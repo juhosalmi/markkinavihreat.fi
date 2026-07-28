@@ -43,13 +43,23 @@ const localeLabels: Record<Locale, string> = { fi: 'FI', sv: 'SV', en: 'EN' }
     >
       <ul class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
         {
-          links.map((link) => (
-            <li>
-              <a href={localePath(locale, link.href)} class="hover:text-vihrea-tumma font-medium">
-                {t(locale, link.key)}
-              </a>
-            </li>
-          ))
+          links.map((link) => {
+            const isActive = path === link.href || path.startsWith(link.href)
+            return (
+              <li>
+                <a
+                  href={localePath(locale, link.href)}
+                  aria-current={isActive ? 'page' : undefined}
+                  class:list={[
+                    'hover:text-vihrea-tumma font-medium underline-offset-4',
+                    isActive && 'underline',
+                  ]}
+                >
+                  {t(locale, link.key)}
+                </a>
+              </li>
+            )
+          })
         }
       </ul>
 
