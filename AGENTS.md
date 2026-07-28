@@ -34,7 +34,7 @@ markkinavihreat.fi is the home base for Markkinavihreät (Market Greens), a mark
 - `src/content/blog/<slug>.<locale>.md` — blog posts; `date` frontmatter field drives the `/blogi/<date>/<slug>/` URL.
 - `src/content/manifesto/manifesto.<locale>.md` — the manifesto, one entry per locale.
 - Schemas: `src/content.config.ts`. UI strings (nav/footer): `src/i18n/ui.ts`. Static page copy (hero text etc.): `src/i18n/pages.ts`.
-- Layouts: `src/layouts/`. Shared components: `src/components/`. Routes: `src/pages/[[...locale]]/**` (fi is unprefixed, sv/en get a `/sv/` or `/en/` prefix from the same route files).
+- Layouts: `src/layouts/`. Shared components: `src/components/`. Page markup/logic lives in `src/components/pages/*Body.astro` (one per route, takes a `locale` prop). Routes: `src/pages/**` (fi, unprefixed) mirrored under `src/pages/sv/**` and `src/pages/en/**` — each route file is a thin wrapper that renders the matching `*Body.astro` with a hardcoded locale (dynamic routes also filter their own `getStaticPaths` to that locale). Don't reintroduce a single `[[...locale]]` catch-all directory for this — Astro 7.1.4's static build mis-resolves that pattern's output paths (confirmed by building it: routes landed in literal `[]`/`[en]`/`[sv]` directories instead of `/`, `/en/`, `/sv/`).
 
 ## Judgment boundaries
 
