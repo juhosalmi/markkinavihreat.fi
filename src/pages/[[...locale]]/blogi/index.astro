@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import ContentCard from '../../../components/ContentCard.astro'
+import { LOCALES, localeParam, localeFromParam, localePath, forLocale } from '../../../lib/content'
+import { dateSlug, formatDate } from '../../../lib/date'
+import { blogPage } from '../../../i18n/pages'
+import { t } from '../../../i18n/ui'
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+}
+
+const locale = localeFromParam(Astro.params.locale)
+const copy = blogPage[locale]
+
+const allPosts = await getCollection('blog')
+const posts = forLocale(allPosts, locale).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+)
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/blogi/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
+    <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
+
+    {posts.length === 0 && <p class="text-harmaa mt-10">{t(locale, 'blog.empty')}</p>}
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      {
+        posts.map((post) => {
+          const slug = post.id.slice(0, post.id.lastIndexOf('.'))
+          return (
+            <ContentCard
+              href={localePath(locale, `/blogi/${dateSlug(post.data.date)}/${slug}/`)}
+              title={post.data.title}
+              description={post.data.description}
+              meta={formatDate(post.data.date, locale)}
+              cta={t(locale, 'blog.readMore')}
+            />
+          )
+        })
+      }
+    </div>
+  </section>
+</BaseLayout>

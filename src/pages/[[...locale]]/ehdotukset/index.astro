@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import ContentCard from '../../../components/ContentCard.astro'
+import {
+  LOCALES,
+  localeParam,
+  localeFromParam,
+  localePath,
+  forLocale,
+  parseLocalizedId,
+} from '../../../lib/content'
+import { programsPage } from '../../../i18n/pages'
+import { t } from '../../../i18n/ui'
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+}
+
+const locale = localeFromParam(Astro.params.locale)
+const copy = programsPage[locale]
+
+const allPrograms = await getCollection('programs')
+const programs = forLocale(allPrograms, locale).sort((a, b) => a.data.order - b.data.order)
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/ehdotukset/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
+    <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
+
+    {programs.length === 0 && <p class="text-harmaa mt-10">{t(locale, 'programs.empty')}</p>}
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      {
+        programs.map((program) => (
+          <ContentCard
+            href={localePath(locale, `/ehdotukset/${parseLocalizedId(program.id).slug}/`)}
+            title={program.data.title}
+            description={program.data.description}
+            cta={t(locale, 'blog.readMore')}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>

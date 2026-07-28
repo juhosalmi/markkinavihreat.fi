@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import PersonCard from '../../components/PersonCard.astro'
+import { LOCALES, localeParam, localeFromParam, forLocale } from '../../lib/content'
+import { about } from '../../i18n/pages'
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+}
+
+const locale = localeFromParam(Astro.params.locale)
+const copy = about[locale]
+
+const allTeam = await getCollection('team')
+const team = forLocale(allTeam, locale).sort((a, b) => a.data.order - b.data.order)
+const rendered = await Promise.all(team.map((entry) => render(entry)))
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/keita-me-olemme/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
+    <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        team.map((person, i) => {
+          const { Content } = rendered[i]
+          return (
+            <PersonCard
+              name={person.data.name}
+              photo={person.data.photo}
+              candidateBadge={person.data.candidateBadge}
+              links={person.data.links}
+            >
+              <Content />
+            </PersonCard>
+          )
+        })
+      }
+    </div>
+  </section>
+</BaseLayout>

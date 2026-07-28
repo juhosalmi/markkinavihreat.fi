@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '../../../../layouts/BaseLayout.astro'
+import {
+  LOCALES,
+  localeParam,
+  localeFromParam,
+  forLocale,
+  parseLocalizedId,
+} from '../../../../lib/content'
+import { dateSlug, formatDate } from '../../../../lib/date'
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog')
+  return LOCALES.flatMap((locale) =>
+    forLocale(allPosts, locale).map((post) => ({
+      params: {
+        locale: localeParam(locale),
+        date: dateSlug(post.data.date),
+        slug: parseLocalizedId(post.id).slug,
+      },
+      props: { post },
+    })),
+  )
+}
+
+const locale = localeFromParam(Astro.params.locale)
+const { post } = Astro.props
+const { Content } = await render(post)
+const path = `/blogi/${Astro.params.date}/${Astro.params.slug}/`
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${post.data.title} — markkinavihreat.fi`}
+  description={post.data.description}
+  path={path}
+>
+  <article class="content-max mx-auto px-4 py-16 sm:px-6">
+    <p class="text-vihrea-tumma font-semibold">
+      {formatDate(post.data.date, locale)}{post.data.author ? ` · ${post.data.author}` : ''}
+    </p>
+    <h1 class="mt-2 text-4xl sm:text-5xl">{post.data.title}</h1>
+    <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

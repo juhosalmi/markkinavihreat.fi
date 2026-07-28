@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { LOCALES, localeParam, localeFromParam, localePath } from '../../lib/content'
+import { home } from '../../i18n/pages'
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+}
+
+const locale = localeFromParam(Astro.params.locale)
+const copy = home[locale]
+const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.eyebrow} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/"
+>
+  <section class="content-max mx-auto px-4 py-16 text-center sm:px-6 sm:py-24">
+    <p class="text-vihrea-tumma font-semibold">{copy.eyebrow}</p>
+    <h1 class="mt-2 text-4xl sm:text-6xl">{copy.title}</h1>
+    <p class="text-harmaa mx-auto mt-6 max-w-2xl text-lg">{copy.subtitle}</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-4">
+      <a href={localePath(locale, '/manifesti/')} class="btn-primary">{copy.ctaManifesto}</a>
+      <a href={localePath(locale, '/ehdotukset/')} class="btn-outline-medium">{copy.ctaPrograms}</a>
+    </div>
+  </section>
+
+  <section class="bg-surface-greige px-4 py-16 sm:px-6">
+    <div class="content-max mx-auto">
+      <h2 class="text-3xl">{copy.framingTitle}</h2>
+      <p class="text-harmaa mt-4 max-w-3xl">{copy.framingBody}</p>
+    </div>
+  </section>
+
+  <section class="px-4 py-16 sm:px-6">
+    <div class="content-max mx-auto grid gap-6 sm:grid-cols-2">
+      {
+        copy.values.map((value) => (
+          <div class="card bg-surface-green">
+            <h3 class="text-lg font-extrabold">{value.title}</h3>
+            <p class="text-harmaa mt-2">{value.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-metsa text-kerma px-4 py-16 sm:px-6">
+    <div class="content-max mx-auto">
+      <h2 class="text-3xl">{copy.exploreTitle}</h2>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2">
+        <a
+          href={localePath(locale, '/manifesti/')}
+          class="rounded-card bg-surface-dark-green p-6 hover:-translate-y-1"
+        >
+          <h3 class="text-lg font-extrabold">{copy.exploreManifesto}</h3>
+          <p class="text-kerma/80 mt-1">{copy.exploreManifestoDesc}</p>
+        </a>
+        <a
+          href={localePath(locale, '/ehdotukset/')}
+          class="rounded-card bg-surface-dark-green p-6 hover:-translate-y-1"
+        >
+          <h3 class="text-lg font-extrabold">{copy.explorePrograms}</h3>
+          <p class="text-kerma/80 mt-1">{copy.exploreProgramsDesc}</p>
+        </a>
+        <a
+          href={localePath(locale, '/blogi/')}
+          class="rounded-card bg-surface-dark-green p-6 hover:-translate-y-1"
+        >
+          <h3 class="text-lg font-extrabold">{copy.exploreBlog}</h3>
+          <p class="text-kerma/80 mt-1">{copy.exploreBlogDesc}</p>
+        </a>
+        <a
+          href={localePath(locale, '/keita-me-olemme/')}
+          class="rounded-card bg-surface-dark-green p-6 hover:-translate-y-1"
+        >
+          <h3 class="text-lg font-extrabold">{copy.exploreAbout}</h3>
+          <p class="text-kerma/80 mt-1">{copy.exploreAboutDesc}</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-max mx-auto px-4 py-16 text-center sm:px-6">
+    <h2 class="text-3xl">{copy.joinTitle}</h2>
+    <p class="text-harmaa mx-auto mt-4 max-w-xl">{copy.joinBody}</p>
+    <a href={WHATSAPP_URL} class="btn-primary mt-6 inline-flex" target="_blank" rel="noopener">
+      {copy.joinCta}
+    </a>
+  </section>
+</BaseLayout>
