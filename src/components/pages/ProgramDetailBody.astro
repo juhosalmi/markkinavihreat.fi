@@ -1,0 +1,28 @@
+---
+import { render, type CollectionEntry } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { parseLocalizedId, type Locale } from '../../lib/content'
+
+interface Props {
+  locale: Locale
+  program: CollectionEntry<'programs'>
+}
+
+const { locale, program } = Astro.props
+const { Content } = await render(program)
+const path = `/ehdotukset/${parseLocalizedId(program.id).slug}/`
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${program.data.title} — markkinavihreat.fi`}
+  description={program.data.description}
+  path={path}
+>
+  <article class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{program.data.title}</h1>
+    <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

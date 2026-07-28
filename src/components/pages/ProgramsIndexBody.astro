@@ -1,23 +1,16 @@
 ---
 import { getCollection } from 'astro:content'
-import BaseLayout from '../../../layouts/BaseLayout.astro'
-import ContentCard from '../../../components/ContentCard.astro'
-import {
-  LOCALES,
-  localeParam,
-  localeFromParam,
-  localePath,
-  forLocale,
-  parseLocalizedId,
-} from '../../../lib/content'
-import { programsPage } from '../../../i18n/pages'
-import { t } from '../../../i18n/ui'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ContentCard from '../ContentCard.astro'
+import { localePath, forLocale, parseLocalizedId, type Locale } from '../../lib/content'
+import { programsPage } from '../../i18n/pages'
+import { t } from '../../i18n/ui'
 
-export function getStaticPaths() {
-  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+interface Props {
+  locale: Locale
 }
 
-const locale = localeFromParam(Astro.params.locale)
+const { locale } = Astro.props
 const copy = programsPage[locale]
 
 const allPrograms = await getCollection('programs')

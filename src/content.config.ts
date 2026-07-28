@@ -6,7 +6,13 @@ const locale = z.enum(['fi', 'sv', 'en'])
 
 // Filenames encode the locale so translations of the same entry share a base
 // slug: `<slug>.<locale>.md`. The translation-parity check (scripts/validate-translations.ts)
-// relies on this convention to verify every locale exists for every entry.
+// and src/lib/content.ts's parseLocalizedId() rely on this convention to split
+// ids back into slug + locale — so the id must keep the dot. Glob's default
+// generateId() slugifies away dots (and would collide "foo.fi" / "foo.sv"),
+// so every collection below overrides it to just strip the .md extension.
+function generateId({ entry }: { entry: string }) {
+  return entry.replace(/\.md$/, '')
+}
 const socialLink = z.object({
   type: z.enum([
     'website',
@@ -26,7 +32,7 @@ const socialLink = z.object({
 })
 
 const team = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/team' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/team', generateId }),
   schema: z.object({
     locale,
     name: z.string(),
@@ -42,7 +48,7 @@ const team = defineCollection({
 })
 
 const programs = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/programs' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/programs', generateId }),
   schema: z.object({
     locale,
     title: z.string(),
@@ -52,7 +58,7 @@ const programs = defineCollection({
 })
 
 const blog = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog', generateId }),
   schema: z.object({
     locale,
     title: z.string(),
@@ -63,7 +69,7 @@ const blog = defineCollection({
 })
 
 const manifesto = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/manifesto' }),
+  loader: glob({ pattern: '**/*.md', base: './src/content/manifesto', generateId }),
   schema: z.object({
     locale,
     title: z.string(),

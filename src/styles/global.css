@@ -44,13 +44,17 @@
   }
 }
 
+@utility btn {
+  @apply rounded-card inline-flex items-center gap-2 px-6 py-3 font-semibold transition;
+}
+
+@utility card {
+  @apply rounded-card border border-black/[0.08] p-6 shadow-[0_1px_0_rgba(255,255,255,.45)_inset,0_10px_24px_rgba(22,26,20,.05)] sm:p-8;
+}
+
 @layer components {
   .content-max {
     max-width: 800px;
-  }
-
-  .btn {
-    @apply rounded-card inline-flex items-center gap-2 px-6 py-3 font-semibold transition;
   }
 
   .btn-primary {
@@ -75,10 +79,6 @@
 
   .btn-outline-lg {
     @apply btn border-musta hover:bg-musta hover:text-kerma rounded-full border bg-transparent px-8 py-4;
-  }
-
-  .card {
-    @apply rounded-card border border-black/[0.08] p-6 shadow-[0_1px_0_rgba(255,255,255,.45)_inset,0_10px_24px_rgba(22,26,20,.05)] sm:p-8;
   }
 
   /* Styles Markdown output from rendered content collection entries. */

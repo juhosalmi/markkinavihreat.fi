@@ -1,17 +1,17 @@
 ---
 import { getCollection } from 'astro:content'
-import BaseLayout from '../../../layouts/BaseLayout.astro'
-import ContentCard from '../../../components/ContentCard.astro'
-import { LOCALES, localeParam, localeFromParam, localePath, forLocale } from '../../../lib/content'
-import { dateSlug, formatDate } from '../../../lib/date'
-import { blogPage } from '../../../i18n/pages'
-import { t } from '../../../i18n/ui'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ContentCard from '../ContentCard.astro'
+import { localePath, forLocale, type Locale } from '../../lib/content'
+import { dateSlug, formatDate } from '../../lib/date'
+import { blogPage } from '../../i18n/pages'
+import { t } from '../../i18n/ui'
 
-export function getStaticPaths() {
-  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+interface Props {
+  locale: Locale
 }
 
-const locale = localeFromParam(Astro.params.locale)
+const { locale } = Astro.props
 const copy = blogPage[locale]
 
 const allPosts = await getCollection('blog')

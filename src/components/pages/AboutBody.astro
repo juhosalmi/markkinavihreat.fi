@@ -1,15 +1,15 @@
 ---
 import { getCollection, render } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import PersonCard from '../../components/PersonCard.astro'
-import { LOCALES, localeParam, localeFromParam, forLocale } from '../../lib/content'
+import PersonCard from '../PersonCard.astro'
+import { forLocale, type Locale } from '../../lib/content'
 import { about } from '../../i18n/pages'
 
-export function getStaticPaths() {
-  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+interface Props {
+  locale: Locale
 }
 
-const locale = localeFromParam(Astro.params.locale)
+const { locale } = Astro.props
 const copy = about[locale]
 
 const allTeam = await getCollection('team')

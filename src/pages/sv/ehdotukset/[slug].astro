@@ -1,0 +1,21 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import ProgramDetailBody from '../../../components/pages/ProgramDetailBody.astro'
+import { forLocale, parseLocalizedId } from '../../../lib/content'
+
+interface Props {
+  program: CollectionEntry<'programs'>
+}
+
+export async function getStaticPaths() {
+  const allPrograms = await getCollection('programs')
+  return forLocale(allPrograms, 'sv').map((program) => ({
+    params: { slug: parseLocalizedId(program.id).slug },
+    props: { program },
+  }))
+}
+
+const { program } = Astro.props
+---
+
+<ProgramDetailBody locale="sv" program={program} />

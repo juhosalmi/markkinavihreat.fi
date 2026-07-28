@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { LOCALES, localeParam, localeFromParam, localePath } from '../../lib/content'
+import { localePath, type Locale } from '../../lib/content'
 import { home } from '../../i18n/pages'
 
-export function getStaticPaths() {
-  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+interface Props {
+  locale: Locale
 }
 
-const locale = localeFromParam(Astro.params.locale)
+const { locale } = Astro.props
 const copy = home[locale]
 const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
 ---

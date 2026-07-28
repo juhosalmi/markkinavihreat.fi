@@ -1,14 +1,14 @@
 ---
 import { getEntry, render } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { LOCALES, localeParam, localeFromParam } from '../../lib/content'
+import type { Locale } from '../../lib/content'
 import { manifestoPage } from '../../i18n/pages'
 
-export function getStaticPaths() {
-  return LOCALES.map((locale) => ({ params: { locale: localeParam(locale) } }))
+interface Props {
+  locale: Locale
 }
 
-const locale = localeFromParam(Astro.params.locale)
+const { locale } = Astro.props
 const copy = manifestoPage[locale]
 
 const entry = await getEntry('manifesto', `manifesto.${locale}`)
