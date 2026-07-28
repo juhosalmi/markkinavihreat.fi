@@ -3,7 +3,7 @@ import type { Locale } from '../lib/content'
 export const ui = {
   fi: {
     'nav.home': 'Etusivu',
-    'nav.about': 'Keitä me olemme',
+    'nav.about': 'Ketkä',
     'nav.manifesto': 'Manifesti',
     'nav.programs': 'Ehdotukset',
     'nav.blog': 'Blogi',
@@ -15,6 +15,7 @@ export const ui = {
     'blog.readMore': 'Lue lisää',
     'blog.empty': 'Blogikirjoituksia ei vielä ole julkaistu.',
     'programs.empty': 'Ehdotuksia ei vielä ole julkaistu.',
+    'programs.quotesHeading': 'Ääniä markkinavihreiltä',
     'contact.whatsappCta': 'Liity markkinavihreiden avoimeen WhatsApp-ryhmään',
     'contact.mediaHeading': 'Yhteystiedot medialle',
   },
@@ -32,6 +33,7 @@ export const ui = {
     'blog.readMore': 'Läs mer',
     'blog.empty': 'Inga blogginlägg har publicerats än.',
     'programs.empty': 'Inga förslag har publicerats än.',
+    'programs.quotesHeading': 'Röster från de marknadsgröna',
     'contact.whatsappCta': 'Gå med i marknadsgrönas öppna WhatsApp-grupp',
     'contact.mediaHeading': 'Kontaktuppgifter för media',
   },
@@ -49,6 +51,7 @@ export const ui = {
     'blog.readMore': 'Read more',
     'blog.empty': 'No blog posts have been published yet.',
     'programs.empty': 'No suggestions have been published yet.',
+    'programs.quotesHeading': 'Voices from the market greens',
     'contact.whatsappCta': "Join the market greens' open WhatsApp group",
     'contact.mediaHeading': 'Media contact',
   },

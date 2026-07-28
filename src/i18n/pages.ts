@@ -90,7 +90,7 @@ export const home: Record<Locale, HomeCopy> = {
     exploreProgramsDesc: 'Konkreettiset esityksemme markkinamekanismin valjastamiseksi.',
     exploreBlog: 'Blogi',
     exploreBlogDesc: 'Kirjoituksia ajankohtaisista aiheista.',
-    exploreAbout: 'Keitä me olemme',
+    exploreAbout: 'Ketkä',
     exploreAboutDesc: 'Tapaa markkinavihreät tekijät.',
     joinTitle: 'Tervetuloa mukaan!',
     joinBody:
@@ -190,7 +190,7 @@ export const about: Record<Locale, AboutCopy> = {
   fi: {
     metaDescription:
       'Tapaa markkinavihreät — Vihreiden sisällä toimivat markkinaliberaalit ja sosiaaliliberaalit.',
-    title: 'Keitä me olemme',
+    title: 'Ketkä',
     intro:
       'Markkinavihreät on joukko Vihreiden jäseniä, luottamushenkilöitä ja aktiiveja, joita yhdistää usko markkinatalouden ja kunnianhimoisen ympäristöpolitiikan yhteensopivuuteen.',
   },
