@@ -1,0 +1,92 @@
+---
+locale: en
+title: More Markets!
+description: Five proposals that harness the market mechanism to solve problems in transport, urban space, public procurement, and land use.
+order: 1
+---
+
+Political rigidity, economic inefficiency, and the protection of incumbent players have brought Finland to a standstill. It is time to harness the market mechanism to solve the challenges of the economy, the climate, and our cities more effectively.
+
+## The market economy solves the problems we set for it
+
+The market economy is an efficient tool, but the rules of the market determine what that efficiency actually achieves. Right now we use markets well in some respects, but at the expense of the common good in others. In addition, some players remain structurally shielded from genuinely competitive markets. We want to change this!
+
+For too long, market-friendly voters in Finland have only had bad options to choose from. The old parties' approach is characterized by **pro-business politics** — protecting the interests of established players and keeping inefficient businesses on life support. That is not market-friendliness in favor of healthy competition; it is making it harder for new entrants to access the market and blocking the creative destruction the economy needs to renew itself.
+
+We want to promote a better **pro-market politics** that makes it easier for new entrants and healthy competition to emerge. That does not mean blindly deregulating markets, but rather directing markets to solve the right problems.
+
+This means that harms — such as pollution, the burden on nature, congestion, or the reservation of public urban space — must be priced. When externalities carry the right price tag, businesses and consumers get a continuous incentive to reduce harm. Markets often steer behavior more effectively than centralized micromanagement by politicians. The role of politicians is to define goals and rules of the game for markets, while leaving competition and innovation room to find the best solutions.
+
+At the same time, we correct today's injustice: when whoever causes the harm pays more, the burden on other taxpayers is lightened. Responsibility becomes an economic advantage. This opens up markets for sustainable business and new companies.
+
+**The Greens are Finland's leading market-liberal party.** We do not build our economic policy on protecting old structures or individual business interest groups; instead, we defend open competition, new entrants, and functioning markets.
+
+Unlike the major right-wing and left-wing parties, we have no ties to old structures or companies that need protecting. Among the established large parties, this shows up as an unwillingness to cut subsidies that preserve the status quo.
+
+We, the Market Greens, want more markets where the political left fails with its overly detailed regulation and the political right fails with its pro-business politics. At the same time, we want to build markets that better serve people and the environment.
+
+We propose five measures to fix the situation:
+
+## Demand 1/5: More markets in transport
+
+Right now, taxpayers subsidize regional flights to the tune of [tens of millions](https://yle.fi/a/74-20162950) of euros every year. This causes many kinds of problems, such as unnecessary climate emissions and money wasted on half-empty flights. It also distorts competition between different modes of transport and puts cities in an unequal position: some regional flights receive only partial subsidies, while the state pays for others in full.
+
+It is not the job of public authorities to prop up demand for a mode of transport that cannot survive on market terms, but to ensure that different modes of transport compete on as level a playing field as possible.
+
+All modes of transport, from cars and trains all the way to airplanes, should be based on fair competition that takes into account the harms each mode causes. The choice should belong to the individual, not the state. If someone wants to fly from Jyväskylä to Helsinki, they can do so at their own expense, without the public purse paying for it.
+
+## Demand 2/5: More markets in public procurement
+
+The public sector is a massive buyer in Finland. Billions of euros' worth of public procurement is carried out every year, so it has a major effect on the whole national economy and on how markets function. When procurement is done well, it increases competition, helps companies grow, improves services, and steers markets toward more responsible solutions. When it is done poorly, it locks the public sector into old suppliers, drives up costs, and shuts out challengers.
+
+According to the Finnish Competition and Consumer Authority (KKV), public procurement suffers from "alarmingly little competition": about half of all tenders receive at most three bids, and more than a thousand procurements a year receive only a single bid. When competition is scarce, the public sector's negotiating position weakens and the risk of excessive costs grows. Genuinely functioning competition helps ensure that contracts go to the companies best able to deliver services with quality, responsibility, and cost-efficiency.
+
+Too often, public procurement is structured in a way where only large, established players can succeed. Contracts are bundled into oversized packages, reference requirements favor incumbent suppliers, and tenders specify the solution so precisely that companies have no room to innovate. This is not genuine market economy — it is competition in name only.
+
+The Market Green solution is to open up public procurement to genuine competition. Contracts should be sensibly broken into smaller lots so that SMEs and growth companies can also take part. Unnecessary reference and turnover requirements should be relaxed whenever they are not genuinely relevant. The public sector should engage in more market dialogue before tenders, so that it does not inadvertently design a contract that fits only one old supplier.
+
+At the same time, procurement should reward responsible operators. The public sector should not look only at the lowest purchase price, but at quality, lifecycle, impact, and responsibility, in a market-driven way.
+
+## Demand 3/5: More markets in urban transport
+
+Especially in the Helsinki metropolitan area, road congestion has been a growing problem for a long time now. This has led to plans for a city-center tunnel [costing as much as €1.4 billion](https://yle.fi/a/3-10970944), which would significantly raise the local municipal tax rate. The tunnel would have to be built with tax money, because if it were financed through usage fees, the price would be so steep that almost no one would use it (a 2013 estimate put it at [€7.5 per trip](https://www.hs.fi/pkseutu/art-2000002617497.html)).
+
+Rather than blasting a billion-euro tunnel through the bedrock, it is far easier and more sensible to solve road congestion using the market mechanism. Dynamic road-usage charges hand the choice of the best solution to the road users themselves. You can choose to drive during the morning commute if you feel it is worth the few euros in road charges. In return, you get significantly smoother traffic and faster journeys, as some people switch to other modes of transport. In addition, some trips will simply not be made at all, if they are not deemed worth those few euros.
+
+Experience with road-usage charges has been so positive that not a single city that has introduced them has later abandoned them. Stockholm, for example, trialed road charges for seven months in 2006. The charges reduced congestion and improved air quality, so the city's residents voted in a referendum the following year to make the charges permanent. Drivers, too, value smooth traffic so much that once the benefits have been experienced, no one has wanted to go back to the old system.
+
+**Let's make it possible to introduce road-usage charges here too, so that growing cities have more tools to pursue more sensible, more market-driven transport policy.**
+
+## Demand 4/5: More markets in urban space
+
+Finnish cities typically require developers to build a certain number of parking spaces for every new building. In practice, this parking minimum means that the true price of a parking space is hidden from the market.
+
+Building a parking space in central Helsinki costs tens of thousands of euros. However, this cost is hidden inside the price of homes and commercial premises, and drivers often do not pay it directly. The result is a market distortion: public urban space and expensive construction costs are subsidized for driving at the expense of everyone else — including those who get around by bike or public transport.
+
+Parking minimums also raise the cost of housing. When every new residential building must include the mandated number of parking spaces regardless of residents' actual needs, construction costs rise and are ultimately passed on to home prices. In the worst cases, building a parking garage costs residents more than they would be willing to pay for a parking space on the free market.
+
+A better outcome would be reached by leaving the decision on the number of parking spaces to the market: once parking minimums are abolished, developers and residents can decide for themselves how many parking spaces are needed. In areas with good public transport, fewer parking spaces will be built and housing will become cheaper. In areas where a car is essential, the market will produce parking spaces to match demand. Urban space is freed up for more efficient use, the cost of housing falls, and mobility is guided by market forces.
+
+Abolishing parking minimums is an example of how removing market distortions can give us a city that is both economically more efficient and more humane, while also reducing unnecessarily detailed regulation.
+
+## Demand 5/5: More markets in forestry and agriculture
+
+The failure of climate policy has led to poor incentives and to taxpayers having to pay for the consequences of harmful activity by old industries.
+
+This particularly concerns the land-use sector and its share of our climate targets. Emissions from forests and agricultural land have become a major problem, and action now requires politicians to summon the will and courage to improve the situation.
+
+In practice, this means that, for example, the cost of climate emissions caused by the forest industry is falling [on taxpayers to cover](https://yle.fi/a/74-20105267). Above all, this creates a serious incentive problem, because when taxpayers foot the bill, the forest industry has no economic incentive to change its practices.
+
+Because solutions have been left to horse-trading between politicians and lobbyists, effective action is not moving forward and Finland's carbon sinks keep shrinking. The land-use sector needs to be brought into a rigorous, market-based emissions trading system. When a clear market price is put on the carbon balance, markets respond and find the most sensible solutions. This would also make the forest industry's marketing claims about the world's best forestry practices come true to a greater degree.
+
+**Let's create markets for carbon sequestration and nature restoration. When capturing carbon acquires monetary value, forest owners and rural entrepreneurs can gain new sources of income from ecologically sustainable solutions.** Harmful and inefficient drainage of peatland forests loses its profitability, while continuous-cover forestry becomes profitable without a single subsidy scheme. Efficient carbon sequestration becomes a new, productive form of business. When the polluter pays, others no longer have to cover the cost of pollution out of their own pockets.
+
+## Summary: markets solve problems more efficiently and more fairly
+
+We do not believe in an unregulated wild west, but neither do we believe in central planning or in politicians' omniscience, especially when it comes to the specific means used. When a real market price is placed on activities that cause a lot of harm, such as the fossil economy or the overconsumption of urban space, incentives finally point in the right direction.
+
+When markets handle the pricing, the bill for irresponsibility no longer ends up with someone else, and we put an end to today's racket, in which irresponsibility is subsidized out of other people's pockets. **The polluter pays, and whoever causes little harm saves money. That is both fair and economically efficient.**
+
+It is the job of politicians to set the framework and define the rules of the game, and it is the job of markets to handle the rest, dynamically and efficiently. A well-functioning market economy is a tool for building a more sustainable, more prosperous, and more humane society. The market mechanism is not a magic wand, but under current conditions, the opportunities it offers are not being used enough.
+
+Join us in building a better market economy for Finland — one that works even harder for our shared wellbeing!

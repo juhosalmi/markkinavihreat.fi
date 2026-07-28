@@ -1,0 +1,16 @@
+---
+locale: sv
+title: Marknadsgrönt manifest
+---
+
+Världen är i kris. Förutsättningarna för ett gott liv förstörs på många fronter världen över, också i Finland. Och vi går inte med på att acceptera passivitet inför situationen!
+
+Finland måste agera mer beslutsamt för att frigöra sig från fossilberoendet och vända miljöförstörelsen. Det är inte bara rättvist gentemot kommande generationer, utan också förnuftigt i vår tid. Vi befinner oss mitt i en enorm global samhällsomvälvning mot utnyttjande av förnybar energi, och det ligger i Finlands intresse att vara i förändringens frontlinje. Det ligger i det självständiga Finlands intresse att frigöra sig från beroendet av auktoritära oljestater.
+
+Vi älskar bildning och kunskap. För oss har sanningen ett egenvärde, inte bara ett medelvärde. Mänsklighetens framtid avgörs av bildningen – antingen ger dess blomstring oss en ljus framtid, eller så leder dess förfall till mänsklighetens undergång. Och vi vill bygga den ljusa framtiden, den nya guldålder som ny bildning för med sig. Vi är en motkraft mot billig populism och kortsiktig politik som undergräver den liberala demokratins grund. När många andra sjunker mot mörkret säger vi att det inte duger för oss, och vi konstaterar: Vi socialliberaler bär upplysningens fackla vidare, för att fortsätta dess arv mot ett nytt blomstrande!
+
+Varje människa är lika mycket värd, det är grunden för våra värderingar och för ett gott samhälle. Att godta detta är också en absolut förutsättning för den bästa samhällsformen, det vill säga den liberala demokratin. Men den liberala demokratin klarar sig inte utan försvarare. Och vi drar oss inte undan kallelsen, utan försvarar liberala värden mot de krafter som motsätter sig dem! Vi försvarar en oberoende och fri media mot alla slags politiska påtryckningar. Vi respekterar individens friheter, försvarar yttrandefriheten, rättsstaten och grundlagen. Dessa institutioner är viktiga i egenvärde, eftersom en liberal demokrati inte kan existera utan deras oberoende existens. För oss är den liberala demokratin inte till salu!
+
+Jämlika och bildade människor som makten är jämnt fördelad mellan är det bästa sättet att organisera ett samhälle. Därför tror vi inte bara på demokratins kraft utan också på marknadens, eftersom marknaden decentraliserar beslutsfattandet mellan dem som deltar i den. Men till skillnad från dem som förblindats av vackra önskedrömmar tror vi inte på oreglerade marknader. Marknader är effektiva, men effektivitet utan riktning är vägen till undergång. Vi kräver och bygger en marknadsekonomi där ekologiska och sociala externa effekter prissätts korrekt och marknadsmisslyckanden identifieras. Bara då tjänar marknaden människan, och inte tvärtom. Det är den offentliga maktens uppgift att rikta marknadens kraft mot att skapa gott, i stället för att förstöra världen.
+
+Världen är i kris, men den behöver inte vara det. Alla vi kan fortfarande välja annorlunda och leda förändringen för hela mänskligheten. Mänskligheten kan välja den av bildning upplysta vägen mot en lysande framtid, och det är vårt val i stället för mörkret. Vi har all kunskap och alla verktyg för att skapa en god framtid, vi behöver bara organisera oss och sätta igång. Vi bjuder därför in alla att vara med och skapa en sådan förändring som vi med stolthet kan lämna efter oss åt kommande generationer!
