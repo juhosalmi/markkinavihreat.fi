@@ -1,0 +1,26 @@
+---
+import type { Locale } from '../lib/content'
+import { t } from '../i18n/ui'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+---
+
+<footer class="bg-metsa text-kerma/70 px-4 py-8 text-center text-sm sm:px-6">
+  <p>{t(locale, 'footer.disclaimer')}</p>
+  <p>
+    {t(locale, 'footer.license')}
+    {' '}
+    <a
+      href="https://creativecommons.org/licenses/by-sa/4.0/"
+      class="underline"
+      target="_blank"
+      rel="noopener"
+    >
+      CC BY-SA 4.0
+    </a>
+  </p>
+</footer>

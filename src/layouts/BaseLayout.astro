@@ -1,0 +1,61 @@
+---
+import '../styles/global.css'
+import Nav from '../components/Nav.astro'
+import Footer from '../components/Footer.astro'
+import type { Locale } from '../lib/content'
+
+interface Props {
+  locale: Locale
+  title: string
+  description: string
+  /** Path relative to the locale root, e.g. "/manifesti/" — same across all locales. */
+  path: string
+}
+
+const { locale, title, description, path } = Astro.props
+
+const SITE_URL = 'https://markkinavihreat.fi'
+const localeUrl = (l: Locale) => (l === 'fi' ? `${SITE_URL}${path}` : `${SITE_URL}/${l}${path}`)
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#6EB82A" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="markkinavihreat.fi" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={localeUrl(locale)} />
+    <link rel="canonical" href={localeUrl(locale)} />
+    <link rel="alternate" hreflang="fi" href={localeUrl('fi')} />
+    <link rel="alternate" hreflang="sv" href={localeUrl('sv')} />
+    <link rel="alternate" hreflang="en" href={localeUrl('en')} />
+    <link rel="alternate" hreflang="x-default" href={localeUrl('fi')} />
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <Nav locale={locale} path={path} />
+    <main>
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

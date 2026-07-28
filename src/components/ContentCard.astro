@@ -1,0 +1,18 @@
+---
+interface Props {
+  href: string
+  title: string
+  description: string
+  meta?: string
+  cta: string
+}
+
+const { href, title, description, meta, cta } = Astro.props
+---
+
+<a href={href} class="card bg-surface-greige block transition hover:-translate-y-1">
+  {meta && <p class="text-vihrea-tumma text-sm font-semibold">{meta}</p>}
+  <h3 class="mt-1 text-xl font-extrabold">{title}</h3>
+  <p class="text-harmaa mt-2">{description}</p>
+  <span class="text-vihrea-tumma mt-4 inline-block font-semibold">{cta} →</span>
+</a>

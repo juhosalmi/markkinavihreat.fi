@@ -1,0 +1,56 @@
+---
+interface SocialLink {
+  type: string
+  url: string
+  label?: string
+}
+
+interface Props {
+  name: string
+  photo: string
+  candidateBadge?: string
+  links: SocialLink[]
+}
+
+const { name, photo, candidateBadge, links } = Astro.props
+
+const iconFor: Record<string, string> = {
+  website: 'fa-solid fa-globe',
+  mastodon: 'fa-brands fa-mastodon',
+  bluesky: 'fa-brands fa-bluesky',
+  threads: 'fa-brands fa-threads',
+  linkedin: 'fa-brands fa-linkedin',
+  instagram: 'fa-brands fa-instagram',
+  facebook: 'fa-brands fa-facebook',
+  tiktok: 'fa-brands fa-tiktok',
+  x: 'fa-brands fa-x-twitter',
+  youtube: 'fa-brands fa-youtube',
+  reddit: 'fa-brands fa-reddit',
+}
+---
+
+<div class="rounded-card bg-surface-dark-green text-kerma overflow-hidden">
+  <img src={photo} alt={name} class="aspect-square w-full object-cover" loading="lazy" />
+  <div class="p-6">
+    <h3 class="text-lg font-extrabold">{name}</h3>
+    {
+      candidateBadge && (
+        <span class="text-vihrea mt-1 inline-block text-xs font-semibold">{candidateBadge}</span>
+      )
+    }
+    <div class="text-kerma/90 mt-2 space-y-2 text-sm [&_a]:underline">
+      <slot />
+    </div>
+    {
+      links.length > 0 && (
+        <div class="mt-4 flex flex-wrap gap-3 text-lg">
+          {links.map((link) => (
+            <a href={link.url} target="_blank" rel="noopener" aria-label={link.label ?? link.type}>
+              <i class={iconFor[link.type] ?? 'fa-solid fa-link'} aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</div>
