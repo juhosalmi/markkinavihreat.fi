@@ -3,6 +3,23 @@ locale: fi
 title: Lisää markkinoita!
 description: Viisi ehdotusta, joilla markkinamekanismi valjastetaan ratkaisemaan liikenteen, kaupunkitilan, julkisten hankintojen ja maankäytön ongelmia.
 order: 1
+citations:
+  - person: lauri-nevanpera
+    quote: 'Minulle on kunnia-asia puolustaa taloutta uudistavia yrityksiä. Kilpailua vääristävistä yritystuista ja kaavoituspäätöksistä pitää luopua. Enemmän markkinataloutta tarkoittaa reilumpia lähtökohtia taloutta uudistaville yrityksille.'
+  - person: lauri-lavanti
+    quote: 'Markkinamekanismi on ihmiskunnan tehokkain keksintö resurssien jakamiseen. Nyt se pitää valjastaa hyvään.'
+  - person: atte-harjanne
+    quote: 'Markkinat voi - ja pitää - valjastaa täysillä planeetan ja ihmisten hyväksi.'
+  - person: anna-jaakola
+    quote: 'Markkinat eivät kuulu vain kaupunkeihin. Markkinavihreys tarkoittaa myös sitä, että metsänomistaja saa korvauksen hiilen sidonnasta, viljelijä huoltovarmuudesta ja maaseudun yrittäjä luonnon ennallistamisesta.'
+  - person: susanna-sielo
+    quote: 'Olen nähnyt läheltä, kuinka yritykset muuttavat toimintaansa, kun kannustimet ovat oikein. Politiikan tehtävä on rakentaa pelisäännöt, joissa tehokkaimmat ja vastuullisimmat pelurit voivat voittaa.'
+  - person: ester-dufva
+    quote: '96 % Suomen yrityksistä on mikroyrityksiä. Silti suuryrityksiä tuetaan ja pienempien toimintaedellytyksiä heikennetään. Terveessä kilpailussa pienet saavat kasvaa ja seistä isojen rinnalla, osallistuen kilpailutuksiin ja jakaen urakoita. On aika tuoda kaikki samalle viivalle.'
+  - person: arttu-laitinen
+    quote: 'Valtion tehtävä ei ole johtaa yrityksiä, vaan asettaa kannustimet niin että ulkoisvaikutukset sisältyvät markkinahintaan.'
+  - person: kalle-euro
+    quote: 'Tämä ohjelma oivaltaa, että sääntelyn purkaminen ja pelisääntöjen korjaaminen siirtävät kilpailun halvoista neliöistä elinkaaren laatuun. Kun haitat hinnoitellaan ja laatu ratkaisee, markkinat alkavat vihdoin palkita pitkäikäisestä arkkitehtuurista, korjausrakentamisesta ja kaupunkitilan hoivaamisesta. Se tekee korkeasta suunnitteluosaamisesta aidon kilpailuedun.'
 ---
 
 Poliitikan kankeus, talouden tehottomuus ja vanhojen toimijoiden suojelu ovat seisauttaneet Suomen. On aika valjastaa markkinamekanismi ratkaisemaan talouden, ilmaston ja kaupunkien haasteita tehokkaammin.

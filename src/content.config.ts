@@ -47,6 +47,13 @@ const team = defineCollection({
   }),
 })
 
+// A citation is an endorsement quote from a team member (src/content/team),
+// referenced by that person's slug — not an external source link.
+const citation = z.object({
+  person: z.string(),
+  quote: z.string(),
+})
+
 const programs = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/programs', generateId }),
   schema: z.object({
@@ -54,6 +61,7 @@ const programs = defineCollection({
     title: z.string(),
     description: z.string(),
     order: z.number(),
+    citations: z.array(citation).default([]),
   }),
 })
 

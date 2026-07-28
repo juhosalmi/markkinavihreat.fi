@@ -3,6 +3,23 @@ locale: sv
 title: Mer marknad!
 description: Fem förslag som tar marknadsmekanismen i bruk för att lösa problem inom trafik, stadsrum, offentlig upphandling och markanvändning.
 order: 1
+citations:
+  - person: lauri-nevanpera
+    quote: 'Det är en hederssak för mig att försvara företag som förnyar ekonomin. Konkurrenssnedvridande företagsstöd och planläggningsbeslut måste avvecklas. Mer marknad betyder rättvisare förutsättningar för företag som förnyar ekonomin.'
+  - person: lauri-lavanti
+    quote: 'Marknadsmekanismen är mänsklighetens mest effektiva uppfinning för att fördela resurser. Nu måste den tas i bruk för det goda.'
+  - person: atte-harjanne
+    quote: 'Marknaden kan — och bör — tas i full användning till nytta för planeten och människorna.'
+  - person: anna-jaakola
+    quote: 'Marknaden hör inte bara hemma i städerna. Marknadsgrönhet innebär också att skogsägaren får ersättning för kolbindning, jordbrukaren för försörjningsberedskap och landsbygdsföretagaren för naturrestaurering.'
+  - person: susanna-sielo
+    quote: 'Jag har på nära håll sett hur företag ändrar sitt agerande när incitamenten är rätt. Politikens uppgift är att bygga spelregler där de mest effektiva och ansvarsfulla aktörerna kan vinna.'
+  - person: ester-dufva
+    quote: '96 % av Finlands företag är mikroföretag. Ändå stöds storföretag medan de mindres verksamhetsförutsättningar försvagas. I en sund konkurrens får de små växa och stå sida vid sida med de stora, delta i upphandlingar och dela på uppdragen. Det är dags att ställa alla på samma startlinje.'
+  - person: arttu-laitinen
+    quote: 'Statens uppgift är inte att leda företag, utan att sätta incitament så att externa effekter ingår i marknadspriset.'
+  - person: kalle-euro
+    quote: 'Det här programmet inser att avreglering och korrigerade spelregler flyttar konkurrensen från billiga kvadratmeter till livscykelkvalitet. När skadorna prissätts och kvaliteten avgör börjar marknaden äntligen belöna långlivad arkitektur, ombyggnad och omsorg om stadsrummet. Det gör hög planeringskompetens till en verklig konkurrensfördel.'
 ---
 
 Politikens stelhet, ekonomins ineffektivitet och skyddandet av gamla aktörer har satt Finland i stå. Det är dags att ta marknadsmekanismen i bruk för att lösa ekonomins, klimatets och städernas utmaningar mer effektivt.

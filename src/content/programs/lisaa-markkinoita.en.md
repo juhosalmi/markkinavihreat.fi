@@ -3,6 +3,23 @@ locale: en
 title: More Markets!
 description: Five proposals that harness the market mechanism to solve problems in transport, urban space, public procurement, and land use.
 order: 1
+citations:
+  - person: lauri-nevanpera
+    quote: "It's a matter of honor for me to defend businesses that renew the economy. Competition-distorting corporate subsidies and zoning decisions need to go. More market means fairer starting conditions for businesses renewing the economy."
+  - person: lauri-lavanti
+    quote: "The market mechanism is humanity's most effective invention for allocating resources. Now it needs to be harnessed for good."
+  - person: atte-harjanne
+    quote: 'Markets can — and should — be put to full use for the benefit of the planet and people.'
+  - person: anna-jaakola
+    quote: "Markets don't belong only in cities. Being market green also means the forest owner gets compensated for carbon sequestration, the farmer for security of supply, and the rural entrepreneur for restoring nature."
+  - person: susanna-sielo
+    quote: 'I have seen up close how companies change their behavior when the incentives are right. The task of politics is to build rules of the game where the most effective and responsible players can win.'
+  - person: ester-dufva
+    quote: "96% of Finnish companies are micro-enterprises. Yet large companies get subsidized while smaller ones' operating conditions are weakened. In healthy competition, small businesses get to grow and stand alongside the big ones, taking part in tenders and sharing contracts. It's time to put everyone on the same starting line."
+  - person: arttu-laitinen
+    quote: "The state's job is not to run businesses, but to set incentives so that externalities are included in the market price."
+  - person: kalle-euro
+    quote: 'This program understands that deregulation and fixing the rules of the game shift competition from cheap square meters to lifecycle quality. When harms are priced and quality decides, markets finally start rewarding long-lived architecture, renovation, and care for urban space. That makes high design expertise a genuine competitive advantage.'
 ---
 
 Political rigidity, economic inefficiency, and the protection of incumbent players have brought Finland to a standstill. It is time to harness the market mechanism to solve the challenges of the economy, the climate, and our cities more effectively.
