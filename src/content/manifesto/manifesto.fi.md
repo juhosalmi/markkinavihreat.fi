@@ -1,0 +1,16 @@
+---
+locale: fi
+title: Markkinavihreä manifesti
+---
+
+Maailma on kriisissä. Hyvän elämän edellytyksiä tuhotaan monella rintamalla maailmanlaajuisesti, myös Suomessa. Ja me emme suostu hyväksymään toimettomuutta tilanteen edessä!
+
+Suomen tulee toimia päättäväisemmin fossiiliriippuvuudesta irtautumiseksi sekä ympäristötuhon kääntämiseksi. Se on paitsi oikeudenmukaista tulevia sukupolvia kohtaan, niin järkevää myös tässä ajassamme. Käynnissä on valtaisa globaali yhteiskuntien murros kohti uusiutuvan energian hyödyntämistä, ja on Suomen etu olla muutoksen eturintamassa. Itsenäisen Suomen etu on irtautua riippuvuudesta autoritaarisiin öljyvaltioihin.
+
+Me rakastamme sivistystä ja tietoa. Meille totuudella on itseisarvo, ei vain välinearvo. Ihmiskunnan tulevaisuuden määrittää sivistys - joko sen kukoistus tuottaa meille valoisan tulevaisuuden, tai sen rappio tuottaa ihmiskunnan tuhon. Ja me haluamme rakentaa sen valoisan tulevaisuuden, uuden sivistyksen tuoman kultakauden. Olemme vastavoima halvalle populismille ja lyhytnäköiselle politiikalle, joka murentaa liberaalin demokratian perustaa. Kun monet muut vajoavat kohti pimeyttä, me sanomme että se ei meille käy, ja toteamme: Me sosiaaliliberaalit kannamme valistuksen soihtua, jatkaen sen perintöä kohti uutta kukoistusta!
+
+Jokainen ihminen on samanarvoinen, se on arvojemme ja hyvän yhteiskunnan perusta. Tämän hyväksyminen on myös parhaan yhteiskuntamuodon, eli liberaalin demokratian, ehdoton edellytys. Liberaali demokratia ei kuitenkaan selviä ilman puolustajia. Ja me emme peräänny kutsusta, vaan puolustamme liberaaleja arvoja niitä vastustavilta voimilta! Me puolustamme itsenäistä ja vapaata mediaa kaikenlaista poliittista painostusta vastaan. Me kunnioitamme yksilönvapauksia, puolustamme sananvapautta, oikeusvaltiota ja perustuslakia. Nämä instituutiot ovat itseisarvoisen tärkeitä, sillä liberaalia demokratiaa ei voi olla olemassa ilman niiden riippumatonta olemassaoloa. Meille liberaali demokratia ei ole kaupan!
+
+Tasa-arvoiset ja sivistyneet ihmiset joille valta on jaettu tasaisesti on paras tapa järjestää yhteiskunta. Tästä syystä me uskomme paitsi demokratian, niin myös markkinoiden voimaan, markkinoiden hajauttaessa päätöksenteon siihen osallistuvien kesken. Mutta, toisinkuin jotkut kauniista haavekuvista sokaistuneet, emme usko säätelemättömiin markkinoihin. Markkinat ovat tehokkaita, mutta tehokkuus ilman suuntaa on tie tuhoon. Me vaadimme ja rakennamme markkinataloutta, jossa ekologiset ja sosiaaliset ulkoisvaikutukset hinnoitellaan oikein, ja markkinahäiriöt tunnistetaan. Vasta silloin markkinat palvelevat ihmistä, eikä päinvastoin. On julkisen vallan tehtävä suunnata markkinoiden voima hyvän luomiseen, maailman tuhoamisen sijaan.
+
+Maailma on kriisissä, mutta sen ei tarvitse olla. Kaikki me voimme vielä valita toisin, ja johtaa muutosta koko ihmiskunnalle. Ihmiskunta voi valita sivistyksen valaiseman polun loistokkaaseen tulevaisuuteen, ja se on meidän valintamme pimeyden sijaan. Meillä on kaikki tieto ja kaikki työkalut hyvän tulevaisuuden tekemiseksi, meidän tarvitsee vain järjestäytyä ja ryhtyä toimeen. Me kutsummekin ihan kaikki mukaan tekemään sellaista muutosta, jonka voimme ylpeänä jättää tuleville sukupolville!

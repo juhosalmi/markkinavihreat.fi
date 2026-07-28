@@ -1,0 +1,92 @@
+---
+locale: fi
+title: Lisää markkinoita!
+description: Viisi ehdotusta, joilla markkinamekanismi valjastetaan ratkaisemaan liikenteen, kaupunkitilan, julkisten hankintojen ja maankäytön ongelmia.
+order: 1
+---
+
+Poliitikan kankeus, talouden tehottomuus ja vanhojen toimijoiden suojelu ovat seisauttaneet Suomen. On aika valjastaa markkinamekanismi ratkaisemaan talouden, ilmaston ja kaupunkien haasteita tehokkaammin.
+
+## Markkinatalous ratkaisee ongelmia joita sille asetamme
+
+Markkinatalous on tehokas väline, mutta markkinoiden säännöt ratkaisevat sen, mitä tehokkuudella saavutetaan. Tällä hetkellä käytämme markkinoita osin hyvin, mutta joiltakin osin yhteisen hyvän kustannuksella. Lisäksi osa toimijoista on edelleen rakenteellisesti suojattu aidosti kilpailluilta markkinoilta. Tähän haluamme muutoksen!
+
+Liian pitkään markkinamyönteisillä oli Suomessa valittavanaan vain huonoja vaihtoehtoja. Vanhojen puolueiden linjaa kuvaa **pro-business-politiikka** eli vakiintuneiden toimijoiden etujen varjeleminen ja tehottoman liiketoiminnan tekohengitys. Se ei ole tervettä kilpailua suosivaa markkinamyönteisyyttä, vaan uusien toimijoiden markkinoille pääsyn vaikeuttamista ja talouden tarpeellisen uudistumisen eli luovan tuhon estämistä.
+
+Me tahdomme edistää parempaa **pro-market-politiikkaa**, joka helpottaa uusien toimijoiden ja terveen kilpailun syntymistä. Se ei kuitenkaan tarkoita markkinoiden sokeaa vapauttamista, vaan markkinoiden ohjaamista ratkaisemaan oikeita ongelmia.
+
+Tämä tarkoittaa, että haitat, kuten saastuttaminen, luonnon kuormitus, ruuhkat, tai julkisen kaupunkitilan varaaminen, täytyy hinnoitella. Kun ulkoisvaikutuksilla on oikea hintalappu, yrityksille ja kuluttajille syntyy jatkuva kannustin vähentää haittoja. Markkinat ohjaavat toimintaa usein tehokkaammin kuin poliitikkojen keskusjohtoinen mikromanageeraus. Poliitikkojen rooli on määritellä tavoitteita ja pelisääntöjä markkinoille, mutta jättää kilpailulle ja innovaatioille tilaa löytää parhaat ratkaisut.
+
+Samalla korjaamme nykyisen epäoikeudenmukaisuuden: kun haittojen aiheuttaja maksaa enemmän, muiden veronmaksajien taakka kevenee. Vastuullisuus muuttuu taloudelliseksi eduksi. Tämä avaa markkinoita kestävälle liiketoiminnalle ja uusille yrityksille.
+
+**Vihreät on Suomen johtava markkinaliberaali puolue.** Emme rakenna talouspolitiikkaamme vanhojen rakenteiden tai yksittäisten yritysryhmien suojelemisen varaan, vaan puolustamme avointa kilpailua, uusia toimijoita ja toimivia markkinoita.
+
+Toisin kuin suurilla oikeisto- ja vasemmistopuolueilla, meillä ei ole kytkyjä vanhoihin rakenteisiin tai yrityksiin, joita suojella. Tämä näkyy vanhoilla suurilla puolueilla haluttomuutena leikata säilyttäviä yritystukia.
+
+Me markkinavihreät haluamme lisää markkinoita sinne, missä poliittinen vasemmisto liian yksityiskohtaisella sääntelyllään ja poliittinen oikeisto pro-business-politiikallaan epäonnistuu. Samalla haluamme rakentaa markkinoita, jotka palvelevat paremmin ihmisiä ja ympäristöä.
+
+Esitämme viisi toimenpidettä tilanteen korjaamiseksi:
+
+## Vaatimus 1/5: Lisää markkinoita liikenteeseen
+
+Tällä hetkellä veronmaksajat tukevat maakuntalentoja [kymmenillä miljoonilla](https://yle.fi/a/74-20162950) euroilla vuosittain. Tämä aiheuttaa monenlaisia ongelmia, kuten ylimääräisiä ilmastopäästöjä ja rahan tuhlaamista puolityhjien lentojen muodossa. Se myös vääristää kilpailua eri kulkumuotojen välillä ja asettaa kaupungit eriarvoiseen asemaan: toisten maakuntalentoja tuetaan vain osittain, samalla kun toisten lennot valtio maksaa täysimääräisesti.
+
+Julkisen vallan tehtävä ei ole ylläpitää kysyntää liikennemuodolle, joka ei pärjää markkinaehtoisesti, vaan varmistaa, että eri liikennemuodot kilpailevat mahdollisimman tasapuolisilla pelisäännöillä.
+
+Kaikkien kulkumuotojen autosta ja junasta aina lentokoneeseen saakka tulee perustua reilulle kilpailulle, eri kulkumuotojen aiheutetut haitat huomioonottaen. Valinnan tulee olla yksilön, ei valtion. Jos joku haluaa lentää Jyväskylästä Helsinkiin, sen voi tehdä omalla kustannuksellaan ilman, että julkinen maksaa.
+
+## Vaatimus 2/5: Lisää markkinoita julkisiin hankintoihin
+
+Julkinen sektori on Suomessa valtava ostaja. Julkisia hankintoja tehdään vuosittain miljardeilla euroilla, joten niillä on suuri vaikutus koko kansantalouteen ja markkinoiden toimintaan. Kun hankinnat tehdään hyvin, ne lisäävät kilpailua, kasvattavat yrityksiä, parantavat palveluja ja ohjaavat markkinoita vastuullisempiin ratkaisuihin. Kun ne tehdään huonosti, ne lukitsevat julkisen sektorin vanhoihin toimittajiin, nostavat kustannuksia ja sulkevat haastajat ulos.
+
+KKV:n mukaan julkisissa hankinnoissa on "hälyttävän vähän kilpailua": noin puolessa kilpailutuksista tarjouksia tulee enintään kolme, ja vuosittain yli tuhat hankintaa saa vain yhden tarjouksen. Kun kilpailua on vähän, julkisen sektorin neuvotteluasema heikkenee ja riski liian korkeista kustannuksista kasvaa. Aidosti toimiva kilpailu auttaa varmistamaan, että hankinnat ohjautuvat niille yrityksille, jotka pystyvät tuottamaan palvelut laadukkaasti, vastuullisesti ja kustannustehokkaasti.
+
+Liian usein julkiset hankinnat rakennetaan tavalla, jossa vain suuret ja vakiintuneet toimijat voivat pärjätä. Hankinnat ovat liian suuria kokonaisuuksia, referenssivaatimukset suosivat vanhoja toimittajia ja kilpailutukset määrittelevät ratkaisun niin tarkasti, ettei yrityksille jää tilaa innovoida. Tämä ei ole aitoa markkinataloutta, vaan kilpailun näennäistä järjestämistä.
+
+Markkinavihreä ratkaisu on avata julkiset hankinnat aidommalle kilpailulle. Hankintoja pitää pilkkoa järkevästi osiin, jotta myös pk-yritykset ja kasvuyritykset voivat osallistua. Turhia referenssi- ja liikevaihtovaatimuksia on kevennettävä silloin, kun ne eivät ole aidosti relevantteja. Julkisen sektorin pitää käydä enemmän markkinavuoropuhelua ennen kilpailutuksia, jotta se ei vahingossa rakenna hankintaa vain yhden vanhan toimittajan näköiseksi.
+
+Samalla hankinnoissa pitää palkita vastuullisia toimijoita. Julkisen sektorin ei pidä katsoa vain halvinta hankintahintaa, vaan laatua, elinkaarta, vaikuttavuutta, ja vastuullisuutta markkinalähtöisesti.
+
+## Vaatimus 3/5: Lisää markkinoita kaupunkiliikenteeseen
+
+Eritoten pääkaupunkiseudulla teiden ruuhkautuminen on ollut kasvava ongelma jo pidempään. Tämän vuoksi on kaavailtu [jopa 1,4 miljardia maksavan](https://yle.fi/a/3-10970944) keskustatunnelin rakentamista, mikä nostaisi alueen kunnallisveroastetta merkittävästi. Tunneli tulisi tehdä verorahoilla, sillä jos se rahoitettaisiin käyttömaksuilla, hinta olisi niin kova ettei juuri kukaan sitä käyttäisi (2013 arvio [7,5 € ajokertaa kohden](https://www.hs.fi/pkseutu/art-2000002617497.html)).
+
+Sen sijaan, että louhitaan miljarditunneli peruskallioon, on paljon helpompaa ja järkevämpää ratkaista teiden ruuhkautuminen markkinamekanismia käyttämällä. Dynaamiset tienkäyttömaksut siirtävät parhaan ratkaisun valitsemisen teiden käyttäjille itselleen. Voit valita autoilun aamun työmatkaliikenteessä jos koet sen muutaman euron tienkäyttömaksun arvoiseksi. Korvauksena saat merkittävästi sujuvamman liikenteen ja nopeamman kulkemisen, osan ihmisistä siirtyessä käyttämään muita kulkumuotoja. Tämän lisäksi osa matkoista jää kokonaan tekemättä, jos niitä ei koeta muutaman euron arvoisiksi.
+
+Kokemukset tienkäyttömaksuista ovat olleet niin myönteisiä, ettei yksikään niitä käyttöön ottanut kaupunki ole myöhemmin luopunut niistä. Esimerkiksi Tukholmassa kokeiltiin tienkäyttömaksuja 7 kuukauden ajan vuonna 2006. Maksut vähensivät ruuhkia ja paransivat ilmanlaatua, joten kaupungin asukkaat äänestivät kansanäänestyksessä tienkäyttömaksujen vakinaistamisen puolesta seuraavana vuonna. Myös autoilijat arvostavat sujuvaa liikennettä niin paljon, että kun hyödyt on kerran koettu, takaisin entiseen ei ole haluttu palata.
+
+**Mahdollistetaan tienkäyttömaksujen käyttöönotto myös meillä, jotta kasvavilla kaupungeilla on käytössään enemmän työkaluja tehdä järkevämpää, markkinalähtöisempää liikennepolitiikkaa.**
+
+## Vaatimus 4/5: Lisää markkinoita kaupunkitilaan
+
+Suomalaisissa kaupungeissa tyypillisesti vaaditaan rakentajilta tietty määrä autopaikkoja uusia rakennuksia rakennettaessa. Tämä pysäköintinormi tarkoittaa käytännössä sitä, että markkinoilta piilotetaan autopaikkojen todellinen hinta.
+
+Pysäköintipaikan rakentaminen Helsingin ydinkeskustaan maksaa kymmeniä tuhansia euroja. Tämä kustannus on kuitenkin piilotettu asuntojen ja toimitilojen hintoihin, eivätkä autoilijat usein maksa sitä suoraan. Seurauksena on markkinavääristymä: julkinen kaupunkitila ja kalliit rakennuskustannukset subventoidaan autoilulle muiden kustannuksella, myös heidän, jotka kulkevat pyörällä tai joukkoliikenteellä.
+
+Pysäköintinormi myös nostaa asumisen hintaa. Kun jokaisen uuden asuinrakennuksen on rakennettava normin mukainen määrä autopaikkoja riippumatta asukkaiden todellisesta tarpeesta, rakentamisen hinta kasvaa ja kustannukset siirtyvät lopulta asuntojen hintoihin. Pahimmillaan parkkihallin rakentaminen maksaa asukkaille enemmän kuin he olisivat valmiita maksamaan autopaikasta vapailla markkinoilla.
+
+Parempaan lopputulokseen päästäisiin siirtämällä päätös pysäköintipaikkojen määrästä markkinoille: kun pysäköintinormi puretaan, rakentajat ja asukkaat saavat itse päättää, kuinka paljon autopaikkoja tarvitaan. Alueilla, joissa joukkoliikenne on hyvä, autopaikkoja rakennetaan vähemmän ja asuminen halpenee. Alueilla, joissa auto on välttämätön, markkinat tuottavat autopaikkoja kysynnän mukaan. Kaupunkitila vapautuu tehokkaampaan käyttöön, asumisen hinta laskee ja liikkuminen ohjautuu markkinaehtoisesti.
+
+Pysäköintinormin purku on esimerkki siitä, miten markkinoiden vääristymiä poistamalla voimme saada sekä taloudellisesti tehokkaamman että inhimillisemmän kaupungin, samalla vähentäen tarpeettoman yksityiskohtaista sääntelyä.
+
+## Vaatimus 5/5: Lisää markkinoita metsiin ja maatalouteen
+
+Ilmastopolitiikan epäonnistuminen on johtanut huonoihin kannustimiin ja siihen, että veronmaksajat joutuvat maksamaan vanhojen teollisuusalojen haitallisen toiminnan seurauksista.
+
+Tämä koskettaa erityisesti maankäyttösektoria ja sen osuutta ilmastotavoitteista. Metsien ja maatalousmaan päästöt ovat muodostuneet isoksi ongelmaksi, ja toimet odottavat nyt poliitikoilta tahtoa ja rohkeutta tehdä parannuksia tilanteeseen.
+
+Käytännössä tämä on johtamassa siihen, että esimerkiksi metsäteollisuuden aiheuttamien ilmastopäästöjen kustannukset ovat lankeamassa [veronmaksajien maksettavaksi](https://yle.fi/a/74-20105267). Tämä aiheuttaa on ennen kaikkea merkittävän kannustinongelman, sillä kun veronmaksajat maksavat laskun, ei metsäteollisuudella ole taloudellista kannustinta muuttaa toimintaansa.
+
+Koska ratkaisut on jätetty poliitikkojen keskinäisten lehmänkauppojen ja lobbareiden varaan, tehokkaat toimet eivät etene ja Suomen nielut murenevat. Maankäyttösektori pitää kytkeä osaksi kovaa, markkinaehtoista päästökauppajärjestelmää. Kun hiilitaseelle asetetaan selkeä markkinahinta, markkinat reagoivat ja löytävät järkevimmät ratkaisut. Tällä tavalla myös metsäteollisuuden markkinointipuhe maailman parhaasta metsänhoidosta toteutuu entistä paremmin.
+
+**Luodaan markkinat hiilensidonnalle ja luonnon ennallistamiselle. Kun hiilen sidonnalle syntyy rahallinen arvo, voivat metsänomistajat ja maaseudun yrittäjät saada uusia tulonlähteitä luonnon kannalta kestävistä ratkaisuista.** Haitallinen ja tehoton suometsien ojitus menettää kannattavuutensa, kun taas metsien jatkuva kasvatus muuttuu kannattavaksi ilman yhtäkään tukihimmeliä. Hiilen tehokkaasta sidonnasta tulee uusi, tuottava liiketoiminnan muoto. Kun saastuttaja maksaa, muut eivät enää joudu kattamaan saastuttamisen kuluja omasta pussistaan.
+
+## Yhteenveto: markkinat ratkaisevat tehokkaammin ja oikeudenmukaisemmin
+
+Me emme usko säätelemättömään villiin länteen, mutta emme myöskään usko keskussuunnitteluun tai poliitikkojen kaikkitietävyyteen erityisesti käytettävien keinojen osalta. Kun paljon haittoja aiheuttavalle toiminnalle, kuten fossiilitaloudelle tai kaupunkitilan ylikulutukselle, asetetaan todellinen markkinahinta, kannustimet kohdistuvat vihdoin oikein.
+
+Kun markkinat hoitavat hinnoittelun, vastuuttomuudesta lasku ei enää päädy muiden maksettavaksi ja lopetamme nykyisen rosvouksen, jossa vastuuttomuutta tuetaan muiden pussista. **Saastuttaja maksaa, ja vähän haittoja aiheuttava säästää. Se on sekä oikeudenmukaista että taloudellisesti tehokasta.**
+
+Poliitikkojen tehtävä on antaa raamit ja määrittää pelisäännöt, ja markkinoiden tehtävä on hoitaa loput dynaamisesti ja tehokkaasti. Hyvin toimiva markkinatalous on väline rakentaa kestävämpää, vauraampaa ja inhimillisempää yhteiskuntaa. Markkinamekanismi ei ole taikasauva, mutta nykytilanteessa sen tarjoamia mahdollisuuksia ei hyödynnetä riittävästi.
+
+Tule mukaan kanssamme tekemään Suomeen parempaa markkinataloutta, joka työskentelee entistä enemmän yhteisen hyvinvoinnin eteen!
