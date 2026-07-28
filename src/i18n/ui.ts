@@ -17,6 +17,7 @@ export const ui = {
     'programs.empty': 'Ehdotuksia ei vielä ole julkaistu.',
     'programs.quotesHeading': 'Ääniä markkinavihreiltä',
     'contact.whatsappCta': 'Liity markkinavihreiden avoimeen WhatsApp-ryhmään',
+    'contact.joinCta': 'Liity Vihreisiin',
     'contact.mediaHeading': 'Yhteystiedot medialle',
   },
   sv: {
@@ -35,6 +36,7 @@ export const ui = {
     'programs.empty': 'Inga förslag har publicerats än.',
     'programs.quotesHeading': 'Röster från de marknadsgröna',
     'contact.whatsappCta': 'Gå med i marknadsgrönas öppna WhatsApp-grupp',
+    'contact.joinCta': 'Gå med i De Gröna',
     'contact.mediaHeading': 'Kontaktuppgifter för media',
   },
   en: {
@@ -53,6 +55,7 @@ export const ui = {
     'programs.empty': 'No suggestions have been published yet.',
     'programs.quotesHeading': 'Voices from the market greens',
     'contact.whatsappCta': "Join the market greens' open WhatsApp group",
+    'contact.joinCta': 'Join the Greens',
     'contact.mediaHeading': 'Media contact',
   },
 } as const

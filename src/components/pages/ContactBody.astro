@@ -11,6 +11,7 @@ interface Props {
 const { locale } = Astro.props
 const copy = contact[locale]
 const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
+const JOIN_URL = 'https://www.vihreat.fi/liity/'
 ---
 
 <BaseLayout
@@ -24,6 +25,16 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
     <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
 
     <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      <a
+        href={JOIN_URL}
+        target="_blank"
+        rel="noopener"
+        class="card bg-musta text-kerma block hover:-translate-y-1 sm:col-span-2"
+      >
+        <h2 class="text-lg font-extrabold">Vihreät</h2>
+        <p class="mt-2">{t(locale, 'contact.joinCta')} →</p>
+      </a>
+
       <div class="card bg-surface-greige">
         <h2 class="text-lg font-extrabold">{t(locale, 'contact.mediaHeading')}</h2>
         <p class="mt-2">Lauri Lavanti</p>
