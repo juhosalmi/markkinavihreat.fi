@@ -29,28 +29,53 @@ const iconFor: Record<string, string> = {
 }
 ---
 
-<div class="rounded-card bg-surface-dark-green text-kerma overflow-hidden">
-  <img src={photo} alt={name} class="aspect-square w-full object-cover" loading="lazy" />
-  <div class="p-6">
-    <h3 class="text-lg font-extrabold">{name}</h3>
-    {
-      candidateBadge && (
-        <span class="text-vihrea mt-1 inline-block text-xs font-semibold">{candidateBadge}</span>
-      )
-    }
-    <div class="text-kerma/90 mt-2 space-y-2 text-sm [&_a]:underline">
-      <slot />
-    </div>
-    {
-      links.length > 0 && (
-        <div class="mt-4 flex flex-wrap gap-3 text-lg">
-          {links.map((link) => (
-            <a href={link.url} target="_blank" rel="noopener" aria-label={link.label ?? link.type}>
-              <i class={iconFor[link.type] ?? 'fa-solid fa-link'} aria-hidden="true" />
-            </a>
-          ))}
-        </div>
-      )
-    }
+<div
+  class="rounded-card bg-surface-dark-green flex flex-col gap-[14px] border border-white/[0.14] p-[28px] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)]"
+>
+  <img
+    src={photo}
+    alt={name}
+    loading="lazy"
+    class="rounded-t-card bg-vihrea-tumma -m-[28px] mb-0 aspect-[3/4] w-[calc(100%+56px)] flex-shrink-0 object-cover object-top"
+  />
+  <h3 class="text-kerma mt-[10px] text-[24px] leading-[1.1] font-extrabold tracking-[-0.01em]">
+    {name}
+  </h3>
+  {
+    candidateBadge && (
+      <span class="bg-kerma text-musta self-start rounded-[20px] px-[10px] py-[5px] text-[12px] font-semibold tracking-[0.01em]">
+        {candidateBadge}
+      </span>
+    )
+  }
+  <div class="text-kerma/[0.92] flex-1 text-[16px] leading-[1.55] [&_a]:underline">
+    <slot />
   </div>
+  {
+    links.length > 0 && (
+      <div class="mt-1 flex flex-wrap gap-2">
+        {links.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            aria-label={link.label ?? link.type}
+            class:list={[
+              'text-kerma inline-flex items-center gap-1.5 py-1 text-[13px] font-medium opacity-65 hover:opacity-100',
+              link.type === 'website' && 'rounded-md bg-white/10 px-2.5',
+            ]}
+          >
+            <i
+              class:list={[
+                iconFor[link.type] ?? 'fa-solid fa-link',
+                'w-[18px] shrink-0 text-center text-[18px]',
+              ]}
+              aria-hidden="true"
+            />
+            {link.label}
+          </a>
+        ))}
+      </div>
+    )
+  }
 </div>
