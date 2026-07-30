@@ -1,0 +1,81 @@
+---
+interface SocialLink {
+  type: string
+  url: string
+  label?: string
+}
+
+interface Props {
+  name: string
+  photo: string
+  candidateBadge?: string
+  links: SocialLink[]
+}
+
+const { name, photo, candidateBadge, links } = Astro.props
+
+const iconFor: Record<string, string> = {
+  website: 'fa-solid fa-globe',
+  mastodon: 'fa-brands fa-mastodon',
+  bluesky: 'fa-brands fa-bluesky',
+  threads: 'fa-brands fa-threads',
+  linkedin: 'fa-brands fa-linkedin',
+  instagram: 'fa-brands fa-instagram',
+  facebook: 'fa-brands fa-facebook',
+  tiktok: 'fa-brands fa-tiktok',
+  x: 'fa-brands fa-x-twitter',
+  youtube: 'fa-brands fa-youtube',
+  reddit: 'fa-brands fa-reddit',
+}
+---
+
+<div
+  class="rounded-card bg-surface-dark-green flex flex-col gap-[14px] border border-white/[0.14] p-[28px] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)]"
+>
+  <img
+    src={photo}
+    alt={name}
+    loading="lazy"
+    class="rounded-t-card bg-vihrea-tumma -m-[28px] mb-0 aspect-[3/4] w-[calc(100%_+_56px)] max-w-none flex-shrink-0 object-cover object-top"
+  />
+  <h3 class="text-kerma mt-[10px] text-[24px] leading-[1.1] font-extrabold tracking-[-0.01em]">
+    {name}
+  </h3>
+  {
+    candidateBadge && (
+      <span class="bg-kerma text-musta self-start rounded-[20px] px-[10px] py-[5px] text-[12px] font-semibold tracking-[0.01em]">
+        {candidateBadge}
+      </span>
+    )
+  }
+  <div class="text-kerma/[0.92] flex-1 text-[16px] leading-[1.55] [&_a]:underline">
+    <slot />
+  </div>
+  {
+    links.length > 0 && (
+      <div class="mt-1 flex flex-wrap gap-2">
+        {links.map((link) => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            aria-label={link.label ?? link.type}
+            class:list={[
+              'text-kerma inline-flex items-center gap-1.5 py-1 text-[13px] font-medium opacity-65 hover:opacity-100',
+              link.type === 'website' && 'rounded-md bg-white/10 px-2.5',
+            ]}
+          >
+            <i
+              class:list={[
+                iconFor[link.type] ?? 'fa-solid fa-link',
+                'w-[18px] shrink-0 text-center text-[18px]',
+              ]}
+              aria-hidden="true"
+            />
+            {link.label}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens ported verbatim from vaihdavihreisiin.fi (style.css / style-v2.css)
+ * for exact visual parity between the two sites.
+ */
+@theme {
+  --color-vihrea: #6eb82a;
+  --color-vihrea-tumma: #2e5e1a;
+  --color-metsa: #1a3a1a;
+  --color-kerma: #efeee9;
+  --color-kerma-syva: #e2e1db;
+  --color-surface-greige: #e8e5dd;
+  --color-surface-green: #dde3d4;
+  --color-surface-dark-green: #294829;
+  --color-terra: #c95b3d;
+  --color-aurinko: #e8b931;
+  --color-taivas: #8ab6d6;
+  --color-musta: #161a14;
+  --color-harmaa: #6b6f66;
+  --color-vihreat-brand: #006845;
+
+  --font-sans: 'Hanken Grotesk', system-ui, sans-serif;
+
+  --radius-card: 16px;
+
+  --breakpoint-xs: 30rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-kerma);
+    color: var(--color-musta);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility btn {
+  @apply rounded-card inline-flex items-center gap-2 px-6 py-3 font-semibold transition;
+}
+
+@utility card {
+  @apply rounded-card border border-black/[0.08] p-6 shadow-[0_1px_0_rgba(255,255,255,.45)_inset,0_10px_24px_rgba(22,26,20,.05)] sm:p-8;
+}
+
+@layer components {
+  .content-max {
+    max-width: 800px;
+  }
+
+  .btn-primary {
+    @apply btn bg-vihrea text-musta hover:-translate-y-0.5 hover:shadow-lg;
+  }
+
+  .btn-contained-sm {
+    @apply btn bg-musta text-kerma rounded-full px-4 py-2 text-sm hover:-translate-y-0.5;
+  }
+
+  .btn-contained-lg {
+    @apply btn bg-musta text-kerma rounded-full px-8 py-4 hover:-translate-y-0.5;
+  }
+
+  .btn-outline-sm {
+    @apply btn border-musta hover:bg-musta hover:text-kerma rounded-full border bg-transparent px-4 py-2 text-sm;
+  }
+
+  .btn-outline-medium {
+    @apply btn border-musta hover:bg-musta hover:text-kerma rounded-full border bg-transparent px-6 py-3;
+  }
+
+  .btn-outline-lg {
+    @apply btn border-musta hover:bg-musta hover:text-kerma rounded-full border bg-transparent px-8 py-4;
+  }
+
+  /* Styles Markdown output from rendered content collection entries. */
+  .prose-body h2 {
+    @apply mt-10 text-2xl first:mt-0;
+  }
+
+  .prose-body strong {
+    @apply font-semibold;
+  }
+
+  .prose-body a {
+    @apply text-vihrea-tumma underline;
+  }
+}

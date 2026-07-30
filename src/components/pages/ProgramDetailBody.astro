@@ -1,0 +1,53 @@
+---
+import { getEntry, render, type CollectionEntry } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import QuoteBand from '../QuoteBand.astro'
+import ShuffleOnLoad from '../ShuffleOnLoad.astro'
+import { parseLocalizedId, type Locale } from '../../lib/content'
+import { t } from '../../i18n/ui'
+
+interface Props {
+  locale: Locale
+  program: CollectionEntry<'programs'>
+}
+
+const { locale, program } = Astro.props
+const { Content } = await render(program)
+const path = `/ehdotukset/${parseLocalizedId(program.id).slug}/`
+
+const citations = await Promise.all(
+  program.data.citations.map(async (citation) => {
+    const person = await getEntry('team', `${citation.person}.${locale}`)
+    if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
+    return { quote: citation.quote, name: person.data.name, photo: person.data.photo }
+  }),
+)
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${program.data.title} — markkinavihreat.fi`}
+  description={program.data.description}
+  path={path}
+>
+  <article class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{program.data.title}</h1>
+    <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">
+      <Content />
+    </div>
+  </article>
+
+  {
+    citations.length > 0 && (
+      <section>
+        <h2 class="sr-only">{t(locale, 'programs.quotesHeading')}</h2>
+        <div id="program-citations" class="flex flex-col divide-y divide-white/10">
+          {citations.map((citation) => (
+            <QuoteBand name={citation.name} photo={citation.photo} quote={citation.quote} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+  <ShuffleOnLoad selector="#program-citations" />
+</BaseLayout>

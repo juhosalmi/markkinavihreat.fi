@@ -1,0 +1,53 @@
+---
+import { getCollection, render } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import PersonCard from '../PersonCard.astro'
+import ShuffleOnLoad from '../ShuffleOnLoad.astro'
+import { forLocale, type Locale } from '../../lib/content'
+import { about } from '../../i18n/pages'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const copy = about[locale]
+
+const allTeam = await getCollection('team')
+const team = forLocale(allTeam, locale).sort((a, b) => a.data.order - b.data.order)
+const rendered = await Promise.all(team.map((entry) => render(entry)))
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/ketka/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
+    <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
+
+    <div
+      id="about-grid"
+      class="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[28px]"
+    >
+      {
+        team.map((person, i) => {
+          const { Content } = rendered[i]
+          return (
+            <PersonCard
+              name={person.data.name}
+              photo={person.data.photo}
+              candidateBadge={person.data.candidateBadge}
+              links={person.data.links}
+            >
+              <Content />
+            </PersonCard>
+          )
+        })
+      }
+    </div>
+  </section>
+  <ShuffleOnLoad selector="#about-grid" />
+</BaseLayout>

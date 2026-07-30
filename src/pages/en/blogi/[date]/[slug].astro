@@ -1,0 +1,22 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import BlogPostBody from '../../../../components/pages/BlogPostBody.astro'
+import { forLocale, parseLocalizedId } from '../../../../lib/content'
+import { dateSlug } from '../../../../lib/date'
+
+interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('blog')
+  return forLocale(allPosts, 'en').map((post) => ({
+    params: { date: dateSlug(post.data.date), slug: parseLocalizedId(post.id).slug },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+---
+
+<BlogPostBody locale="en" post={post} />

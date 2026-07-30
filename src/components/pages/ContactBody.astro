@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import type { Locale } from '../../lib/content'
+import { contact } from '../../i18n/pages'
+import { t } from '../../i18n/ui'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const copy = contact[locale]
+const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
+const JOIN_URL = 'https://www.vihreat.fi/liity/'
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${copy.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/yhteystiedot/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
+    <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      <a
+        href={JOIN_URL}
+        target="_blank"
+        rel="noopener"
+        class="card bg-musta text-kerma block hover:-translate-y-1 sm:col-span-2"
+      >
+        <h2 class="text-lg font-extrabold">Vihreät</h2>
+        <p class="mt-2">{t(locale, 'contact.joinCta')} →</p>
+      </a>
+
+      <div class="card bg-surface-greige">
+        <h2 class="text-lg font-extrabold">{t(locale, 'contact.mediaHeading')}</h2>
+        <p class="mt-2">Lauri Lavanti</p>
+        <p class="mt-1">
+          <a href="mailto:lauri@laurilavanti.fi" class="text-vihrea-tumma underline"
+            >lauri@laurilavanti.fi</a
+          ><br />
+          <a href="tel:+358407617605" class="text-vihrea-tumma underline">040 761 7605</a>
+        </p>
+      </div>
+
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener"
+        class="card bg-vihrea block hover:-translate-y-1"
+      >
+        <h2 class="text-lg font-extrabold">WhatsApp</h2>
+        <p class="mt-2">{t(locale, 'contact.whatsappCta')} →</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

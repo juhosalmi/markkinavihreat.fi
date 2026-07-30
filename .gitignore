@@ -1,0 +1,26 @@
+# build
+dist/
+.astro/
+
+# deps
+node_modules/
+
+# env
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+
+# wrangler
+.wrangler/
+
+# test artifacts
+coverage/
+playwright-report/
+test-results/
+
+# editor/OS
+.DS_Store
+.vscode/*
+!.vscode/extensions.json

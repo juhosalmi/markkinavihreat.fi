@@ -1,0 +1,31 @@
+---
+import { getEntry, render } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import type { Locale } from '../../lib/content'
+import { manifestoPage } from '../../i18n/pages'
+
+interface Props {
+  locale: Locale
+}
+
+const { locale } = Astro.props
+const copy = manifestoPage[locale]
+
+const entry = await getEntry('manifesto', `manifesto.${locale}`)
+if (!entry) throw new Error(`Missing manifesto content for locale "${locale}"`)
+const { Content } = await render(entry)
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${entry.data.title} — markkinavihreat.fi`}
+  description={copy.metaDescription}
+  path="/manifesti/"
+>
+  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+    <h1 class="text-4xl sm:text-5xl">{entry.data.title}</h1>
+    <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">
+      <Content />
+    </div>
+  </section>
+</BaseLayout>
