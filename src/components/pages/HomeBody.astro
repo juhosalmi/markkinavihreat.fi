@@ -1,5 +1,8 @@
 ---
+import { getEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import QuoteBand from '../QuoteBand.astro'
+import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { localePath, type Locale } from '../../lib/content'
 import { home } from '../../i18n/pages'
 
@@ -10,6 +13,14 @@ interface Props {
 const { locale } = Astro.props
 const copy = home[locale]
 const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
+
+const citations = await Promise.all(
+  copy.citations.map(async (citation) => {
+    const person = await getEntry('team', `${citation.person}.${locale}`)
+    if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
+    return { quote: citation.quote, name: person.data.name, photo: person.data.photo }
+  }),
+)
 ---
 
 <BaseLayout
@@ -28,12 +39,34 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
     </div>
   </section>
 
+  {
+    citations[0] && (
+      <QuoteBand
+        class="js-quote-band"
+        name={citations[0].name}
+        photo={citations[0].photo}
+        quote={citations[0].quote}
+      />
+    )
+  }
+
   <section class="bg-surface-greige px-4 py-16 sm:px-6">
     <div class="content-max mx-auto">
       <h2 class="text-3xl">{copy.framingTitle}</h2>
       <p class="text-harmaa mt-4 max-w-3xl">{copy.framingBody}</p>
     </div>
   </section>
+
+  {
+    citations[1] && (
+      <QuoteBand
+        class="js-quote-band"
+        name={citations[1].name}
+        photo={citations[1].photo}
+        quote={citations[1].quote}
+      />
+    )
+  }
 
   <section class="px-4 py-16 sm:px-6">
     <div class="content-max mx-auto grid gap-6 sm:grid-cols-2">
@@ -47,6 +80,17 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
       }
     </div>
   </section>
+
+  {
+    citations[2] && (
+      <QuoteBand
+        class="js-quote-band"
+        name={citations[2].name}
+        photo={citations[2].photo}
+        quote={citations[2].quote}
+      />
+    )
+  }
 
   <section class="bg-metsa text-kerma px-4 py-16 sm:px-6">
     <div class="content-max mx-auto">
@@ -84,6 +128,17 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
     </div>
   </section>
 
+  {
+    citations[3] && (
+      <QuoteBand
+        class="js-quote-band"
+        name={citations[3].name}
+        photo={citations[3].photo}
+        quote={citations[3].quote}
+      />
+    )
+  }
+
   <section class="content-max mx-auto px-4 py-16 text-center sm:px-6">
     <h2 class="text-3xl">{copy.joinTitle}</h2>
     <p class="text-harmaa mx-auto mt-4 max-w-xl">{copy.joinBody}</p>
@@ -91,4 +146,6 @@ const WHATSAPP_URL = 'https://chat.whatsapp.com/DFBhxqTOmLRHqGgUzupy7L'
       {copy.joinCta}
     </a>
   </section>
+
+  <ShuffleOnLoad selector=".js-quote-band" />
 </BaseLayout>
