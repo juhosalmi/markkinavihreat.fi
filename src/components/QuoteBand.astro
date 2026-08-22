@@ -3,12 +3,13 @@ interface Props {
   name: string
   photo: string
   quote: string
+  class?: string
 }
 
-const { name, photo, quote } = Astro.props
+const { name, photo, quote, class: className } = Astro.props
 ---
 
-<div class="bg-musta text-kerma px-8 py-20 text-center">
+<div class:list={['bg-musta text-kerma px-8 py-20 text-center', className]}>
   <div
     class="content-max mx-auto flex flex-col items-center gap-8 md:flex-row md:items-center md:text-left"
   >

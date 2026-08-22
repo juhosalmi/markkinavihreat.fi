@@ -1,0 +1,50 @@
+---
+import { renderInlineMarkdown } from '../lib/markdown'
+
+interface Props {
+  /**
+   * `dark` — the framing/summary highlight bands (bg-metsa).
+   * `light` / `tint` — alternating backgrounds for numbered requirement bands.
+   */
+  tone: 'dark' | 'light' | 'tint'
+  /** Eyebrow label above the heading, e.g. "Vaatimus 1 / 5". */
+  label?: string
+  heading: string
+  paragraphs: string[]
+}
+
+const { tone, label, heading, paragraphs } = Astro.props
+
+const TONE_STYLES = {
+  dark: { section: 'bg-metsa text-kerma', prose: 'prose-body-dark', eyebrow: 'text-vihrea' },
+  light: { section: 'bg-kerma text-musta', prose: 'prose-body', eyebrow: 'text-vihreat-brand' },
+  tint: { section: 'bg-surface-green text-metsa', prose: 'prose-body', eyebrow: 'text-metsa' },
+} as const
+
+const styles = TONE_STYLES[tone]
+---
+
+<section class:list={['px-4 py-20 sm:px-6 sm:py-28', styles.section]}>
+  <div class="content-max mx-auto">
+    {label && <p class:list={['text-eyebrow mb-3', styles.eyebrow]}>{label}</p>}
+    <h2 class="text-display mb-8">{heading}</h2>
+    <div class="space-y-4">
+      {
+        paragraphs.map((paragraph, i) => (
+          <p
+            class:list={[
+              styles.prose,
+              tone === 'dark'
+                ? 'text-lg leading-relaxed opacity-90'
+                : i === 0
+                  ? 'text-lg font-medium'
+                  : 'text-base',
+            ]}
+            set:html={renderInlineMarkdown(paragraph)}
+          />
+        ))
+      }
+    </div>
+    <slot />
+  </div>
+</section>
