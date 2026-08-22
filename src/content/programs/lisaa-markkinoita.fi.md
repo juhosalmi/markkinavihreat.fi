@@ -3,6 +3,10 @@ locale: fi
 title: Lisää markkinoita!
 description: Viisi ehdotusta, joilla markkinamekanismi valjastetaan ratkaisemaan liikenteen, kaupunkitilan, julkisten hankintojen ja maankäytön ongelmia.
 order: 1
+heroKicker: Markkinavihreät vaativat
+heroLines:
+  - Lisää
+  - markkinoita!
 citations:
   - person: lauri-nevanpera
     quote: 'Minulle on kunnia-asia puolustaa taloutta uudistavia yrityksiä. Kilpailua vääristävistä yritystuista ja kaavoituspäätöksistä pitää luopua. Enemmän markkinataloutta tarkoittaa reilumpia lähtökohtia taloutta uudistaville yrityksille.'

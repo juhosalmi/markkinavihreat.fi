@@ -1,9 +1,16 @@
 ---
-import { getEntry, render, type CollectionEntry } from 'astro:content'
+import { getEntry, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import ProgramFaq from '../ProgramFaq.astro'
+import ProgramHero from '../ProgramHero.astro'
+import ProgramSection from '../ProgramSection.astro'
 import QuoteBand from '../QuoteBand.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { parseLocalizedId, type Locale } from '../../lib/content'
+import {
+  parseProgramBody,
+  type ProgramSection as ProgramSectionData,
+} from '../../lib/programSections'
 import { t } from '../../i18n/ui'
 
 interface Props {
@@ -12,8 +19,8 @@ interface Props {
 }
 
 const { locale, program } = Astro.props
-const { Content } = await render(program)
 const path = `/ehdotukset/${parseLocalizedId(program.id).slug}/`
+const { leadParagraphs, sections } = parseProgramBody(program.body ?? '')
 
 const citations = await Promise.all(
   program.data.citations.map(async (citation) => {
@@ -22,6 +29,25 @@ const citations = await Promise.all(
     return { quote: citation.quote, name: person.data.name, photo: person.data.photo }
   }),
 )
+
+const JOIN_URL = 'https://www.vihreat.fi/liity/'
+
+// Numbered requirement bands alternate between two backgrounds; the framing
+// intro and closing summary always use the dark highlight band.
+function toneFor(section: ProgramSectionData, requirementPosition: number) {
+  if (section.type === 'requirement') return requirementPosition % 2 === 0 ? 'light' : 'tint'
+  return 'dark'
+}
+
+let requirementPosition = 0
+
+// The join CTA belongs on the closing summary, which is the last "highlight"
+// section — not necessarily the last section overall, since an FAQ block (if
+// present) always comes after it.
+let lastHighlightIndex = -1
+sections.forEach((section, i) => {
+  if (section.type === 'highlight') lastHighlightIndex = i
+})
 ---
 
 <BaseLayout
@@ -29,25 +55,61 @@ const citations = await Promise.all(
   title={`${program.data.title} — markkinavihreat.fi`}
   description={program.data.description}
   path={path}
+  noindex={program.data.unlisted}
 >
-  <article class="content-max mx-auto px-4 py-16 sm:px-6">
-    <h1 class="text-4xl sm:text-5xl">{program.data.title}</h1>
-    <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">
-      <Content />
-    </div>
-  </article>
+  <ProgramHero
+    kicker={program.data.heroKicker}
+    lines={program.data.heroLines}
+    leadParagraphs={leadParagraphs}
+  />
 
   {
-    citations.length > 0 && (
-      <section>
-        <h2 class="sr-only">{t(locale, 'programs.quotesHeading')}</h2>
-        <div id="program-citations" class="flex flex-col divide-y divide-white/10">
-          {citations.map((citation) => (
-            <QuoteBand name={citation.name} photo={citation.photo} quote={citation.quote} />
-          ))}
-        </div>
-      </section>
-    )
+    sections.map((section, i) => {
+      if (section.type === 'faq') {
+        return <ProgramFaq heading={section.heading} items={section.items} />
+      }
+
+      const tone = toneFor(section, section.type === 'requirement' ? requirementPosition++ : 0)
+      const citation = citations[i]
+      return (
+        <>
+          <ProgramSection
+            tone={tone}
+            label={section.type === 'requirement' ? section.label : undefined}
+            heading={section.heading}
+            paragraphs={section.paragraphs}
+          >
+            {i === lastHighlightIndex && (
+              <a href={JOIN_URL} class="btn-contained-lg mt-10 inline-flex">
+                {t(locale, 'programs.joinCta')}
+              </a>
+            )}
+          </ProgramSection>
+          {citation && (
+            <QuoteBand
+              class="js-quote-band"
+              name={citation.name}
+              photo={citation.photo}
+              quote={citation.quote}
+            />
+          )}
+        </>
+      )
+    })
   }
-  <ShuffleOnLoad selector="#program-citations" />
+
+  {
+    citations
+      .slice(sections.length)
+      .map((citation) => (
+        <QuoteBand
+          class="js-quote-band"
+          name={citation.name}
+          photo={citation.photo}
+          quote={citation.quote}
+        />
+      ))
+  }
+
+  <ShuffleOnLoad selector=".js-quote-band" />
 </BaseLayout>

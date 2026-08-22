@@ -3,6 +3,10 @@ locale: sv
 title: Mer marknad!
 description: Fem förslag som tar marknadsmekanismen i bruk för att lösa problem inom trafik, stadsrum, offentlig upphandling och markanvändning.
 order: 1
+heroKicker: De marknadsgröna kräver
+heroLines:
+  - Mer
+  - marknad!
 citations:
   - person: lauri-nevanpera
     quote: 'Det är en hederssak för mig att försvara företag som förnyar ekonomin. Konkurrenssnedvridande företagsstöd och planläggningsbeslut måste avvecklas. Mer marknad betyder rättvisare förutsättningar för företag som förnyar ekonomin.'

@@ -1,14 +1,17 @@
 ---
+import { assetPath } from '../lib/content'
+
 interface Props {
   name: string
   photo: string
   quote: string
+  class?: string
 }
 
-const { name, photo, quote } = Astro.props
+const { name, photo, quote, class: className } = Astro.props
 ---
 
-<div class="bg-musta text-kerma px-8 py-20 text-center">
+<div class:list={['bg-musta text-kerma px-8 py-20 text-center', className]}>
   <div
     class="content-max mx-auto flex flex-col items-center gap-8 md:flex-row md:items-center md:text-left"
   >
@@ -16,7 +19,7 @@ const { name, photo, quote } = Astro.props
       class="rounded-card h-[clamp(140px,85vw,280px)] w-[clamp(93px,56.7vw,187px)] flex-shrink-0 overflow-hidden"
     >
       <img
-        src={photo}
+        src={assetPath(photo)}
         alt={name}
         loading="lazy"
         class="block h-full w-full object-cover object-top"

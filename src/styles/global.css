@@ -52,6 +52,30 @@
   @apply rounded-card border border-black/[0.08] p-6 shadow-[0_1px_0_rgba(255,255,255,.45)_inset,0_10px_24px_rgba(22,26,20,.05)] sm:p-8;
 }
 
+/* Large display headings, e.g. program section h2s. */
+@utility text-display {
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  font-size: clamp(2.25rem, 5.5vw, 4rem);
+}
+
+/* The biggest display heading, reserved for page hero h1s. */
+@utility text-display-lg {
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-size: clamp(2.5rem, 9vw, 5.75rem);
+}
+
+/* Small uppercase label, e.g. a hero kicker or a section eyebrow. */
+@utility text-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
 @layer components {
   .content-max {
     max-width: 800px;
@@ -92,5 +116,14 @@
 
   .prose-body a {
     @apply text-vihrea-tumma underline;
+  }
+
+  /* Same as .prose-body, for paragraphs on a dark (bg-metsa) section. */
+  .prose-body-dark strong {
+    @apply font-semibold;
+  }
+
+  .prose-body-dark a {
+    @apply text-kerma underline;
   }
 }
