@@ -1,6 +1,7 @@
 ---
 import { getEntry, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
+import ProgramFaq from '../ProgramFaq.astro'
 import ProgramHero from '../ProgramHero.astro'
 import ProgramSection from '../ProgramSection.astro'
 import QuoteBand from '../QuoteBand.astro'
@@ -34,11 +35,19 @@ const JOIN_URL = 'https://www.vihreat.fi/liity/'
 // Numbered requirement bands alternate between two backgrounds; the framing
 // intro and closing summary always use the dark highlight band.
 function toneFor(section: ProgramSectionData, requirementPosition: number) {
-  if (section.type === 'highlight') return 'dark'
-  return requirementPosition % 2 === 0 ? 'light' : 'tint'
+  if (section.type === 'requirement') return requirementPosition % 2 === 0 ? 'light' : 'tint'
+  return 'dark'
 }
 
 let requirementPosition = 0
+
+// The join CTA belongs on the closing summary, which is the last "highlight"
+// section — not necessarily the last section overall, since an FAQ block (if
+// present) always comes after it.
+let lastHighlightIndex = -1
+sections.forEach((section, i) => {
+  if (section.type === 'highlight') lastHighlightIndex = i
+})
 ---
 
 <BaseLayout
@@ -46,6 +55,7 @@ let requirementPosition = 0
   title={`${program.data.title} — markkinavihreat.fi`}
   description={program.data.description}
   path={path}
+  noindex={program.data.unlisted}
 >
   <ProgramHero
     kicker={program.data.heroKicker}
@@ -55,8 +65,11 @@ let requirementPosition = 0
 
   {
     sections.map((section, i) => {
+      if (section.type === 'faq') {
+        return <ProgramFaq heading={section.heading} items={section.items} />
+      }
+
       const tone = toneFor(section, section.type === 'requirement' ? requirementPosition++ : 0)
-      const isLastSection = i === sections.length - 1
       const citation = citations[i]
       return (
         <>
@@ -66,7 +79,7 @@ let requirementPosition = 0
             heading={section.heading}
             paragraphs={section.paragraphs}
           >
-            {isLastSection && (
+            {i === lastHighlightIndex && (
               <a href={JOIN_URL} class="btn-contained-lg mt-10 inline-flex">
                 {t(locale, 'programs.joinCta')}
               </a>

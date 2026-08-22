@@ -1,11 +1,12 @@
 ---
 import { renderInlineMarkdown } from '../lib/markdown'
+import type { ProgramParagraph } from '../lib/programSections'
 
 interface Props {
   kicker: string
   /** Display lines of the hero heading; the last line gets the accent color. */
   lines: string[]
-  leadParagraphs: string[]
+  leadParagraphs: ProgramParagraph[]
 }
 
 const { kicker, lines, leadParagraphs } = Astro.props
@@ -26,7 +27,7 @@ const { kicker, lines, leadParagraphs } = Astro.props
     leadParagraphs.map((paragraph) => (
       <p
         class="prose-body mx-auto max-w-[52ch] text-lg font-medium"
-        set:html={renderInlineMarkdown(paragraph)}
+        set:html={renderInlineMarkdown(paragraph.text)}
       />
     ))
   }
