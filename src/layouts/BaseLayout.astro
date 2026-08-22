@@ -10,9 +10,11 @@ interface Props {
   description: string
   /** Path relative to the locale root, e.g. "/manifesti/" — same across all locales. */
   path: string
+  /** For a page that's reachable but intentionally kept out of search results. */
+  noindex?: boolean
 }
 
-const { locale, title, description, path } = Astro.props
+const { locale, title, description, path, noindex = false } = Astro.props
 
 const SITE_URL = 'https://markkinavihreat.fi'
 const localeUrl = (l: Locale) => (l === 'fi' ? `${SITE_URL}${path}` : `${SITE_URL}/${l}${path}`)
@@ -38,7 +40,11 @@ const localeUrl = (l: Locale) => (l === 'fi' ? `${SITE_URL}${path}` : `${SITE_UR
     <link rel="alternate" hreflang="x-default" href={localeUrl('fi')} />
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
     <link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
-    {import.meta.env.NOINDEX === 'true' && <meta name="robots" content="noindex, nofollow" />}
+    {
+      (noindex || import.meta.env.NOINDEX === 'true') && (
+        <meta name="robots" content="noindex, nofollow" />
+      )
+    }
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

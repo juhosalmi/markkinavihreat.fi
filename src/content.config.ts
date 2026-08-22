@@ -66,6 +66,9 @@ const programs = defineCollection({
     // The hero heading's display lines, e.g. ["Lisää", "markkinoita!"] — the
     // last line is rendered in the accent color.
     heroLines: z.array(z.string()).min(1),
+    // Reachable at its own URL, but left out of the /ehdotukset/ index and
+    // the sitemap — for a page that's ready to link to but not to announce.
+    unlisted: z.boolean().default(false),
     citations: z.array(citation).default([]),
   }),
 })

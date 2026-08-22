@@ -9,7 +9,9 @@ Lead paragraph two.
 
 Framing paragraph one.
 
-Framing paragraph two.
+> A pulled quote.
+
+— Some Attribution
 
 ## Vaatimus 1/5: First requirement
 
@@ -24,20 +26,34 @@ Only paragraph.
 ## Yhteenveto: closing heading
 
 Closing paragraph.
+
+## Usein kysytyt kysymykset
+
+**Answered question?**
+The answer.
+
+**Unanswered question?**
 `
 
 describe('parseProgramBody', () => {
   const parsed = parseProgramBody(SAMPLE)
 
-  it('extracts the lead paragraphs before the first heading', () => {
-    expect(parsed.leadParagraphs).toEqual(['Lead paragraph one.', 'Lead paragraph two.'])
+  it('extracts the lead paragraphs before the first heading as text', () => {
+    expect(parsed.leadParagraphs).toEqual([
+      { type: 'text', text: 'Lead paragraph one.' },
+      { type: 'text', text: 'Lead paragraph two.' },
+    ])
   })
 
   it('classifies a heading with no numbering as a highlight section', () => {
     expect(parsed.sections[0]).toEqual({
       type: 'highlight',
       heading: 'Framing heading',
-      paragraphs: ['Framing paragraph one.', 'Framing paragraph two.'],
+      paragraphs: [
+        { type: 'text', text: 'Framing paragraph one.' },
+        { type: 'quote', text: 'A pulled quote.' },
+        { type: 'attribution', text: '— Some Attribution' },
+      ],
     })
   })
 
@@ -48,7 +64,10 @@ describe('parseProgramBody', () => {
       index: 1,
       total: 5,
       heading: 'First requirement',
-      paragraphs: ['Requirement lead.', 'Requirement body.'],
+      paragraphs: [
+        { type: 'text', text: 'Requirement lead.' },
+        { type: 'text', text: 'Requirement body.' },
+      ],
     })
     expect(parsed.sections[2]).toMatchObject({ type: 'requirement', index: 2, total: 5 })
   })
@@ -57,7 +76,18 @@ describe('parseProgramBody', () => {
     expect(parsed.sections[3]).toEqual({
       type: 'highlight',
       heading: 'Closing heading',
-      paragraphs: ['Closing paragraph.'],
+      paragraphs: [{ type: 'text', text: 'Closing paragraph.' }],
+    })
+  })
+
+  it('parses a block of "**Question**" paragraphs as an FAQ section', () => {
+    expect(parsed.sections[4]).toEqual({
+      type: 'faq',
+      heading: 'Usein kysytyt kysymykset',
+      items: [
+        { question: 'Answered question?', answer: 'The answer.' },
+        { question: 'Unanswered question?', answer: '' },
+      ],
     })
   })
 

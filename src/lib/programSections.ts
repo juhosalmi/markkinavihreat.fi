@@ -1,7 +1,13 @@
+export interface ProgramParagraph {
+  /** `quote`/`attribution` are for an inline pull-quote (`> ...` / `— ...`); everything else is `text`. */
+  type: 'text' | 'quote' | 'attribution'
+  text: string
+}
+
 export interface ProgramHighlightSection {
   type: 'highlight'
   heading: string
-  paragraphs: string[]
+  paragraphs: ProgramParagraph[]
 }
 
 export interface ProgramRequirementSection {
@@ -10,14 +16,26 @@ export interface ProgramRequirementSection {
   index: number
   total: number
   heading: string
-  paragraphs: string[]
+  paragraphs: ProgramParagraph[]
 }
 
-export type ProgramSection = ProgramHighlightSection | ProgramRequirementSection
+export interface ProgramFaqItem {
+  question: string
+  /** May be empty — an unanswered question is left out of the accordion by the caller, or shown as-is. */
+  answer: string
+}
+
+export interface ProgramFaqSection {
+  type: 'faq'
+  heading: string
+  items: ProgramFaqItem[]
+}
+
+export type ProgramSection = ProgramHighlightSection | ProgramRequirementSection | ProgramFaqSection
 
 export interface ParsedProgramBody {
   /** Paragraph(s) before the first heading — the hero's lead-in text. */
-  leadParagraphs: string[]
+  leadParagraphs: ProgramParagraph[]
   sections: ProgramSection[]
 }
 
@@ -27,25 +45,43 @@ const REQUIREMENT_HEADING = /^(\S+)\s+(\d+)\/(\d+):\s*(.+)$/
 // "Yhteenveto: ..." / "Summary: ..." — any other "Word: rest" heading. The
 // original site never shows this label in the rendered heading, so we strip it.
 const LABELED_HEADING = /^[^:]+:\s*(.+)$/
+// "**Question?**" optionally followed by a hard-break and its answer — the
+// authoring convention for FAQ sections (see content/programs/*.md).
+const FAQ_ITEM = /^\*\*(.+?)\*\*\s*([\s\S]*)$/
 
-function splitParagraphs(content: string): string[] {
+function splitRawParagraphs(content: string): string[] {
   return content
     .split(/\n{2,}/)
     .map((paragraph) => paragraph.trim())
     .filter(Boolean)
 }
 
+function classifyParagraph(raw: string): ProgramParagraph {
+  if (raw.startsWith('> ')) return { type: 'quote', text: raw.slice(2).trim() }
+  if (raw.startsWith('—')) return { type: 'attribution', text: raw }
+  return { type: 'text', text: raw }
+}
+
 function capitalize(text: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1)
+}
+
+/** A block is an FAQ section once every paragraph in it is a "**Question**" item. */
+function parseFaqItems(rawParagraphs: string[]): ProgramFaqItem[] | null {
+  if (rawParagraphs.length === 0 || !rawParagraphs.every((p) => FAQ_ITEM.test(p))) return null
+  return rawParagraphs.map((p) => {
+    const [, question, answer] = p.match(FAQ_ITEM)!
+    return { question: question.trim(), answer: answer.trim() }
+  })
 }
 
 /**
  * Splits a program's markdown body into the hero lead-in and its `##`
  * sections, classifying each section as a numbered requirement ("Vaatimus
- * N/5: ...") or a plain highlight band (the framing intro and the closing
- * summary). Keeps content authoring in plain markdown while letting
- * ProgramDetailBody lay sections out with alternating styles and interleave
- * quote bands between them.
+ * N/5: ..."), an FAQ block, or a plain highlight band (the framing intro and
+ * the closing summary). Keeps content authoring in plain markdown while
+ * letting ProgramDetailBody lay sections out with alternating styles and
+ * interleave quote bands between them.
  */
 export function parseProgramBody(body: string): ParsedProgramBody {
   const blocks = body.trim().split(/\n(?=## )/)
@@ -63,7 +99,14 @@ export function parseProgramBody(body: string): ParsedProgramBody {
       .replace(/^##\s*/, '')
       .trim()
     const content = newlineIndex === -1 ? '' : block.slice(newlineIndex + 1)
-    const paragraphs = splitParagraphs(content)
+    const rawParagraphs = splitRawParagraphs(content)
+
+    const faqItems = parseFaqItems(rawParagraphs)
+    if (faqItems) {
+      return { type: 'faq', heading: headingLine, items: faqItems }
+    }
+
+    const paragraphs = rawParagraphs.map(classifyParagraph)
 
     const requirementMatch = headingLine.match(REQUIREMENT_HEADING)
     if (requirementMatch) {
@@ -86,5 +129,5 @@ export function parseProgramBody(body: string): ParsedProgramBody {
     }
   })
 
-  return { leadParagraphs: splitParagraphs(lead), sections }
+  return { leadParagraphs: splitRawParagraphs(lead).map(classifyParagraph), sections }
 }

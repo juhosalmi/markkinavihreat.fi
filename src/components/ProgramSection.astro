@@ -1,5 +1,6 @@
 ---
 import { renderInlineMarkdown } from '../lib/markdown'
+import type { ProgramParagraph } from '../lib/programSections'
 
 interface Props {
   /**
@@ -10,15 +11,30 @@ interface Props {
   /** Eyebrow label above the heading, e.g. "Vaatimus 1 / 5". */
   label?: string
   heading: string
-  paragraphs: string[]
+  paragraphs: ProgramParagraph[]
 }
 
 const { tone, label, heading, paragraphs } = Astro.props
 
 const TONE_STYLES = {
-  dark: { section: 'bg-metsa text-kerma', prose: 'prose-body-dark', eyebrow: 'text-vihrea' },
-  light: { section: 'bg-kerma text-musta', prose: 'prose-body', eyebrow: 'text-vihreat-brand' },
-  tint: { section: 'bg-surface-green text-metsa', prose: 'prose-body', eyebrow: 'text-metsa' },
+  dark: {
+    section: 'bg-metsa text-kerma',
+    prose: 'prose-body-dark',
+    eyebrow: 'text-vihrea',
+    quoteBorder: 'border-vihrea',
+  },
+  light: {
+    section: 'bg-kerma text-musta',
+    prose: 'prose-body',
+    eyebrow: 'text-vihreat-brand',
+    quoteBorder: 'border-vihreat-brand',
+  },
+  tint: {
+    section: 'bg-surface-green text-metsa',
+    prose: 'prose-body',
+    eyebrow: 'text-metsa',
+    quoteBorder: 'border-metsa',
+  },
 } as const
 
 const styles = TONE_STYLES[tone]
@@ -30,19 +46,32 @@ const styles = TONE_STYLES[tone]
     <h2 class="text-display mb-8">{heading}</h2>
     <div class="space-y-4">
       {
-        paragraphs.map((paragraph, i) => (
-          <p
-            class:list={[
-              styles.prose,
-              tone === 'dark'
-                ? 'text-lg leading-relaxed opacity-90'
-                : i === 0
-                  ? 'text-lg font-medium'
-                  : 'text-base',
-            ]}
-            set:html={renderInlineMarkdown(paragraph)}
-          />
-        ))
+        paragraphs.map((paragraph, i) => {
+          if (paragraph.type === 'quote') {
+            return (
+              <blockquote
+                class:list={['border-l-4 pl-6 text-xl font-semibold italic', styles.quoteBorder]}
+                set:html={renderInlineMarkdown(paragraph.text)}
+              />
+            )
+          }
+          if (paragraph.type === 'attribution') {
+            return <p class="text-sm font-semibold opacity-70">{paragraph.text}</p>
+          }
+          return (
+            <p
+              class:list={[
+                styles.prose,
+                tone === 'dark'
+                  ? 'text-lg leading-relaxed opacity-90'
+                  : i === 0
+                    ? 'text-lg font-medium'
+                    : 'text-base',
+              ]}
+              set:html={renderInlineMarkdown(paragraph.text)}
+            />
+          )
+        })
       }
     </div>
     <slot />

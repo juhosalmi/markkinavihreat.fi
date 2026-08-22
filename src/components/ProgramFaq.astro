@@ -1,0 +1,36 @@
+---
+import { renderInlineMarkdown } from '../lib/markdown'
+import type { ProgramFaqItem } from '../lib/programSections'
+
+interface Props {
+  heading: string
+  items: ProgramFaqItem[]
+}
+
+const { heading, items } = Astro.props
+---
+
+<section class="bg-kerma px-4 py-20 sm:px-6 sm:py-28">
+  <div class="content-max mx-auto">
+    <h2 class="text-display mb-8">{heading}</h2>
+    <div class="divide-y divide-black/10 border-t border-b border-black/10">
+      {
+        items.map((item) => (
+          <details class="group py-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold marker:content-none">
+              <span set:html={renderInlineMarkdown(item.question)} />
+              <i
+                class="fa-solid fa-chevron-down shrink-0 text-sm transition-transform group-open:rotate-180"
+                aria-hidden="true"
+              />
+            </summary>
+            <div
+              class="prose-body text-harmaa mt-3 max-w-[65ch]"
+              set:html={renderInlineMarkdown(item.answer)}
+            />
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
