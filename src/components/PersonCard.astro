@@ -1,4 +1,6 @@
 ---
+import { assetPath } from '../lib/content'
+
 interface SocialLink {
   type: string
   url: string
@@ -33,7 +35,7 @@ const iconFor: Record<string, string> = {
   class="rounded-card bg-surface-dark-green flex flex-col gap-[14px] border border-white/[0.14] p-[28px] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)]"
 >
   <img
-    src={photo}
+    src={assetPath(photo)}
     alt={name}
     loading="lazy"
     class="rounded-t-card bg-vihrea-tumma -m-[28px] mb-0 aspect-[3/4] w-[calc(100%_+_56px)] max-w-none flex-shrink-0 object-cover object-top"
