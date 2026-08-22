@@ -74,7 +74,7 @@ let requirementPosition = 0
           </ProgramSection>
           {citation && (
             <QuoteBand
-              class="js-program-quote"
+              class="js-quote-band"
               name={citation.name}
               photo={citation.photo}
               quote={citation.quote}
@@ -90,7 +90,7 @@ let requirementPosition = 0
       .slice(sections.length)
       .map((citation) => (
         <QuoteBand
-          class="js-program-quote"
+          class="js-quote-band"
           name={citation.name}
           photo={citation.photo}
           quote={citation.quote}
@@ -98,5 +98,5 @@ let requirementPosition = 0
       ))
   }
 
-  <ShuffleOnLoad selector=".js-program-quote" />
+  <ShuffleOnLoad selector=".js-quote-band" />
 </BaseLayout>
