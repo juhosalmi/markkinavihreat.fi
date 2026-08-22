@@ -1,0 +1,33 @@
+---
+import { renderInlineMarkdown } from '../lib/markdown'
+
+interface Props {
+  kicker: string
+  /** Display lines of the hero heading; the last line gets the accent color. */
+  lines: string[]
+  leadParagraphs: string[]
+}
+
+const { kicker, lines, leadParagraphs } = Astro.props
+---
+
+<section
+  class="content-max mx-auto flex min-h-[70svh] flex-col justify-center px-4 py-20 text-center sm:px-6"
+>
+  <p class="text-eyebrow text-vihreat-brand mb-6">{kicker}</p>
+  <h1 class="text-display-lg mx-auto mb-6 max-w-[16ch] uppercase">
+    {
+      lines.map((line, i) => (
+        <span class:list={['block', i === lines.length - 1 && 'text-vihreat-brand']}>{line}</span>
+      ))
+    }
+  </h1>
+  {
+    leadParagraphs.map((paragraph) => (
+      <p
+        class="prose-body mx-auto max-w-[52ch] text-lg font-medium"
+        set:html={renderInlineMarkdown(paragraph)}
+      />
+    ))
+  }
+</section>

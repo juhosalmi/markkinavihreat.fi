@@ -1,6 +1,12 @@
 ---
 interface Props {
-  /** CSS selector for the container whose children get shuffled. */
+  /**
+   * CSS selector matching every element whose content should be shuffled
+   * among each other. Unlike reordering a single container's children, this
+   * swaps innerHTML between elements, so it also works when the matches are
+   * scattered as siblings of unrelated content (e.g. quote bands interleaved
+   * between page sections) and their positions must stay fixed.
+   */
   selector: string
 }
 
@@ -8,13 +14,15 @@ const { selector } = Astro.props
 ---
 
 <script is:inline define:vars={{ selector }}>
-  const container = document.querySelector(selector)
-  if (container) {
-    const children = Array.from(container.children)
-    for (let i = children.length - 1; i > 0; i--) {
+  const nodes = document.querySelectorAll(selector)
+  if (nodes.length > 1) {
+    const contents = Array.from(nodes, (node) => node.innerHTML)
+    for (let i = contents.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
-      ;[children[i], children[j]] = [children[j], children[i]]
+      ;[contents[i], contents[j]] = [contents[j], contents[i]]
     }
-    children.forEach((child) => container.appendChild(child))
+    nodes.forEach((node, i) => {
+      node.innerHTML = contents[i]
+    })
   }
 </script>

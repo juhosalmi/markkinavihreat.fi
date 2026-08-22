@@ -3,6 +3,10 @@ locale: en
 title: More Markets!
 description: Five proposals that harness the market mechanism to solve problems in transport, urban space, public procurement, and land use.
 order: 1
+heroKicker: The Market Greens demand
+heroLines:
+  - More
+  - markets!
 citations:
   - person: lauri-nevanpera
     quote: "It's a matter of honor for me to defend businesses that renew the economy. Competition-distorting corporate subsidies and zoning decisions need to go. More market means fairer starting conditions for businesses renewing the economy."
