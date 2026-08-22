@@ -22,14 +22,27 @@ export function forLocale<T extends HasId>(entries: T[], locale: Locale): T[] {
   return entries.filter((entry) => parseLocalizedId(entry.id).locale === locale)
 }
 
+// BASE_URL is "/" in production and on the Cloudflare deploy; only a
+// subpath preview (e.g. GitHub Pages, see astro.config.mjs) sets it to
+// something else, so this is a no-op outside that case.
+function withBase(path: string): string {
+  const normalized = path.startsWith('/') ? path : `/${path}`
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+  return `${base}${normalized}`
+}
+
 export function localePath(locale: Locale, path: string): string {
   const normalized = path.startsWith('/') ? path : `/${path}`
   const localized = locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
-  // BASE_URL is "/" in production and on the Cloudflare deploy; only a
-  // subpath preview (e.g. GitHub Pages, see astro.config.mjs) sets it to
-  // something else, so this is a no-op outside that case.
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
-  return `${base}${localized}`
+  return withBase(localized)
+}
+
+/**
+ * Prefixes a root-absolute static asset path (e.g. a content collection's
+ * `/images/team/...` field) the same way localePath() prefixes routes.
+ */
+export function assetPath(path: string): string {
+  return withBase(path)
 }
 
 /**
