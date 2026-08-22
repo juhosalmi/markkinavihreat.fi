@@ -24,7 +24,12 @@ export function forLocale<T extends HasId>(entries: T[], locale: Locale): T[] {
 
 export function localePath(locale: Locale, path: string): string {
   const normalized = path.startsWith('/') ? path : `/${path}`
-  return locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
+  const localized = locale === DEFAULT_LOCALE ? normalized : `/${locale}${normalized}`
+  // BASE_URL is "/" in production and on the Cloudflare deploy; only a
+  // subpath preview (e.g. GitHub Pages, see astro.config.mjs) sets it to
+  // something else, so this is a no-op outside that case.
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+  return `${base}${localized}`
 }
 
 /**
