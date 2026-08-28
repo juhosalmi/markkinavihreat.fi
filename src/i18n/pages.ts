@@ -22,9 +22,6 @@ interface HomeCopy {
   joinTitle: string
   joinBody: string
   joinCta: string
-  // A handful of team quotes reused from the programs' citations, shown as
-  // random quote bands between this page's sections (see HomeBody.astro).
-  citations: { person: string; quote: string }[]
 }
 
 interface AboutCopy {
@@ -99,27 +96,6 @@ export const home: Record<Locale, HomeCopy> = {
     joinBody:
       'Kutsumme sinut avoimeen markkinavihreiden WhatsApp-ryhmäämme keskustelemaan, ehdottamaan ja vaikuttamaan.',
     joinCta: 'Liity WhatsApp-ryhmään →',
-    citations: [
-      {
-        person: 'lauri-lavanti',
-        quote:
-          'Markkinamekanismi on ihmiskunnan tehokkain keksintö resurssien jakamiseen. Nyt se pitää valjastaa hyvään.',
-      },
-      {
-        person: 'atte-harjanne',
-        quote: 'Markkinat voi - ja pitää - valjastaa täysillä planeetan ja ihmisten hyväksi.',
-      },
-      {
-        person: 'arttu-laitinen',
-        quote:
-          'Valtion tehtävä ei ole johtaa yrityksiä, vaan asettaa kannustimet niin että ulkoisvaikutukset sisältyvät markkinahintaan.',
-      },
-      {
-        person: 'anna-jaakola',
-        quote:
-          'Markkinat eivät kuulu vain kaupunkeihin. Markkinavihreys tarkoittaa myös sitä, että metsänomistaja saa korvauksen hiilen sidonnasta, viljelijä huoltovarmuudesta ja maaseudun yrittäjä luonnon ennallistamisesta.',
-      },
-    ],
   },
   sv: {
     metaDescription:
@@ -164,28 +140,6 @@ export const home: Record<Locale, HomeCopy> = {
     joinBody:
       'Vi bjuder in dig till vår öppna WhatsApp-grupp för att diskutera, föreslå och påverka.',
     joinCta: 'Gå med i WhatsApp-gruppen →',
-    citations: [
-      {
-        person: 'lauri-lavanti',
-        quote:
-          'Marknadsmekanismen är mänsklighetens mest effektiva uppfinning för att fördela resurser. Nu måste den tas i bruk för det goda.',
-      },
-      {
-        person: 'atte-harjanne',
-        quote:
-          'Marknaden kan — och bör — tas i full användning till nytta för planeten och människorna.',
-      },
-      {
-        person: 'arttu-laitinen',
-        quote:
-          'Statens uppgift är inte att leda företag, utan att sätta incitament så att externa effekter ingår i marknadspriset.',
-      },
-      {
-        person: 'anna-jaakola',
-        quote:
-          'Marknaden hör inte bara hemma i städerna. Marknadsgrönhet innebär också att skogsägaren får ersättning för kolbindning, jordbrukaren för försörjningsberedskap och landsbygdsföretagaren för naturrestaurering.',
-      },
-    ],
   },
   en: {
     metaDescription:
@@ -229,28 +183,6 @@ export const home: Record<Locale, HomeCopy> = {
     joinTitle: 'Welcome aboard!',
     joinBody: 'Join our open WhatsApp group to discuss, suggest, and get involved.',
     joinCta: 'Join the WhatsApp group →',
-    citations: [
-      {
-        person: 'lauri-lavanti',
-        quote:
-          "The market mechanism is humanity's most effective invention for allocating resources. Now it needs to be harnessed for good.",
-      },
-      {
-        person: 'atte-harjanne',
-        quote:
-          'Markets can — and should — be put to full use for the benefit of the planet and people.',
-      },
-      {
-        person: 'arttu-laitinen',
-        quote:
-          "The state's job is not to run businesses, but to set incentives so that externalities are included in the market price.",
-      },
-      {
-        person: 'anna-jaakola',
-        quote:
-          "Markets don't belong only in cities. Being market green also means the forest owner gets compensated for carbon sequestration, the farmer for security of supply, and the rural entrepreneur for restoring nature.",
-      },
-    ],
   },
 }
 
