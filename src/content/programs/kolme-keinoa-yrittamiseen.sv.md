@@ -1,0 +1,95 @@
+---
+locale: sv
+title: Tre sätt att underlätta företagande
+description: 'Ett inlägg för Företagardagen – tre konkreta sätt att riva hindren för företagande med marknadsmekanismen: FöPL, återkomsten efter konkurs och att anställa den första arbetstagaren.'
+order: 3
+heroKicker: De marknadsgrönas inlägg för Företagardagen
+heroLines:
+  - Tre sätt att underlätta
+  - företagande
+citations: []
+---
+
+Företagande är mod. Det är flit, organisationsförmåga och beredskap att ta ansvar för sina egna och ofta även andras handlingar. Men i Finland och EU finns det för många hinder kring företagande som inte gagnar någon – varken företagaren, arbetstagaren eller samhället.
+
+De marknadsgrönas lösningar vilar på marknadsmekanismen: när regleringen är konsekvent, förutsägbar och lätt hittar marknaden själv de effektivaste lösningarna. När hindren rivs frigörs potentialen för företagande och hållbar tillväxt. Nedan tre konkreta sätt.
+
+## Metod 1/3: Det största löftet i FöPL-reformen infrias inte – den lägst avlönade företagaren fick betala
+
+Företagarens pensionsförsäkring (FöPL) skulle reformeras så att den äntligen skulle basera sig på faktiska förvärvsinkomster. Regeringens utkast till proposition från juni 2026 är en klar besvikelse: principen erkänns som riktig, men man vågar inte genomföra den konsekvent. Även Företagarna i Finland har lyft fram samma kritik.
+
+En låginkomsttagande eller nystartande företagare stöter fortfarande på samma oklara och konstlade nedre FöPL-gräns som förut. Den nedre gränsen för försäkringsskyldigheten förblir uppskattningsbaserad, och man eftersträvar inte ens att förvärvsinkomsterna ska vara i realtid. I praktiken kan inkomstuppgifterna vara upp till två år gamla. Nedsättningen för nystartande företagare har slopats helt och ersatts med betalningsflexibilitet, men avgifterna flexar aldrig under minimiavgiften, även om det inte finns några inkomster alls. Företagaren har alltid kvar en månadsavgift på minst cirka 200 euro, oavsett om det finns inkomster eller inte.
+
+Om företagaren insjuknar avbryts avgifterna inte förrän sjukledigheten varar i minst tre månader. Det är inte den hjälp som en insjuknad företagare vanligtvis behöver.
+
+De grönas vice ordförande Allu Pyhälammi och partifullmäktiges vice ordförande Pyry Väre har krävt att avgiften ska vara progressiv i stället för att man vid en viss gräns genast får hela procentandelen. Regeringens proposition tog inte fasta på detta. Avsikten var att göra systemet mer begripligt och tydligare, men i det lyckades man riktigt dåligt. I De grönas ekonomisk-politiska program har man länge krävt att FöPL-systemet reformeras.
+
+**De marknadsgrönas lösningar:**
+
+**FöPL-avgifterna måste basera sig på faktiska förvärvsinkomster i realtid** – inte på två år gamla uppgifter eller uppskattningar. När avgifterna speglar den faktiska marknadsinkomsten är systemet rättvist och förutsägbart. Företagaren kan planera sin verksamhet utan att pensionsförsäkringen blir en dold skatt som inte motsvarar den verkliga förtjänsten.
+
+**Flexibilitet vid sjukdom genast, inte först efter tre månader.** Om en företagare insjuknar och inkomsterna försvinner måste avgifterna avbrytas omedelbart. En oflexibel minimiavgift är ett konstlat hinder som fråntar företagaren förmågan att klara marknadens naturliga svackor.
+
+**Ordning på finansieringen av FöPL-systemet.** Statens finansieringsandel ökar, men ingen fondering av systemet inleds. Bristen på hållbar finansiering flyttar bördan till företagarna, som betalar oproportionerligt höga avgifter i förhållande till det skydd de får. Med hållbar finansiering kan avgifterna riktas rättvist.
+
+> "Den planerade FöPL:en försvårar, efter reformen, eller ibland till och med hindrar att företagsverksamhet startas i större skala än 'garageskala'."
+
+— Minna Roukkio-Taipale
+
+## Metod 2/3: En tydlig definition av företagande och dess upphörande
+
+Företagsverksamhet som slutat i konkurs har gett företagaren enormt mycket kunnande och erfarenhet. Ändå är konkurs i Finland förknippat med en stämpel av misslyckande, som den stränga konkurslagstiftningen förstärker. En betalningsanmärkning kan hindra att man får startpeng och att man öppnar ett företagskonto i banken. Skatteförvaltningen kan neka att införa ett nytt företag i förskottsuppbördsregistret enbart på grund av en konkurs. Företagarna i Finland har framfört detsamma: det borde bli lättare för den som gjort konkurs att återvända som företagare. I De grönas lösningar mot överskuldsättning konstateras att "vi vill ha ett samhälle där misslyckande inte är en skam, utan en ny början".
+
+Marknadsekonomins grundidé är att misslyckande hör till processen. En företagare som lärt sig av sina misstag är en värdefullare resurs på nästa varv. Om systemet hindrar en ny start förlorar det det dyraste kapitalet: erfarenheten.
+
+**De marknadsgrönas lösningar:**
+
+**Ett nytt företag efter konkurs utan hinder.** Vi tar bort Skatteförvaltningens rätt att neka grundandet av ett nytt företag när konkursen inte är förknippad med missbruk och företagaren inte har näringsförbud. Marknaden avgör om företagaren är pålitlig, inte en myndighet som bestraffar redan för ett misslyckande.
+
+**En betalningsanmärkning hindrar inte företagande.** Vi säkerställer att en betalningsanmärkning inte hindrar att startpeng beviljas eller att ett företagskonto öppnas. Sökandens situation bedöms från fall till fall och på ett företagarvänligt sätt. Genom att rikta startpengen till företagandet, inte till betalningshistoriken, utnyttjar samhället befintligt kunnande genom att återföra det till marknaden.
+
+**Avdrag för ett nedlagt företags skulder.** Vi möjliggör att betalningen av ett nedlagt företags skulder får dras av i företagarens personliga beskattning. Det minskar kostnaderna för misslyckande och uppmuntrar till ny företagsverksamhet.
+
+> "Jag drömmer om företagande och har gjort en preliminär affärsplan. Med de här lösningarna skulle jag kanske våga pröva mina vingar."
+
+— Johanna Muurinen
+
+## Metod 3/3: Vi röjer hinder på vägen för att anställa den första arbetstagaren
+
+Många företagare skulle vilja växa och anställa, men att anställa den första arbetstagaren upplevs som en för stor risk. Bikostnader, byråkrati och osäkerhet gör tröskeln för rekrytering hög. Denna tröskel hindrar företag från att växa och samhälleliga nyttor från att uppstå. Enligt De grönas näringspolitiska program upplevs anställningen av de första arbetstagarna som en för stor risk, och en sänkning av denna tröskel skulle möjliggöra företagets tillväxt.
+
+Marknadsmekanismen fungerar bara om tröskeln för att växa är rimlig. När ett företag vill anställa ska det uppmuntras, inte bestraffas. Att bikostnaderna för den första arbetstagaren slopas är en investering i marknadens expansion och i sysselsättningen.
+
+**De marknadsgrönas lösningar:**
+
+**Bort med bikostnaderna för den första arbetstagaren.** Vi befriar tillfälligt en självsysselsatt företagare från bikostnaderna för den första arbetstagaren. När kostnaden för att anställa är lägre i det första skedet skapar marknaden jobb på ett naturligt sätt.
+
+**En ny lönesubventionsmodell för den första arbetstagaren.** Vi skapar en lönesubventionsmodell som är riktad just till mikroföretagens första rekrytering. Ett riktat stöd sänker tröskeln och ger marknaden en signal: det lönar sig att växa.
+
+**Lättare för privatpersoner att vara arbetsgivare.** Vi underlättar byråkratin för privatpersoner som fungerar som arbetsgivare genom att skapa lämpliga modeller för försäkring och företagshälsovård. När det är enkelt att anställa expanderar marknaden nerifrån.
+
+> "Jag har vuxit upp i en företagarfamilj och själv varit företagare, så jag vet hur stort steg och hur stor ekonomisk risk det kan vara att anställa den första arbetstagaren. Den här tröskeln är det värt att sänka, för för ett litet företag kan den första arbetstagaren vara början på tillväxt och på att nya jobb uppstår."
+
+— Ulla Santti
+
+## Bonus – EU-förpackningsförordningen bromsar e-handelns expansion
+
+EU:s nya förordning om förpackningar och förpackningsavfall (PPWR) trädde i kraft den 12 augusti 2026. Målet är gott: mindre avfall, mer återvinning. I De grönas program stöds en minskning av förpackningsmaterial och en beskattning av engångsförpackningar. Men genomförandet slår hårt just mot små webbutiker. Även Iltalehti rapporterade om förordningens slag mot småföretagare.
+
+Om en liten webbutik vill sälja förpackade produkter direkt till konsument i ett annat EU-land måste den registrera sig, rapportera sina förpackningar, betala producentansvarsavgifter (EPR) och eventuellt utse en lokal representant separat i vart och ett av de 27 EU-länderna. Om exporten går till tio länder görs samma process tio gånger. För ett enmans hantverksföretag, en specialhandlare eller en liten webbutik kan kostnaderna överstiga hela försäljningen från mållandet. Enligt Ilta-Sanomat måste en företagare som vill sälja direkt till en kund i ett annat EU-land utreda landets system, ingå avtal med en producentsammanslutning och betala en återvinningsavgift – i vart och ett av länderna separat.
+
+Den inre marknadens grundidé är att det ska vara en union, ett regelverk. När varje medlemsland kräver egen registrering, egen avgift och egen representant fungerar inte den inre marknaden. Detta är ett tillstånd som strider mot marknadsmekanismen, som gynnar stora företag och kväver de små.
+
+**Främsta lösningen: en gemensam kontaktpunkt för förpackningsproducentansvar på EU-nivå.** En registrering, en anmälan, en avgift – inte 27 separata nationella register. På samma sätt som momsen har ett OSS/IOSS-system som möjliggör en enda registrering behövs en enhetlig anmälnings- och betalningskanal för producentansvaret på EU-nivå. Detta är den lösning med vilken miljömålet och företagandet kan förenas. När reglerna är enhetliga på hela den inre marknaden förmedlas konkurrensen via pris och kvalitet, inte via förmågan att ta sig igenom byråkratin.
+
+**En lättmodell för mikroföretag inom systemet med en kontaktpunkt.** När en kontaktpunkt finns byggs det inom den en lätt anmälningspraxis för mikro- och ensamföretagare (under 10 anställda, omsättning under 2 M€), där förpackningsåtervinningsavgifterna och rapporteringen förblir rimliga i förhållande till försäljningen. I EU:s förordning föreskrivs att små producenter inte får åläggas en oskälig börda – denna princip måste fås att leva i systemet med en kontaktpunkt.
+
+> "EU:s styrka är den stora inre marknaden, där företag från Finland till Portugal kan konkurrera på öppna marknader. EU:s förpackningsförordning bryter mot denna princip och ställer upp konstlade hinder på marknaden."
+
+— Lauri Lavanti
+
+## Tillsammans gör vi företagandet lättare
+
+Företagande behöver inga nya stödkaruseller utan färre konstlade hinder. När regleringen är lätt, konsekvent och förutsägbar belönar marknaden mod och flit – inte förmågan att ta sig igenom byråkratin.
+
+Kom med och bygg ett Finland där det lönar sig att vara företagare och där marknaden tjänar människorna.

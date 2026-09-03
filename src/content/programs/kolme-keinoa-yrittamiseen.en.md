@@ -1,0 +1,95 @@
+---
+locale: en
+title: Three ways to make entrepreneurship easier
+description: "A statement for Entrepreneur's Day – three concrete ways to dismantle the barriers to entrepreneurship with the market mechanism: pension insurance (YEL), returning after bankruptcy, and hiring the first employee."
+order: 3
+heroKicker: The Market Greens' statement for Entrepreneur's Day
+heroLines:
+  - Three ways to make
+  - entrepreneurship easier
+citations: []
+---
+
+Entrepreneurship takes courage. It is diligence, organisational skill, and a readiness to take responsibility for one's own actions and often for those of others too. But in Finland and the EU there are too many barriers around entrepreneurship that serve no one – not the entrepreneur, not the employee, and not society.
+
+The Market Greens' solutions rest on the market mechanism: when regulation is consistent, predictable, and light, the market itself finds the most effective solutions. When the barriers are dismantled, the potential of entrepreneurship and sustainable growth is unleashed. Below are three concrete ways.
+
+## Method 1/3: The biggest promise of the YEL reform goes unfulfilled – the lowest-earning entrepreneur paid the price
+
+The entrepreneur's pension insurance (YEL) was supposed to be reformed so that it would finally be based on actual earned income. The government's draft bill from June 2026 is a clear disappointment: the principle is acknowledged as correct, but there is no courage to implement it consistently. The Federation of Finnish Enterprises has raised the same criticism.
+
+A low-income or beginning entrepreneur still runs into the same unclear and artificial YEL lower limit as before. The lower limit of the insurance obligation remains estimate-based, and real-time earned income is not even pursued. In practice, income data can be as much as two years old. The discount for beginning entrepreneurs has been removed entirely and replaced with payment flexibility, but the payments never flex below the minimum charge, even if there is no income at all. The entrepreneur is always left with a monthly charge of at least around 200 euros, whether there is income or not.
+
+If an entrepreneur falls ill, the payments are not suspended unless the sick leave lasts at least three months. That is not the kind of help an ill entrepreneur typically needs.
+
+The Greens' deputy chair Allu Pyhälammi and the party council's deputy chair Pyry Väre have demanded that the charge should be progressive, instead of the full percentage kicking in immediately at a certain threshold. The government's bill did not take this up. The intention was to make the system more understandable and clearer, but in that it succeeded very poorly. The Greens' economic policy programme has long called for the YEL system to be reformed.
+
+**The Market Greens' solutions:**
+
+**YEL payments must be based on actual, real-time earned income** – not on two-year-old data or estimates. When the payments reflect real market income, the system is fair and predictable. The entrepreneur can plan their business without the pension insurance becoming a hidden tax that does not match actual earnings.
+
+**Flexibility during illness immediately, not only after three months.** If an entrepreneur falls ill and income vanishes, the payments must be cut off at once. An inflexible minimum charge is an artificial barrier that deprives the entrepreneur of the ability to weather the market's natural dips.
+
+**Fix the funding of the YEL system.** The state's funding share grows, but no funding reserve for the system is established. The lack of sustainable financing shifts the burden onto entrepreneurs, who pay disproportionately high charges relative to the protection they receive. With sustainable financing, the payments can be allocated fairly.
+
+> "The YEL as planned, after the reform, hampers or sometimes even prevents starting up a business beyond 'garage scale'."
+
+— Minna Roukkio-Taipale
+
+## Method 2/3: A clear definition of entrepreneurship and of when it ends
+
+Business activity that ended in bankruptcy has given the entrepreneur a huge amount of expertise and experience. Yet in Finland bankruptcy carries a stigma of failure, one that the harsh bankruptcy legislation reinforces. A payment default entry can prevent obtaining a start-up grant and opening a business account at the bank. The Tax Administration can refuse to enter a new company in the prepayment register solely because of a bankruptcy. The Federation of Finnish Enterprises has made the same point: the return of someone who has gone bankrupt to entrepreneurship should be made easier. The Greens' solutions to over-indebtedness state that "we want a society in which failure is not a shame, but a new beginning".
+
+The basic idea of the market economy is that failure is part of the process. An entrepreneur who has learned from their mistakes is a more valuable resource on the next round. If the system prevents a new start, it loses the most precious capital: experience.
+
+**The Market Greens' solutions:**
+
+**A new company after bankruptcy without barriers.** We remove the Tax Administration's right to refuse the founding of a new company when the bankruptcy involves no misconduct and the entrepreneur is under no business ban. The market decides whether an entrepreneur is trustworthy, not an authority that punishes them merely for a failure.
+
+**A payment default does not prevent entrepreneurship.** We ensure that a payment default entry does not prevent a start-up grant from being granted or a business account from being opened. The applicant's situation is assessed case by case and in an entrepreneurship-friendly way. By targeting the start-up grant at entrepreneurship rather than at payment history, society makes use of existing expertise by returning it to the market.
+
+**Deducting the debts of a wound-up company.** We make it possible to deduct the payment of a wound-up company's debts in the entrepreneur's personal taxation. This lowers the cost of failure and encourages new business activity.
+
+> "I dream of entrepreneurship and have drafted a preliminary business plan. With these solutions I might dare to try my wings."
+
+— Johanna Muurinen
+
+## Method 3/3: Clearing the barriers to hiring the first employee
+
+Many entrepreneurs would like to grow and employ people, but hiring the first employee is seen as too great a risk. Indirect costs, bureaucracy, and uncertainty make the recruitment threshold high. This threshold prevents companies from growing and societal benefits from arising. According to the Greens' industrial policy programme, hiring the first employees is seen as too great a risk, and lowering this threshold would enable a company to grow.
+
+The market mechanism works only if the threshold to grow is reasonable. When a company wants to employ people, it should be encouraged, not punished. Removing the indirect costs of the first employee is an investment in the expansion of the market and in employment.
+
+**The Market Greens' solutions:**
+
+**Away with the indirect costs of the first employee.** We temporarily free a self-employed entrepreneur from the indirect costs concerning the first employee. When the cost of hiring is lower at the first stage, the market creates jobs naturally.
+
+**A new pay-subsidy model for the first employee.** We create a pay-subsidy model aimed precisely at a micro-enterprise's first hire. Targeted support lowers the threshold and gives the market a signal: growing is worth it.
+
+**Lightening employer duties for private individuals.** We ease the bureaucracy of acting as an employer for private individuals by creating suitable models for insurance and occupational health care. When hiring is easy, the market expands from the bottom up.
+
+> "I grew up in an entrepreneurial family and have been an entrepreneur myself, so I know what a big step and what a financial risk hiring the first employee can be. This threshold is worth lowering, because for a small company the first employee can be the start of growth and of new jobs being created."
+
+— Ulla Santti
+
+## Bonus – the EU packaging regulation holds back e-commerce expansion
+
+The EU's new Packaging and Packaging Waste Regulation (PPWR) entered into force on 12 August 2026. Its goal is good: less waste, more recycling. The Greens' programmes support reducing packaging materials and taxing single-use packaging. But the implementation hits small online shops especially hard. Iltalehti also reported on the regulation's blow to small entrepreneurs.
+
+If a small online shop wants to sell packaged products directly to a consumer in another EU country, it has to register, report its packaging, pay extended producer responsibility (EPR) fees, and possibly appoint a local representative separately in each of the 27 EU countries. If it exports to ten countries, the same process is gone through ten times. For a one-person craft business, a specialty retailer, or a small online shop, the costs can exceed all the sales obtainable from the target country. According to Ilta-Sanomat, an entrepreneur who wants to sell directly to a customer in another EU country has to figure out that country's system, conclude an agreement with a producer responsibility organisation, and pay a recycling fee – in each country separately.
+
+The basic idea of the single market is one union, one set of rules. When every member state demands its own registration, its own fee, and its own representative, the single market does not work. This is a state of affairs contrary to the market mechanism, one that favours large companies and stifles small ones.
+
+**The primary solution: a single EU-level one-stop shop for packaging producer responsibility.** One registration, one declaration, one fee – not 27 separate national registers. Just as VAT has an OSS/IOSS system to enable a single registration, a unified EU-level declaration and payment channel for producer responsibility is needed. This is the solution with which the environmental goal and entrepreneurship can be reconciled. When the rules are uniform across the whole single market, competition is conveyed through price and quality, not through the ability to get through bureaucracy.
+
+**A light model for micro-enterprises inside the one-stop shop.** Once the one-stop shop exists, a light reporting practice is built inside it for micro- and sole entrepreneurs (under 10 employees, turnover under €2M), in which the packaging recycling fees and reporting stay reasonable relative to sales. The EU regulation stipulates that small producers must not be subjected to an unreasonable burden – this principle must be made to live within the one-stop shop.
+
+> "The EU's strength is the large single market, where companies from Finland to Portugal can compete on open markets. The EU's packaging regulation breaks this principle and sets up artificial barriers on the market."
+
+— Lauri Lavanti
+
+## Together we make entrepreneurship easier
+
+Entrepreneurship needs no new subsidy contraptions, but fewer artificial barriers. When regulation is light, consistent, and predictable, the market rewards courage and diligence – not the ability to get through bureaucracy.
+
+Come and help build a Finland where being an entrepreneur pays off and where the market serves people.
