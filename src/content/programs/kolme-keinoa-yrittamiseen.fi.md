@@ -44,7 +44,7 @@ Markkinatalouden perusidea on, että epäonnistuminen kuuluu prosessiin. Yrittä
 
 **Markkinavihreiden ratkaisut:**
 
-**Uusi yritys konkurssin jälkeen ilman esteitä.** Poistetaan verottajalta oikeus evätä uuden yrityksen perustaminen, kun konkurssiin ei liity väärinkäytöksiä eikä yrittäjällä ole liiketoimintakieltoa. Markkinat päättävät, onko yrittäjä luotettava, ei viranomainen, joka rankaisee jo epäonnistumisesta.
+**Uusi yritys konkurssin jälkeen ilman esteitä.** Poistetaan verottajalta oikeus evätä uuden yrityksen merkitseminen ennakkoperintärekisteriin, kun konkurssiin ei liity väärinkäytöksiä eikä yrittäjällä ole liiketoimintakieltoa. Markkinat päättävät, onko yrittäjä luotettava, ei viranomainen, joka rankaisee jo epäonnistumisesta.
 
 **Maksuhäiriö ei estä yrittämistä.** Varmistetaan, ettei maksuhäiriömerkintä estä starttirahan myöntämistä tai yritystilin avaamista. Hakijan tilanne arvioidaan tapauskohtaisesti ja yrittäjyysmyönteisesti. Kohdentamalla starttirahan yrittäjyyteen, ei maksuhistoriaan, yhteiskunta hyödyntää olemassa olevaa osaamista markkinoille palauttamalla.
 

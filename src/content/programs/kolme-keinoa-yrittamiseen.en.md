@@ -44,7 +44,7 @@ The basic idea of the market economy is that failure is part of the process. An 
 
 **The Market Greens' solutions:**
 
-**A new company after bankruptcy without barriers.** We remove the Tax Administration's right to refuse the founding of a new company when the bankruptcy involves no misconduct and the entrepreneur is under no business ban. The market decides whether an entrepreneur is trustworthy, not an authority that punishes them merely for a failure.
+**A new company after bankruptcy without barriers.** We remove the Tax Administration's right to refuse to enter a new company in the prepayment register when the bankruptcy involves no misconduct and the entrepreneur is under no business ban. The market decides whether an entrepreneur is trustworthy, not an authority that punishes them merely for a failure.
 
 **A payment default does not prevent entrepreneurship.** We ensure that a payment default entry does not prevent a start-up grant from being granted or a business account from being opened. The applicant's situation is assessed case by case and in an entrepreneurship-friendly way. By targeting the start-up grant at entrepreneurship rather than at payment history, society makes use of existing expertise by returning it to the market.
 

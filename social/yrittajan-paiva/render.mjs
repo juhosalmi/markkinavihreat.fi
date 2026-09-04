@@ -112,7 +112,7 @@ const slides = [
       <p class="intro">Konkurssin tehnyt osaa enemmän kuin ennen. Silti järjestelmä rankaisee:</p>
       ${bullets([
         'Maksuhäiriö estää starttirahan ja tilit',
-        'Verottaja voi estää uuden yrityksen perustamisen',
+        'Verottaja voi evätä pääsyn ennakkoperintärekisteriin',
         'Vanhat velat jäävät painamaan henkilökohtaisesti',
       ])}
       ${solution('Jokaiselle reilun uuden alun konkurssin jälkeen — ilman rangaistusleimaa.')}`,

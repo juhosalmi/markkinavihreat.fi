@@ -44,7 +44,7 @@ Marknadsekonomins grundidé är att misslyckande hör till processen. En företa
 
 **De marknadsgrönas lösningar:**
 
-**Ett nytt företag efter konkurs utan hinder.** Vi tar bort Skatteförvaltningens rätt att neka grundandet av ett nytt företag när konkursen inte är förknippad med missbruk och företagaren inte har näringsförbud. Marknaden avgör om företagaren är pålitlig, inte en myndighet som bestraffar redan för ett misslyckande.
+**Ett nytt företag efter konkurs utan hinder.** Vi tar bort Skatteförvaltningens rätt att neka att införa ett nytt företag i förskottsuppbördsregistret när konkursen inte är förknippad med missbruk och företagaren inte har näringsförbud. Marknaden avgör om företagaren är pålitlig, inte en myndighet som bestraffar redan för ett misslyckande.
 
 **En betalningsanmärkning hindrar inte företagande.** Vi säkerställer att en betalningsanmärkning inte hindrar att startpeng beviljas eller att ett företagskonto öppnas. Sökandens situation bedöms från fall till fall och på ett företagarvänligt sätt. Genom att rikta startpengen till företagandet, inte till betalningshistoriken, utnyttjar samhället befintligt kunnande genom att återföra det till marknaden.
 
