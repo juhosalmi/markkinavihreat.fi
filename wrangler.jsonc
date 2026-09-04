@@ -5,4 +5,9 @@
   "observability": { "enabled": true },
   "assets": { "directory": "./dist" },
   "compatibility_flags": ["nodejs_compat"],
+  // Enable version preview URLs so Workers Builds posts a per-PR preview link.
+  // Default follows workers.dev, which is disabled here (custom domain), so it
+  // must be set explicitly. Requires "non-production branch builds" on in the
+  // Workers Builds settings (deploy cmd defaults to `wrangler versions upload`).
+  "preview_urls": true,
 }
