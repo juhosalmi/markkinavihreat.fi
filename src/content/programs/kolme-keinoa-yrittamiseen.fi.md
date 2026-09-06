@@ -3,6 +3,8 @@ locale: fi
 title: Kolme keinoa yrittämisen helpottamiseen
 description: 'Yrittäjän päivän avaus – kolme konkreettista keinoa purkaa yrittämisen esteitä markkinamekanismilla: YEL, konkurssin jälkeinen paluu ja ensimmäisen työntekijän palkkaaminen.'
 order: 3
+published: 2026-09-03
+updated: 2026-09-04
 heroKicker: Markkinavihreiden avaus Yrittäjän päivälle
 heroLines:
   - Kolme keinoa yrittämisen

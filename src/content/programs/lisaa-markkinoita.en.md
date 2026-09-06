@@ -3,6 +3,8 @@ locale: en
 title: More Markets!
 description: Five proposals that harness the market mechanism to solve problems in transport, urban space, public procurement, and land use.
 order: 1
+published: 2026-07-28
+updated: 2026-08-22
 heroKicker: The Market Greens demand
 heroLines:
   - More

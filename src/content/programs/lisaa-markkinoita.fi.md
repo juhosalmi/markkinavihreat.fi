@@ -3,6 +3,8 @@ locale: fi
 title: Lisää markkinoita!
 description: Viisi ehdotusta, joilla markkinamekanismi valjastetaan ratkaisemaan liikenteen, kaupunkitilan, julkisten hankintojen ja maankäytön ongelmia.
 order: 1
+published: 2026-07-28
+updated: 2026-08-22
 heroKicker: Markkinavihreät vaativat
 heroLines:
   - Lisää

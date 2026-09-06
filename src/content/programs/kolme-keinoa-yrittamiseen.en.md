@@ -3,6 +3,8 @@ locale: en
 title: Three ways to make entrepreneurship easier
 description: "A statement for Entrepreneur's Day – three concrete ways to dismantle the barriers to entrepreneurship with the market mechanism: pension insurance (YEL), returning after bankruptcy, and hiring the first employee."
 order: 3
+published: 2026-09-03
+updated: 2026-09-04
 heroKicker: The Market Greens' statement for Entrepreneur's Day
 heroLines:
   - Three ways to make
