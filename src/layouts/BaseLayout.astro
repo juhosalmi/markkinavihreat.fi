@@ -13,12 +13,30 @@ interface Props {
   path: string
   /** For a page that's reachable but intentionally kept out of search results. */
   noindex?: boolean
+  /** "article" for a program or blog post; "website" for the standing pages. */
+  ogType?: 'website' | 'article'
+  /** Only meaningful with ogType="article" — drives the article:* meta. */
+  publishedTime?: Date
+  modifiedTime?: Date
 }
 
-const { locale, title, description, path, noindex = false } = Astro.props
+const {
+  locale,
+  title,
+  description,
+  path,
+  noindex = false,
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+} = Astro.props
 
 const SITE_URL = 'https://markkinavihreat.fi'
 const localeUrl = (l: Locale) => (l === 'fi' ? `${SITE_URL}${path}` : `${SITE_URL}/${l}${path}`)
+
+// Facebook-style locale codes. Both minority-language editions target Finland.
+const OG_LOCALE: Record<Locale, string> = { fi: 'fi_FI', sv: 'sv_FI', en: 'en_GB' }
+const otherLocales = (['fi', 'sv', 'en'] as const).filter((l) => l !== locale)
 
 // Per-page Open Graph image, generated at build time by
 // src/pages/images/og/[slug].png.ts. Emitted only for indexable pages, so the
@@ -34,11 +52,23 @@ const ogImage = ogUrlFor(locale, path)
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#6EB82A" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="markkinavihreat.fi" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={localeUrl(locale)} />
+    <meta property="og:locale" content={OG_LOCALE[locale]} />
+    {otherLocales.map((l) => <meta property="og:locale:alternate" content={OG_LOCALE[l]} />)}
+    {
+      ogType === 'article' && publishedTime && (
+        <meta property="article:published_time" content={publishedTime.toISOString()} />
+      )
+    }
+    {
+      ogType === 'article' && modifiedTime && (
+        <meta property="article:modified_time" content={modifiedTime.toISOString()} />
+      )
+    }
     {
       !noindex && (
         <>
@@ -61,10 +91,14 @@ const ogImage = ogUrlFor(locale, path)
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
     <link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
     {
-      (noindex || import.meta.env.NOINDEX === 'true') && (
+      noindex || import.meta.env.NOINDEX === 'true' ? (
         <meta name="robots" content="noindex, nofollow" />
+      ) : (
+        <meta name="robots" content="index, follow, max-image-preview:large" />
       )
     }
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
