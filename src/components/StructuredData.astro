@@ -1,0 +1,18 @@
+---
+import { buildGraph, organizationNode, type JsonLdNode } from '../lib/structuredData'
+
+interface Props {
+  /** The Organization's description — the locale's home metaDescription. */
+  description: string
+  /** Page-specific nodes (Article, WebSite, BreadcrumbList, FAQPage). */
+  nodes?: JsonLdNode[]
+}
+
+const { description, nodes = [] } = Astro.props
+
+// One @graph per page: the Organization first, then whatever this page adds.
+// Page nodes reference the org by @id rather than restating it.
+const graph = buildGraph([organizationNode(description), ...nodes])
+---
+
+<script type="application/ld+json" is:inline set:html={graph} />

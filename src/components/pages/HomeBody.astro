@@ -5,6 +5,7 @@ import QuoteBand from '../QuoteBand.astro'
 import RandomizeQuotes from '../RandomizeQuotes.astro'
 import { forLocale, localePath, type Locale } from '../../lib/content'
 import { home } from '../../i18n/pages'
+import { webSiteNode } from '../../lib/structuredData'
 
 interface Props {
   locale: Locale
@@ -41,7 +42,13 @@ const pool = (
   .filter((entry, i, all) => all.findIndex((other) => other.person === entry.person) === i)
 ---
 
-<BaseLayout locale={locale} title={copy.pageTitle} description={copy.metaDescription} path="/">
+<BaseLayout
+  locale={locale}
+  title={copy.pageTitle}
+  description={copy.metaDescription}
+  path="/"
+  jsonLd={[webSiteNode(locale, copy.metaDescription)]}
+>
   <section class="content-max mx-auto px-4 py-16 text-center sm:px-6 sm:py-24">
     <p class="text-vihrea-tumma font-semibold">{copy.eyebrow}</p>
     <h1 class="mt-2 text-4xl sm:text-6xl">{copy.title}</h1>

@@ -12,6 +12,16 @@ import {
   type ProgramSection as ProgramSectionData,
 } from '../../lib/programSections'
 import { t } from '../../i18n/ui'
+import { programsPage } from '../../i18n/pages'
+import { localePath } from '../../lib/content'
+import { ogUrlFor } from '../../lib/og'
+import {
+  articleNode,
+  breadcrumbNode,
+  faqNode,
+  SITE_URL,
+  type JsonLdNode,
+} from '../../lib/structuredData'
 
 interface Props {
   locale: Locale
@@ -48,6 +58,31 @@ let lastHighlightIndex = -1
 sections.forEach((section, i) => {
   if (section.type === 'highlight') lastHighlightIndex = i
 })
+
+const canonical = `${SITE_URL}${localePath(locale, path)}`
+const indexable = !program.data.unlisted
+
+const jsonLd: JsonLdNode[] = [
+  articleNode({
+    url: canonical,
+    headline: program.data.title,
+    description: program.data.description,
+    locale,
+    image: ogUrlFor(locale, path),
+    published: program.data.published,
+    updated: program.data.updated,
+  }),
+  breadcrumbNode([
+    { name: 'Markkinavihreät', url: `${SITE_URL}${localePath(locale, '/')}` },
+    { name: programsPage[locale].title, url: `${SITE_URL}${localePath(locale, '/ehdotukset/')}` },
+    { name: program.data.title, url: canonical },
+  ]),
+]
+
+// Only emitted once a program's FAQ is genuinely complete — see faqNode().
+const faqSection = sections.find((section) => section.type === 'faq')
+const faq = faqSection ? faqNode(faqSection.items, { indexable }) : null
+if (faq) jsonLd.push(faq)
 ---
 
 <BaseLayout
@@ -59,6 +94,7 @@ sections.forEach((section, i) => {
   ogType="article"
   publishedTime={program.data.published}
   modifiedTime={program.data.updated}
+  jsonLd={jsonLd}
 >
   <ProgramHero
     kicker={program.data.heroKicker}

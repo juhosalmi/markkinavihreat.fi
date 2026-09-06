@@ -2,8 +2,11 @@
 import '../styles/global.css'
 import Nav from '../components/Nav.astro'
 import Footer from '../components/Footer.astro'
+import StructuredData from '../components/StructuredData.astro'
 import type { Locale } from '../lib/content'
+import { home } from '../i18n/pages'
 import { ogUrlFor } from '../lib/og'
+import type { JsonLdNode } from '../lib/structuredData'
 
 interface Props {
   locale: Locale
@@ -18,6 +21,8 @@ interface Props {
   /** Only meaningful with ogType="article" — drives the article:* meta. */
   publishedTime?: Date
   modifiedTime?: Date
+  /** Page-specific JSON-LD nodes; the Organization is always added for you. */
+  jsonLd?: JsonLdNode[]
 }
 
 const {
@@ -29,6 +34,7 @@ const {
   ogType = 'website',
   publishedTime,
   modifiedTime,
+  jsonLd = [],
 } = Astro.props
 
 const SITE_URL = 'https://markkinavihreat.fi'
@@ -97,6 +103,7 @@ const ogImage = ogUrlFor(locale, path)
         <meta name="robots" content="index, follow, max-image-preview:large" />
       )
     }
+    <StructuredData description={home[locale].metaDescription} nodes={jsonLd} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
     <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
