@@ -38,7 +38,7 @@ const pool = (
       }),
   )
 )
-  // Dedupe by person so one face can't fill two of the four slots on a load.
+  // Dedupe by person so one face can't fill both slots on a load.
   .filter((entry, i, all) => all.findIndex((other) => other.person === entry.person) === i)
 ---
 
@@ -74,14 +74,6 @@ const pool = (
     </div>
   </section>
 
-  {
-    pool[1] && (
-      <div class="js-quote-slot">
-        <QuoteBand name={pool[1].name} photo={pool[1].photo} quote={pool[1].quote} />
-      </div>
-    )
-  }
-
   <section class="px-4 py-16 sm:px-6">
     <div class="content-max mx-auto grid gap-6 sm:grid-cols-2">
       {
@@ -94,14 +86,6 @@ const pool = (
       }
     </div>
   </section>
-
-  {
-    pool[2] && (
-      <div class="js-quote-slot">
-        <QuoteBand name={pool[2].name} photo={pool[2].photo} quote={pool[2].quote} />
-      </div>
-    )
-  }
 
   <section class="bg-metsa text-kerma px-4 py-16 sm:px-6">
     <div class="content-max mx-auto">
@@ -140,9 +124,9 @@ const pool = (
   </section>
 
   {
-    pool[3] && (
+    pool[1] && (
       <div class="js-quote-slot">
-        <QuoteBand name={pool[3].name} photo={pool[3].photo} quote={pool[3].quote} />
+        <QuoteBand name={pool[1].name} photo={pool[1].photo} quote={pool[1].quote} />
       </div>
     )
   }
