@@ -1,7 +1,7 @@
 ---
 locale: sv
 title: Grön nedskärningslista
-description: Marknadsgrönt förslag för nästa regeringsperiods anpassning — cirka 9,4 miljarder euro, varav 80 % nedskärningar och 20 % skattehöjningar. Den största enskilda posten är en frysning av arbetspensionsindexet.
+description: Marknadsgrönt förslag för nästa regeringsperiods anpassning — 11 miljarder euro, varav 7 miljarder nedskärningar och 4 miljarder skattehöjningar. Den största enskilda posten är en frysning av arbetspensionsindexet.
 order: 4
 heroKicker: Marknadsgröna föreslår
 heroLines:

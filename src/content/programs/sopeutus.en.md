@@ -1,7 +1,7 @@
 ---
 locale: en
 title: The Green cut list
-description: A Market Green proposal for next term's fiscal adjustment — about €9.4 billion, of which 80% spending cuts and 20% tax increases. The single largest item is a freeze of the earnings-related pension index.
+description: A Market Green proposal for next term's fiscal adjustment — €11 billion, of which €7 billion spending cuts and €4 billion tax increases. The single largest item is a freeze of the earnings-related pension index.
 order: 4
 heroKicker: The Market Greens propose
 heroLines:
