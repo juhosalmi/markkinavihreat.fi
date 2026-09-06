@@ -3,6 +3,8 @@ locale: sv
 title: Tre sätt att underlätta företagande
 description: 'Ett inlägg för Företagardagen – tre konkreta sätt att riva hindren för företagande med marknadsmekanismen: FöPL, återkomsten efter konkurs och att anställa den första arbetstagaren.'
 order: 3
+published: 2026-09-03
+updated: 2026-09-04
 heroKicker: De marknadsgrönas inlägg för Företagardagen
 heroLines:
   - Tre sätt att underlätta

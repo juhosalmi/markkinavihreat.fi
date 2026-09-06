@@ -57,6 +57,8 @@ sections.forEach((section, i) => {
   path={path}
   noindex={program.data.unlisted}
   ogType="article"
+  publishedTime={program.data.published}
+  modifiedTime={program.data.updated}
 >
   <ProgramHero
     kicker={program.data.heroKicker}

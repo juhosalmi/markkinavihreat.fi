@@ -3,6 +3,7 @@ locale: sv
 title: Med lön ska man kunna bli förmögen!
 description: Ett förmögenhetskonto skulle göra det möjligt att spara och investera direkt av lön, före skatt.
 order: 2
+published: 2026-08-22
 heroKicker: De marknadsgröna kräver
 heroLines:
   - Med lön ska man

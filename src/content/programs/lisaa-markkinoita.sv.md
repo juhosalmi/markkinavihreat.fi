@@ -3,6 +3,8 @@ locale: sv
 title: Mer marknad!
 description: Fem förslag som tar marknadsmekanismen i bruk för att lösa problem inom trafik, stadsrum, offentlig upphandling och markanvändning.
 order: 1
+published: 2026-07-28
+updated: 2026-08-22
 heroKicker: De marknadsgröna kräver
 heroLines:
   - Mer
