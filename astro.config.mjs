@@ -24,6 +24,22 @@ function unlistedProgramSlugs() {
 
 const unlistedSlugs = unlistedProgramSlugs()
 
+// The /blogi/ index renders in all three locales even with no posts, showing
+// only "no posts yet". Three near-empty pages are a thin-content signal, so
+// they stay out of the sitemap (and carry noindex, set in BlogIndexBody)
+// until the first post lands. Self-healing: publishing a post re-includes them.
+function hasBlogPosts() {
+  const dir = fileURLToPath(new URL('./src/content/blog', import.meta.url))
+  try {
+    return readdirSync(dir).some((file) => file.endsWith('.md'))
+  } catch {
+    // The directory doesn't exist yet — the blog was unpublished in 4f9c4bc.
+    return false
+  }
+}
+
+const blogHasPosts = hasBlogPosts()
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://markkinavihreat.fi/',
@@ -38,7 +54,9 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) => !unlistedSlugs.some((slug) => page.includes(`/ehdotukset/${slug}/`)),
+      filter: (page) =>
+        !unlistedSlugs.some((slug) => page.includes(`/ehdotukset/${slug}/`)) &&
+        (blogHasPosts || !page.includes('/blogi/')),
     }),
   ],
 })

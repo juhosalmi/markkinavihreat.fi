@@ -2,6 +2,12 @@ import type { Locale } from '../lib/content'
 
 interface HomeCopy {
   metaDescription: string
+  /**
+   * The <title> for the home page. Kept separate from `eyebrow` (which is only
+   * the small label above the hero heading) so the site's most valuable title
+   * slot can carry topical keywords rather than just the network's name.
+   */
+  pageTitle: string
   eyebrow: string
   title: string
   subtitle: string
@@ -56,6 +62,7 @@ export const home: Record<Locale, HomeCopy> = {
   fi: {
     metaDescription:
       'Markkinavihreät on Vihreiden sisällä toimiva markkinaliberaalien ja sosiaaliliberaalien verkosto. Manifesti, ehdotukset ja tekijät.',
+    pageTitle: 'Markkinavihreät — markkinaliberaali verkosto Vihreissä',
     eyebrow: 'Markkinavihreät',
     title: 'Markkinat ja luonto samalla puolella.',
     subtitle:
@@ -100,6 +107,7 @@ export const home: Record<Locale, HomeCopy> = {
   sv: {
     metaDescription:
       'Markkinavihreät (marknadsgröna) är ett nätverk av marknadsliberaler och socialliberaler inom De Gröna. Manifest, förslag och medlemmar.',
+    pageTitle: 'Markkinavihreät — marknadsliberalt nätverk inom De Gröna',
     eyebrow: 'Markkinavihreät',
     title: 'Marknaden och naturen på samma sida.',
     subtitle:
@@ -144,6 +152,7 @@ export const home: Record<Locale, HomeCopy> = {
   en: {
     metaDescription:
       "Markkinavihreät (Market Greens) is a network of market-liberal and social-liberal members within Finland's Green League. Manifesto, suggestions and people.",
+    pageTitle: 'Markkinavihreät — a market-liberal network within the Greens',
     eyebrow: 'Markkinavihreät',
     title: 'Markets and nature, on the same side.',
     subtitle:

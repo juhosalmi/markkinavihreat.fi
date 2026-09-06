@@ -41,12 +41,7 @@ const pool = (
   .filter((entry, i, all) => all.findIndex((other) => other.person === entry.person) === i)
 ---
 
-<BaseLayout
-  locale={locale}
-  title={`${copy.eyebrow} — markkinavihreat.fi`}
-  description={copy.metaDescription}
-  path="/"
->
+<BaseLayout locale={locale} title={copy.pageTitle} description={copy.metaDescription} path="/">
   <section class="content-max mx-auto px-4 py-16 text-center sm:px-6 sm:py-24">
     <p class="text-vihrea-tumma font-semibold">{copy.eyebrow}</p>
     <h1 class="mt-2 text-4xl sm:text-6xl">{copy.title}</h1>
