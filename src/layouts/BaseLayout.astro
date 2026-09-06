@@ -96,6 +96,12 @@ const ogImage = ogUrlFor(locale, path)
     <link rel="alternate" hreflang="x-default" href={localeUrl('fi')} />
     <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" />
     <link rel="sitemap" href={`${import.meta.env.BASE_URL}sitemap-index.xml`} />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Markkinavihreät"
+      href={`${import.meta.env.BASE_URL}rss.xml`}
+    />
     {
       noindex || import.meta.env.NOINDEX === 'true' ? (
         <meta name="robots" content="noindex, nofollow" />

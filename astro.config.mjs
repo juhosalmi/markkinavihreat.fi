@@ -40,6 +40,23 @@ function hasBlogPosts() {
 
 const blogHasPosts = hasBlogPosts()
 
+// Maps a program slug to its last content change, for the sitemap's <lastmod>.
+// Same constraint as above — the content layer isn't available here — so the
+// `published`/`updated` frontmatter (see src/content.config.ts) is read
+// directly. Dates are mirrored across locales, so one file per slug suffices.
+function programLastmod() {
+  const dir = fileURLToPath(new URL('./src/content/programs', import.meta.url))
+  const dates = new Map()
+  for (const file of readdirSync(dir).filter((f) => f.endsWith('.fi.md'))) {
+    const text = readFileSync(`${dir}/${file}`, 'utf-8')
+    const date = (/^updated:\s*(\S+)\s*$/m.exec(text) ?? /^published:\s*(\S+)\s*$/m.exec(text))?.[1]
+    if (date) dates.set(file.replace(/\.\w+\.md$/, ''), date)
+  }
+  return dates
+}
+
+const lastmodBySlug = programLastmod()
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://markkinavihreat.fi/',
@@ -57,6 +74,18 @@ export default defineConfig({
       filter: (page) =>
         !unlistedSlugs.some((slug) => page.includes(`/ehdotukset/${slug}/`)) &&
         (blogHasPosts || !page.includes('/blogi/')),
+      // Emits xhtml:link alternates per URL, so hreflang reaches crawlers via
+      // the sitemap as well as the <head>. Mirrors BaseLayout's link rel=alternate.
+      i18n: {
+        defaultLocale: 'fi',
+        locales: { fi: 'fi', sv: 'sv', en: 'en' },
+      },
+      serialize(item) {
+        for (const [slug, date] of lastmodBySlug) {
+          if (item.url.includes(`/ehdotukset/${slug}/`)) return { ...item, lastmod: date }
+        }
+        return item
+      },
     }),
   ],
 })
