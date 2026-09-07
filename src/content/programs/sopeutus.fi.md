@@ -73,11 +73,11 @@ Esitämme kahta uudistusta, joita ekonomistit ovat suositelleet vuosia ja jotka 
 
 **Kotihoidontuki lakkautetaan, 0,1 miljardia.** Tutkimusnäyttö on yksiselitteistä: kotihoidontuki heikentää naisten työllisyyttä ja ansiokehitystä. Kela maksaa sitä enää [137 miljoonaa euroa vuodessa](https://www.kela.fi/tietotarjotin/1359979-kotihoidon-tuen-saajamaara-on-lahes-puolittunut-kymmenessa-vuodessa), koska perheet ovat jo äänestäneet jaloillaan: saajamäärä on puolittunut kymmenessä vuodessa. Nykyinen hallitus teki tukeen vain asumisaikarajauksen — me viemme uudistuksen loppuun ja ohjaamme vapautuvat varat osaksi sopeutusta. Tämä vahvistaa valtiota ja kuntia.
 
-## Vaatimus 6/7: Yhtenäistetään arvonlisävero ja puretaan huonosti kohdentuvat verotuet
+## Vaatimus 6/7: Puretaan huonosti kohdentuvat verotuet
 
 Tutkijoiden viesti on ollut vuosia sama: [tehokkain arvonlisävero on laajapohjainen ja yksikantainen](https://vatt.fi/documents/2956369/3012213/muistio_51.pdf), ja verotuki on tukea siinä missä suora tukikin — usein vain huonommin kohdennettua. Esitämme tähän kokonaisuuteen 1,7 miljardin veronkorotuksia:
 
-**Arvonlisäveron yhtenäistäminen, 1,0 miljardia.** Siirrämme ravintola- ja ateriapalvelut ([918 miljoonan verotuki](https://budjetti.vm.fi/sisalto.jsp?year=2026&lang=fi&maindoc=/2026/tae/hallituksenEsitys/hallituksenEsitys.xml&id=/2026/tae/hallituksenEsitys/YksityiskohtaisetPerustelut/11/04/01/01.html)), majoituspalvelut (114 miljoonaa) sekä kulttuurin ja liikunnan yleiseen verokantaan. Kirjojen alennettu verokanta säilyy: lukeminen on sivistyksen perusta, emmekä veronkorotuksia tehdessämme aloita siitä. Lääkkeiden ja joukkoliikenteen tuki hoidetaan jatkossa suoraan ja näkyvästi — lääkekorvauksina ja joukkoliikenteen ostoina — eikä piilottamalla se verokantaan, jonka suurin hyöty valuu eniten kuluttaville. Ruoka on eri asia: sen siirto yleiseen kantaan on oma ehdotuksemme, jossa koko tuotto palautetaan ihmisille kuukausittaisena perustulona — tuottoneutraalisti, eli se ei tuota tähän pakettiin euroakaan. Lue se täältä: [Muutetaan ruuan alv perustuloksi](/ehdotukset/ruuan-alv-perustuloksi/).
+**Ravintola-, ateria- ja majoituspalvelut yleiseen verokantaan, 1,0 miljardia.** Siirrämme ravintola- ja ateriapalvelut ([918 miljoonan verotuki](https://budjetti.vm.fi/sisalto.jsp?year=2026&lang=fi&maindoc=/2026/tae/hallituksenEsitys/hallituksenEsitys.xml&id=/2026/tae/hallituksenEsitys/YksityiskohtaisetPerustelut/11/04/01/01.html)) ja majoituspalvelut (114 miljoonaa) yleiseen verokantaan. Kirjojen, kulttuurin ja liikunnan alennetut verokannat säilyvät: sivistys ja liikkuminen ovat asioita, joita verojärjestelmän sopii tukea, emmekä aloita veronkorotuksia niistä. Lääkkeiden ja joukkoliikenteen tuki hoidetaan jatkossa suoraan ja näkyvästi — lääkekorvauksina ja joukkoliikenteen ostoina — eikä piilottamalla se verokantaan, jonka suurin hyöty valuu eniten kuluttaville. Ruoka on eri asia: sen siirto yleiseen kantaan on oma ehdotuksemme, jossa koko tuotto palautetaan ihmisille kuukausittaisena perustulona — tuottoneutraalisti, eli se ei tuota tähän pakettiin euroakaan. Lue se täältä: [Muutetaan ruuan alv perustuloksi](/ehdotukset/ruuan-alv-perustuloksi/).
 
 **Listaamattomien osinkojen huojennuksen kiristys, 0,4 miljardia.** Listaamattomien yhtiöiden osinkojen verotuki on [550 miljoonaa euroa vuodessa](https://budjetti.vm.fi/sisalto.jsp?year=2026&lang=fi&maindoc=/2026/tae/hallituksenEsitys/hallituksenEsitys.xml&id=/2026/tae/hallituksenEsitys/YksityiskohtaisetPerustelut/11/01/01/01.html), ja se kannustaa muuntamaan palkkaa osingoiksi. Toteutamme valtiovarainministeriön asiantuntijatyöryhmän mallin: tuottoprosentti lasketaan kahdeksasta neljään ja 150 000 euron raja poistetaan. Valtiovarainministeriön [verokartoituksen](https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/164690/2023_VM_15.pdf) mukaan tämä tuottaa staattisesti 430 miljoonaa euroa, josta 400 miljoonaa kohdistuu ylimpään tulokymmenykseen.
 
@@ -110,7 +110,7 @@ Paketti kokonaisuudessaan, staattisina vaikutuksina vuositasolla 2031:
 **Veronkorotukset, 4,0 miljardia:**
 
 - Yritysten energiaverotukien purku: 1,4 mrd
-- Arvonlisäveron yhtenäistäminen ruokaa ja kirjoja lukuun ottamatta: 1,0 mrd
+- Ravintola-, ateria- ja majoituspalveluiden siirto yleiseen verokantaan: 1,0 mrd
 - Haittojen hinnoittelu ja terveysvero: 0,7 mrd
 - Listaamattomien osinkojen huojennuksen kiristys: 0,4 mrd
 - Oman asunnon myyntivoiton verovapauden rajaus: 0,3 mrd
