@@ -1,12 +1,12 @@
 ---
 locale: sv
-title: Grön nedskärningslista
+title: Marknadsgrön anpassningslista
 description: Marknadsgrönt förslag för nästa regeringsperiods anpassning — 11 miljarder euro, varav 7 miljarder nedskärningar och 4 miljarder skattehöjningar. Den största enskilda posten är en frysning av arbetspensionsindexet.
 order: 4
 heroKicker: Marknadsgröna föreslår
 heroLines:
-  - Grön
-  - nedskärningslista
+  - Marknadsgrön
+  - anpassningslista
 unlisted: true
 citations: []
 ---

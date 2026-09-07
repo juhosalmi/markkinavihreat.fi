@@ -66,7 +66,7 @@ Tästä emme tingi. Se on koko ehdotuksen ydin: emme halua kiristää ihmisten v
 
 Ruoka yleiseen verokantaan ja tuotto takaisin kuukausittaisena tulona tuottaisi useita hyötyjä yhdellä kertaa. Tuki kohdentuisi paremmin: pienituloisen asema paranisi, suurituloisen tuki pienenisi. Ihmiset saisivat vapauden päättää itse, mihin omat rahansa käyttävät, ilman valtion sanelua. Verojärjestelmä yksinkertaistuisi, kun yksi erityiskohtelu poistuisi. Ja koska kyse on käytännössä pienestä perustulosta, se olisi ensimmäinen konkreettinen askel kohti aitoa perustuloa ja ihmisten vapauttamista nykyisestä kafkamaisen kyttäävästä byrokratiasosiaaliturvasta.
 
-Koska muutos on tuottoneutraali, se ei tuota euroakaan julkisen talouden sopeutukseen — eikä sen ole tarkoituskaan. Ehdotus täydentää [Vihreää leikkauslistaamme](/ehdotukset/sopeutus/), jossa esitämme, miten ensi hallituskauden sopeutus tehdään.
+Koska muutos on tuottoneutraali, se ei tuota euroakaan julkisen talouden sopeutukseen — eikä sen ole tarkoituskaan. Ehdotus täydentää [Markkinavihreää sopeutuslistaamme](/ehdotukset/sopeutus/), jossa esitämme, miten ensi hallituskauden sopeutus tehdään.
 
 **Ruuan alennettu alv ei ole huono ajatus siksi, että pienituloisia ei kannattaisi tukea. Se on huono ajatus siksi, että se tekee sen huonosti.** Reilumpi, yksinkertaisempi ja vapaampi vaihtoehto on maksaa raha suoraan ihmisille.
 

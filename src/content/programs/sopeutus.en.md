@@ -1,12 +1,12 @@
 ---
 locale: en
-title: The Green cut list
+title: The Market Green adjustment list
 description: A Market Green proposal for next term's fiscal adjustment — €11 billion, of which €7 billion spending cuts and €4 billion tax increases. The single largest item is a freeze of the earnings-related pension index.
 order: 4
 heroKicker: The Market Greens propose
 heroLines:
-  - The Green
-  - cut list
+  - The Market Green
+  - adjustment list
 unlisted: true
 citations: []
 ---
