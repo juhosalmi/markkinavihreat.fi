@@ -8,3 +8,5 @@ npm run dev
 ```
 
 See [AGENTS.md](./AGENTS.md) for the full toolchain, content map, and conventions.
+
+Production deploys automatically from `main` (Cloudflare Workers Builds). If the live site lags behind `main`, check the build history for the `markkinavihreat` worker.
