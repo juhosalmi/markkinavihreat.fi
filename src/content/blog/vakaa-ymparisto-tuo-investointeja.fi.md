@@ -1,0 +1,58 @@
+---
+locale: fi
+title: Vakaa ympäristö tuo investointeja, poukkoilu vie niitä
+description: 'Googlen 13 miljardin investointi syntyi toimivalle sähkömarkkinalle. Hintakatto veisi hintasignaalin juuri silloin, kun sitä eniten tarvitaan.'
+date: 2026-09-10
+author: Lauri Lavanti
+---
+
+Google kertoi keskiviikkona [sijoittavansa Suomeen 13 miljardia euroa vuosina 2027 ja 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure). Se on yhtiön suurin yksittäinen investointi Euroopassa. Rahat menevät [Haminan datakeskuksen laajennukseen sekä uusiin datakeskuksiin Kajaaniin, Vaalaan ja Muhokselle](https://yle.fi/a/74-20245271). Rakennan työkseni ohjelmistoja, jotka pyörivät juuri tämänkaltaisessa infrastruktuurissa, joten sanon sen suoraan: raha ei tullut Suomeen tukien perässä vaan siksi, että sähkömarkkina toimii. Suomi saa pääomaa, kun yritysten toimintakenttä on ennakoitavissa.
+
+## Kuinka paljon Googlen 13 miljardista jää Suomeen?
+
+Karkeasti ottaen puolet summasta menee tietokoneiden ja sirujen hankintaan, eikä siis nosta Suomen bruttokansantuotetta suoraan, arvioi [Etlan vanhempi tutkija Sakari Lähdemäki](https://yle.fi/a/74-20245322). Loppuosa näkyy rakennustyömaina, verotuloina ja pysyvinä työpaikkoina Kainuussa, Pohjois-Pohjanmaalla ja Kymenlaaksossa. Ennen kuin yksikään uusista datakeskuksista on täydessä käytössä.
+
+Google arvioi hankkeen työllistävän rakennusaikana [noin 37 000 ihmistä eri puolilla Suomea](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure), joista noin 16 000 rakennusalalla, ja ylläpitovaiheessa noin 7 000 ihmistä vuosittain. Vaikka Google arvioisi luvut yläkanttiin, on kyse uudesta rahasta ja uusista työpaikoista, joita ei Suomeen muuten tulisi, ja ne tulevat ilman valtion velkaa tai tukia. Fyysinen infrastruktuuri myös jää tänne, vaikka Google joskus päättäisi, että se ei enää tarvitse niin merkittäviä datakeskuksia Suomessa.
+
+Se, kuinka suuri osa summasta jää tänne, on lopulta kysymys siitä, miten paljon lisäarvoa kykenemme keskukseen ja sen ympärillä tuottamaan. Mitä suurempi osa datakeskusten arvosta syntyy suomalaisella osaamisella ja suomalaisilla tuotteilla, sitä pienempi osa valuu ulos.
+
+## Miksi Google rakentaa Suomeen omaa sähköntuotantoa?
+
+Samassa yhteydessä Google tiedotti tehneensä Fortumin kanssa 22 vuoden [pitkäaikaisen sähkönostosopimuksen](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/), joka takaa yhtiölle jopa puolet Loviisan ydinvoimalan tuotannosta vuodesta 2028 alkaen, käytännössä siis kokonaisen ydinreaktorin. Laitos [työllistää](https://muhos.fi/ajankohtaista/google-vahvistaa-sitoutumistaan-suomeen-kaksivuotisella-13-miljardin-euron-investoinnilla-tekoalyinfrastruktuuriin/) noin 580 henkilöä ja tuottaa noin kymmenesosan Suomen sähköstä. On myös hyvin todennäköistä, että laitos ei olisi jatkanut tuotantoaan vuoden 2030 jälkeen [ilman tätä sopimusta](https://www.datacenterdynamics.com/en/news/google-signs-nuclear-ppa-with-fortum-in-loviisa-finland/).
+
+Loviisan sopimus on kuitenkin vain osa kokonaisuutta. Google on lisäksi hankkinut [sääriippumatonta ja sääriippuvaista tuotantoa](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/):
+
+- kaksi uutta tuulivoimasopimusta, Valorem ja Suomen Hyötytuuli, yhteensä 629 megawattia
+- 94 megawatin akkuvarasto Kajaanin lähelle, valmis vuoden 2027 lopulla
+- aiesopimus uudesta ydinvoimasta ja kulutusjoustosta
+
+Loviisan sopimus, tuulivoima ja akkuvarasto ovat yksityisen ostajan rahoittamia hankkeita, ilman julkista tukea tai veronmaksajalle siirrettyä riskiä. Aiesopimus uudesta ydinvoimasta ei ole vielä sitova, mutta sama periaate pätee siihenkin: jos uutta ydinvoimaa rakennetaan, riskin kantaa ostaja, ei valtio. [Vihreän eduskuntaryhmän puheenjohtaja Oras Tynkkynen](https://www.sttinfo.fi/tiedote/72307284/vihreiden-tynkkynen-googlen-investointi-osoittaa-vihrean-siirtyman-vetovoiman?lang=fi) totesi julkistuspäivänä, ettei datakeskusten houkuttelemiseksi tarvita ylimääräisiä yritystukia eikä niitä pidä antaa. Tämä on sitä keinovalikoimaa, jolla puututaan sähkön niukkuuteen: sääriippumatonta tuotantoa, akkuja ja kulutusjoustoa. Nyt sen toteuttaa yksityinen pääoma, koska hintasignaali kertoi markkinalle, että rakentaminen kannattaa.
+
+## Miksi hintakatto rikkoisi sähkömarkkinan?
+
+Hintakatto vaimentaisi juuri sen signaalin, jota tarvitaan eniten silloin, kun sähköstä on niukkuutta. Sähkön hinta on [markkinamekanismia parhaimmillaan](https://lavanti.fi/fi/blog/75/lisaa-markkinoita/). Kun kysyntä ylittää tarjonnan, hinta nousee, kunnes kysyntä ja tarjonta jälleen kohtaavat. Kuitenkin pääministeri Petteri Orpo totesi [julkistuksen yhteydessä](https://www.ksml.fi/uutissuomalainen/9777613): "Hallitus valmistelee lisäksi hintakattoa tavallisille kotitalouksille mahdollisten kriisitilanteiden varalle."
+
+Olen sanonut saman ennenkin:
+
+> Sähkö on aina niin halpaa kuin kallein sillä hetkellä tarvittava tuotantomuoto.
+
+Korkea hinta on markkinan ominaisuus, joka tekee kannattavaksi tarjota lisää tuotantoa, akkuja ja kulutusjoustoa juuri silloin, kun niitä tarvitaan.
+
+Hallitus tosiaan valmistelee työ- ja elinkeinoministeriössä [lakiluonnosta (TEM081:00/2025)](https://valtioneuvosto.fi/hanke?tunnus=TEM081:00/2025), joka [mahdollistaisi hintakaton asettamisen](https://tem.fi/-/lausunnolle-lakiluonnos-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-hintakaton-asettaminen-mahdollistuisi) vain, jos EU:n neuvosto toteaisi sähkön hintakriisin. Katto olisi tällöinkin vähintään 18 senttiä kilowattitunnilta ilman arvonlisäveroa. Hallituksen esitystä ei ole vielä annettu, ja sen arvioidaan tulevan eduskuntaan vasta myöhemmin syksyllä. Näin kapea kriisikatto ei sinänsä pysäytä yhtään investointia. Sen vaikutus on toinen. Kun hinta voidaan katkaista poliittisella päätöksellä, jokainen pitkä sopimus hinnoittelee tuon riskin valmiiksi, ja se maksetaan korkeampana tuottovaatimuksena. [Energiateollisuus ry totesi lausunnossaan](https://energia.fi/lausunnot/energiateollisuus-ryn-lausunto-luonnoksesta-laiksi-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-ym/) maaliskuussa 2026: "Tarve varautua hintakriisiin on olemassa, mutta emme voi tukea esitettyä keinoa."
+
+## Onko Suomi vakaa investointiympäristö?
+
+Ei riittävän vakaa. Hallitus siirsi datakeskusten sähköveron yleiseen luokkaan, [0,05 sentistä 2,24 senttiin kilowattitunnilta](https://www.vero.fi/yritykset-ja-yhteisot/verot-ja-maksut/valmisteverotus/sahkovero/), mikä tuo valtiolle noin 47 miljoonaa euroa vuodessa. Muutoksen tausta on [keväällä 2025 tehty päätös](https://www.verdelehti.fi/2025/10/23/google-jaadytti-miljardiluokan-investoinnin-hallitus-kiistelee-datakeskusten-sahkoverosta/) perua suunniteltu makeisveron korotus ja kattaa aukko poistamalla datakeskusten ja kaivosten sähköveron huojennuksen. Veroluokan muutoksen voi sinänsä perustella, ja olisi varmasti paikallaan keskustella alennetusta sähköverosta kaiken teollisuuden osalta. Google lopulta investoi korkeammallakin verolla. Ongelma oli kuitenkin muutoksen toteutustapa. Ympäristö vaihtui äkkiä kesken investointilaskelmien, ja hallitus kiisteli tasosta vuoden.
+
+Seuraukset näkyivät puolessa vuodessa:
+
+- huhtikuussa 2025 Googlen Antti Järvinen totesi: ["Suomen hallituksen suunnitelma sähköverosta laittaa investointilaskelmat ihan uuteen asentoon"](https://yle.fi/a/74-20155449)
+- lokakuussa 2025 [Google jäädytti Kajaanin ja Muhoksen investointipäätöksen](https://yle.fi/a/74-20189971), kunnes verotaso selviäisi
+
+> "Kokonaisuus antaa kuitenkin huonon vaikutelman Suomesta investointiympäristönä." ([Jukka Leskelä, Energiateollisuus ry, 1.9.2026](https://energia.fi/tiedotteet/energiateollisuus-huolissaan-poukkoilevasta-toimintaymparistosta/))
+
+[Datakeskusteollisuus ry:n toiminnanjohtaja Antti Poikola](https://www.verkkouutiset.fi/a/datakeskusala-varoittaa-suomen-poliittisen-riskin-kasvusta/) totesi 2.9.2026, että viestit antavat kuvan, jossa "Suomi on varsin epäluotettava investointiympäristö", ja piirtävät "erittäin reaktiivisen ja poukkoilevan kuvan". Datakeskusteollisuuden tehtävä on toki edistää datakeskusten etua, mutta huomio osuu. 13 miljardin investointi tuli ennakoitavuuden puutteesta huolimatta. Ennakoitava sääntely pitää seuraavatkin investoinnit tulossa. Oras Tynkkynen muistuttikin tiedotteessaan: "Vihreys on yksi Suomen suurimpia valtteja kovassa kansainvälisessä kilpailussa investoinneista, eikä sitä ole varaa politiikalla tärvätä." Sama ennakoimattomuus ei saisi toistua hintakaton kohdalla.
+
+[Markkinatalous](https://lavanti.fi/fi/blog/62/vihreat-markkinatalouden-aito-puolustaja/) ei ratkaise itsestään kaikkea. Se on väline, joka toimii, kun ulkoisvaikutukset on hinnoiteltu oikein ja säännöt pysyvät samoina riippumatta siitä, kuka niitä koettelee. Päästökauppa ja [toimiva sähkömarkkina](https://lavanti.fi/fi/blog/65/suomi-voi-tehda-sahkoistymisesta-kilpailuedun/) ovat tehneet osansa. Suomeen syntyy puhdasta tuotantoa ja miljardiluokan investointeja, kun hintasignaali saa toimia rauhassa. Seuraava koettelemus on kuitenkin tulossa. Jos hallitus vaimentaa sähkön hintasignaalin juuri silloin, kun sitä eniten tarvitaan, mikä takaa, että seuraava investointi tulee Suomeen?
+
+_Kirjoitus on julkaistu myös [Lauri Lavannin blogissa](https://lavanti.fi/fi/blog/77/sahkomarkkina-google-hintakatto/) ja [TalousVihreiden sivuilla](https://talousvihreat.fi/2026/09/10/vakaa-ymparisto-tuo-investointeja-poukkoilu-vie-niita/)._
