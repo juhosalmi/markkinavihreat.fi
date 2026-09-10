@@ -1,0 +1,58 @@
+---
+locale: sv
+title: En stabil miljö ger investeringar, ryckighet tar dem
+description: 'Googles investering på 13 miljarder euro föddes ur en fungerande elmarknad. Ett pristak skulle ta bort prissignalen just när den behövs som mest.'
+date: 2026-09-10
+author: Lauri Lavanti
+---
+
+Google meddelade på onsdagen att [bolaget investerar 13 miljarder euro i Finland under 2027 och 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure). Det är företagets största enskilda investering i Europa. Pengarna går till [utbyggnaden av datacentret i Fredrikshamn samt nya datacenter i Kajana, Vaala och Muhos](https://yle.fi/a/74-20245271). Jag bygger till vardags programvara som körs i just den här sortens infrastruktur, så jag säger det rakt ut: pengarna kom inte till Finland för stödens skull, utan för att elmarknaden fungerar. Finland får kapital när företagens verksamhetsmiljö är förutsägbar.
+
+## Hur mycket av Googles 13 miljarder blir kvar i Finland?
+
+Grovt räknat går hälften av summan till inköp av datorer och kretsar och höjer alltså inte Finlands bruttonationalprodukt direkt, bedömer [Sakari Lähdemäki, senior forskare vid Näringslivets forskningsinstitut Etla](https://yle.fi/a/74-20245322). Resten syns som byggarbetsplatser, skatteintäkter och permanenta arbetsplatser i Kajanaland, Norra Österbotten och Kymmenedalen. Innan ett enda av de nya datacentren är i full drift.
+
+Google bedömer att projektet under byggtiden sysselsätter [omkring 37 000 människor runtom i Finland](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure), varav cirka 16 000 inom byggbranschen, och i drifttiden omkring 7 000 människor årligen. Även om Google skulle bedöma siffrorna i överkant handlar det om nya pengar och nya arbetsplatser som annars inte skulle komma till Finland, och de kommer utan statlig skuld eller stöd. Den fysiska infrastrukturen blir också kvar här, även om Google någon gång skulle besluta att bolaget inte längre behöver så omfattande datacenter i Finland.
+
+Hur stor del av summan som stannar kvar här är i slutändan en fråga om hur mycket mervärde vi förmår skapa kring centret och i dess omgivning. Ju större del av datacentrens värde som uppstår genom finländskt kunnande och finländska produkter, desto mindre del rinner ut.
+
+## Varför bygger Google egen elproduktion i Finland?
+
+I samma sammanhang meddelade Google att bolaget ingått ett 22-årigt [långsiktigt elköpsavtal](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/) med Fortum, som garanterar bolaget upp till hälften av produktionen vid Lovisa kärnkraftverk från och med 2028, i praktiken alltså en hel kärnreaktor. Anläggningen [sysselsätter](https://muhos.fi/ajankohtaista/google-vahvistaa-sitoutumistaan-suomeen-kaksivuotisella-13-miljardin-euron-investoinnilla-tekoalyinfrastruktuuriin/) omkring 580 personer och producerar ungefär en tiondel av Finlands el. Det är också mycket sannolikt att anläggningen inte skulle ha fortsatt sin produktion efter 2030 [utan detta avtal](https://www.datacenterdynamics.com/en/news/google-signs-nuclear-ppa-with-fortum-in-loviisa-finland/).
+
+Lovisaavtalet är dock bara en del av helheten. Google har dessutom skaffat [väderoberoende och väderberoende produktion](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/):
+
+- två nya vindkraftsavtal, Valorem och Suomen Hyötytuuli, sammanlagt 629 megawatt
+- ett batterilager på 94 megawatt nära Kajana, klart i slutet av 2027
+- en avsiktsförklaring om ny kärnkraft och efterfrågeflexibilitet
+
+Lovisaavtalet, vindkraften och batterilagret är projekt som finansieras av en privat köpare, utan offentligt stöd eller risk som förs över på skattebetalarna. Avsiktsförklaringen om ny kärnkraft är ännu inte bindande, men samma princip gäller även den: om ny kärnkraft byggs bär köparen risken, inte staten. [Gröna riksdagsgruppens ordförande Oras Tynkkynen](https://www.sttinfo.fi/tiedote/72307284/vihreiden-tynkkynen-googlen-investointi-osoittaa-vihrean-siirtyman-vetovoiman?lang=fi) konstaterade på offentliggörandedagen att inga extra företagsstöd behövs för att locka datacenter, och att sådana inte heller bör ges. Det här är just den verktygslåda som används mot elbrist: väderoberoende produktion, batterier och efterfrågeflexibilitet. Nu förverkligas den av privat kapital, eftersom prissignalen visade marknaden att det lönar sig att bygga.
+
+## Varför skulle ett pristak sätta elmarknaden ur spel?
+
+Ett pristak skulle dämpa just den signal som behövs som mest när elen är knapp. Elpriset är [marknadsmekanismen när den fungerar som bäst](https://lavanti.fi/sv/blog/75/mer-marknad/). När efterfrågan överstiger utbudet stiger priset tills efterfrågan och utbud åter möts. Ändå konstaterade statsminister Petteri Orpo [i samband med offentliggörandet](https://www.ksml.fi/uutissuomalainen/9777613): "Regeringen bereder dessutom ett pristak för vanliga hushåll inför eventuella krissituationer."
+
+Jag har sagt samma sak tidigare:
+
+> El är alltid så billig som den dyraste produktionsformen som just då behövs.
+
+Ett högt pris är en egenskap hos marknaden som gör det lönsamt att erbjuda mer produktion, batterier och efterfrågeflexibilitet just när de behövs.
+
+Regeringen bereder som bäst vid Arbets- och näringsministeriet [ett lagförslag (TEM081:00/2025)](https://valtioneuvosto.fi/hanke?tunnus=TEM081:00/2025) som [skulle göra det möjligt att införa ett pristak](https://tem.fi/-/lausunnolle-lakiluonnos-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-hintakaton-asettaminen-mahdollistuisi) endast om EU:s råd konstaterar en elpriskris. Även då skulle taket vara minst 18 cent per kilowattimme utan mervärdesskatt. Regeringens proposition har ännu inte avgetts, och den beräknas komma till riksdagen först senare i höst. Ett så snävt kristak stoppar i sig inte en enda investering. Dess effekt är en annan. När priset kan brytas av med ett politiskt beslut prissätter varje långt avtal den risken i förväg, och den betalas som ett högre avkastningskrav. [Finsk Energiindustri rf konstaterade i sitt utlåtande](https://energia.fi/lausunnot/energiateollisuus-ryn-lausunto-luonnoksesta-laiksi-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-ym/) i mars 2026: "Behovet av att förbereda sig för en priskris finns, men vi kan inte stödja det föreslagna medlet."
+
+## Är Finland en stabil investeringsmiljö?
+
+Inte tillräckligt stabil. Regeringen flyttade datacentrens elskatt till den allmänna klassen, [från 0,05 cent till 2,24 cent per kilowattimme](https://www.vero.fi/yritykset-ja-yhteisot/verot-ja-maksut/valmisteverotus/sahkovero/), vilket ger staten omkring 47 miljoner euro per år. Bakgrunden till ändringen är [ett beslut från våren 2025](https://www.verdelehti.fi/2025/10/23/google-jaadytti-miljardiluokan-investoinnin-hallitus-kiistelee-datakeskusten-sahkoverosta/) att dra tillbaka den planerade höjningen av sötsaksskatten och täcka hålet genom att slopa elskattelättnaden för datacenter och gruvor. Ändringen av skatteklassen kan i sig motiveras, och det vore säkert på sin plats att diskutera en sänkt elskatt för hela industrin. Google investerade till slut även med den högre skatten. Problemet var dock hur ändringen genomfördes. Miljön förändrades plötsligt mitt under investeringskalkylerna, och regeringen tvistade om nivån i ett år.
+
+Följderna syntes inom ett halvår:
+
+- i april 2025 konstaterade Googles Antti Järvinen: "[Finlands regerings plan för elskatt sätter investeringskalkylerna i ett helt nytt läge](https://yle.fi/a/74-20155449)"
+- i oktober 2025 [frös Google investeringsbeslutet för Kajana och Muhos](https://yle.fi/a/74-20189971) tills skattenivån klarnat
+
+> "Helheten ger ändå ett dåligt intryck av Finland som investeringsmiljö." ([Jukka Leskelä, Finsk Energiindustri rf, 1.9.2026](https://energia.fi/tiedotteet/energiateollisuus-huolissaan-poukkoilevasta-toimintaymparistosta/))
+
+[Antti Poikola, verksamhetsledare för Datakeskusteollisuus ry (Finlands datacenterförening)](https://www.verkkouutiset.fi/a/datakeskusala-varoittaa-suomen-poliittisen-riskin-kasvusta/), konstaterade 2.9.2026 att budskapen ger en bild av att "Finland är en ganska opålitlig investeringsmiljö", och tecknar "en mycket reaktiv och ryckig bild". Datakeskusteollisuus ry:s uppgift är förstås att främja datacenterbranschens intressen, men iakttagelsen träffar rätt. Investeringen på 13 miljarder kom trots bristen på förutsägbarhet. Förutsägbar reglering gör att fler investeringar fortsätter att komma. Oras Tynkkynen påminde också i sitt pressmeddelande: "Det gröna är ett av Finlands största trumfkort i den hårda internationella konkurrensen om investeringar, och det har vi inte råd att förstöra med politik." Samma oförutsägbarhet får inte upprepas när det gäller pristaket.
+
+[Marknadsekonomin](https://lavanti.fi/sv/blog/62/de-grona-marknadsekonomiets-sanna-forsvarare/) löser inte allt av sig själv. Den är ett verktyg som fungerar när externa effekter prissätts rätt och reglerna förblir desamma oavsett vem som sätter dem på prov. Utsläppshandeln och [en fungerande elmarknad](https://lavanti.fi/sv/blog/65/finland-kan-gora-elektrifieringen-till-en-konkurrensfordel/) har gjort sin del. Finland får ren produktion och miljardinvesteringar när prissignalen får verka i fred. Nästa prövning är dock på väg. Om regeringen dämpar elens prissignal just när den behövs som mest, vad garanterar då att nästa investering kommer till Finland?
+
+_Texten har också publicerats på [Lauri Lavantis blogg](https://lavanti.fi/sv/blog/77/elmarknaden-google-pristak/) och [TalousVihreäts webbplats](https://talousvihreat.fi/2026/09/10/vakaa-ymparisto-tuo-investointeja-poukkoilu-vie-niita/)._

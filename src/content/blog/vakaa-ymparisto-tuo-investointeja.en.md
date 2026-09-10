@@ -1,0 +1,58 @@
+---
+locale: en
+title: Stability Brings Investment, Erratic Policy Drives It Away
+description: "Google's €13 billion investment came from a functioning electricity market. A price cap would remove the price signal exactly when it is needed most."
+date: 2026-09-10
+author: Lauri Lavanti
+---
+
+Google announced on Wednesday [a €13 billion investment in Finland for 2027 and 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure), its largest single investment in Europe. The money [funds the Hamina data centre expansion and new data centres in Kajaani, Vaala and Muhos](https://yle.fi/a/74-20245271). I build software for a living that runs on exactly this kind of infrastructure, so let me say it plainly: this money did not come to Finland chasing subsidies, it came because the electricity market works. Finland attracts capital when business conditions are predictable.
+
+## How Much of Google's €13 Billion Will Stay in Finland?
+
+Roughly half of the €13 billion goes to computers and chips, so it will not directly raise Finland's GDP, estimates [Sakari Lähdemäki, senior researcher at Etla Economic Research](https://yle.fi/a/74-20245322). The rest shows up as construction, tax revenue and permanent jobs in Kainuu, North Ostrobothnia and Kymenlaakso, before a single new data centre is even operating.
+
+Google estimates the project will employ [about 37,000 people across Finland](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure) during construction, about 16,000 in construction itself, and around 7,000 people a year once the centres are running. Even on generous figures, this is new money and new jobs Finland would not otherwise get, arriving without state debt or subsidies. The infrastructure stays here too, even if Google later scales back.
+
+How large a share ultimately stays here depends on how much added value we generate in and around the data centres. The more that value is created with Finnish expertise and products, the less flows back out.
+
+## Why Is Google Building Its Own Power Generation in Finland?
+
+Google also announced a 22-year [power purchase agreement (PPA)](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/) with Fortum for up to half of the Loviisa nuclear plant's output from 2028, effectively a full reactor's output. The plant [employs](https://muhos.fi/ajankohtaista/google-vahvistaa-sitoutumistaan-suomeen-kaksivuotisella-13-miljardin-euron-investoinnilla-tekoalyinfrastruktuuriin/) about 580 people and produces roughly a tenth of Finland's electricity, and would likely not have kept running [past 2030 without this agreement](https://www.datacenterdynamics.com/en/news/google-signs-nuclear-ppa-with-fortum-in-loviisa-finland/).
+
+The Loviisa agreement, however, is only part of the picture. Google has also secured [dispatchable and weather-dependent generation](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/clean-energy-finland/):
+
+- two new wind power agreements, Valorem and Suomen Hyötytuuli, totalling 629 megawatts
+- a 94-megawatt battery storage near Kajaani, due by late 2027
+- a letter of intent on new nuclear power and demand response
+
+The Loviisa deal, the wind power and the battery storage are privately financed, with no public subsidy or taxpayer risk, and the same principle covers the not-yet-binding letter of intent on new nuclear: if built, the buyer bears the risk, not the state. [Oras Tynkkynen, chair of the Green parliamentary group,](https://www.sttinfo.fi/tiedote/72307284/vihreiden-tynkkynen-googlen-investointi-osoittaa-vihrean-siirtyman-vetovoiman?lang=fi) said on announcement day that attracting data centres needs, and should get, no extra subsidies. This is the toolkit for electricity scarcity: dispatchable generation, batteries and demand response, now delivered by private capital because the price signal said building pays off.
+
+## Why Would a Price Cap Break the Electricity Market?
+
+A price cap would mute exactly the signal needed most when electricity is scarce. The price of electricity is [the market mechanism at its best](https://lavanti.fi/en/blog/75/more-markets/): when demand exceeds supply, price rises until they meet again. Yet Prime Minister Petteri Orpo said [at the announcement](https://www.ksml.fi/uutissuomalainen/9777613): "The government is also preparing a price cap for ordinary households in case of a possible crisis."
+
+I have said this before:
+
+> Electricity is always only as cheap as the most expensive generation method needed at that moment.
+
+A high price is a feature of the market, making it profitable to offer more generation, batteries and demand response exactly when they are needed.
+
+The Ministry of Economic Affairs and Employment is preparing a [draft bill (TEM081:00/2025)](https://valtioneuvosto.fi/hanke?tunnus=TEM081:00/2025) that [would allow a price cap](https://tem.fi/-/lausunnolle-lakiluonnos-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-hintakaton-asettaminen-mahdollistuisi) only if the Council of the EU declared an electricity price crisis, floored at 18 cents per kilowatt-hour excluding VAT; the bill is not yet submitted and is not expected in parliament until later this autumn. Such a narrow crisis cap would not itself halt any investment. Its damage lies elsewhere: once a price can be cut by political decision, every long contract prices that risk in as a higher required return. [Finnish Energy (Energiateollisuus ry) said in its statement](https://energia.fi/lausunnot/energiateollisuus-ryn-lausunto-luonnoksesta-laiksi-sahkon-vahittaismyyntihintojen-saantelysta-sahkon-hintakriisin-aikana-ym/) in March 2026: "The need to prepare for a price crisis exists, but we cannot support the proposed means."
+
+## Is Finland a Stable Investment Environment?
+
+Not stable enough. The government moved data centres' electricity tax into the general bracket, [from 0.05 to 2.24 cents per kilowatt-hour](https://www.vero.fi/yritykset-ja-yhteisot/verot-ja-maksut/valmisteverotus/sahkovero/), worth about €47 million a year to the state. The change traces back to [a spring 2025 decision](https://www.verdelehti.fi/2025/10/23/google-jaadytti-miljardiluokan-investoinnin-hallitus-kiistelee-datakeskusten-sahkoverosta/) to cancel a planned confectionery tax rise, covering the gap by cutting electricity tax relief for data centres and mines. The bracket change is defensible; a lower rate for industry generally deserves debate too. Google invested anyway, at the higher rate; the problem was an abrupt shift mid-calculation, with the government arguing over the rate for a year.
+
+The consequences showed within six months:
+
+- in April 2025 Google's Antti Järvinen said: ["the Finnish government's electricity tax plan puts investment calculations in a completely new position"](https://yle.fi/a/74-20155449)
+- in October 2025 [Google froze its Kajaani and Muhos investment decision](https://yle.fi/a/74-20189971) pending the tax level
+
+> "Overall, though, it gives a poor impression of Finland as an investment environment." ([Jukka Leskelä, Finnish Energy, 1 September 2026](https://energia.fi/tiedotteet/energiateollisuus-huolissaan-poukkoilevasta-toimintaymparistosta/))
+
+[Antti Poikola, managing director of the Finnish Data Center Association (Datakeskusteollisuus ry)](https://www.verkkouutiset.fi/a/datakeskusala-varoittaa-suomen-poliittisen-riskin-kasvusta/), said on 2 September 2026 that the messages give the impression that "Finland is a fairly unreliable investment environment" and paint "a highly reactive and erratic picture". Promoting data centres is the association's job, but the point stands: the €13 billion investment came despite the lack of predictability, not because of it. Predictable regulation is what keeps the next investments coming. Oras Tynkkynen made the same point: "Being green is one of Finland's biggest advantages in tough international competition for investment, and policy cannot afford to squander it." The same unpredictability must not repeat with the price cap.
+
+[The market economy](https://lavanti.fi/en/blog/62/greens-the-true-defenders-of-the-market-economy/) does not solve everything by itself. It is a tool that works when externalities are priced correctly and the rules stay the same no matter who tests them. Emissions trading and [a well-functioning electricity market](https://lavanti.fi/en/blog/65/finland-can-turn-electrification-into-a-competitive-edge/) have done their part. Finland gets clean power and billion-euro investment when the price signal works undisturbed. The next test, however, is coming. If the government mutes the electricity price signal exactly when it is needed most, what guarantees the next investment will come to Finland?
+
+_This piece is also published on [Lauri Lavanti's blog](https://lavanti.fi/en/blog/77/electricity-market-google-price-cap/) and on the [TalousVihreät site](https://talousvihreat.fi/2026/09/10/vakaa-ymparisto-tuo-investointeja-poukkoilu-vie-niita/)._
