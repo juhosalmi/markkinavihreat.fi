@@ -3,7 +3,6 @@ locale: fi
 name: 'Samuli "Sako" Koivulahti'
 order: 11
 photo: '/images/team/Samuli-Koivulahti.jpg'
-candidateBadge: 'Ehdolla eduskuntavaaliehdokkaaksi Varsinais-Suomessa'
 links:
   - type: website
     url: 'https://samulikoivulahti.fi/'

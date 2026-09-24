@@ -3,7 +3,7 @@ locale: fi
 name: 'Arttu Laitinen'
 order: 15
 photo: '/images/team/Arttu-Laitinen.jpg'
-candidateBadge: 'Ehdolla eduskuntavaaliehdokkaaksi Varsinais-Suomessa'
+candidateBadge: 'Eduskuntavaaliehdokas Varsinais-Suomessa'
 links:
   - type: website
     url: 'https://arttulaitinen.fi'

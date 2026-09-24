@@ -3,7 +3,6 @@ locale: sv
 name: 'Samuli "Sako" Koivulahti'
 order: 11
 photo: '/images/team/Samuli-Koivulahti.jpg'
-candidateBadge: 'Kandiderar som riksdagsvalskandidat i Egentliga Finland'
 links:
   - type: website
     url: 'https://samulikoivulahti.fi/'

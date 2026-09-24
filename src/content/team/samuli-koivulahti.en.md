@@ -3,7 +3,6 @@ locale: en
 name: 'Samuli "Sako" Koivulahti'
 order: 11
 photo: '/images/team/Samuli-Koivulahti.jpg'
-candidateBadge: 'Running as a parliamentary candidate in Southwest Finland'
 links:
   - type: website
     url: 'https://samulikoivulahti.fi/'
