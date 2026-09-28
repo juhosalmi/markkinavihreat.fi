@@ -34,28 +34,30 @@ const META_DESCRIPTION_MAX = 160
 const SENTENCE_MIN = 60
 
 /**
- * A person page's meta description: the bio's opening sentence, which by
- * convention is a self-contained "X is Y" statement. Markdown links are reduced
- * to their text. Cut at a word boundary if the sentence runs long.
+ * The bio's opening sentence as plain text, which by convention is a
+ * self-contained "X is Y" statement. Markdown links are reduced to their text.
+ * Empty string for an empty bio. Used whole as the Person JSON-LD description.
  */
-export function metaDescriptionFromBio(bio: string, fallback: string): string {
+export function firstSentenceOfBio(bio: string): string {
   const plain = bio
     .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/[*_`]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-  if (!plain) return fallback
 
-  // A sentence end is a period after a whole word of 4+ letters (so not
-  // "M.Sc.", "vt." or "ry."), far enough in that it isn't a stray early period.
-  let end = plain.length
-  for (const match of plain.matchAll(/(?<=(?:^|[\s(])\p{L}{4,})[.!?](?=\s|$)/gu)) {
-    if (match.index + 1 >= SENTENCE_MIN) {
-      end = match.index + 1
-      break
-    }
+  // A sentence end is a period after a whole word of 4+ letters, optionally
+  // closing a parenthesis — "(DI, Aalto)." — but not "M.Sc.", "vt." or "ry.",
+  // and far enough in that it isn't a stray early period.
+  for (const match of plain.matchAll(/(?<=(?:^|[\s(-])\p{L}{4,}\)?)[.!?](?=\s|$)/gu)) {
+    if (match.index + 1 >= SENTENCE_MIN) return plain.slice(0, match.index + 1)
   }
-  const sentence = plain.slice(0, end)
+  return plain
+}
+
+/** A person page's meta description: the opening sentence, cut at a word boundary if long. */
+export function metaDescriptionFromBio(bio: string, fallback: string): string {
+  const sentence = firstSentenceOfBio(bio)
+  if (!sentence) return fallback
   if (sentence.length <= META_DESCRIPTION_MAX) return sentence
   const cut = sentence.slice(0, META_DESCRIPTION_MAX - 1)
   return `${cut.slice(0, cut.lastIndexOf(' '))}…`

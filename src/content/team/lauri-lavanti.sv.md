@@ -24,6 +24,12 @@ links:
     url: 'https://www.facebook.com/laurilavanti'
   - type: tiktok
     url: 'https://www.tiktok.com/@laurilavanti'
+  - type: youtube
+    url: 'https://www.youtube.com/@laurilavanti'
+  - type: reddit
+    url: 'https://www.reddit.com/user/laurilavanti/'
+  - type: wikipedia
+    url: 'https://fi.wikipedia.org/wiki/Lauri_Lavanti'
 ---
 
-Lauri Lavanti är kommunfullmäktigeledamot i Kyrkslätt, ordförande för fullmäktigegruppen och ledande programvaruutvecklare på en bank. Han är utexaminerad diplomingenjör från Aalto-universitetet och har fyra barn. Lauris far satt länge som Samlingspartiets kommunfullmäktigeledamot i Kyrkslätt. Lauris mål är ett digitalt oberoende Finland, där ekonomi, bildning och frihet fungerar tillsammans under den artificiella intelligensens tidsålder.
+Lauri Lavanti är De Grönas riksdagskandidat i Nylands valkrets i riksdagsvalet 2027, fullmäktigeledamot i Kyrkslätt och ledande programutvecklare (DI, Aalto-universitetet). Han är utexaminerad diplomingenjör från Aalto-universitetet och har fyra barn. Lauris far satt länge som Samlingspartiets kommunfullmäktigeledamot i Kyrkslätt. Lauris mål är ett digitalt oberoende Finland, där ekonomi, bildning och frihet fungerar tillsammans under den artificiella intelligensens tidsålder.

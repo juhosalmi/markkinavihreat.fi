@@ -5,7 +5,7 @@ import ContentCard from '../ContentCard.astro'
 import SocialLinks from '../SocialLinks.astro'
 import { assetPath, localePath, parseLocalizedId, type Locale } from '../../lib/content'
 import { dateSlug, formatDate } from '../../lib/date'
-import { involvementFor, metaDescriptionFromBio } from '../../lib/team'
+import { firstSentenceOfBio, involvementFor, metaDescriptionFromBio } from '../../lib/team'
 import { about, blogPage, programsPage } from '../../i18n/pages'
 import { t } from '../../i18n/ui'
 import {
@@ -52,7 +52,8 @@ const jsonLd: JsonLdNode[] = [
     slug,
     name,
     image: `${SITE_URL}${assetPath(photo)}`,
-    description,
+    // The whole opening sentence, untruncated — the meta description may be cut.
+    description: firstSentenceOfBio(person.body ?? '') || description,
     sameAs: allLinks.map((link) => link.url),
   }),
   profilePageNode(canonical, slug, locale),
