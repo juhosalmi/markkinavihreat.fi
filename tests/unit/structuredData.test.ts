@@ -6,6 +6,10 @@ import {
   faqNode,
   organizationNode,
   ORGANIZATION_ID,
+  personId,
+  personNode,
+  profilePageNode,
+  teamCollectionNode,
 } from '../../src/lib/structuredData'
 
 const answered = [
@@ -69,6 +73,74 @@ describe('articleNode', () => {
   it('uses the update date when there is one', () => {
     const node = articleNode({ ...base, updated: new Date('2026-08-22') })
     expect(node.dateModified).toBe(new Date('2026-08-22').toISOString())
+  })
+})
+
+describe('articleNode authors', () => {
+  it('credits team members as Persons with name and url inline', () => {
+    const node = articleNode({
+      url: 'https://markkinavihreat.fi/blogi/2026-09-10/x/',
+      headline: 'X',
+      description: 'Y',
+      locale: 'sv',
+      image: 'https://markkinavihreat.fi/og.png',
+      published: new Date('2026-09-10'),
+      authors: [{ slug: 'anna', name: 'Anna', url: 'https://markkinavihreat.fi/sv/ketka/anna/' }],
+    })
+    expect(node.author).toEqual([
+      {
+        '@type': 'Person',
+        '@id': personId('anna'),
+        name: 'Anna',
+        url: 'https://markkinavihreat.fi/sv/ketka/anna/',
+      },
+    ])
+    expect(node.publisher).toEqual({ '@id': ORGANIZATION_ID })
+  })
+})
+
+describe('personNode', () => {
+  const base = {
+    slug: 'anna',
+    name: 'Anna',
+    url: 'https://markkinavihreat.fi/en/ketka/anna/',
+    image: 'https://markkinavihreat.fi/images/team/Anna.jpg',
+    description: 'Anna is a councillor.',
+  }
+
+  it('uses one locale-independent @id and belongs to the organization', () => {
+    const node = personNode({ ...base, sameAs: [] })
+    expect(node['@id']).toBe('https://markkinavihreat.fi/ketka/anna/#person')
+    expect(node.memberOf).toEqual({ '@id': ORGANIZATION_ID })
+  })
+
+  it('omits sameAs when there are no profiles, and keeps them otherwise', () => {
+    expect(personNode({ ...base, sameAs: [] })).not.toHaveProperty('sameAs')
+    expect(personNode({ ...base, sameAs: ['https://example.fi/'] }).sameAs).toEqual([
+      'https://example.fi/',
+    ])
+  })
+})
+
+describe('profilePageNode', () => {
+  it('points mainEntity at the Person', () => {
+    const node = profilePageNode('https://markkinavihreat.fi/ketka/anna/', 'anna', 'fi')
+    expect(node.mainEntity).toEqual({ '@id': personId('anna') })
+  })
+})
+
+describe('teamCollectionNode', () => {
+  it('lists people in order, by their Person @id', () => {
+    const node = teamCollectionNode('https://markkinavihreat.fi/ketka/', 'Ketkä', 'fi', [
+      { slug: 'b', name: 'B', url: 'https://markkinavihreat.fi/ketka/b/' },
+      { slug: 'a', name: 'A', url: 'https://markkinavihreat.fi/ketka/a/' },
+    ])
+    const list = node.mainEntity as { numberOfItems: number; itemListElement: unknown[] }
+    expect(list.numberOfItems).toBe(2)
+    expect(list.itemListElement[0]).toMatchObject({
+      position: 1,
+      item: { '@id': personId('b') },
+    })
   })
 })
 

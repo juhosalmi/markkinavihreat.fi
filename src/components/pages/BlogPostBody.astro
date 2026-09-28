@@ -1,9 +1,12 @@
 ---
 import { getEntry, render, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import { parseLocalizedId, type Locale } from '../../lib/content'
+import { localePath, parseLocalizedId, type Locale } from '../../lib/content'
 import { dateSlug, formatDate } from '../../lib/date'
+import { ogUrlFor } from '../../lib/og'
 import { personPath } from '../../lib/team'
+import { articleNode, breadcrumbNode, SITE_URL } from '../../lib/structuredData'
+import { blogPage } from '../../i18n/pages'
 
 interface Props {
   locale: Locale
@@ -17,9 +20,27 @@ const authors = await Promise.all(
   post.data.authors.map(async (slug) => {
     const person = await getEntry('team', `${slug}.${locale}`)
     if (!person) throw new Error(`Blog post "${post.id}" names unknown author "${slug}"`)
-    return { name: person.data.name, href: personPath(locale, slug) }
+    return { slug, name: person.data.name, href: personPath(locale, slug) }
   }),
 )
+
+const canonical = `${SITE_URL}${localePath(locale, path)}`
+const jsonLd = [
+  articleNode({
+    url: canonical,
+    headline: post.data.title,
+    description: post.data.description,
+    locale,
+    image: ogUrlFor(locale, path),
+    published: post.data.date,
+    authors: authors.map((a) => ({ slug: a.slug, name: a.name, url: `${SITE_URL}${a.href}` })),
+  }),
+  breadcrumbNode([
+    { name: 'Markkinavihreät', url: `${SITE_URL}${localePath(locale, '/')}` },
+    { name: blogPage[locale].title, url: `${SITE_URL}${localePath(locale, '/blogi/')}` },
+    { name: post.data.title, url: canonical },
+  ]),
+]
 ---
 
 <BaseLayout
@@ -29,6 +50,7 @@ const authors = await Promise.all(
   path={path}
   ogType="article"
   publishedTime={post.data.date}
+  jsonLd={jsonLd}
 >
   <article class="content-max mx-auto px-4 py-16 sm:px-6">
     <p class="text-vihrea-tumma font-semibold">
