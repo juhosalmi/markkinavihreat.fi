@@ -24,6 +24,12 @@ links:
     url: 'https://www.facebook.com/laurilavanti'
   - type: tiktok
     url: 'https://www.tiktok.com/@laurilavanti'
+  - type: youtube
+    url: 'https://www.youtube.com/@laurilavanti'
+  - type: reddit
+    url: 'https://www.reddit.com/user/laurilavanti/'
+  - type: wikipedia
+    url: 'https://fi.wikipedia.org/wiki/Lauri_Lavanti'
 ---
 
-Lauri Lavanti on Kirkkonummen kunnanvaltuutettu, valtuustoryhmän puheenjohtaja ja johtava ohjelmistokehittäjä pankissa. Hän on valmistunut diplomi-insinööriksi Aalto-yliopistosta ja hänellä on neljä lasta. Laurin isä toimi pitkään Kokoomuksen kunnanvaltuutettuna Kirkkonummella. Laurin tavoitteena on digitaalisesti itsenäinen Suomi, jossa talous, sivistys ja vapaus toimivat yhdessä tekoälyn aikakaudella.
+Lauri Lavanti on Vihreiden eduskuntavaaliehdokas Uudenmaan vaalipiirissä eduskuntavaaleissa 2027, Kirkkonummen kunnanvaltuutettu ja johtava ohjelmistokehittäjä (DI, Aalto). Hän on valmistunut diplomi-insinööriksi Aalto-yliopistosta ja hänellä on neljä lasta. Laurin isä toimi pitkään Kokoomuksen kunnanvaltuutettuna Kirkkonummella. Laurin tavoitteena on digitaalisesti itsenäinen Suomi, jossa talous, sivistys ja vapaus toimivat yhdessä tekoälyn aikakaudella.

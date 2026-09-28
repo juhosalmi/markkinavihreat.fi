@@ -56,6 +56,21 @@ describe('metaDescriptionFromBio', () => {
     ).toBe('Timo is an M.Sc. graduate who works on energy markets and city planning.')
   })
 
+  it('ends a sentence at a period closing a parenthesis', () => {
+    expect(
+      metaDescriptionFromBio(
+        'Lauri on kunnanvaltuutettu ja johtava ohjelmistokehittäjä (DI, Aalto). Hänellä on lapsia.',
+        'x',
+      ),
+    ).toBe('Lauri on kunnanvaltuutettu ja johtava ohjelmistokehittäjä (DI, Aalto).')
+    expect(
+      metaDescriptionFromBio(
+        'Lauri är fullmäktigeledamot och ledande programutvecklare (DI, Aalto-universitetet). Mer.',
+        'x',
+      ),
+    ).toBe('Lauri är fullmäktigeledamot och ledande programutvecklare (DI, Aalto-universitetet).')
+  })
+
   it('cuts a long sentence at a word boundary', () => {
     const result = metaDescriptionFromBio(`${'sana '.repeat(60)}loppu.`, 'x')
     expect(result.length).toBeLessThanOrEqual(160)
