@@ -1,0 +1,21 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import PersonBody from '../../../components/pages/PersonBody.astro'
+import { forLocale, parseLocalizedId } from '../../../lib/content'
+
+interface Props {
+  person: CollectionEntry<'team'>
+}
+
+export async function getStaticPaths() {
+  const team = await getCollection('team')
+  return forLocale(team, 'en').map((person) => ({
+    params: { slug: parseLocalizedId(person.id).slug },
+    props: { person },
+  }))
+}
+
+const { person } = Astro.props
+---
+
+<PersonBody locale="en" person={person} />

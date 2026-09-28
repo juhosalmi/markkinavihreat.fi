@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { assertTeamRefs, involvementFor, personPath } from '../../src/lib/team'
+import {
+  assertTeamRefs,
+  involvementFor,
+  metaDescriptionFromBio,
+  personPath,
+} from '../../src/lib/team'
 
 function program(
   id: string,
@@ -29,6 +34,36 @@ describe('personPath', () => {
   it('builds the localized person page path', () => {
     expect(personPath('fi', 'atte-harjanne')).toBe('/ketka/atte-harjanne/')
     expect(personPath('sv', 'atte-harjanne')).toBe('/sv/ketka/atte-harjanne/')
+  })
+})
+
+describe('metaDescriptionFromBio', () => {
+  it('takes the opening sentence, with link markup reduced to text', () => {
+    expect(
+      metaDescriptionFromBio(
+        'Anna on [Esimerkkikunnan](https://example.fi) valtuutettu ja pitkän linjan aktiivi. Toinen lause.',
+        'x',
+      ),
+    ).toBe('Anna on Esimerkkikunnan valtuutettu ja pitkän linjan aktiivi.')
+  })
+
+  it("doesn't stop at an abbreviation's period", () => {
+    expect(
+      metaDescriptionFromBio(
+        'Timo is an M.Sc. graduate who works on energy markets and city planning. More.',
+        'x',
+      ),
+    ).toBe('Timo is an M.Sc. graduate who works on energy markets and city planning.')
+  })
+
+  it('cuts a long sentence at a word boundary', () => {
+    const result = metaDescriptionFromBio(`${'sana '.repeat(60)}loppu.`, 'x')
+    expect(result.length).toBeLessThanOrEqual(160)
+    expect(result).toMatch(/sana…$/)
+  })
+
+  it('falls back when the bio is empty', () => {
+    expect(metaDescriptionFromBio('  ', 'Anna — Markkinavihreät')).toBe('Anna — Markkinavihreät')
   })
 })
 

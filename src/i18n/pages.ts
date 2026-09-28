@@ -34,6 +34,8 @@ interface AboutCopy {
   metaDescription: string
   title: string
   intro: string
+  /** Label for a person's own canonical about page (team `profileUrl`). */
+  profileLink: string
 }
 
 interface ContactCopy {
@@ -202,6 +204,7 @@ export const about: Record<Locale, AboutCopy> = {
     title: 'Ketkä',
     intro:
       'Markkinavihreät on joukko Vihreiden jäseniä, luottamushenkilöitä ja aktiiveja, joita yhdistää usko markkinatalouden ja kunnianhimoisen ympäristöpolitiikan yhteensopivuuteen.',
+    profileLink: 'Esittely',
   },
   sv: {
     metaDescription:
@@ -209,6 +212,7 @@ export const about: Record<Locale, AboutCopy> = {
     title: 'Vilka vi är',
     intro:
       'Markkinavihreät (de marknadsgröna) är en grupp medlemmar, förtroendevalda och aktiva inom De Gröna som förenas av tron att marknadsekonomi och ambitiös miljöpolitik går hand i hand.',
+    profileLink: 'Presentation',
   },
   en: {
     metaDescription:
@@ -216,6 +220,7 @@ export const about: Record<Locale, AboutCopy> = {
     title: 'Who we are',
     intro:
       'Markkinavihreät is a group of Green League members, elected officials, and activists united by a belief that market economics and ambitious environmental policy belong together.',
+    profileLink: 'About',
   },
 }
 

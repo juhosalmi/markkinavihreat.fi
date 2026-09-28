@@ -1,0 +1,59 @@
+---
+// A person's outbound profile links, as icon buttons. Shared by the gallery
+// card and the person page. Deliberately no rel="me": that asserts "this page
+// is me", which is true on a member's own site but not on a network page.
+interface SocialLink {
+  type: string
+  url: string
+  label?: string
+}
+
+interface Props {
+  links: SocialLink[]
+}
+
+const { links } = Astro.props
+
+const iconFor: Record<string, string> = {
+  website: 'fa-solid fa-globe',
+  mastodon: 'fa-brands fa-mastodon',
+  bluesky: 'fa-brands fa-bluesky',
+  threads: 'fa-brands fa-threads',
+  linkedin: 'fa-brands fa-linkedin',
+  instagram: 'fa-brands fa-instagram',
+  facebook: 'fa-brands fa-facebook',
+  tiktok: 'fa-brands fa-tiktok',
+  x: 'fa-brands fa-x-twitter',
+  youtube: 'fa-brands fa-youtube',
+  reddit: 'fa-brands fa-reddit',
+  wikipedia: 'fa-brands fa-wikipedia-w',
+}
+---
+
+{
+  links.length > 0 && (
+    <div class="mt-1 flex flex-wrap gap-2">
+      {links.map((link) => (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener"
+          aria-label={link.label ?? link.type}
+          class:list={[
+            'text-kerma inline-flex items-center gap-1.5 py-1 text-[13px] font-medium opacity-65 hover:opacity-100',
+            link.label && 'rounded-md bg-white/10 px-2.5',
+          ]}
+        >
+          <i
+            class:list={[
+              iconFor[link.type] ?? 'fa-solid fa-link',
+              'w-[18px] shrink-0 text-center text-[18px]',
+            ]}
+            aria-hidden="true"
+          />
+          {link.label}
+        </a>
+      ))}
+    </div>
+  )
+}
