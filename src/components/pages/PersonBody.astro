@@ -1,0 +1,122 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import ContentCard from '../ContentCard.astro'
+import SocialLinks from '../SocialLinks.astro'
+import { assetPath, localePath, parseLocalizedId, type Locale } from '../../lib/content'
+import { dateSlug, formatDate } from '../../lib/date'
+import { involvementFor, metaDescriptionFromBio } from '../../lib/team'
+import { about, blogPage, programsPage } from '../../i18n/pages'
+import { t } from '../../i18n/ui'
+
+interface Props {
+  locale: Locale
+  person: CollectionEntry<'team'>
+}
+
+const { locale, person } = Astro.props
+const { slug } = parseLocalizedId(person.id)
+const { name, photo, candidateBadge, links, profileUrl, wikidata } = person.data
+const path = `/ketka/${slug}/`
+const { Content } = await render(person)
+
+const involvement = involvementFor(
+  slug,
+  locale,
+  await getCollection('programs'),
+  await getCollection('blog'),
+)
+
+// Identity links beyond the everyday social ones. Rendered visibly because
+// they also go into the Person JSON-LD's sameAs, and markup may only state
+// what the page shows.
+const identityLinks = [
+  ...(profileUrl ? [{ type: 'website', url: profileUrl, label: about[locale].profileLink }] : []),
+  ...(wikidata
+    ? [{ type: 'wikidata', url: `https://www.wikidata.org/wiki/${wikidata}`, label: 'Wikidata' }]
+    : []),
+]
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${name} — markkinavihreat.fi`}
+  description={metaDescriptionFromBio(person.body ?? '', `${name} — Markkinavihreät`)}
+  path={path}
+>
+  <article class="content-max mx-auto px-4 py-16 sm:px-6">
+    <nav aria-label="Breadcrumb" class="text-harmaa text-sm">
+      <a href={localePath(locale, '/ketka/')} class="underline">{about[locale].title}</a>
+      <span aria-hidden="true"> / </span>
+      <span aria-current="page">{name}</span>
+    </nav>
+
+    <div
+      class="rounded-card bg-surface-dark-green mt-6 grid overflow-hidden border border-white/[0.14] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)] md:grid-cols-[minmax(0,320px)_1fr]"
+    >
+      <img
+        src={assetPath(photo)}
+        alt={name}
+        loading="eager"
+        fetchpriority="high"
+        class="bg-vihrea-tumma aspect-[3/4] w-full object-cover object-top"
+      />
+      <div class="flex flex-col gap-[14px] p-[28px]">
+        <h1 class="text-kerma text-4xl leading-[1.1] font-extrabold tracking-[-0.01em] sm:text-5xl">
+          {name}
+        </h1>
+        {
+          candidateBadge && (
+            <span class="bg-kerma text-musta self-start rounded-[20px] px-[10px] py-[5px] text-[12px] font-semibold tracking-[0.01em]">
+              {candidateBadge}
+            </span>
+          )
+        }
+        <div class="text-kerma/[0.92] text-lg leading-[1.55] [&_a]:underline">
+          <Content />
+        </div>
+        <SocialLinks links={[...identityLinks, ...links]} />
+      </div>
+    </div>
+
+    {
+      involvement.programs.length > 0 && (
+        <section class="mt-14">
+          <h2 class="text-3xl">{programsPage[locale].title}</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            {involvement.programs.map(({ program, quote }) => (
+              <ContentCard
+                href={localePath(locale, `/ehdotukset/${parseLocalizedId(program.id).slug}/`)}
+                title={program.data.title}
+                description={quote ? `”${quote}”` : program.data.description}
+                cta={t(locale, 'blog.readMore')}
+              />
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    {
+      involvement.posts.length > 0 && (
+        <section class="mt-14">
+          <h2 class="text-3xl">{blogPage[locale].title}</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            {involvement.posts.map((post) => (
+              <ContentCard
+                href={localePath(
+                  locale,
+                  `/blogi/${dateSlug(post.data.date)}/${parseLocalizedId(post.id).slug}/`,
+                )}
+                title={post.data.title}
+                description={post.data.description}
+                meta={formatDate(post.data.date, locale)}
+                cta={t(locale, 'blog.readMore')}
+              />
+            ))}
+          </div>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>

@@ -179,6 +179,18 @@ export async function ogPages(): Promise<OgPage[]> {
     })
   }
 
+  const team = await getCollection('team')
+  for (const person of team) {
+    const { slug, locale } = parseLocalizedId(person.id)
+    pages.push({
+      locale,
+      path: `/ketka/${slug}/`,
+      eyebrow: about[locale].title,
+      lines: [person.data.name],
+      accent: 'lastWord',
+    })
+  }
+
   const posts = await getCollection('blog')
   for (const post of posts) {
     const { slug, locale } = parseLocalizedId(post.id)

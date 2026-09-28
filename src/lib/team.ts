@@ -30,6 +30,37 @@ export function personPath(locale: Locale, slug: string): string {
   return localePath(locale, `/ketka/${slug}/`)
 }
 
+const META_DESCRIPTION_MAX = 160
+const SENTENCE_MIN = 60
+
+/**
+ * A person page's meta description: the bio's opening sentence, which by
+ * convention is a self-contained "X is Y" statement. Markdown links are reduced
+ * to their text. Cut at a word boundary if the sentence runs long.
+ */
+export function metaDescriptionFromBio(bio: string, fallback: string): string {
+  const plain = bio
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/[*_`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+  if (!plain) return fallback
+
+  // A sentence end is a period after a whole word of 4+ letters (so not
+  // "M.Sc.", "vt." or "ry."), far enough in that it isn't a stray early period.
+  let end = plain.length
+  for (const match of plain.matchAll(/(?<=(?:^|[\s(])\p{L}{4,})[.!?](?=\s|$)/gu)) {
+    if (match.index + 1 >= SENTENCE_MIN) {
+      end = match.index + 1
+      break
+    }
+  }
+  const sentence = plain.slice(0, end)
+  if (sentence.length <= META_DESCRIPTION_MAX) return sentence
+  const cut = sentence.slice(0, META_DESCRIPTION_MAX - 1)
+  return `${cut.slice(0, cut.lastIndexOf(' '))}…`
+}
+
 /**
  * Throws if any program or post names a team slug that doesn't exist. Called
  * from the person pages' getStaticPaths, so a typo fails `astro build`.
