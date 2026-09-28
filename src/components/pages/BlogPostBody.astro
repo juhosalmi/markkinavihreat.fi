@@ -3,6 +3,7 @@ import { getEntry, render, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { parseLocalizedId, type Locale } from '../../lib/content'
 import { dateSlug, formatDate } from '../../lib/date'
+import { personPath } from '../../lib/team'
 
 interface Props {
   locale: Locale
@@ -16,10 +17,9 @@ const authors = await Promise.all(
   post.data.authors.map(async (slug) => {
     const person = await getEntry('team', `${slug}.${locale}`)
     if (!person) throw new Error(`Blog post "${post.id}" names unknown author "${slug}"`)
-    return person
+    return { name: person.data.name, href: personPath(locale, slug) }
   }),
 )
-const byline = authors.map((a) => a.data.name).join(', ')
 ---
 
 <BaseLayout
@@ -32,7 +32,17 @@ const byline = authors.map((a) => a.data.name).join(', ')
 >
   <article class="content-max mx-auto px-4 py-16 sm:px-6">
     <p class="text-vihrea-tumma font-semibold">
-      {formatDate(post.data.date, locale)}{byline ? ` · ${byline}` : ''}
+      {formatDate(post.data.date, locale)}
+      {
+        authors.map((author, i) => (
+          <>
+            {i === 0 ? ' · ' : ', '}
+            <a href={author.href} rel="author" class="underline">
+              {author.name}
+            </a>
+          </>
+        ))
+      }
     </p>
     <h1 class="mt-2 text-4xl sm:text-5xl">{post.data.title}</h1>
     <div class="prose-body mt-8 space-y-5 text-lg leading-relaxed">

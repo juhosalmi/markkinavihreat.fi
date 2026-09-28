@@ -10,25 +10,31 @@ interface SocialLink {
 
 interface Props {
   name: string
+  /** The person's own page. */
+  href: string
   photo: string
   candidateBadge?: string
   links: SocialLink[]
 }
 
-const { name, photo, candidateBadge, links } = Astro.props
+const { name, href, photo, candidateBadge, links } = Astro.props
 ---
 
 <div
   class="rounded-card bg-surface-dark-green flex flex-col gap-[14px] border border-white/[0.14] p-[28px] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)]"
 >
-  <img
-    src={assetPath(photo)}
-    alt={name}
-    loading="lazy"
-    class="rounded-t-card bg-vihrea-tumma -m-[28px] mb-0 aspect-[3/4] w-[calc(100%_+_56px)] max-w-none flex-shrink-0 object-cover object-top"
-  />
+  <!-- Photo and name both lead to the person page; the photo link is kept out
+       of the tab order and accessibility tree so it isn't announced twice. -->
+  <a href={href} tabindex="-1" aria-hidden="true" class="-m-[28px] mb-0 flex-shrink-0">
+    <img
+      src={assetPath(photo)}
+      alt=""
+      loading="lazy"
+      class="rounded-t-card bg-vihrea-tumma aspect-[3/4] w-full max-w-none object-cover object-top"
+    />
+  </a>
   <h3 class="text-kerma mt-[10px] text-[24px] leading-[1.1] font-extrabold tracking-[-0.01em]">
-    {name}
+    <a href={href} class="hover:underline">{name}</a>
   </h3>
   {
     candidateBadge && (
