@@ -2,7 +2,7 @@
 locale: sv
 name: 'Arttu Laitinen'
 order: 15
-photo: '/images/team/Arttu-Laitinen.jpg'
+photo: '../../assets/team/Arttu-Laitinen.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Egentliga Finland'
 links:
   - type: website

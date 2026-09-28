@@ -2,7 +2,7 @@
 locale: fi
 name: 'Lauri Lavanti'
 order: 16
-photo: '/images/team/Lauri-Lavanti.jpg'
+photo: '../../assets/team/Lauri-Lavanti.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Uudellamaalla'
 profileUrl: 'https://lavanti.fi/fi/laurista/'
 wikidata: 'Q139711658'

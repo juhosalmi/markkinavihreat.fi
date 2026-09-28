@@ -34,27 +34,31 @@ const socialLink = z.object({
 
 const team = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/team', generateId }),
-  schema: z.object({
-    locale,
-    name: z.string(),
-    order: z.number(),
-    photo: z.string(),
-    candidateBadge: z.string().optional(),
-    // Identity anchors for entity reconciliation: the person's own canonical
-    // about page (not just their site's home page) and their Wikidata item.
-    // Both end up in the Person JSON-LD's sameAs, and both are rendered as
-    // visible links on the person page — markup only states what's shown.
-    profileUrl: z.url().optional(),
-    wikidata: z
-      .string()
-      .regex(/^Q\d+$/)
-      .optional(),
-    links: z
-      .array(socialLink)
-      .nullable()
-      .optional()
-      .transform((v) => v ?? []),
-  }),
+  // `photo` is a path relative to the entry file (e.g. '../../assets/team/X.jpg'),
+  // resolved by image() into ImageMetadata so astro:assets can emit resized
+  // webp/avif variants instead of shipping the multi-megabyte originals.
+  schema: ({ image }) =>
+    z.object({
+      locale,
+      name: z.string(),
+      order: z.number(),
+      photo: image(),
+      candidateBadge: z.string().optional(),
+      // Identity anchors for entity reconciliation: the person's own canonical
+      // about page (not just their site's home page) and their Wikidata item.
+      // Both end up in the Person JSON-LD's sameAs, and both are rendered as
+      // visible links on the person page — markup only states what's shown.
+      profileUrl: z.url().optional(),
+      wikidata: z
+        .string()
+        .regex(/^Q\d+$/)
+        .optional(),
+      links: z
+        .array(socialLink)
+        .nullable()
+        .optional()
+        .transform((v) => v ?? []),
+    }),
 })
 
 // A citation is an endorsement quote from a team member (src/content/team),

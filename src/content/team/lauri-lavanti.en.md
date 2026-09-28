@@ -2,7 +2,7 @@
 locale: en
 name: 'Lauri Lavanti'
 order: 16
-photo: '/images/team/Lauri-Lavanti.jpg'
+photo: '../../assets/team/Lauri-Lavanti.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 profileUrl: 'https://lavanti.fi/en/about/'
 wikidata: 'Q139711658'

@@ -2,7 +2,7 @@
 locale: sv
 name: 'Tuuli Kousa'
 order: 14
-photo: '/images/team/Tuuli-Kousa.jpg'
+photo: '../../assets/team/Tuuli-Kousa.jpg'
 links:
   - type: website
     url: 'https://www.tuulikousa.com'

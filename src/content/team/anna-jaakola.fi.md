@@ -2,7 +2,7 @@
 locale: fi
 name: 'Anna Jaakola'
 order: 9
-photo: '/images/team/Anna-Jaakola.jpg'
+photo: '../../assets/team/Anna-Jaakola.jpg'
 links:
   - type: instagram
     url: 'https://www.instagram.com/karhuryhma_'

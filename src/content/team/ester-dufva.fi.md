@@ -2,7 +2,7 @@
 locale: fi
 name: 'Ester Dufva'
 order: 3
-photo: '/images/team/Ester-Dufva.jpg'
+photo: '../../assets/team/Ester-Dufva.jpg'
 links:
   - type: website
     url: 'https://esterdufva.fi'
