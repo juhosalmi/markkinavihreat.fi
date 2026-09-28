@@ -15,6 +15,7 @@ import { t } from '../../i18n/ui'
 import { programsPage } from '../../i18n/pages'
 import { localePath } from '../../lib/content'
 import { ogUrlFor } from '../../lib/og'
+import { personPath } from '../../lib/team'
 import {
   articleNode,
   breadcrumbNode,
@@ -36,7 +37,20 @@ const citations = await Promise.all(
   program.data.citations.map(async (citation) => {
     const person = await getEntry('team', `${citation.person}.${locale}`)
     if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
-    return { quote: citation.quote, name: person.data.name, photo: person.data.photo }
+    return {
+      quote: citation.quote,
+      name: person.data.name,
+      photo: person.data.photo,
+      href: personPath(locale, citation.person),
+    }
+  }),
+)
+
+const contributors = await Promise.all(
+  program.data.contributors.map(async (slug) => {
+    const person = await getEntry('team', `${slug}.${locale}`)
+    if (!person) throw new Error(`Program lists unknown contributor "${slug}"`)
+    return { name: person.data.name, href: personPath(locale, slug) }
   }),
 )
 
@@ -130,6 +144,7 @@ if (faq) jsonLd.push(faq)
               name={citation.name}
               photo={citation.photo}
               quote={citation.quote}
+              href={citation.href}
             />
           )}
         </>
@@ -146,8 +161,25 @@ if (faq) jsonLd.push(faq)
           name={citation.name}
           photo={citation.photo}
           quote={citation.quote}
+          href={citation.href}
         />
       ))
+  }
+
+  {
+    contributors.length > 0 && (
+      <p class="content-max text-harmaa mx-auto px-4 py-10 sm:px-6">
+        {t(locale, 'programs.contributors')}{' '}
+        {contributors.map((c, i) => (
+          <>
+            {i > 0 && ', '}
+            <a href={c.href} class="underline">
+              {c.name}
+            </a>
+          </>
+        ))}
+      </p>
+    )
   }
 
   <ShuffleOnLoad selector=".js-quote-band" />

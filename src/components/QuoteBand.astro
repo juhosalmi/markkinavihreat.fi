@@ -5,10 +5,12 @@ interface Props {
   name: string
   photo: string
   quote: string
+  /** The person's page; makes the name a link. */
+  href?: string
   class?: string
 }
 
-const { name, photo, quote, class: className } = Astro.props
+const { name, photo, quote, href, class: className } = Astro.props
 ---
 
 <div class:list={['bg-musta text-kerma px-8 py-20 text-center', className]}>
@@ -31,9 +33,20 @@ const { name, photo, quote, class: className } = Astro.props
       >
         "{quote}"
       </blockquote>
-      <span class="text-vihrea block text-[16px] font-extrabold tracking-[0.1em] uppercase"
-        >{name}</span
-      >
+      {
+        href ? (
+          <a
+            href={href}
+            class="text-vihrea block text-[16px] font-extrabold tracking-[0.1em] uppercase hover:underline"
+          >
+            {name}
+          </a>
+        ) : (
+          <span class="text-vihrea block text-[16px] font-extrabold tracking-[0.1em] uppercase">
+            {name}
+          </span>
+        )
+      }
     </div>
   </div>
 </div>
