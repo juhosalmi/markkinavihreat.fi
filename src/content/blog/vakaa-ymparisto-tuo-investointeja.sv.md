@@ -3,7 +3,8 @@ locale: sv
 title: En stabil miljö ger investeringar, ryckighet tar dem
 description: 'Googles investering på 13 miljarder euro föddes ur en fungerande elmarknad. Ett pristak skulle ta bort prissignalen just när den behövs som mest.'
 date: 2026-09-10
-author: Lauri Lavanti
+authors:
+  - lauri-lavanti
 ---
 
 Google meddelade på onsdagen att [bolaget investerar 13 miljarder euro i Finland under 2027 och 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure). Det är företagets största enskilda investering i Europa. Pengarna går till [utbyggnaden av datacentret i Fredrikshamn samt nya datacenter i Kajana, Vaala och Muhos](https://yle.fi/a/74-20245271). Jag bygger till vardags programvara som körs i just den här sortens infrastruktur, så jag säger det rakt ut: pengarna kom inte till Finland för stödens skull, utan för att elmarknaden fungerar. Finland får kapital när företagens verksamhetsmiljö är förutsägbar.

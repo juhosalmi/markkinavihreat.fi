@@ -3,7 +3,8 @@ locale: en
 title: Stability Brings Investment, Erratic Policy Drives It Away
 description: "Google's €13 billion investment came from a functioning electricity market. A price cap would remove the price signal exactly when it is needed most."
 date: 2026-09-10
-author: Lauri Lavanti
+authors:
+  - lauri-lavanti
 ---
 
 Google announced on Wednesday [a €13 billion investment in Finland for 2027 and 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure), its largest single investment in Europe. The money [funds the Hamina data centre expansion and new data centres in Kajaani, Vaala and Muhos](https://yle.fi/a/74-20245271). I build software for a living that runs on exactly this kind of infrastructure, so let me say it plainly: this money did not come to Finland chasing subsidies, it came because the electricity market works. Finland attracts capital when business conditions are predictable.
