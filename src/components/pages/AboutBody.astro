@@ -1,10 +1,11 @@
 ---
-import { getCollection, render } from 'astro:content'
+import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import PersonCard from '../PersonCard.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { forLocale, localePath, parseLocalizedId, type Locale } from '../../lib/content'
-import { personPath } from '../../lib/team'
+import { firstSentenceOfBio, personPath } from '../../lib/team'
+import { t } from '../../i18n/ui'
 import { SITE_URL, teamCollectionNode } from '../../lib/structuredData'
 import { about } from '../../i18n/pages'
 
@@ -17,7 +18,6 @@ const copy = about[locale]
 
 const allTeam = await getCollection('team')
 const team = forLocale(allTeam, locale).sort((a, b) => a.data.order - b.data.order)
-const rendered = await Promise.all(team.map((entry) => render(entry)))
 
 const people = team.map((person) => {
   const { slug } = parseLocalizedId(person.id)
@@ -44,20 +44,16 @@ const jsonLd = [
       class="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[28px]"
     >
       {
-        team.map((person, i) => {
-          const { Content } = rendered[i]
-          return (
-            <PersonCard
-              name={person.data.name}
-              href={personPath(locale, parseLocalizedId(person.id).slug)}
-              photo={person.data.photo}
-              candidateBadge={person.data.candidateBadge}
-              links={person.data.links}
-            >
-              <Content />
-            </PersonCard>
-          )
-        })
+        team.map((person) => (
+          <PersonCard
+            name={person.data.name}
+            href={personPath(locale, parseLocalizedId(person.id).slug)}
+            photo={person.data.photo}
+            candidateBadge={person.data.candidateBadge}
+            summary={firstSentenceOfBio(person.body ?? '')}
+            cta={t(locale, 'blog.readMore')}
+          />
+        ))
       }
     </div>
   </section>
