@@ -1,12 +1,8 @@
 ---
-import SocialLinks from './SocialLinks.astro'
+// Gallery teaser for one person. The full bio and profile links live only on
+// the person page, so that page — not the gallery — is the one search engines
+// and answer engines associate with the person's name.
 import { assetPath } from '../lib/content'
-
-interface SocialLink {
-  type: string
-  url: string
-  label?: string
-}
 
 interface Props {
   name: string
@@ -14,10 +10,13 @@ interface Props {
   href: string
   photo: string
   candidateBadge?: string
-  links: SocialLink[]
+  /** The bio's opening sentence (see firstSentenceOfBio). */
+  summary: string
+  /** Link text for the person page, e.g. "Lue lisää". */
+  cta: string
 }
 
-const { name, href, photo, candidateBadge, links } = Astro.props
+const { name, href, photo, candidateBadge, summary, cta } = Astro.props
 ---
 
 <div
@@ -43,8 +42,9 @@ const { name, href, photo, candidateBadge, links } = Astro.props
       </span>
     )
   }
-  <div class="text-kerma/[0.92] flex-1 text-[16px] leading-[1.55] [&_a]:underline">
-    <slot />
-  </div>
-  <SocialLinks links={links} />
+  <p class="text-kerma/[0.92] flex-1 text-[16px] leading-[1.55]">{summary}</p>
+  <a href={href} class="text-kerma self-start text-[15px] font-semibold hover:underline">
+    {cta}
+    <span aria-hidden="true">→</span><span class="sr-only">: {name}</span>
+  </a>
 </div>
