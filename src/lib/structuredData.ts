@@ -73,18 +73,28 @@ export function webSiteNode(locale: Locale, description: string): JsonLdNode {
  * they ever change it. Their own profile goes into sameAs instead.
  */
 export function personId(slug: string): string {
-  return `${SITE_URL}/ketka/${slug}/#person`
+  return `${personUrl(slug)}#person`
+}
+
+/**
+ * The Person's `url`: always the fi page, like the @id, so every node that
+ * describes this entity agrees on it whichever locale emitted it.
+ */
+function personUrl(slug: string): string {
+  return `${SITE_URL}/ketka/${slug}/`
 }
 
 /** A reference to a team member, e.g. as an article author. */
 export interface PersonRef {
   slug: string
   name: string
-  /** The person page in the current locale. */
+  /** The person page in the current locale — used where a page links to it. */
   url: string
 }
 
-interface PersonInput extends PersonRef {
+interface PersonInput {
+  slug: string
+  name: string
   image: string
   description: string
   /** Profile URLs that identify this same person elsewhere — all visible on the page. */
@@ -92,19 +102,12 @@ interface PersonInput extends PersonRef {
 }
 
 /** A team member. `memberOf` the network, since the page presents them as part of it. */
-export function personNode({
-  slug,
-  name,
-  url,
-  image,
-  description,
-  sameAs,
-}: PersonInput): JsonLdNode {
+export function personNode({ slug, name, image, description, sameAs }: PersonInput): JsonLdNode {
   return {
     '@type': 'Person',
     '@id': personId(slug),
     name,
-    url,
+    url: personUrl(slug),
     image,
     description,
     memberOf: { '@id': ORGANIZATION_ID },
@@ -120,7 +123,7 @@ export function profilePageNode(url: string, slug: string, locale: Locale): Json
     url,
     inLanguage: locale,
     mainEntity: { '@id': personId(slug) },
-    isPartOf: { '@id': `${SITE_URL}/#website` },
+    publisher: { '@id': ORGANIZATION_ID },
   }
 }
 
@@ -190,7 +193,7 @@ export function articleNode({
             '@type': 'Person',
             '@id': personId(a.slug),
             name: a.name,
-            url: a.url,
+            url: personUrl(a.slug),
           }))
         : { '@id': ORGANIZATION_ID },
     publisher: { '@id': ORGANIZATION_ID },

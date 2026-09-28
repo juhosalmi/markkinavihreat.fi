@@ -51,7 +51,6 @@ const jsonLd: JsonLdNode[] = [
   personNode({
     slug,
     name,
-    url: canonical,
     image: `${SITE_URL}${assetPath(photo)}`,
     description,
     sameAs: allLinks.map((link) => link.url),
