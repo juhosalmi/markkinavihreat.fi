@@ -2,7 +2,7 @@
 locale: sv
 name: 'Joel Himanen'
 order: 6
-photo: '/images/team/Joel-Himanen.jpg'
+photo: '../../assets/team/Joel-Himanen.jpg'
 links:
   - type: linkedin
     url: 'https://www.linkedin.com/in/joel-himanen-784a24137/'

@@ -2,7 +2,7 @@
 locale: en
 name: 'Ville-Veikko Karttunen'
 order: 10
-photo: '/images/team/Ville-Veikko-Karttunen.jpg'
+photo: '../../assets/team/Ville-Veikko-Karttunen.jpg'
 links:
   - type: website
     url: 'https://villekarttunen.fi'

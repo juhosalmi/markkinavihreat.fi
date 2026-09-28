@@ -1,9 +1,10 @@
 ---
+import { getImage, Picture } from 'astro:assets'
 import { getCollection, render, type CollectionEntry } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import ContentCard from '../ContentCard.astro'
 import SocialLinks from '../SocialLinks.astro'
-import { assetPath, localePath, parseLocalizedId, type Locale } from '../../lib/content'
+import { localePath, parseLocalizedId, type Locale } from '../../lib/content'
 import { dateSlug, formatDate } from '../../lib/date'
 import { firstSentenceOfBio, involvementFor, metaDescriptionFromBio } from '../../lib/team'
 import { about, blogPage, programsPage } from '../../i18n/pages'
@@ -45,13 +46,18 @@ const identityLinks = [
 ]
 const allLinks = [...identityLinks, ...links]
 
+// A resized JPEG for the Person JSON-LD: crawlers need one absolute URL in a
+// universally supported format, and referencing `photo.src` would ship the
+// multi-megabyte original. getImage()'s src already includes the base path.
+const jsonLdImage = await getImage({ src: photo, width: 1200, format: 'jpg' })
+
 const description = metaDescriptionFromBio(person.body ?? '', `${name} — Markkinavihreät`)
 const canonical = `${SITE_URL}${localePath(locale, path)}`
 const jsonLd: JsonLdNode[] = [
   personNode({
     slug,
     name,
-    image: `${SITE_URL}${assetPath(photo)}`,
+    image: `${SITE_URL}${jsonLdImage.src}`,
     // The whole opening sentence, untruncated — the meta description may be cut.
     description: firstSentenceOfBio(person.body ?? '') || description,
     sameAs: allLinks.map((link) => link.url),
@@ -82,11 +88,17 @@ const jsonLd: JsonLdNode[] = [
     <div
       class="rounded-card bg-surface-dark-green mt-6 grid overflow-hidden border border-white/[0.14] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)] md:grid-cols-[minmax(0,320px)_1fr]"
     >
-      <img
-        src={assetPath(photo)}
+      <!-- The LCP image: a 320px column from md up, full content width below. -->
+      <Picture
+        src={photo}
         alt={name}
+        width={1280}
+        widths={[640, 1280]}
+        sizes="(min-width: 768px) 320px, calc(100vw - 32px)"
+        formats={['webp']}
         loading="eager"
         fetchpriority="high"
+        pictureAttributes={{ class: 'contents' }}
         class="bg-vihrea-tumma aspect-[3/4] w-full object-cover object-top md:aspect-auto md:h-full"
       />
       <div class="flex flex-col gap-[14px] p-[28px]">

@@ -2,7 +2,7 @@
 locale: en
 name: 'Tero Koskinen'
 order: 12
-photo: '/images/team/Tero-Koskinen.jpg'
+photo: '../../assets/team/Tero-Koskinen.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 links:
   - type: bluesky

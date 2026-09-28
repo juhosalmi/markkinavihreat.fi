@@ -2,7 +2,7 @@
 locale: sv
 name: 'Lauri Lavanti'
 order: 16
-photo: '/images/team/Lauri-Lavanti.jpg'
+photo: '../../assets/team/Lauri-Lavanti.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 profileUrl: 'https://lavanti.fi/sv/om-lauri/'
 wikidata: 'Q139711658'

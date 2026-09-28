@@ -2,7 +2,7 @@
 locale: en
 name: 'Susanna Sankala'
 order: 25
-photo: '/images/team/Susanna-Sankala.jpg'
+photo: '../../assets/team/Susanna-Sankala.jpg'
 links:
   - type: threads
     url: 'https://www.threads.com/@susannasankala'

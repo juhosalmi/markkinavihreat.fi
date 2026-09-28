@@ -2,7 +2,7 @@
 locale: sv
 name: 'Kalle Matsinen'
 order: 18
-photo: '/images/team/Kalle-Matsinen.jpg'
+photo: '../../assets/team/Kalle-Matsinen.jpg'
 links:
   - type: threads
     url: 'https://www.threads.com/@kalakalmari'

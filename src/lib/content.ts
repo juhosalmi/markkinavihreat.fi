@@ -38,14 +38,6 @@ export function localePath(locale: Locale, path: string): string {
 }
 
 /**
- * Prefixes a root-absolute static asset path (e.g. a content collection's
- * `/images/team/...` field) the same way localePath() prefixes routes.
- */
-export function assetPath(path: string): string {
-  return withBase(path)
-}
-
-/**
  * Value for the `locale` rest param in `src/pages/[[...locale]]/**` routes:
  * undefined for the default locale (produces no URL segment), otherwise the
  * locale code itself.

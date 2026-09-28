@@ -2,7 +2,7 @@
 locale: en
 name: 'Kalle Euro'
 order: 4
-photo: '/images/team/Kalle-Euro.jpeg'
+photo: '../../assets/team/Kalle-Euro.jpeg'
 links:
   - type: website
     url: 'https://atl.fi/'

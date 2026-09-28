@@ -2,7 +2,7 @@
 locale: sv
 name: 'Timo Huhta'
 order: 8
-photo: '/images/team/Timo-Huhta.jpg'
+photo: '../../assets/team/Timo-Huhta.jpg'
 links:
   - type: website
     url: 'https://www.timohuhta.fi'

@@ -2,7 +2,7 @@
 locale: sv
 name: 'Samuli "Sako" Koivulahti'
 order: 11
-photo: '/images/team/Samuli-Koivulahti.jpg'
+photo: '../../assets/team/Samuli-Koivulahti.jpg'
 links:
   - type: website
     url: 'https://samulikoivulahti.fi/'

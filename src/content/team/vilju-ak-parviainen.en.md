@@ -2,7 +2,7 @@
 locale: en
 name: 'Vilju A.K. Parviainen'
 order: 22
-photo: '/images/team/Vilju-A.K.-Parviainen.jpg'
+photo: '../../assets/team/Vilju-A.K.-Parviainen.jpg'
 links:
   - type: linkedin
     url: 'https://www.linkedin.com/in/vilju-allen-kira-parviainen-96096b314'
