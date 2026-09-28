@@ -8,6 +8,13 @@ import { dateSlug, formatDate } from '../../lib/date'
 import { involvementFor, metaDescriptionFromBio } from '../../lib/team'
 import { about, blogPage, programsPage } from '../../i18n/pages'
 import { t } from '../../i18n/ui'
+import {
+  breadcrumbNode,
+  personNode,
+  profilePageNode,
+  SITE_URL,
+  type JsonLdNode,
+} from '../../lib/structuredData'
 
 interface Props {
   locale: Locale
@@ -36,13 +43,34 @@ const identityLinks = [
     ? [{ type: 'wikidata', url: `https://www.wikidata.org/wiki/${wikidata}`, label: 'Wikidata' }]
     : []),
 ]
+const allLinks = [...identityLinks, ...links]
+
+const description = metaDescriptionFromBio(person.body ?? '', `${name} — Markkinavihreät`)
+const canonical = `${SITE_URL}${localePath(locale, path)}`
+const jsonLd: JsonLdNode[] = [
+  personNode({
+    slug,
+    name,
+    url: canonical,
+    image: `${SITE_URL}${assetPath(photo)}`,
+    description,
+    sameAs: allLinks.map((link) => link.url),
+  }),
+  profilePageNode(canonical, slug, locale),
+  breadcrumbNode([
+    { name: 'Markkinavihreät', url: `${SITE_URL}${localePath(locale, '/')}` },
+    { name: about[locale].title, url: `${SITE_URL}${localePath(locale, '/ketka/')}` },
+    { name, url: canonical },
+  ]),
+]
 ---
 
 <BaseLayout
   locale={locale}
   title={`${name} — markkinavihreat.fi`}
-  description={metaDescriptionFromBio(person.body ?? '', `${name} — Markkinavihreät`)}
+  description={description}
   path={path}
+  jsonLd={jsonLd}
 >
   <article class="content-max mx-auto px-4 py-16 sm:px-6">
     <nav aria-label="Breadcrumb" class="text-harmaa text-sm">
@@ -75,7 +103,7 @@ const identityLinks = [
         <div class="text-kerma/[0.92] text-lg leading-[1.55] [&_a]:underline">
           <Content />
         </div>
-        <SocialLinks links={[...identityLinks, ...links]} />
+        <SocialLinks links={allLinks} />
       </div>
     </div>
 

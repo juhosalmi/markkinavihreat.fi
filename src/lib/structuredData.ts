@@ -65,6 +65,92 @@ export function webSiteNode(locale: Locale, description: string): JsonLdNode {
   }
 }
 
+/**
+ * A team member's entity id. Anchored on the fi page and shared by all three
+ * locales, so the sv/en pages describe the same Person rather than three.
+ * Deliberately *not* the person's own site's @id (e.g. lavanti.fi's): reusing
+ * someone else's id would merge our claims into their entity and break if
+ * they ever change it. Their own profile goes into sameAs instead.
+ */
+export function personId(slug: string): string {
+  return `${SITE_URL}/ketka/${slug}/#person`
+}
+
+/** A reference to a team member, e.g. as an article author. */
+export interface PersonRef {
+  slug: string
+  name: string
+  /** The person page in the current locale. */
+  url: string
+}
+
+interface PersonInput extends PersonRef {
+  image: string
+  description: string
+  /** Profile URLs that identify this same person elsewhere — all visible on the page. */
+  sameAs: string[]
+}
+
+/** A team member. `memberOf` the network, since the page presents them as part of it. */
+export function personNode({
+  slug,
+  name,
+  url,
+  image,
+  description,
+  sameAs,
+}: PersonInput): JsonLdNode {
+  return {
+    '@type': 'Person',
+    '@id': personId(slug),
+    name,
+    url,
+    image,
+    description,
+    memberOf: { '@id': ORGANIZATION_ID },
+    ...(sameAs.length > 0 && { sameAs }),
+  }
+}
+
+/** The person page itself, whose subject is the Person. */
+export function profilePageNode(url: string, slug: string, locale: Locale): JsonLdNode {
+  return {
+    '@type': 'ProfilePage',
+    '@id': `${url}#webpage`,
+    url,
+    inLanguage: locale,
+    mainEntity: { '@id': personId(slug) },
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+  }
+}
+
+/** The team gallery: a hub listing every person page, in page order. */
+export function teamCollectionNode(
+  url: string,
+  name: string,
+  locale: Locale,
+  people: PersonRef[],
+): JsonLdNode {
+  return {
+    '@type': 'CollectionPage',
+    '@id': `${url}#webpage`,
+    url,
+    name,
+    inLanguage: locale,
+    about: { '@id': ORGANIZATION_ID },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: people.length,
+      itemListElement: people.map((person, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: person.url,
+        item: { '@id': personId(person.slug), name: person.name },
+      })),
+    },
+  }
+}
+
 interface ArticleInput {
   url: string
   headline: string
@@ -73,6 +159,8 @@ interface ArticleInput {
   image: string
   published: Date
   updated?: Date
+  /** Team members credited on the page; the article is the org's when empty. */
+  authors?: PersonRef[]
 }
 
 export function articleNode({
@@ -83,6 +171,7 @@ export function articleNode({
   image,
   published,
   updated,
+  authors = [],
 }: ArticleInput): JsonLdNode {
   return {
     '@type': 'Article',
@@ -94,7 +183,16 @@ export function articleNode({
     image,
     datePublished: published.toISOString(),
     dateModified: (updated ?? published).toISOString(),
-    author: { '@id': ORGANIZATION_ID },
+    // Google's author guidance wants name + url inline, not just an @id.
+    author:
+      authors.length > 0
+        ? authors.map((a) => ({
+            '@type': 'Person',
+            '@id': personId(a.slug),
+            name: a.name,
+            url: a.url,
+          }))
+        : { '@id': ORGANIZATION_ID },
     publisher: { '@id': ORGANIZATION_ID },
   }
 }
