@@ -3,7 +3,8 @@ locale: fi
 title: Vakaa ympäristö tuo investointeja, poukkoilu vie niitä
 description: 'Googlen 13 miljardin investointi syntyi toimivalle sähkömarkkinalle. Hintakatto veisi hintasignaalin juuri silloin, kun sitä eniten tarvitaan.'
 date: 2026-09-10
-author: Lauri Lavanti
+authors:
+  - lauri-lavanti
 ---
 
 Google kertoi keskiviikkona [sijoittavansa Suomeen 13 miljardia euroa vuosina 2027 ja 2028](https://www.googlecloudpresscorner.com/2026-09-09-Google-Deepens-Commitment-to-Finland-with-Two-Year-EUR13-Billion-investment-in-AI-Infrastructure). Se on yhtiön suurin yksittäinen investointi Euroopassa. Rahat menevät [Haminan datakeskuksen laajennukseen sekä uusiin datakeskuksiin Kajaaniin, Vaalaan ja Muhokselle](https://yle.fi/a/74-20245271). Rakennan työkseni ohjelmistoja, jotka pyörivät juuri tämänkaltaisessa infrastruktuurissa, joten sanon sen suoraan: raha ei tullut Suomeen tukien perässä vaan siksi, että sähkömarkkina toimii. Suomi saa pääomaa, kun yritysten toimintakenttä on ennakoitavissa.

@@ -26,6 +26,7 @@ const socialLink = z.object({
     'x',
     'youtube',
     'reddit',
+    'wikipedia',
   ]),
   url: z.url(),
   label: z.string().optional(),
@@ -39,6 +40,15 @@ const team = defineCollection({
     order: z.number(),
     photo: z.string(),
     candidateBadge: z.string().optional(),
+    // Identity anchors for entity reconciliation: the person's own canonical
+    // about page (not just their site's home page) and their Wikidata item.
+    // Both end up in the Person JSON-LD's sameAs, and both are rendered as
+    // visible links on the person page — markup only states what's shown.
+    profileUrl: z.url().optional(),
+    wikidata: z
+      .string()
+      .regex(/^Q\d+$/)
+      .optional(),
     links: z
       .array(socialLink)
       .nullable()
@@ -76,6 +86,8 @@ const programs = defineCollection({
     // the sitemap — for a page that's ready to link to but not to announce.
     unlisted: z.boolean().default(false),
     citations: z.array(citation).default([]),
+    // Team member slugs who worked on the program without being quoted in it.
+    contributors: z.array(z.string()).default([]),
   }),
 })
 
@@ -86,7 +98,9 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    author: z.string().optional(),
+    // Team member slugs (src/content/team), not free-text names — resolved to
+    // linked names and Person JSON-LD. Unknown slugs fail the build (src/lib/team.ts).
+    authors: z.array(z.string()).default([]),
   }),
 })
 
