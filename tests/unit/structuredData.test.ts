@@ -92,7 +92,8 @@ describe('articleNode authors', () => {
         '@type': 'Person',
         '@id': personId('anna'),
         name: 'Anna',
-        url: 'https://markkinavihreat.fi/sv/ketka/anna/',
+        // The entity's url is the fi page whichever locale the article is in.
+        url: 'https://markkinavihreat.fi/ketka/anna/',
       },
     ])
     expect(node.publisher).toEqual({ '@id': ORGANIZATION_ID })
@@ -103,7 +104,6 @@ describe('personNode', () => {
   const base = {
     slug: 'anna',
     name: 'Anna',
-    url: 'https://markkinavihreat.fi/en/ketka/anna/',
     image: 'https://markkinavihreat.fi/images/team/Anna.jpg',
     description: 'Anna is a councillor.',
   }
@@ -111,6 +111,7 @@ describe('personNode', () => {
   it('uses one locale-independent @id and belongs to the organization', () => {
     const node = personNode({ ...base, sameAs: [] })
     expect(node['@id']).toBe('https://markkinavihreat.fi/ketka/anna/#person')
+    expect(node.url).toBe('https://markkinavihreat.fi/ketka/anna/')
     expect(node.memberOf).toEqual({ '@id': ORGANIZATION_ID })
   })
 

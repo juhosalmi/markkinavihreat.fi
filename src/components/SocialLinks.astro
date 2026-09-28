@@ -41,7 +41,7 @@ const iconFor: Record<string, string> = {
           aria-label={link.label ?? link.type}
           class:list={[
             'text-kerma inline-flex items-center gap-1.5 py-1 text-[13px] font-medium opacity-65 hover:opacity-100',
-            link.label && 'rounded-md bg-white/10 px-2.5',
+            (link.type === 'website' || link.label) && 'rounded-md bg-white/10 px-2.5',
           ]}
         >
           <i
