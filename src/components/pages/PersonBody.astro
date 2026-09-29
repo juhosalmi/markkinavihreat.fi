@@ -88,7 +88,9 @@ const jsonLd: JsonLdNode[] = [
     <div
       class="rounded-card bg-surface-dark-green mt-6 grid overflow-hidden border border-white/[0.14] shadow-[0_1px_0_rgba(255,255,255,.18)_inset,0_14px_34px_rgba(0,0,0,.16)] md:grid-cols-[minmax(0,320px)_1fr]"
     >
-      <!-- The LCP image: a 320px column from md up, full content width below. -->
+      <!-- The LCP image: a 320px column from md up, full content width below.
+           `contents` makes the <img> the grid item; hiding <source> keeps it
+           from taking a grid cell and pushing the bio onto a second row. -->
       <Picture
         src={photo}
         alt={name}
@@ -98,7 +100,7 @@ const jsonLd: JsonLdNode[] = [
         formats={['webp']}
         loading="eager"
         fetchpriority="high"
-        pictureAttributes={{ class: 'contents' }}
+        pictureAttributes={{ class: 'contents [&>source]:hidden' }}
         class="bg-vihrea-tumma aspect-[3/4] w-full object-cover object-top md:aspect-auto md:h-full"
       />
       <div class="flex flex-col gap-[14px] p-[28px]">

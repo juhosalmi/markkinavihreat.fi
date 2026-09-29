@@ -24,6 +24,15 @@ test('person page emits Person JSON-LD with sameAs', async ({ page }) => {
   expect(person?.sameAs).toContain('https://lavanti.fi/fi/laurista/')
 })
 
+test('person page puts photo and bio side by side on desktop', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 900 })
+  await page.goto('/ketka/lauri-lavanti/')
+  const photo = await page.getByRole('img', { name: 'Lauri Lavanti' }).boundingBox()
+  const heading = await page.locator('h1').boundingBox()
+  expect(heading!.x).toBeGreaterThanOrEqual(photo!.x + photo!.width - 1)
+  expect(heading!.y).toBeLessThan(photo!.y + photo!.height)
+})
+
 test('language switcher keeps the person', async ({ page }) => {
   await page.goto('/ketka/lauri-lavanti/')
   await page.getByRole('link', { name: 'SV', exact: true }).click()
