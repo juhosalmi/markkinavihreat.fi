@@ -20,7 +20,7 @@ Investors already have ways to defer tax. Investment funds, insurance wrappers a
 
 That is exactly what a wealth account does. You can invest the euros you earn from your work before income tax is deducted, and your investments get an entirely new head start!
 
-In practice, the wealth account is not a bank account but a bookkeeping arrangement in the Finnish Tax Administration's systems. Wages moved to the account are deductible in income taxation, and trades inside the account are not taxed. Tax is paid only when you withdraw money for your own use. The withdrawal is then split in two: the deposited wages are taxed as earned income, and investment returns as capital income, just as they are today.
+In practice, the wealth account is not a bank account but a bookkeeping arrangement in the Finnish Tax Administration's systems. Wages moved to the account are deductible in income taxation, and trades inside the account are not taxed. Tax is paid only when you withdraw money for your own use.
 
 This simple change promotes people's capitalism. When more and more wage earners are also owners, the economy becomes more resilient to crises and building wealth comes within reach of every wage earner.
 
@@ -36,7 +36,7 @@ The real obstacle to building wealth on a salary is that tax has to be paid on y
 
 With a wealth account, savings are deductible in income taxation. You can invest the full gross amount, and compound interest gets to work with a bigger engine from the very start.
 
-The tax is not skipped; only its timing moves. Earned-income tax is paid when the deposit is withdrawn, and capital income tax is paid on the returns. Building capital is not penalised up front.
+The tax is not skipped; it is paid when the money is put to use. Building capital is not penalised up front.
 
 ## Benefit 2/4: Invest freely wherever you want, the taxman doesn't set the terms
 
@@ -89,6 +89,9 @@ _Answer to be added._
 _Answer to be added._
 
 **Are savings deducted from earned-income tax, or from taxable earned income?**
+_Answer to be added._
+
+**How is money withdrawn from the account taxed: as earned income, capital income, or both?**
 _Answer to be added._
 
 **Why not just raise the deposit cap on the equity savings account?**

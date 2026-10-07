@@ -20,7 +20,7 @@ För investerare finns det redan sätt att skjuta upp beskattningen. Placeringsf
 
 Det är precis vad ett förmögenhetskonto gör. Du kan investera de euro du tjänat med ditt arbete innan inkomstskatten dras, och dina investeringar får en helt ny fart från start!
 
-I praktiken är förmögenhetskontot inte ett bankkonto, utan ett bokföringsarrangemang i Skatteförvaltningens system. Lön som förs till kontot dras av i inkomstbeskattningen, och affärer inom kontot beskattas inte. Skatten betalas först när du tar ut pengar för eget bruk. Då delas uttaget i två delar: den insatta lönen beskattas som förvärvsinkomst och investeringarnas avkastning som kapitalinkomst, precis som i dag.
+I praktiken är förmögenhetskontot inte ett bankkonto, utan ett bokföringsarrangemang i Skatteförvaltningens system. Lön som förs till kontot dras av i inkomstbeskattningen, och affärer inom kontot beskattas inte. Skatten betalas först när du tar ut pengar för eget bruk.
 
 Denna enkla förändring främjar folkkapitalism. När allt fler löntagare också är ägare blir samhällsekonomin mer motståndskraftig mot kriser, och förmögenhetsbyggande blir möjligt för varje löntagare.
 
@@ -36,7 +36,7 @@ Det verkliga hindret för en löntagare att bli förmögen är att skatten på l
 
 Med förmögenhetskontot får sparandet dras av i inkomstbeskattningen. Du kan alltså investera hela bruttobeloppet, och ränta på ränta-effekten kan arbeta med en kraftigare motor redan från början.
 
-Skatten uteblir inte, men tidpunkten för betalningen flyttas. Förvärvsinkomstskatten betalas när insättningen tas ut, och på avkastningen betalas kapitalinkomstskatt. Kapitalbildning straffas inte i förväg.
+Skatten uteblir inte, men betalningen flyttas till när pengarna tas i bruk. Kapitalbildning straffas inte i förväg.
 
 ## Fördel 2/4: Investera fritt där du vill, Skatteförvaltningen dikterar inte villkoren
 
@@ -89,6 +89,9 @@ _Svaret kompletteras._
 _Svaret kompletteras._
 
 **Dras sparandet av från förvärvsinkomstskatten eller från den beskattningsbara förvärvsinkomsten?**
+_Svaret kompletteras._
+
+**Hur beskattas pengar som tas ut från kontot: som förvärvsinkomst, som kapitalinkomst eller som båda?**
 _Svaret kompletteras._
 
 **Varför inte bara höja insättningstaket på aktiesparkontot?**
