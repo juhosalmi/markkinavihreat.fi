@@ -20,7 +20,7 @@ Sijoittajille verojärjestelmä tuntee jo keinoja lykätä verotusta. Sijoitusra
 
 Varallisuustili tekee juuri tämän. Voit sijoittaa työllä ansaitsemasi eurot ennen kuin niistä maksetaan tuloveroa, ja sijoituksesi saavat täysin uudenlaisen lähtövauhdin!
 
-Käytännössä varallisuustili ei ole pankkitili, vaan kirjanpidollinen järjestely Verohallinnon järjestelmissä. Tilille siirretty palkka vähennetään tuloverotuksessa, eikä tilin sisällä tehdyistä kaupoista makseta veroa. Vero maksetaan vasta, kun nostat rahaa omaan käyttöösi. Silloin nosto jaetaan kahteen osaan: talletettu palkka verotetaan ansiotulona ja sijoitusten tuotto pääomatulona, kuten nykyäänkin.
+Käytännössä varallisuustili ei ole pankkitili, vaan kirjanpidollinen järjestely Verohallinnon järjestelmissä. Tilille siirretty palkka vähennetään tuloverotuksessa, eikä tilin sisällä tehdyistä kaupoista makseta veroa. Vero maksetaan vasta, kun nostat rahaa omaan käyttöösi.
 
 Tämä yksinkertainen muutos edistää kansankapitalismia. Kun yhä useampi palkansaaja on myös omistaja, kansantalous kestää kriisejä paremmin ja vaurastuminen tulee jokaisen palkansaajan ulottuville.
 
@@ -36,7 +36,7 @@ Palkansaajan todellinen este vaurastumiselle on se, että palkasta on maksettava
 
 Varallisuustilillä säästöt saa vähentää tuloverotuksessa. Voit siis sijoittaa koko bruttosumman, ja korkoa korolle -ilmiö pääsee jauhamaan tulosta järeämmällä moottorilla alusta asti.
 
-Vero ei jää maksamatta, vaan sen maksuhetki siirtyy. Ansiotulovero maksetaan, kun talletus nostetaan käyttöön, ja tuotosta maksetaan pääomatulovero. Pääoman kerryttämisestä ei rangaista etukäteen.
+Vero ei jää maksamatta, vaan sen maksuhetki siirtyy siihen, kun rahat nostetaan käyttöön. Pääoman kerryttämisestä ei rangaista etukäteen.
 
 ## Hyöty 2/4: Sijoita vapaasti mihin haluat, verottaja ei sanele ehtoja
 
@@ -89,6 +89,9 @@ _Vastausta täydennetään._
 _Vastausta täydennetään._
 
 **Vähennetäänkö säästöt ansiotuloveron määrästä, vai verotettavasta ansiotulon määrästä?**
+_Vastausta täydennetään._
+
+**Miten tililtä nostettu raha verotetaan: ansiotulona, pääomatulona vai molempina?**
 _Vastausta täydennetään._
 
 **Miksi ei vain korotettaisi osakesäästötilin talletuskattoa?**
