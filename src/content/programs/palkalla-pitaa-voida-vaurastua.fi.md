@@ -14,13 +14,11 @@ citations: []
 
 ## Miksi palkalla on niin vaikea vaurastua?
 
-Suomessa työntekoa verotetaan raskaasti. Palkasta maksetaan ensin progressiivinen ansiotulovero, ja säästää ja sijoittaa voi vasta siitä, mitä verottajan jäljiltä jää käteen. Tavallisesta palkasta jää säästöön usein niin vähän, että omaisuuden kerryttäminen tuntuu mahdottomalta.
+Suomessa ahkeruudesta rangaistaan. Tällä hetkellä palkkatuloista täytyy maksaa ansiotulovero ennen kuin tuloja voi siirtää säästöön. Palkansaaja pääsee sijoittamaan vasta siitä potista, joka verottajan jäljiltä jää käteen. Pääomatuloilla tällaista kynnystä ei ole, ja varallisuus kasvaakin huomattavasti nopeammin.
 
-Sijoittajille verojärjestelmä tuntee jo keinoja lykätä verotusta. Sijoitusrahastot, vakuutuskuoret ja osakesäästötili antavat tuottojen kasvaa ilman, että jokaisesta myynnistä maksetaan veroa heti. Hyvä niin. Haluamme, että sama periaate ulotetaan myös palkkaan: säästöä verotetaan vasta, kun se otetaan käyttöön.
+Me haluamme mahdollistaa vaurastumisen kaikille. Varallisuustili mahdollistaa säästämisen palkkatuloista samalla tavalla kuin pääomatuloista. Ideana on, että voit sijoittaa työllä ansaitsemasi eurot ennen kuin niistä maksetaan veroja, jonka seurauksena saat täysin uudenlaisen lähtövauhdin sijoituksillesi!
 
-Varallisuustili tekee juuri tämän. Voit sijoittaa työllä ansaitsemasi eurot ennen kuin niistä maksetaan tuloveroa, ja sijoituksesi saavat täysin uudenlaisen lähtövauhdin!
-
-Käytännössä varallisuustili ei ole pankkitili, vaan kirjanpidollinen järjestely Verohallinnon järjestelmissä. Tilille siirretty palkka vähennetään tuloverotuksessa, eikä tilin sisällä tehdyistä kaupoista makseta veroa. Vero maksetaan vasta, kun nostat rahaa omaan käyttöösi.
+Käytännössä varallisuustili ei ole todellinen tili pankkitilin tapaan, vaan kirjanpidollinen järjestely Verohallinnon järjestelmissä. Säästöön ja sijoituksiin menevät rahat eivät aiheuta välittömiä veroseuraamuksia. Maksat veroa vasta, kun nostat rahaa ulos omaan käyttöösi, jolloin nosto on tavanomaisesti tuloveron alaista.
 
 Tämä yksinkertainen muutos edistää kansankapitalismia. Kun yhä useampi palkansaaja on myös omistaja, kansantalous kestää kriisejä paremmin ja vaurastuminen tulee jokaisen palkansaajan ulottuville.
 
@@ -32,15 +30,15 @@ Esitämme neljä perustetta, miksi varallisuustili rakentaa parempaa ja reilumpa
 
 ## Hyöty 1/4: Sijoita koko palkalla, niin alkupääoma on isompi
 
-Palkansaajan todellinen este vaurastumiselle on se, että palkasta on maksettava verot ennen kuin yhtäkään euroa pääsee sijoittamaan. Se asettaa työntekijän takamatkalle niihin nähden, joilla on jo valmiiksi pääomaa.
+Nykyäänkin sijoittaja voi viivästyttää omistuksista tulevien tuottojen verotusta esimerkiksi sijoitusrahastojen, vakuutuskuorien tai osakesäästötilin avulla. Palkansaajan todellinen este vaurastumiselle on kuitenkin se, että palkasta on maksettava raskaat verot ennen kuin yhtäkään euroa pääsee sijoittamaan.
 
-Varallisuustilillä säästöt saa vähentää tuloverotuksessa. Voit siis sijoittaa koko bruttosumman, ja korkoa korolle -ilmiö pääsee jauhamaan tulosta järeämmällä moottorilla alusta asti.
+Varallisuustilillä säästöt saa vähentää tuloverotuksessa. Voit siis aloittaa sijoittamisen kertaheitolla täysimääräisellä bruttosummalla, jolloin korkoa korolle -ilmiö pääsee jauhamaan tulosta huomattavasti järeämmällä moottorilla alusta asti.
 
-Vero ei jää maksamatta, vaan sen maksuhetki siirtyy siihen, kun rahat nostetaan käyttöön. Pääoman kerryttämisestä ei rangaista etukäteen.
+Näin hyödynnetään korkoa korolle -ilmiötä niin valtiolle kuin veronmaksajalle. Pääoman kerryttämisestä ei rangaista etukäteen, vaan tulovero maksetaan vasta siinä vaiheessa, kun varoja nostetaan omaan käyttöön.
 
 ## Hyöty 2/4: Sijoita vapaasti mihin haluat, verottaja ei sanele ehtoja
 
-Suomen verojärjestelmä on täynnä poikkeuksia, jotka ohjaavat ihmisten sijoituksia. Sama sijoitus verotetaan eri tavalla sen mukaan, onko se osakesäästötilillä, vakuutuskuoressa vai suorassa omistuksessa.
+Nykyään Suomen verojärjestelmä on täynnä monimutkaisia poikkeuksia, jotka ohjaavat ihmisten sijoituksia. Yhtä sijoituskohdetta verotetaan eri tavalla kuin toista.
 
 Tämä on markkinatalouden kannalta tehotonta. Varallisuustilillä eri sijoituskohteet ovat verotuksessa samalla viivalla. Verotus ei enää ohjaa päätöksiäsi, vaan valitset sijoituksesi niiden tuoton ja riskin perusteella, kuten markkinoilla kuuluukin.
 
@@ -48,60 +46,48 @@ Tämä on markkinatalouden kannalta tehotonta. Varallisuustilillä eri sijoitusk
 
 Monen suomalaisen säästöt ovat jumissa vanhoissa sijoituskohteissa, joista he haluaisivat eroon. Myynnistä maksettava luovutusvoittovero kuitenkin estää siirron.
 
-Rahat jäävät makaamaan tehottomiin kohteisiin sen sijaan, että ne rahoittaisivat uusia suomalaisia innovaatioita tai kasvuyrityksiä. Varallisuustilillä tällaista lukkoa ei synny. Voit myydä sijoituksesi ja ostaa tilalle uutta ilman, että välissä maksetaan veroa. Vero maksetaan vasta, kun siirrät rahat tililtä omaan käyttöösi.
+Tämä johtaa siihen, että rahat makaavat tehottomissa kohteissa sen sijaan, että ne rahoittaisivat uusia suomalaisia innovaatioita tai kasvuyrityksiä. Varallisuustili ratkaisee tämän ongelman kertaheitolla. Se vapauttaa verotussyistä lukkiutuneen omaisuuden tuottavampaan käyttöön.
 
-Näin pääoma hakeutuu tuottavimpaan käyttöön, ja pääomamarkkinoistamme tulee dynaamisemmat ja ketterämmät.
+Voit vapaasti myydä sijoituksesi ja ostaa tilalle uutta ilman, että joudut maksamaan veroa välistä. Maksat veron vasta siinä vaiheessa, kun siirrät rahat tililtä omaan elämiseesi. Tämä tekee pääomamarkkinoistamme dynaamisemmat ja ketterämmät.
 
-## Hyöty 4/4: Verotetaan sitä, mitä otat käyttöön, ei sitä, mitä säästät
+## Hyöty 4/4: Verotetaan kulutusta, ei vaurastumista
 
-Varallisuustilin ajatus on yksinkertainen: palkkaa verotetaan, kun se käytetään, ei silloin, kun se säästetään. Työllä ansaittu pääoma saa kasvaa rauhassa, ja säästäväisyydestä ja oman talouden turvaamisesta palkitaan.
+Varallisuustili toimii käytännössä kuten progressiivinen menovero. Se ei estä pääomien muodostumista työtä tekemällä, mutta verottaa kertyneen varallisuuden kuluttamista. Järjestelmä ei siis suosi suihkuseurapiirien elämäntapaa ja turhaa luksuskulutusta, vaan kannustaa säästäväisyyteen ja oman talouden turvaamiseen.
 
-Kun säännöt ovat kaikille samat, tarve kalliille verosuunnittelulle vähenee. Järjestelmä on myös rakennettu niin, ettei lykättyä veroa voi välttää kokonaan:
+Kun säännöt ovat kaikille reilut, poistuu tarve kalliille verosuunnittelulle. Järjestelmä on myös suunniteltu vedenpitäväksi: kokonaisjärjestelmässä pitää olla arvonnousuvero (eli maastapoistumisvero), jotta tuottoja ei voi tulouttaa ulkomailla verovapaasti. Et siis voi kiertää veroja muuttamalla ulkomaille.
 
-- **Muutto ulkomaille.** Jos muutat ulkomaille, tilillä lykätty vero erääntyy maksettavaksi samalla tavalla kuin nostossa. Kyse ei ole uudesta verosta, vaan jo kertyneen veron maksamisesta ennen kuin varat siirtyvät Suomen verotusvallan ulkopuolelle. Muuta omaisuuttasi tämä ei koske.
-- **Kuolema.** Tiliä ei voi käyttää verotuksen lykkäämiseen loputtomiin. Kuoleman yhteydessä tili puretaan, ja lykätty vero maksetaan kuolinpesän verotuksessa samalla tavalla kuin nostossa.
-
-Näin varmistetaan, että verot tulevat maksetuiksi ja järjestelmä pysyy reiluna kaikkia kohtaan.
+Kenelläkään ei myöskään ole mahdollisuutta pakoilla veroja hautaan saakka. Tilin avulla ei voi ikuisesti lykätä verotusta, koska tili realisoidaan kuoleman yhteydessä kuolinpesän tuloksi. Näin varmistetaan, että verot tulevat maksetuiksi ja järjestelmä pysyy reiluna kaikkia kohtaan.
 
 ## Tehdään vaurastumisesta jokaisen oikeus
 
-Varallisuustili tarttuu yhteen suurimmista esteistä suomalaisten vaurastumisen tiellä: siihen, että ahkeralla palkkatyöllä on tuskallisen vaikeaa kerätä omaisuutta. Kun säästöt voi siirtää sijoituksiin ennen verojen maksamista, annamme työnteolle ja yritteliäisyydelle sen arvon, joka niille kuuluu.
+Varallisuustili tarttuu kiinni yhteen suurimmista esteistä suomalaisten vaurastumisen tiellä: siihen, että ahkeralla palkkatyöllä on tuskallisen vaikeaa kerätä omaisuutta. Kun säästöt voi siirtää sijoituksiin ennen verojen maksamista, annamme työnteolle ja yritteliäisyydelle sen arvon, joka sille kuuluu.
 
-Tämä on markkinataloutta parhaimmillaan. Vaurastuminen ei ole etuoikeus niille, joilla on jo pääomaa, vaan kaikilla on samat säännöt oman taloudellisen turvan rakentamiseen. Verotuksen aiheuttamat tehottomuudet vähenevät, rahat ohjautuvat tuottaviin kohteisiin ja korkoa korolle -ilmiö hyödyttää koko Suomea.
+Tämä on markkinataloutta parhaimmillaan. Se ei suojele vain jo valmiiksi varakkaiden etuja, vaan antaa kaikille tasapuoliset säännöt rakentaa omaa taloudellista turvaa. Se poistaa markkinoiden tehottomuudet, ohjaa rahat tuottaviin kohteisiin ja valjastaa korkoa korolle -ilmiön hyödyttämään koko Suomea.
 
 Tule mukaan tekemään kansankapitalismista totta. Valitaan ratkaisu, joka palkitsee ahkeruudesta ja tuo reilun markkinatalouden jokaisen palkansaajan ulottuville.
 
 ## Usein kysytyt kysymykset
 
 **Mitä ongelmaa ehdotus ratkaisee?**
-Erilaisia tuloja pitäisi lähtökohtaisesti verottaa mahdollisimman samankaltaisesti. Jos yhdellä tulomuodolla on merkittäviä verotuksellisia etuja, niille pitää olla painavat ja järkevät perustelut. Säästäminen ja sijoittaminen ennen veronmaksua on nykyään mahdollista vain tietyille pääomatuloille. Ehdotamme, että sama mahdollisuus annetaan myös palkkatuloille.
+Erilaisten tulojen kohtelu pitäisi lähtökohtaisesti olla verotuksellisesti mahdollisimman samankaltaista. Jos yhdellä tulomuodolla on merkittäviä etuja verotuksellisesti, täytyisi sille olla merkittävät ja järkevät perustelut. Ehdotamme siis palkkatuloille tiettyjen etujen lisäämistä, joita tällä hetkellä on vain tietyillä pääomatuloilla. Säästämisen ja sijoittamisen mahdollistaminen ennen veronmaksua on siis tällä hetkellä mielestämme etuus, jota ei ole järkevää tai oikeudenmukaista rajata vain tietyntyylisille pääomatuloille.
 
 **Onko muutos vaikea toteuttaa?**
-_Vastausta täydennetään._
+Ei teknisesti. Suomessa on jo osakesäästötili, jolla tilin sisäiset kaupat ovat verottomia ja vero maksetaan vasta nostettaessa, ja Verohallinto hallinnoi sitä jo nyt. Valtiovarainministeriön virkamiehet esittävät tuoreessa [virkapuheenvuorossaan](https://urn.fi/URN:ISBN:978-952-367-595-7) osakesäästötilin uudistamista sijoitussäästötiliksi, jolle voisi sijoittaa osakkeiden lisäksi myös rahastoja ja muita listattuja tuotteita. Myös Euroopan komissio on suositellut jäsenmaille vastaavia sijoitussäästötilejä osana EU:n säästämis- ja sijoitusunionia. Varallisuustili vie saman ajatuksen pidemmälle: myös palkasta säästetty raha pääsisi tilille ennen veroja. Lainsäädäntötyötä tarvitaan esimerkiksi noston, maastamuuton ja kuolinpesän sääntöjen osalta, mutta pohja on olemassa.
 
 **Miten muutos vaikuttaa verotulojen määrään?**
-_Vastausta täydennetään._
+Emme ole vielä laskeneet vaikutusta, emmekä halua esittää arvausta. Suunta on selvä: lyhyellä aikavälillä verotulot pienenevät, koska tilille siirretystä palkasta ei makseta veroa heti. Vero ei kuitenkaan katoa, vaan se maksetaan, kun rahat nostetaan käyttöön. Kokonaisvaikutus riippuu toteutuksen yksityiskohdista, kuten siitä, paljonko tilille voi vuosittain siirtää ja miten nostot verotetaan. Siksi esitämme, että valtiovarainministeriö tai Valtion taloudellinen tutkimuskeskus VATT arvioi vaikutukset ennen päätöksiä.
 
 **Jos valtion saamat verotulot pienenevät, onko tämän järjestelmän kulut jostakin muusta pois?**
-_Vastausta täydennetään._
+Lyhyellä aikavälillä kyllä: lykätty vero on valtiolle tuloa, joka saadaan vasta myöhemmin. Siksi varallisuustilin kustannus pitää arvioida ja sovittaa yhteen julkisen talouden sopeuttamisen kanssa ennen käyttöönottoa. Pitkällä aikavälillä lykätty vero palaa valtiolle, kun säästöt nostetaan käyttöön.
 
 **Onko varallisuustilistä olemassa tarkkaa toteuttamiskelpoista suunnitelmaa?**
-_Vastausta täydennetään._
+Ei vielä. Tämä on avaus, jolla haluamme nostaa palkansaajien vaurastumisen verokeskusteluun. Periaatteet ovat selvät: tilille siirretty palkka vähennetään tuloverotuksessa, tilin sisällä sijoituksia voi vaihtaa ilman veroa, vero maksetaan nostettaessa, ja lykätty vero erääntyy viimeistään maastamuutossa tai kuolemassa. Yksityiskohdat, kuten noston verotus ja vaikutukset verotuloihin, ratkaistaan jatkovalmistelussa.
 
 **Vähennetäänkö säästöt ansiotuloveron määrästä, vai verotettavasta ansiotulon määrästä?**
-_Vastausta täydennetään._
-
-**Miten tililtä nostettu raha verotetaan: ansiotulona, pääomatulona vai molempina?**
-_Vastausta täydennetään._
-
-**Miksi ei vain korotettaisi osakesäästötilin talletuskattoa?**
-_Vastausta täydennetään._
-
-**Voiko tililtä nostaa rahaa esimerkiksi asunnon käsirahaan?**
-_Vastausta täydennetään._
-
-**Miten varallisuustili suhteutuu perintöveroon?**
-_Vastausta täydennetään._
+Verotettavasta ansiotulosta. Tilille siirretty palkka käsitellään kuin sitä ei olisi vielä maksettu sinulle käteen: siitä ei makseta tuloveroa ennen kuin nostat sen käyttöösi. Siksi voit sijoittaa koko bruttosumman.
 
 **Miten tämä on (ympäristökysymyksiin, kestävään kehitykseen ja sosiaaliseen oikeudenmukaisuuteen keskittyvää) vihreää politiikkaa?**
-_Vastausta täydennetään._
+Vihreä politiikka on pitkäjänteisyyttä. Varallisuustili palkitsee säästämisestä ja verottaa kulutusta, joten se kannustaa ajattelemaan pitkällä aikavälillä eikä seuraavaa ostosta. Sosiaalista oikeudenmukaisuutta se edistää, koska nykyään vaurastuvat helpoimmin ne, joilla on jo pääomaa. Varallisuustili antaa palkansaajille saman mahdollisuuden. Kun ihmisillä on säästöjä, he ja koko kansantalous kestävät kriisejä paremmin. Säästöjen ohjaaminen investointeihin on myös EU:n säästämis- ja sijoitusunionin tavoite, ja sillä rahoitetaan muun muassa ilmastosiirtymää.
+
+**Millä veroprosentilla alkuperäinen palkka verotetaan nostettaessa?**
+Tätä ei ole vielä lyöty lukkoon. Lähtökohta on, että nosto on tuloveron alaista. Tarkka malli, eli verotetaanko nosto noston vuoden ansiotulona ja miten tilille kertynyttä tuottoa kohdellaan, ratkaistaan jatkovalmistelussa. Valinta vaikuttaa sekä säästäjän hyötyyn että valtion verotuloihin, joten se pitää arvioida yhdessä verotulovaikutusten kanssa.
