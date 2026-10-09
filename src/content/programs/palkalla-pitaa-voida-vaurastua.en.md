@@ -9,7 +9,9 @@ heroLines:
   - Your paycheck
   - should build wealth!
 unlisted: true
-citations: []
+citations:
+  - person: lauri-lavanti
+    quote: "It's time to make building wealth everyone's right, whether your income comes as wages or as dividends!"
 ---
 
 ## Why is it so hard to build wealth on a salary?
@@ -23,10 +25,6 @@ In practice, the wealth account is not a real account like a bank account, but a
 This simple change promotes people's capitalism. When more and more wage earners are also owners, the economy becomes more resilient to crises and building wealth comes within reach of every wage earner.
 
 Here are four reasons why the wealth account builds a better and fairer market economy:
-
-> "Building wealth should not be the exclusive privilege of those who are already wealthy, but an opportunity open to everyone who works. We need a system that encourages ownership."
-
-— The Market Greens
 
 ## Benefit 1/4: Invest your whole paycheck for a bigger starting capital
 

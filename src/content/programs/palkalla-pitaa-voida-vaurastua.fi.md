@@ -9,7 +9,9 @@ heroLines:
   - Palkalla pitää
   - voida vaurastua!
 unlisted: true
-citations: []
+citations:
+  - person: lauri-lavanti
+    quote: 'On aika tehdä vaurastumisesta jokaisen oikeus, riippumatta siitä, saako tulonsa palkkana vai osinkoina!'
 ---
 
 ## Miksi palkalla on niin vaikea vaurastua?
@@ -23,10 +25,6 @@ Käytännössä varallisuustili ei ole todellinen tili pankkitilin tapaan, vaan 
 Tämä yksinkertainen muutos edistää kansankapitalismia. Kun yhä useampi palkansaaja on myös omistaja, kansantalous kestää kriisejä paremmin ja vaurastuminen tulee jokaisen palkansaajan ulottuville.
 
 Esitämme neljä perustetta, miksi varallisuustili rakentaa parempaa ja reilumpaa markkinataloutta:
-
-> "Vaurastumisen ei pitäisi olla jo ennestään vauraiden yksinoikeus, vaan jokaisen työtä tekevän saavutettavissa oleva mahdollisuus. Tarvitsemme järjestelmän, joka kannustaa omistajuuteen."
-
-— Markkinavihreät
 
 ## Hyöty 1/4: Sijoita koko palkalla, niin alkupääoma on isompi
 

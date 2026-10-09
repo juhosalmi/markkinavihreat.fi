@@ -9,7 +9,9 @@ heroLines:
   - Med lön ska man
   - kunna bli förmögen!
 unlisted: true
-citations: []
+citations:
+  - person: lauri-lavanti
+    quote: 'Det är dags att göra förmögenhetsbyggande till allas rätt, oavsett om man får sin inkomst som lön eller som utdelning!'
 ---
 
 ## Varför är det så svårt att bli förmögen på lön?
@@ -23,10 +25,6 @@ I praktiken är förmögenhetskontot inte ett verkligt konto som ett bankkonto, 
 Denna enkla förändring främjar folkkapitalism. När allt fler löntagare också är ägare blir samhällsekonomin mer motståndskraftig mot kriser, och förmögenhetsbyggande blir möjligt för varje löntagare.
 
 Vi presenterar fyra skäl till varför förmögenhetskontot bygger en bättre och rättvisare marknadsekonomi:
-
-> "Att bli förmögen borde inte vara ett privilegium för dem som redan är förmögna, utan en möjlighet för alla som arbetar. Vi behöver ett system som uppmuntrar till ägande."
-
-— De marknadsgröna
 
 ## Fördel 1/4: Investera hela lönen, så blir startkapitalet större
 
