@@ -3,6 +3,7 @@ locale: fi
 name: 'Ville Aarnio'
 order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
+candidateBadge: 'Eduskuntavaaliehdokas Kaakkois-Suomessa'
 links:
   - type: website
     url: 'https://aarnionville.fi/'
