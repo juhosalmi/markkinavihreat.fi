@@ -3,6 +3,7 @@ locale: sv
 name: 'Johanna Muurinen'
 order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
+candidateBadge: 'Riksdagsvalskandidat i Nyland'
 links:
   - type: bluesky
     url: 'https://bsky.app/profile/jmuurine.bsky.social'

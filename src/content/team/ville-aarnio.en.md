@@ -3,6 +3,7 @@ locale: en
 name: 'Ville Aarnio'
 order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
+candidateBadge: 'Parliamentary candidate in Southeast Finland'
 links:
   - type: website
     url: 'https://aarnionville.fi/'
