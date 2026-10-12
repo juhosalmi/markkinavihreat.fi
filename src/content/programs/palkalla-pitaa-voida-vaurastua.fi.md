@@ -18,15 +18,18 @@ citations:
   - person: essi-lindberg
     quote: 'Vaurastumiseen pitää kannustaa, verojen välttelyyn ei. Siksi järjestelmän pitää olla sellainen, ettei veroista pääse eroon kalliilla verosuunnittelulla tai muuttamalla varallisuutensa kanssa ulkomaille.'
     afterSection: 4
+    afterParagraph: 2
   - person: johanna-muurinen
     quote: 'Sen lisäksi, että näin verotus kohdistuu paremmin luonnonvarojen kulutukseen, voi tämä järjestelmä kannustaa ihan tavallisia ihmisiä kiinnostumaan taloudesta ja ylipäätään suunnittelemaan omaa talouttaan ja rahan käyttöään.'
     afterSection: 4
   - person: arttu-laitinen
     quote: 'Varallisuustili on meille tavan palkansaajille tehokas ja reilu työkalu sekä erinomainen kannustin varallisuuden kerryttämiseen.'
     afterSection: 5
+    afterParagraph: 1
   - person: taru-hallikainen
     quote: 'Lisäksi, kun yhteiskunnassa siirrytään perustuloon, pystyvät myös epäsäännöllisesti ansaitsevat ainakin järjestelmätasolla kerryttämään säästöjä varallisuustilin turvin.'
     afterSection: 5
+    afterParagraph: 2
 ---
 
 ## Miksi palkalla on niin vaikea vaurastua?
