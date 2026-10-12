@@ -12,6 +12,11 @@ unlisted: true
 citations:
   - person: lauri-lavanti
     quote: "It's time to make building wealth everyone's right, whether your income comes as wages or as dividends!"
+  - person: ulla-santti
+    quote: 'In Finland we talk a lot about incentives to work, but too little about how an ordinary wage earner could build wealth. I believe everyone should have the chance to build financial security through their own work. That also takes new solutions.'
+  - person: johanna-muurinen
+    quote: 'Besides targeting taxation better at the consumption of natural resources, this system can encourage perfectly ordinary people to take an interest in the economy and to plan their own finances and spending in the first place.'
+    afterSection: 4
 ---
 
 ## Why is it so hard to build wealth on a salary?
