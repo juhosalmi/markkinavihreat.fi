@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import ProgramFaq from '../ProgramFaq.astro'
 import ProgramHero from '../ProgramHero.astro'
 import ProgramSection from '../ProgramSection.astro'
+import ProgramSlides from '../ProgramSlides.astro'
 import QuoteBand from '../QuoteBand.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { parseLocalizedId, type Locale } from '../../lib/content'
@@ -182,6 +183,17 @@ if (faq) jsonLd.push(faq)
           </>
         ))}
       </p>
+    )
+  }
+
+  {
+    program.data.slides && (
+      <ProgramSlides
+        locale={locale}
+        slides={program.data.slides}
+        title={program.data.title}
+        url={canonical}
+      />
     )
   }
 

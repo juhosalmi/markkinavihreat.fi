@@ -97,6 +97,23 @@ const programs = defineCollection({
     citations: z.array(citation).default([]),
     // Team member slugs who worked on the program without being quoted in it.
     contributors: z.array(z.string()).default([]),
+    // The program's social-media carousel, offered for download and sharing
+    // at the bottom of the page. Paths are public/ URLs (same-origin, so the
+    // download attribute and the share sheet's file fetch both work).
+    slides: z
+      .object({
+        // Language the slide images are in; a locale whose language differs
+        // gets a note saying so.
+        lang: locale,
+        // The whole carousel as one PDF, for the "download all" link.
+        pdf: z.string().optional(),
+        // Pixel size shared by every slide (a carousel is uniform), so the
+        // images reserve their space before loading.
+        width: z.number().int().positive(),
+        height: z.number().int().positive(),
+        images: z.array(z.object({ src: z.string(), alt: z.string() })).min(1),
+      })
+      .optional(),
   }),
 })
 
