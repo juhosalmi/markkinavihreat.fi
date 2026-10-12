@@ -71,6 +71,10 @@ const citation = z.object({
   // follows the n-th section. Setting it also pins the quote: the load-time
   // shuffle of quote bands only moves quotes that leave it unset.
   afterSection: z.number().int().min(0).optional(),
+  // Places the quote inside that section, after its n-th paragraph (1-based),
+  // splitting the section around the quote band. Left out, or at or past the
+  // section's last paragraph, the quote follows the whole section. Also pins.
+  afterParagraph: z.number().int().min(1).optional(),
 })
 
 const programs = defineCollection({

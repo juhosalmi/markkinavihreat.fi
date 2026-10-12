@@ -9,6 +9,7 @@ import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { parseLocalizedId, type Locale } from '../../lib/content'
 import {
   parseProgramBody,
+  type ProgramParagraph,
   type ProgramSection as ProgramSectionData,
 } from '../../lib/programSections'
 import { t } from '../../i18n/ui'
@@ -39,8 +40,9 @@ const citations = await Promise.all(
     if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
     return {
       afterSection: citation.afterSection ?? i,
+      afterParagraph: citation.afterParagraph,
       // A quote placed by hand stays put; only unplaced ones join the shuffle.
-      pinned: citation.afterSection !== undefined,
+      pinned: citation.afterSection !== undefined || citation.afterParagraph !== undefined,
       quote: citation.quote,
       name: person.data.name,
       photo: person.data.photo,
@@ -48,6 +50,34 @@ const citations = await Promise.all(
     }
   }),
 )
+
+type Citation = (typeof citations)[number]
+
+// Splits a section at the quotes placed inside it (afterParagraph), so each
+// such quote band sits between two parts of the same section. The last part
+// carries the quotes that follow the whole section.
+function sectionParts(paragraphs: ProgramParagraph[], quotes: Citation[]) {
+  const inside = quotes.filter(
+    (c) => c.afterParagraph !== undefined && c.afterParagraph < paragraphs.length,
+  )
+  const cuts = [...new Set(inside.map((c) => c.afterParagraph!))].sort((a, b) => a - b)
+  const parts: Array<{ start: number; paragraphs: typeof paragraphs; quotes: Citation[] }> = []
+  let start = 0
+  for (const cut of cuts) {
+    parts.push({
+      start,
+      paragraphs: paragraphs.slice(start, cut),
+      quotes: inside.filter((c) => c.afterParagraph === cut),
+    })
+    start = cut
+  }
+  parts.push({
+    start,
+    paragraphs: paragraphs.slice(start),
+    quotes: quotes.filter((c) => !inside.includes(c)),
+  })
+  return parts
+}
 
 const contributors = await Promise.all(
   program.data.contributors.map(async (slug) => {
@@ -126,22 +156,26 @@ if (faq) jsonLd.push(faq)
       }
 
       const tone = toneFor(section, section.type === 'requirement' ? requirementPosition++ : 0)
-      const sectionCitations = citations.filter((c) => c.afterSection === i)
-      return (
+      const parts = sectionParts(
+        section.paragraphs,
+        citations.filter((c) => c.afterSection === i),
+      )
+      return parts.map((part, p) => (
         <>
           <ProgramSection
             tone={tone}
-            label={section.type === 'requirement' ? section.label : undefined}
-            heading={section.heading}
-            paragraphs={section.paragraphs}
+            label={p === 0 && section.type === 'requirement' ? section.label : undefined}
+            heading={p === 0 ? section.heading : undefined}
+            paragraphs={part.paragraphs}
+            firstParagraphIndex={part.start}
           >
-            {i === lastHighlightIndex && (
+            {i === lastHighlightIndex && p === parts.length - 1 && (
               <a href={JOIN_URL} class="btn-contained-lg mt-10 inline-flex">
                 {t(locale, 'programs.joinCta')}
               </a>
             )}
           </ProgramSection>
-          {sectionCitations.map((citation) => (
+          {part.quotes.map((citation) => (
             <QuoteBand
               class={citation.pinned ? undefined : 'js-quote-band'}
               name={citation.name}
@@ -151,7 +185,7 @@ if (faq) jsonLd.push(faq)
             />
           ))}
         </>
-      )
+      ))
     })
   }
 
