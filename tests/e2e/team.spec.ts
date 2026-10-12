@@ -7,6 +7,18 @@ test('gallery card leads to the person page', async ({ page }) => {
   await expect(page.locator('h1')).toHaveText('Lauri Lavanti')
 })
 
+test('gallery shuffles the people on load', async ({ page }) => {
+  const orders = new Set<string>()
+  for (let i = 0; i < 5; i++) {
+    await page.goto('/ketka/')
+    const names = await page.locator('#about-grid h3').allTextContents()
+    expect(names.length).toBeGreaterThan(2)
+    orders.add(names.join('|'))
+  }
+  // Five loads landing on the same order by chance is vanishingly unlikely.
+  expect(orders.size).toBeGreaterThan(1)
+})
+
 test('person page links to the programs and posts they are part of', async ({ page }) => {
   await page.goto('/ketka/lauri-lavanti/')
   await expect(page.locator('a[href="/ehdotukset/lisaa-markkinoita/"]')).toBeVisible()
