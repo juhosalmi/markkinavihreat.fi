@@ -68,7 +68,8 @@ const citation = z.object({
   quote: z.string(),
   // The body section (0-based, one per `##` heading) whose quote band this is.
   // Defaults to the citation's own position in the list, so the n-th quote
-  // follows the n-th section.
+  // follows the n-th section. Setting it also pins the quote: the load-time
+  // shuffle of quote bands only moves quotes that leave it unset.
   afterSection: z.number().int().min(0).optional(),
 })
 

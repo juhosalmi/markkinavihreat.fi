@@ -39,6 +39,8 @@ const citations = await Promise.all(
     if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
     return {
       afterSection: citation.afterSection ?? i,
+      // A quote placed by hand stays put; only unplaced ones join the shuffle.
+      pinned: citation.afterSection !== undefined,
       quote: citation.quote,
       name: person.data.name,
       photo: person.data.photo,
@@ -141,7 +143,7 @@ if (faq) jsonLd.push(faq)
           </ProgramSection>
           {sectionCitations.map((citation) => (
             <QuoteBand
-              class="js-quote-band"
+              class={citation.pinned ? undefined : 'js-quote-band'}
               name={citation.name}
               photo={citation.photo}
               quote={citation.quote}
@@ -158,7 +160,7 @@ if (faq) jsonLd.push(faq)
       .filter((c) => c.afterSection >= sections.length)
       .map((citation) => (
         <QuoteBand
-          class="js-quote-band"
+          class={citation.pinned ? undefined : 'js-quote-band'}
           name={citation.name}
           photo={citation.photo}
           quote={citation.quote}
