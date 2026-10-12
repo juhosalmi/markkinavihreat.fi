@@ -27,6 +27,28 @@ citations:
   - person: taru-hallikainen
     quote: 'Dessutom, när samhället övergår till basinkomst, kan även de som tjänar oregelbundet åtminstone på systemnivå bygga upp sparande med hjälp av förmögenhetskontot.'
     afterSection: 5
+slides:
+  lang: fi
+  pdf: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili.pdf
+  width: 1280
+  height: 1600
+  images:
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-1.jpg
+      alt: 'Kansi: Palkalla pitää voida vaurastua! Varallisuustili: sijoita palkkasi ennen kuin siitä maksetaan veroa.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-2.jpg
+      alt: 'Ohjelmistokehittäjä säästää 450 €/kk: nyt vero vie 180 € ja sijoitukseen jää 270 €, varallisuustilillä koko 450 €.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-3.jpg
+      alt: 'Ohjelmistokehittäjä 10 vuoden päästä: nyt 43 900 €, varallisuustilillä 73 100 €, noin 29 200 € enemmän.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-4.jpg
+      alt: 'Varhaiskasvatuksen opettaja säästää 300 €/kk: nyt vero vie 120 €, sijoitukseen 180 €, varallisuustilillä 300 €.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-5.jpg
+      alt: 'Varhaiskasvatuksen opettaja 10 vuoden päästä: nyt 29 200 €, varallisuustilillä 48 700 €, noin 19 500 € enemmän.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-6.jpg
+      alt: 'Neljä hyötyä palkansaajalle: isompi alkupääoma, sijoita mihin haluat, vaihda ilman veroa, vero vasta käytöstä.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-7.jpg
+      alt: 'Verotetaan kulutusta, ei vaurastumista: palkka siirtyy varallisuustilille ennen veroa, vero maksetaan nostossa.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-8.jpg
+      alt: 'Tehdään vaurastumisesta jokaisen oikeus. Lue koko ehdotus: markkinavihreat.fi.'
 ---
 
 ## Varför är det så svårt att bli förmögen på lön?
