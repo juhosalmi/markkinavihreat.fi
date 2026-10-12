@@ -34,10 +34,11 @@ const path = `/ehdotukset/${parseLocalizedId(program.id).slug}/`
 const { leadParagraphs, sections } = parseProgramBody(program.body ?? '')
 
 const citations = await Promise.all(
-  program.data.citations.map(async (citation) => {
+  program.data.citations.map(async (citation, i) => {
     const person = await getEntry('team', `${citation.person}.${locale}`)
     if (!person) throw new Error(`Citation references unknown team member "${citation.person}"`)
     return {
+      afterSection: citation.afterSection ?? i,
       quote: citation.quote,
       name: person.data.name,
       photo: person.data.photo,
@@ -123,7 +124,7 @@ if (faq) jsonLd.push(faq)
       }
 
       const tone = toneFor(section, section.type === 'requirement' ? requirementPosition++ : 0)
-      const citation = citations[i]
+      const sectionCitations = citations.filter((c) => c.afterSection === i)
       return (
         <>
           <ProgramSection
@@ -138,7 +139,7 @@ if (faq) jsonLd.push(faq)
               </a>
             )}
           </ProgramSection>
-          {citation && (
+          {sectionCitations.map((citation) => (
             <QuoteBand
               class="js-quote-band"
               name={citation.name}
@@ -146,7 +147,7 @@ if (faq) jsonLd.push(faq)
               quote={citation.quote}
               href={citation.href}
             />
-          )}
+          ))}
         </>
       )
     })
@@ -154,7 +155,7 @@ if (faq) jsonLd.push(faq)
 
   {
     citations
-      .slice(sections.length)
+      .filter((c) => c.afterSection >= sections.length)
       .map((citation) => (
         <QuoteBand
           class="js-quote-band"

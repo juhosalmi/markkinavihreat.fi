@@ -66,6 +66,10 @@ const team = defineCollection({
 const citation = z.object({
   person: z.string(),
   quote: z.string(),
+  // The body section (0-based, one per `##` heading) whose quote band this is.
+  // Defaults to the citation's own position in the list, so the n-th quote
+  // follows the n-th section.
+  afterSection: z.number().int().min(0).optional(),
 })
 
 const programs = defineCollection({
