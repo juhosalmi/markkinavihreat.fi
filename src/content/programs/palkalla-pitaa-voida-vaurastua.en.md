@@ -16,9 +16,18 @@ citations:
   - person: ulla-santti
     quote: 'In Finland we talk a lot about incentives to work, but too little about how an ordinary wage earner could build wealth. I believe everyone should have the chance to build financial security through their own work. That also takes new solutions.'
     afterSection: 1
+  - person: essi-lindberg
+    quote: 'Building wealth should be encouraged, dodging tax should not. That is why the system must be built so that no one can escape tax through costly tax planning or by moving abroad with their wealth.'
+    afterSection: 4
   - person: johanna-muurinen
     quote: 'Besides targeting taxation better at the consumption of natural resources, this system can encourage perfectly ordinary people to take an interest in the economy and to plan their own finances and spending in the first place.'
     afterSection: 4
+  - person: arttu-laitinen
+    quote: 'For us ordinary wage earners, the wealth account is an effective and fair tool and an excellent incentive to build wealth.'
+    afterSection: 5
+  - person: taru-hallikainen
+    quote: 'Moreover, as society moves to a basic income, people with irregular earnings will also be able, at least at the system level, to build up savings through the wealth account.'
+    afterSection: 5
 ---
 
 ## Why is it so hard to build wealth on a salary?

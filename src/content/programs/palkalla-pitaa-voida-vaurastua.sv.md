@@ -16,9 +16,18 @@ citations:
   - person: ulla-santti
     quote: 'I Finland talar man mycket om incitament att arbeta, men för lite om hur en vanlig löntagare kunde bli förmögen. Jag anser att alla ska ha möjlighet att bygga ekonomisk trygghet genom sitt eget arbete. Det kräver också nya lösningar.'
     afterSection: 1
+  - person: essi-lindberg
+    quote: 'Förmögenhetsbyggande ska uppmuntras, skatteflykt inte. Därför måste systemet vara sådant att man inte kan slippa skatten genom dyr skatteplanering eller genom att flytta utomlands med sin förmögenhet.'
+    afterSection: 4
   - person: johanna-muurinen
     quote: 'Utöver att beskattningen på så sätt bättre riktas mot förbrukningen av naturresurser kan systemet uppmuntra helt vanliga människor att intressera sig för ekonomi och överhuvudtaget planera sin egen ekonomi och hur de använder sina pengar.'
     afterSection: 4
+  - person: arttu-laitinen
+    quote: 'Förmögenhetskontot är för oss vanliga löntagare ett effektivt och rättvist verktyg och ett utmärkt incitament att bygga upp förmögenhet.'
+    afterSection: 5
+  - person: taru-hallikainen
+    quote: 'Dessutom, när samhället övergår till basinkomst, kan även de som tjänar oregelbundet åtminstone på systemnivå bygga upp sparande med hjälp av förmögenhetskontot.'
+    afterSection: 5
 ---
 
 ## Varför är det så svårt att bli förmögen på lön?
