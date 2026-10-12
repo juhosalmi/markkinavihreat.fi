@@ -9,7 +9,7 @@ import {
 function program(
   id: string,
   opts: {
-    order?: number
+    published?: string
     unlisted?: boolean
     citations?: Array<{ person: string; quote: string }>
     contributors?: string[]
@@ -18,7 +18,7 @@ function program(
   return {
     id,
     data: {
-      order: opts.order ?? 1,
+      published: new Date(opts.published ?? '2026-01-01'),
       unlisted: opts.unlisted ?? false,
       citations: opts.citations ?? [],
       contributors: opts.contributors ?? [],
@@ -109,16 +109,19 @@ describe('assertTeamRefs', () => {
 })
 
 describe('involvementFor', () => {
-  it('collects cited and contributed programs in order, with the quote', () => {
+  it('collects cited and contributed programs newest first, with the quote', () => {
     const programs = [
-      program('late.fi', { order: 2, contributors: ['anna'] }),
-      program('early.fi', { order: 1, citations: [{ person: 'anna', quote: 'Hyvä!' }] }),
+      program('early.fi', {
+        published: '2026-07-01',
+        citations: [{ person: 'anna', quote: 'Hyvä!' }],
+      }),
+      program('late.fi', { published: '2026-10-01', contributors: ['anna'] }),
       program('other.fi', { citations: [{ person: 'bert', quote: 'x' }] }),
     ]
     const result = involvementFor('anna', 'fi', programs, [])
     expect(result.programs.map((p) => [p.program.id, p.quote])).toEqual([
-      ['early.fi', 'Hyvä!'],
       ['late.fi', undefined],
+      ['early.fi', 'Hyvä!'],
     ])
   })
 

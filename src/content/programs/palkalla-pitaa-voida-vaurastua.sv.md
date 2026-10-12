@@ -2,7 +2,6 @@
 locale: sv
 title: Med lön ska man kunna bli förmögen!
 description: Ett förmögenhetskonto skulle göra det möjligt att investera sin lön före skatt – fyra skäl till varför det skulle bygga en rättvisare och mer dynamisk marknadsekonomi.
-order: 2
 published: 2026-10-12
 heroKicker: De marknadsgröna kräver
 heroLines:
