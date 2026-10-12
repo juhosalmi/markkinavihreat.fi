@@ -2,7 +2,6 @@
 locale: fi
 title: Palkalla pitää voida vaurastua!
 description: Varallisuustili mahdollistaisi palkkatulojen sijoittamisen ennen verotusta – neljä syytä, miksi tämä rakentaisi reilumman ja dynaamisemman markkinatalouden.
-order: 2
 published: 2026-10-12
 heroKicker: Markkinavihreät vaativat
 heroLines:

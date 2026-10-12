@@ -22,6 +22,18 @@ export function forLocale<T extends HasId>(entries: T[], locale: Locale): T[] {
   return entries.filter((entry) => parseLocalizedId(entry.id).locale === locale)
 }
 
+/**
+ * Sort comparator for programs: newest `published` first, so a freshly
+ * published program leads every listing. Same-day ties fall back to the id
+ * to keep the order stable between builds.
+ */
+export function newestFirst(
+  a: HasId & { data: { published: Date } },
+  b: HasId & { data: { published: Date } },
+): number {
+  return b.data.published.getTime() - a.data.published.getTime() || a.id.localeCompare(b.id)
+}
+
 // BASE_URL is "/" in production and on the Cloudflare deploy; only a
 // subpath preview (e.g. GitHub Pages, see astro.config.mjs) sets it to
 // something else, so this is a no-op outside that case.

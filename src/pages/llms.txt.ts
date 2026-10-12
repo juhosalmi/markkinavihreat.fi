@@ -10,7 +10,7 @@
  */
 import type { APIRoute } from 'astro'
 import { getCollection } from 'astro:content'
-import { forLocale, parseLocalizedId } from '../lib/content'
+import { forLocale, newestFirst, parseLocalizedId } from '../lib/content'
 import { dateSlug } from '../lib/date'
 import { metaDescriptionFromBio } from '../lib/team'
 import { SITE_URL } from '../lib/structuredData'
@@ -34,7 +34,7 @@ export const GET: APIRoute = async () => {
 
   const programs = forLocale(await getCollection('programs'), LOCALE)
     .filter((program) => !program.data.unlisted)
-    .sort((a, b) => a.data.order - b.data.order)
+    .sort(newestFirst)
     .map((program) =>
       line(
         program.data.title,

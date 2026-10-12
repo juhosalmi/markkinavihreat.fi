@@ -9,12 +9,12 @@
  * Kept free of `astro:content` imports so it can be unit-tested with plain
  * objects; callers pass in the collections.
  */
-import { localePath, parseLocalizedId, type Locale } from './content'
+import { localePath, newestFirst, parseLocalizedId, type Locale } from './content'
 
 interface ProgramLike {
   id: string
   data: {
-    order: number
+    published: Date
     unlisted: boolean
     citations: Array<{ person: string; quote: string }>
     contributors: string[]
@@ -100,7 +100,7 @@ export interface ProgramInvolvement<P extends ProgramLike> {
 
 /**
  * What a person took part in, in one locale: listed programs where they're
- * cited or a contributor (by `order`), and posts they wrote (newest first).
+ * cited or a contributor (newest first), and posts they wrote (newest first).
  * Unlisted programs are left out — they're noindex and not meant to be
  * announced, so a person page shouldn't link to them either.
  */
@@ -119,7 +119,7 @@ export function involvementFor<P extends ProgramLike, B extends PostLike>(
     .filter(
       (p) => p.data.contributors.includes(slug) || p.data.citations.some((c) => c.person === slug),
     )
-    .sort((a, b) => a.data.order - b.data.order)
+    .sort(newestFirst)
     .map((program) => ({
       program,
       quote: program.data.citations.find((c) => c.person === slug)?.quote,

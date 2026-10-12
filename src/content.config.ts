@@ -79,11 +79,11 @@ const programs = defineCollection({
     locale,
     title: z.string(),
     description: z.string(),
-    order: z.number(),
     // Publication dates, mirrored across all three locales of an entry (a
     // translation isn't a separate publication). Drive Article JSON-LD's
     // datePublished/dateModified, the sitemap's lastmod and the RSS feed —
     // so they track when the *content* changed, not when the file was touched.
+    // `published` also orders every program listing, newest first.
     published: z.coerce.date(),
     updated: z.coerce.date().optional(),
     // Short label above the hero heading, e.g. "Markkinavihreät vaativat".
