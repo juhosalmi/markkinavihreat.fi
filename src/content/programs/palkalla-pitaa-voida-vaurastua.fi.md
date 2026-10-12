@@ -16,9 +16,18 @@ citations:
   - person: ulla-santti
     quote: 'Suomessa puhutaan paljon työnteon kannustimista, mutta liian vähän siitä, miten tavallinen palkansaaja voisi vaurastua. Minusta jokaisella pitää olla mahdollisuus rakentaa taloudellista turvaa omalla työllään. Siihen tarvitaan myös uusia ratkaisuja.'
     afterSection: 1
+  - person: essi-lindberg
+    quote: 'Vaurastumiseen pitää kannustaa, verojen välttelyyn ei. Siksi järjestelmän pitää olla sellainen, ettei veroista pääse eroon kalliilla verosuunnittelulla tai muuttamalla varallisuutensa kanssa ulkomaille.'
+    afterSection: 4
   - person: johanna-muurinen
     quote: 'Sen lisäksi, että näin verotus kohdistuu paremmin luonnonvarojen kulutukseen, voi tämä järjestelmä kannustaa ihan tavallisia ihmisiä kiinnostumaan taloudesta ja ylipäätään suunnittelemaan omaa talouttaan ja rahan käyttöään.'
     afterSection: 4
+  - person: arttu-laitinen
+    quote: 'Varallisuustili on meille tavan palkansaajille tehokas ja reilu työkalu sekä erinomainen kannustin varallisuuden kerryttämiseen.'
+    afterSection: 5
+  - person: taru-hallikainen
+    quote: 'Lisäksi, kun yhteiskunnassa siirrytään perustuloon, pystyvät myös epäsäännöllisesti ansaitsevat ainakin järjestelmätasolla kerryttämään säästöjä varallisuustilin turvin.'
+    afterSection: 5
 ---
 
 ## Miksi palkalla on niin vaikea vaurastua?
