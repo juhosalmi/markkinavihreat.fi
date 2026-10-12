@@ -29,6 +29,10 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - run: npm ci
+      # BASE_PATH/SITE_URL make build-time absolute URLs (og:image, sitemap
+      # links, etc.) resolve under this preview's actual GitHub Pages origin
+      # and repo subpath; NOINDEX adds <meta robots noindex> so the preview
+      # is never indexed by search engines.
       - run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}
