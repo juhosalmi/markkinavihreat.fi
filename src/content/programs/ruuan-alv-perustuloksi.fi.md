@@ -24,7 +24,7 @@ Ongelma ruuan alennetussa verokannassa on että se että hyväosaiset käyttäv�
 
 Me esitämme, että ruoka siirretään yleiseen 25,5 prosentin arvonlisäverokantaan, ja koko tuotto maksetaan takaisin ihmisille kuukausittaisena, samansuuruisena perustulona. Emme kuitenkaan hyväksy veronkorotusta ilman pienen perustulon käyttöönottoa: tämä on meille ehdoton kynnyskysymys!
 
-## Nykymallin ongelma - Tuki kasvaa sitä mukaa kun sen tarve pienenee
+## Nykymallin ongelma - Ruuan alv-tuki kohdistuu eniten hyvätuloisille
 
 [kuvaaja: ruokaostostuki-alv]
 
