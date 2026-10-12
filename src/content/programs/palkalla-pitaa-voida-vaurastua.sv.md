@@ -18,15 +18,18 @@ citations:
   - person: essi-lindberg
     quote: 'Förmögenhetsbyggande ska uppmuntras, skatteflykt inte. Därför måste systemet vara sådant att man inte kan slippa skatten genom dyr skatteplanering eller genom att flytta utomlands med sin förmögenhet.'
     afterSection: 4
+    afterParagraph: 2
   - person: johanna-muurinen
     quote: 'Utöver att beskattningen på så sätt bättre riktas mot förbrukningen av naturresurser kan systemet uppmuntra helt vanliga människor att intressera sig för ekonomi och överhuvudtaget planera sin egen ekonomi och hur de använder sina pengar.'
     afterSection: 4
   - person: arttu-laitinen
     quote: 'Förmögenhetskontot är för oss vanliga löntagare ett effektivt och rättvist verktyg och ett utmärkt incitament att bygga upp förmögenhet.'
     afterSection: 5
+    afterParagraph: 1
   - person: taru-hallikainen
     quote: 'Dessutom, när samhället övergår till basinkomst, kan även de som tjänar oregelbundet åtminstone på systemnivå bygga upp sparande med hjälp av förmögenhetskontot.'
     afterSection: 5
+    afterParagraph: 2
 ---
 
 ## Varför är det så svårt att bli förmögen på lön?
