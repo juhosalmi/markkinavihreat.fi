@@ -12,6 +12,11 @@ unlisted: true
 citations:
   - person: lauri-lavanti
     quote: 'On aika tehdä vaurastumisesta jokaisen oikeus, riippumatta siitä, saako tulonsa palkkana vai osinkoina!'
+  - person: ulla-santti
+    quote: 'Suomessa puhutaan paljon työnteon kannustimista, mutta liian vähän siitä, miten tavallinen palkansaaja voisi vaurastua. Minusta jokaisella pitää olla mahdollisuus rakentaa taloudellista turvaa omalla työllään. Siihen tarvitaan myös uusia ratkaisuja.'
+  - person: johanna-muurinen
+    quote: 'Sen lisäksi, että näin verotus kohdistuu paremmin luonnonvarojen kulutukseen, voi tämä järjestelmä kannustaa ihan tavallisia ihmisiä kiinnostumaan taloudesta ja ylipäätään suunnittelemaan omaa talouttaan ja rahan käyttöään.'
+    afterSection: 4
 ---
 
 ## Miksi palkalla on niin vaikea vaurastua?

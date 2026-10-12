@@ -12,6 +12,11 @@ unlisted: true
 citations:
   - person: lauri-lavanti
     quote: 'Det är dags att göra förmögenhetsbyggande till allas rätt, oavsett om man får sin inkomst som lön eller som utdelning!'
+  - person: ulla-santti
+    quote: 'I Finland talar man mycket om incitament att arbeta, men för lite om hur en vanlig löntagare kunde bli förmögen. Jag anser att alla ska ha möjlighet att bygga ekonomisk trygghet genom sitt eget arbete. Det kräver också nya lösningar.'
+  - person: johanna-muurinen
+    quote: 'Utöver att beskattningen på så sätt bättre riktas mot förbrukningen av naturresurser kan systemet uppmuntra helt vanliga människor att intressera sig för ekonomi och överhuvudtaget planera sin egen ekonomi och hur de använder sina pengar.'
+    afterSection: 4
 ---
 
 ## Varför är det så svårt att bli förmögen på lön?
