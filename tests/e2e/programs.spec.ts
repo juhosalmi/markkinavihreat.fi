@@ -7,7 +7,8 @@ test('program slides offer a download per slide and the whole PDF', async ({ pag
   const section = page.locator('section', { has: page.getByRole('heading', { name: 'Jaa kuvat' }) })
 
   await expect(section.locator('img')).toHaveCount(8)
-  const first = section.getByRole('link', { name: 'Lataa', exact: true }).first()
+  // Each per-slide button carries its slide number for screen readers.
+  const first = section.getByRole('link', { name: 'Lataa 1/8', exact: true })
   await expect(first).toHaveAttribute('download', 'varallisuustili-1.jpg')
   await expect(section.getByRole('link', { name: 'Lataa kaikki (PDF)' })).toHaveAttribute(
     'download',
@@ -31,9 +32,9 @@ test('program slides share falls back to copying the link without Web Share', as
 
   // Located by slide, not by label: the label is what the click changes.
   const share = page.locator('button[data-src$="varallisuustili-1.jpg"]')
-  await expect(share).toHaveText('Jaa')
+  await expect(share).toHaveAccessibleName('Jaa 1/8')
   await share.click()
-  await expect(share).toHaveText('Linkki kopioitu')
+  await expect(share).toHaveAccessibleName('Linkki kopioitu 1/8')
   expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
     `https://markkinavihreat.fi${SLIDES_PATH}`,
   )
