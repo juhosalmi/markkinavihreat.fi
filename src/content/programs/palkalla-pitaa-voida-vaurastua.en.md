@@ -3,12 +3,11 @@ locale: en
 title: Your paycheck should let you build wealth!
 description: A wealth account would let wage earners invest their pay before tax – four reasons why it would build a fairer and more dynamic market economy.
 order: 2
-published: 2026-08-22
+published: 2026-10-12
 heroKicker: The Market Greens demand
 heroLines:
   - Your paycheck
   - should build wealth!
-unlisted: true
 citations:
   - person: lauri-lavanti
     quote: "It's time to make building wealth everyone's right, whether your income comes as wages or as dividends!"
