@@ -32,4 +32,4 @@ links:
     url: 'https://fi.wikipedia.org/wiki/Lauri_Lavanti'
 ---
 
-Lauri Lavanti on Vihreiden eduskuntavaaliehdokas Uudenmaan vaalipiirissä eduskuntavaaleissa 2027, Kirkkonummen kunnanvaltuutettu ja johtava ohjelmistokehittäjä (DI, Aalto). Hän on valmistunut diplomi-insinööriksi Aalto-yliopistosta ja hänellä on neljä lasta. Laurin isä toimi pitkään Kokoomuksen kunnanvaltuutettuna Kirkkonummella. Laurin tavoitteena on digitaalisesti itsenäinen Suomi, jossa talous, sivistys ja vapaus toimivat yhdessä tekoälyn aikakaudella.
+Lauri Lavanti on Vihreiden eduskuntavaaliehdokas Uudenmaan vaalipiirissä eduskuntavaaleissa 2027, Kirkkonummen kunnanvaltuutettu ja johtava ohjelmistokehittäjä (DI, Aalto). Hän on valmistunut diplomi-insinööriksi Aalto-yliopistosta ja hänellä on neljä lasta. Laurin isä toimi pitkään Kokoomuksen kunnanvaltuutettuna Kirkkonummella. Lauri perusti Markkinavihreät ja oli kirjoittamassa Markkinavihreää manifestia sekä verkoston avausta yrittäjän päiväksi. Laurin tavoitteena on digitaalisesti itsenäinen Suomi, jossa talous, sivistys ja vapaus toimivat yhdessä tekoälyn aikakaudella.
