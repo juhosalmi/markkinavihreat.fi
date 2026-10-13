@@ -19,8 +19,6 @@ citations:
     quote: 'Markkinat eivät kuulu vain kaupunkeihin. Markkinavihreys tarkoittaa myös sitä, että metsänomistaja saa korvauksen hiilen sidonnasta, viljelijä huoltovarmuudesta ja maaseudun yrittäjä luonnon ennallistamisesta.'
   - person: susanna-sielo
     quote: 'Olen nähnyt läheltä, kuinka yritykset muuttavat toimintaansa, kun kannustimet ovat oikein. Politiikan tehtävä on rakentaa pelisäännöt, joissa tehokkaimmat ja vastuullisimmat pelurit voivat voittaa.'
-  - person: ester-dufva
-    quote: '96 % Suomen yrityksistä on mikroyrityksiä. Silti suuryrityksiä tuetaan ja pienempien toimintaedellytyksiä heikennetään. Terveessä kilpailussa pienet saavat kasvaa ja seistä isojen rinnalla, osallistuen kilpailutuksiin ja jakaen urakoita. On aika tuoda kaikki samalle viivalle.'
   - person: arttu-laitinen
     quote: 'Valtion tehtävä ei ole johtaa yrityksiä, vaan asettaa kannustimet niin että ulkoisvaikutukset sisältyvät markkinahintaan.'
   - person: kalle-euro
