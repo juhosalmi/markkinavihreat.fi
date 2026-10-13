@@ -19,8 +19,6 @@ citations:
     quote: 'Marknaden hör inte bara hemma i städerna. Marknadsgrönhet innebär också att skogsägaren får ersättning för kolbindning, jordbrukaren för försörjningsberedskap och landsbygdsföretagaren för naturrestaurering.'
   - person: susanna-sielo
     quote: 'Jag har på nära håll sett hur företag ändrar sitt agerande när incitamenten är rätt. Politikens uppgift är att bygga spelregler där de mest effektiva och ansvarsfulla aktörerna kan vinna.'
-  - person: ester-dufva
-    quote: '96 % av Finlands företag är mikroföretag. Ändå stöds storföretag medan de mindres verksamhetsförutsättningar försvagas. I en sund konkurrens får de små växa och stå sida vid sida med de stora, delta i upphandlingar och dela på uppdragen. Det är dags att ställa alla på samma startlinje.'
   - person: arttu-laitinen
     quote: 'Statens uppgift är inte att leda företag, utan att sätta incitament så att externa effekter ingår i marknadspriset.'
   - person: kalle-euro

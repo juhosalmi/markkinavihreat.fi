@@ -19,8 +19,6 @@ citations:
     quote: "Markets don't belong only in cities. Being market green also means the forest owner gets compensated for carbon sequestration, the farmer for security of supply, and the rural entrepreneur for restoring nature."
   - person: susanna-sielo
     quote: 'I have seen up close how companies change their behavior when the incentives are right. The task of politics is to build rules of the game where the most effective and responsible players can win.'
-  - person: ester-dufva
-    quote: "96% of Finnish companies are micro-enterprises. Yet large companies get subsidized while smaller ones' operating conditions are weakened. In healthy competition, small businesses get to grow and stand alongside the big ones, taking part in tenders and sharing contracts. It's time to put everyone on the same starting line."
   - person: arttu-laitinen
     quote: "The state's job is not to run businesses, but to set incentives so that externalities are included in the market price."
   - person: kalle-euro
