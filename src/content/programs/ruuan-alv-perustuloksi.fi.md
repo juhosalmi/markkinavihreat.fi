@@ -22,7 +22,7 @@ Ruoasta maksetaan vähemmän arvonlisäveroa kuin muusta kulutuksesta, ja täten
 
 Ongelma ruuan alennetussa verokannassa on että se että hyväosaiset käyttävät lähes kaksinkertaisen määrän rahaa ruokaostoksiin, ja täten valtio käytännössä tukee järjestelyllä voittopuolisesti hyväosaisia. Siitä huolimatta, että alemman verokannan perustelu on nimenomaan pienituloisten tukemisessa.
 
-Me esitämme, että ruoka siirretään yleiseen 25,5 prosentin arvonlisäverokantaan, ja koko tuotto maksetaan takaisin ihmisille kuukausittaisena, samansuuruisena perustulona. Emme kuitenkaan hyväksy veronkorotusta ilman pienen perustulon käyttöönottoa: tämä on meille ehdoton kynnyskysymys!
+Me esitämme, että ruoka siirretään yleiseen 25,5 prosentin arvonlisäverokantaan, ja koko tuotto maksetaan takaisin ihmisille kuukausittaisena, samansuuruisena perustulona. Emme kuitenkaan hyväksy ruuan arvonlisäveron korotusta ilman pienen perustulon käyttöönottoa: tämä on meille ehdoton kynnyskysymys!
 
 ## Nykymallin ongelma - Ruuan alv-tuki kohdistuu eniten hyvätuloisille
 
@@ -41,11 +41,11 @@ Sama asia näkyy yksittäisellä kuitillakin, ei vain tilastollisena keskiarvona
 
 [kuva: ruuan-alv-esimerkki]
 
-## Nykymallin ongelma - Tuki kelpaa vain kaupan kassalla
+## Nykymallin ongelma - Tuki kelpaa vain ruokaostoksiin
 
 Huono kohdentuminen ei ole ruuan alennetun arvonlisäveron ainoa ongelma. Vaikka se kohdentuisikin paremmin, se olisi silti huono tapa tukea pienituloisia, sillä se kelpaa vain yhteen tarkoitukseen.
 
-Pienituloinen ihminen tietää itse parhaiten, mihin hänen rahansa juuri nyt kannattaa käyttää. Joskus se on ruokaa. Joskus se on vuokra, joka on myöhässä. Joskus lääkkeet, bussilippu tai lapsen harrastusmaksu. Ruuan alennettu ALV ei anna tähän mitään valinnanvaraa: se on tukea, joka kelpaa vain kaupan kassalla, ei mihinkään muualle.
+Pienituloinen ihminen tietää itse parhaiten, mihin hänen rahansa juuri nyt kannattaa käyttää. Joskus se on ruokaa. Joskus se on vuokra, lääkkeet, bussilippu tai lapsen harrastusmaksu. Ruuan alennettu ALV ei anna tähän mitään valinnanvaraa: se on tukea joka on sidottu ruokaostoksiin, ilman valinnanvaraa.
 
 Me markkinavihreät emme halua holhota pienituloisia. Emme usko, että valtio tietää paremmin kuin ihminen itse, mihin hänen euronsa kannattaa käyttää. Siksi haluamme muuttaa tuen muotoa, mutta emme sen perimmäistä tarkoitusta.
 
@@ -61,7 +61,7 @@ Katso myös talousvihreiden esitys aiheesta.
 
 [video: IpUvpkl-WfQ]
 
-## Ilman perustuloa emme hyväksy veronkorotusta
+## Ilman perustuloa emme hyväksy alvin korotusta
 
 Tämä on meille kynnyskysymys: emme hyväksy ruuan arvonlisäveron korottamista yleiselle tasolle, ellei tuotto samalla palauteta ihmisille kuukausittaisena tulona. Ei "myöhemmin katsotaan", ei "kompensoidaan erikseen jossain muussa yhteydessä", kuukausittain maksettavan "ruokaperustulon" pitää tulla voimaan täsmälleen samassa hetkessä kuin ruuan arvonlisäveroa korotetaan.
 
