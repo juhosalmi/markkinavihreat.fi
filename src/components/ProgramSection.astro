@@ -1,6 +1,28 @@
 ---
 import { renderInlineMarkdown } from '../lib/markdown'
+import type { Locale } from '../lib/content'
 import type { ProgramParagraph } from '../lib/programSections'
+import RuokaostostukiAlvChart from './charts/RuokaostostukiAlvChart.astro'
+import YouTubeEmbed from './YouTubeEmbed.astro'
+import ProgramImage from './ProgramImage.astro'
+import ProgramDisclosure from './ProgramDisclosure.astro'
+import type { UiKey } from '../i18n/ui'
+
+// Charts registered for the "[kuvaaja: <id>]" marker (see lib/programSections.ts).
+// Add new chart components here as they're built — a program body referencing
+// an id not listed here fails the build, the same way an unknown citation
+// person does in ProgramDetailBody.astro.
+const CHARTS = {
+  'ruokaostostuki-alv': RuokaostostukiAlvChart,
+} as const
+
+// Images registered for the "[kuva: <id>]" marker (see lib/programSections.ts).
+const IMAGES: Record<string, { src: string; altKey: UiKey }> = {
+  'ruuan-alv-esimerkki': {
+    src: '/programs/ruuan_alv/Ruuan_ALV_infografiikka.jpg',
+    altKey: 'image.ruuanAlvEsimerkki.alt',
+  },
+}
 
 interface Props {
   /**
@@ -12,9 +34,11 @@ interface Props {
   label?: string
   heading: string
   paragraphs: ProgramParagraph[]
+  /** Needed only for locale-aware chart rendering (labels, number formatting). */
+  locale: Locale
 }
 
-const { tone, label, heading, paragraphs } = Astro.props
+const { tone, label, heading, paragraphs, locale } = Astro.props
 
 const TONE_STYLES = {
   dark: {
@@ -47,6 +71,31 @@ const styles = TONE_STYLES[tone]
     <div class="space-y-4">
       {
         paragraphs.map((paragraph, i) => {
+          if (paragraph.type === 'chart') {
+            const Chart = CHARTS[paragraph.text as keyof typeof CHARTS]
+            if (!Chart)
+              throw new Error(`Program body references unknown chart id "${paragraph.text}"`)
+            return <Chart locale={locale} />
+          }
+          if (paragraph.type === 'video') {
+            return <YouTubeEmbed videoId={paragraph.text} locale={locale} />
+          }
+          if (paragraph.type === 'image') {
+            const image = IMAGES[paragraph.text]
+            if (!image)
+              throw new Error(`Program body references unknown image id "${paragraph.text}"`)
+            return <ProgramImage src={image.src} altKey={image.altKey} locale={locale} />
+          }
+          if (paragraph.type === 'disclosure') {
+            if (!paragraph.question) throw new Error('Disclosure paragraph is missing its question')
+            return (
+              <ProgramDisclosure
+                question={paragraph.question}
+                answer={paragraph.text}
+                proseClass={styles.prose}
+              />
+            )
+          }
           if (paragraph.type === 'quote') {
             return (
               <blockquote
