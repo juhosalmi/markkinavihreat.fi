@@ -2,7 +2,8 @@
 locale: sv
 name: 'Atte Harjanne'
 order: 5
-photo: '/images/team/Atte-Harjanne.jpg'
+photo: '../../assets/team/Atte-Harjanne.jpg'
+candidateBadge: 'Riksdagsvalskandidat i Helsingfors'
 links:
   - type: website
     url: 'https://www.atteharjanne.fi'

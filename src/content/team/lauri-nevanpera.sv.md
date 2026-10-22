@@ -2,7 +2,7 @@
 locale: sv
 name: 'Lauri Nevanperä'
 order: 20
-photo: '/images/team/Lauri-Nevanperä.jpg'
+photo: '../../assets/team/Lauri-Nevanperä.jpg'
 links:
   - type: website
     url: 'https://www.laurinevanpera.fi'

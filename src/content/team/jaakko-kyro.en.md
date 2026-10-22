@@ -2,7 +2,7 @@
 locale: en
 name: 'Jaakko Kyrö'
 order: 13
-photo: '/images/team/Jaakko-Kyrö.jpg'
+photo: '../../assets/team/Jaakko-Kyrö.jpg'
 links:
   - type: website
     url: 'https://www.jaakkokyro.fi'

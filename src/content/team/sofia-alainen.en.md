@@ -2,7 +2,7 @@
 locale: en
 name: 'Sofia Alainen'
 order: 2
-photo: '/images/team/Sofia-Alainen.jpg'
+photo: '../../assets/team/Sofia-Alainen.jpg'
 links:
   - type: instagram
     url: 'https://www.instagram.com/sofia.alainen'

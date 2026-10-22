@@ -2,7 +2,8 @@
 locale: en
 name: 'Atte Harjanne'
 order: 5
-photo: '/images/team/Atte-Harjanne.jpg'
+photo: '../../assets/team/Atte-Harjanne.jpg'
+candidateBadge: 'Parliamentary candidate in Helsinki'
 links:
   - type: website
     url: 'https://www.atteharjanne.fi'

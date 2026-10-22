@@ -1,0 +1,160 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import type { Locale } from '../lib/content'
+import { t } from '../i18n/ui'
+
+interface Props {
+  locale: Locale
+  slides: NonNullable<CollectionEntry<'programs'>['data']['slides']>
+  /** Program title, passed to the share sheet. */
+  title: string
+  /** Canonical page URL, shared alongside (or instead of) the image. */
+  url: string
+}
+
+const { locale, slides, title, url } = Astro.props
+
+const fileName = (src: string) => src.split('/').pop() ?? src
+// Tells the per-slide buttons apart for screen readers ("Lataa 3/8").
+const slideNumber = (i: number) => ` ${i + 1}/${slides.images.length}`
+---
+
+<section class="bg-kerma-syva px-4 py-20 sm:px-6 sm:py-28">
+  <div class="content-max mx-auto">
+    <h2 class="text-display mb-4">{t(locale, 'programs.slidesHeading')}</h2>
+    {
+      slides.lang === 'fi' && locale !== 'fi' && (
+        <p class="text-harmaa mb-4">{t(locale, 'programs.slidesInFinnish')}</p>
+      )
+    }
+    {
+      slides.pdf && (
+        <a
+          href={slides.pdf}
+          download={fileName(slides.pdf)}
+          class="btn-outline-medium mb-8 inline-flex"
+        >
+          {t(locale, 'programs.slidesDownloadAll')}
+        </a>
+      )
+    }
+  </div>
+
+  <ul
+    class="js-slides -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 lg:justify-center-safe"
+    data-title={title}
+    data-url={url}
+    data-copied-label={t(locale, 'programs.slidesLinkCopied')}
+  >
+    {
+      slides.images.map((image, i) => (
+        <li class="js-slide w-64 shrink-0 snap-center sm:w-72">
+          <img
+            src={image.src}
+            alt={image.alt}
+            lang={slides.lang !== locale ? slides.lang : undefined}
+            width={slides.width}
+            height={slides.height}
+            loading="lazy"
+            decoding="async"
+            class="h-auto w-full rounded-lg shadow-md"
+          />
+          <div class="mt-3 flex gap-2">
+            <a href={image.src} download={fileName(image.src)} class="btn-outline-sm">
+              {t(locale, 'programs.slidesDownload')}
+              <span class="sr-only">{slideNumber(i)}</span>
+            </a>
+            <button
+              type="button"
+              class="js-slide-share btn-contained-sm"
+              data-src={image.src}
+              hidden
+            >
+              <span class="js-slide-share-label">{t(locale, 'programs.slidesShare')}</span>
+              <span class="sr-only">{slideNumber(i)}</span>
+            </button>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<script>
+  // Share falls back step by step: the slide image itself (mobile share
+  // sheets), then just the page link via the share sheet, then copying the
+  // link. The image is fetched ahead of time, as the slide scrolls into view:
+  // awaiting a fetch inside the click handler would use up the click's user
+  // activation, and iOS Safari then refuses navigator.share().
+  const files = new Map<string, Promise<File | null>>()
+
+  function prefetch(src: string) {
+    if (!files.has(src)) {
+      files.set(
+        src,
+        fetch(src)
+          .then((res) => (res.ok ? res.blob() : null))
+          .then((blob) =>
+            blob
+              ? new File([blob], src.split('/').pop() ?? 'slide.jpg', { type: blob.type })
+              : null,
+          )
+          .catch(() => null),
+      )
+    }
+  }
+
+  async function share(button: HTMLButtonElement, list: HTMLElement) {
+    const { title = '', url = location.href, copiedLabel = '' } = list.dataset
+    const src = button.dataset.src ?? ''
+    const file = await files.get(src)
+    try {
+      if (file && navigator.canShare?.({ files: [file] })) {
+        // The file alone: some share targets drop the image when text or a
+        // URL comes with it.
+        await navigator.share({ files: [file] })
+      } else if (navigator.share) {
+        await navigator.share({ title, url })
+      } else {
+        await navigator.clipboard.writeText(url)
+        const label = button.querySelector('.js-slide-share-label')
+        if (label) {
+          const text = label.textContent
+          label.textContent = copiedLabel
+          setTimeout(() => (label.textContent = text), 2000)
+        }
+      }
+    } catch (error) {
+      // The user closing the share sheet isn't an error.
+      if (!(error instanceof DOMException && error.name === 'AbortError')) throw error
+    }
+  }
+
+  const canShareFiles = typeof navigator.canShare === 'function'
+
+  document.querySelectorAll<HTMLElement>('.js-slides').forEach((list) => {
+    const buttons = list.querySelectorAll<HTMLButtonElement>('.js-slide-share')
+    if (!navigator.share && !navigator.clipboard) return
+
+    if (canShareFiles) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (!entry.isIntersecting) continue
+            const src =
+              entry.target.querySelector<HTMLButtonElement>('.js-slide-share')?.dataset.src
+            if (src) prefetch(src)
+            observer.unobserve(entry.target)
+          }
+        },
+        { rootMargin: '200px' },
+      )
+      list.querySelectorAll('.js-slide').forEach((slide) => observer.observe(slide))
+    }
+
+    buttons.forEach((button) => {
+      button.hidden = false
+      button.addEventListener('click', () => share(button, list))
+    })
+  })
+</script>

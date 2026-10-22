@@ -2,7 +2,7 @@
 locale: sv
 name: 'Susanna Sielo'
 order: 26
-photo: '/images/team/Susanna-Sielo.jpg'
+photo: '../../assets/team/Susanna-Sielo.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 links:
   - type: website

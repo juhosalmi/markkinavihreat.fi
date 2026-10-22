@@ -2,7 +2,7 @@
 locale: en
 name: 'Susanna Sielo'
 order: 26
-photo: '/images/team/Susanna-Sielo.jpg'
+photo: '../../assets/team/Susanna-Sielo.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 links:
   - type: website

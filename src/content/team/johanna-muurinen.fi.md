@@ -2,7 +2,8 @@
 locale: fi
 name: 'Johanna Muurinen'
 order: 19
-photo: '/images/team/Johanna-Muurinen.jpg'
+photo: '../../assets/team/Johanna-Muurinen.jpg'
+candidateBadge: 'Eduskuntavaaliehdokas Uudellamaalla'
 links:
   - type: bluesky
     url: 'https://bsky.app/profile/jmuurine.bsky.social'

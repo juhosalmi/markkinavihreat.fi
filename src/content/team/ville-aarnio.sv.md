@@ -2,7 +2,8 @@
 locale: sv
 name: 'Ville Aarnio'
 order: 1
-photo: '/images/team/Ville-Aarnio.jpg'
+photo: '../../assets/team/Ville-Aarnio.jpg'
+candidateBadge: 'Riksdagsvalskandidat i Sydöstra Finland'
 links:
   - type: website
     url: 'https://aarnionville.fi/'

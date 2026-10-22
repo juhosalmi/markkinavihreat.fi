@@ -1,0 +1,29 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content'
+import PersonBody from '../../components/pages/PersonBody.astro'
+import { forLocale, parseLocalizedId } from '../../lib/content'
+import { assertTeamRefs } from '../../lib/team'
+
+interface Props {
+  person: CollectionEntry<'team'>
+}
+
+export async function getStaticPaths() {
+  const team = await getCollection('team')
+  // Fails the build on a program or post naming an unknown team member. Only
+  // the fi route runs it — once is enough, and fi always builds.
+  assertTeamRefs(
+    team.map((p) => p.id),
+    await getCollection('programs'),
+    await getCollection('blog'),
+  )
+  return forLocale(team, 'fi').map((person) => ({
+    params: { slug: parseLocalizedId(person.id).slug },
+    props: { person },
+  }))
+}
+
+const { person } = Astro.props
+---
+
+<PersonBody locale="fi" person={person} />

@@ -2,7 +2,7 @@
 locale: fi
 name: 'Ilari Putkonen'
 order: 23
-photo: '/images/team/Ilari-Putkonen.jpg'
+photo: '../../assets/team/Ilari-Putkonen.jpg'
 links:
   - type: website
     url: 'https://ilariputkonen.fi/'

@@ -2,7 +2,7 @@
 locale: fi
 name: 'Susanna Sielo'
 order: 26
-photo: '/images/team/Susanna-Sielo.jpg'
+photo: '../../assets/team/Susanna-Sielo.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Uudellamaalla'
 links:
   - type: website

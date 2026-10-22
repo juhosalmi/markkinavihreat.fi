@@ -2,7 +2,7 @@
 locale: fi
 name: 'Samuel Tammekann'
 order: 29
-photo: '/images/team/Samuel-Tammekann.jpg'
+photo: '../../assets/team/Samuel-Tammekann.jpg'
 links:
   - type: threads
     url: 'https://www.threads.com/@stammekann'

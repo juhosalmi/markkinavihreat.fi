@@ -2,7 +2,7 @@
 locale: sv
 name: 'Tero Koskinen'
 order: 12
-photo: '/images/team/Tero-Koskinen.jpg'
+photo: '../../assets/team/Tero-Koskinen.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 links:
   - type: bluesky

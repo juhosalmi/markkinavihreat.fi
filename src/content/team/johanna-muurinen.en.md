@@ -2,7 +2,8 @@
 locale: en
 name: 'Johanna Muurinen'
 order: 19
-photo: '/images/team/Johanna-Muurinen.jpg'
+photo: '../../assets/team/Johanna-Muurinen.jpg'
+candidateBadge: 'Parliamentary candidate in Uusimaa'
 links:
   - type: bluesky
     url: 'https://bsky.app/profile/jmuurine.bsky.social'

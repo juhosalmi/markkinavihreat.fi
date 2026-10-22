@@ -4,6 +4,7 @@ import { getCollection, getEntry } from 'astro:content'
 import { Resvg } from '@resvg/resvg-js'
 import satori from 'satori'
 import { LOCALES, parseLocalizedId, type Locale } from './content'
+import { dateSlug } from './date'
 import { about, blogPage, contact, home, programsPage } from '../i18n/pages'
 
 // Brand tokens, kept in sync with src/styles/global.css. Accent is the Vihreät
@@ -142,7 +143,8 @@ export async function renderOgPng(
  * the og:image meta for every page on the same basis, regardless of noindex.
  *
  * Static pages reuse their visible headline with the fixed brand eyebrow;
- * program pages reuse heroKicker + heroLines (last line already the accent).
+ * program pages reuse heroKicker + heroLines (last line already the accent);
+ * blog posts reuse their title under the blog section name as the eyebrow.
  */
 export async function ogPages(): Promise<OgPage[]> {
   const pages: OgPage[] = []
@@ -174,6 +176,30 @@ export async function ogPages(): Promise<OgPage[]> {
       eyebrow: program.data.heroKicker,
       lines: program.data.heroLines,
       accent: 'lastLine',
+    })
+  }
+
+  const team = await getCollection('team')
+  for (const person of team) {
+    const { slug, locale } = parseLocalizedId(person.id)
+    pages.push({
+      locale,
+      path: `/ketka/${slug}/`,
+      eyebrow: about[locale].title,
+      lines: [person.data.name],
+      accent: 'lastWord',
+    })
+  }
+
+  const posts = await getCollection('blog')
+  for (const post of posts) {
+    const { slug, locale } = parseLocalizedId(post.id)
+    pages.push({
+      locale,
+      path: `/blogi/${dateSlug(post.data.date)}/${slug}/`,
+      eyebrow: blogPage[locale].title,
+      lines: [post.data.title],
+      accent: 'lastWord',
     })
   }
 

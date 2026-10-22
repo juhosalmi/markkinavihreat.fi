@@ -2,7 +2,7 @@
 locale: sv
 name: 'Mikko Särelä'
 order: 28
-photo: '/images/team/Mikko-Särelä.jpg'
+photo: '../../assets/team/Mikko-Särelä.jpg'
 links:
 ---
 

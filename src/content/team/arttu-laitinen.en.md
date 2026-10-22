@@ -2,8 +2,8 @@
 locale: en
 name: 'Arttu Laitinen'
 order: 15
-photo: '/images/team/Arttu-Laitinen.jpg'
-candidateBadge: 'Running as a parliamentary candidate in Southwest Finland'
+photo: '../../assets/team/Arttu-Laitinen.jpg'
+candidateBadge: 'Parliamentary candidate in Southwest Finland'
 links:
   - type: website
     url: 'https://arttulaitinen.fi'

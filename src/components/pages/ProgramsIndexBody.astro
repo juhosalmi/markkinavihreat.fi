@@ -2,7 +2,13 @@
 import { getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import ContentCard from '../ContentCard.astro'
-import { localePath, forLocale, parseLocalizedId, type Locale } from '../../lib/content'
+import {
+  localePath,
+  forLocale,
+  newestFirst,
+  parseLocalizedId,
+  type Locale,
+} from '../../lib/content'
 import { programsPage } from '../../i18n/pages'
 import { t } from '../../i18n/ui'
 
@@ -16,7 +22,7 @@ const copy = programsPage[locale]
 const allPrograms = await getCollection('programs')
 const programs = forLocale(allPrograms, locale)
   .filter((program) => !program.data.unlisted)
-  .sort((a, b) => a.data.order - b.data.order)
+  .sort(newestFirst)
 ---
 
 <BaseLayout

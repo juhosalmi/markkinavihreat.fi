@@ -1,16 +1,127 @@
 ---
 locale: sv
 title: Med lön ska man kunna bli förmögen!
-description: Ett förmögenhetskonto skulle göra det möjligt att spara och investera direkt av lön, före skatt.
-order: 2
+description: Ett förmögenhetskonto skulle göra det möjligt att investera sin lön före skatt – fyra skäl till varför det skulle bygga en rättvisare och mer dynamisk marknadsekonomi.
+published: 2026-10-12
 heroKicker: De marknadsgröna kräver
 heroLines:
   - Med lön ska man
   - kunna bli förmögen!
-unlisted: true
-citations: []
+citations:
+  - person: lauri-lavanti
+    quote: 'Det är dags att göra förmögenhetsbyggande till allas rätt, oavsett om man får sin inkomst som lön eller som utdelning!'
+    afterSection: 0
+  - person: ulla-santti
+    quote: 'I Finland talar man mycket om incitament att arbeta, men för lite om hur en vanlig löntagare kunde bli förmögen. Jag anser att alla ska ha möjlighet att bygga ekonomisk trygghet genom sitt eget arbete. Det kräver också nya lösningar.'
+    afterSection: 1
+  - person: essi-lindberg
+    quote: 'Förmögenhetsbyggande ska uppmuntras, skatteflykt inte. Därför måste systemet vara sådant att man inte kan slippa skatten genom dyr skatteplanering eller genom att flytta utomlands med sin förmögenhet.'
+    afterSection: 4
+  - person: johanna-muurinen
+    quote: 'Utöver att beskattningen på så sätt bättre riktas mot förbrukningen av naturresurser kan systemet uppmuntra helt vanliga människor att intressera sig för ekonomi och överhuvudtaget planera sin egen ekonomi och hur de använder sina pengar.'
+    afterSection: 4
+  - person: arttu-laitinen
+    quote: 'Förmögenhetskontot är för oss vanliga löntagare ett effektivt och rättvist verktyg och ett utmärkt incitament att bygga upp förmögenhet.'
+    afterSection: 5
+  - person: taru-hallikainen
+    quote: 'Dessutom, när samhället övergår till basinkomst, kan även de som tjänar oregelbundet åtminstone på systemnivå bygga upp sparande med hjälp av förmögenhetskontot.'
+    afterSection: 5
+slides:
+  lang: fi
+  pdf: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili.pdf
+  width: 1280
+  height: 1600
+  images:
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-1.jpg
+      alt: 'Kansi: Palkalla pitää voida vaurastua! Varallisuustili: sijoita palkkasi ennen kuin siitä maksetaan veroa.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-2.jpg
+      alt: 'Ohjelmistokehittäjä säästää 450 €/kk: nyt vero vie 180 € ja sijoitukseen jää 270 €, varallisuustilillä koko 450 €.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-3.jpg
+      alt: 'Ohjelmistokehittäjä 10 vuoden päästä: nyt 43 900 €, varallisuustilillä 73 100 €, noin 29 200 € enemmän.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-4.jpg
+      alt: 'Varhaiskasvatuksen opettaja säästää 300 €/kk: nyt vero vie 120 €, sijoitukseen 180 €, varallisuustilillä 300 €.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-5.jpg
+      alt: 'Varhaiskasvatuksen opettaja 10 vuoden päästä: nyt 29 200 €, varallisuustilillä 48 700 €, noin 19 500 € enemmän.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-6.jpg
+      alt: 'Neljä hyötyä palkansaajalle: isompi alkupääoma, sijoita mihin haluat, vaihda ilman veroa, vero vasta käytöstä.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-7.jpg
+      alt: 'Verotetaan kulutusta, ei vaurastumista: palkka siirtyy varallisuustilille ennen veroa, vero maksetaan nostossa.'
+    - src: /ehdotukset/palkalla-pitaa-voida-vaurastua/varallisuustili-8.jpg
+      alt: 'Tehdään vaurastumisesta jokaisen oikeus. Lue koko ehdotus: markkinavihreat.fi.'
 ---
 
-## Översättning på väg
+## Varför är det så svårt att bli förmögen på lön?
 
-Det här förslaget finns tills vidare bara på finska. Den svenska översättningen läggs till senare.
+I Finland straffas flit. I dag måste man betala förvärvsinkomstskatt på lönen innan inkomsten kan föras till sparande. En löntagare kan investera först det som blir kvar efter skatt. För kapitalinkomster finns ingen sådan tröskel, och förmögenheten växer också betydligt snabbare.
+
+Vi vill göra det möjligt för alla att bli förmögna. Förmögenhetskontot gör det möjligt att spara av lön på samma sätt som av kapitalinkomster. Tanken är att du kan investera de euro du tjänat med ditt arbete innan skatten dras, vilket ger dina investeringar en helt ny fart från start!
+
+I praktiken är förmögenhetskontot inte ett verkligt konto som ett bankkonto, utan ett bokföringsarrangemang i Skatteförvaltningens system. Pengar som går till sparande och investeringar får inga omedelbara skattekonsekvenser. Du betalar skatt först när du tar ut pengar för eget bruk, och då omfattas uttaget normalt av inkomstskatt.
+
+Denna enkla förändring främjar folkkapitalism. När allt fler löntagare också är ägare blir samhällsekonomin mer motståndskraftig mot kriser, och förmögenhetsbyggande blir möjligt för varje löntagare.
+
+Vi presenterar fyra skäl till varför förmögenhetskontot bygger en bättre och rättvisare marknadsekonomi:
+
+## Fördel 1/4: Investera hela lönen, så blir startkapitalet större
+
+Redan i dag kan en investerare skjuta upp beskattningen av avkastningen på sitt ägande, till exempel med placeringsfonder, kapitalförsäkringar eller aktiesparkonto. Det verkliga hindret för en löntagare att bli förmögen är ändå att den tunga skatten på lönen måste betalas innan en enda euro kan investeras.
+
+Med förmögenhetskontot får sparandet dras av i inkomstbeskattningen. Du kan alltså börja investera med hela bruttobeloppet på en gång, och ränta på ränta-effekten kan arbeta med en betydligt kraftigare motor redan från början.
+
+På så sätt utnyttjas ränta på ränta-effekten både för staten och för skattebetalaren. Kapitalbildning straffas inte i förväg, utan inkomstskatten betalas först när medlen tas ut för eget bruk.
+
+## Fördel 2/4: Investera fritt där du vill, Skatteförvaltningen dikterar inte villkoren
+
+I dag är det finska skattesystemet fullt av komplicerade undantag som styr hur människor investerar. Ett investeringsobjekt beskattas annorlunda än ett annat.
+
+Det är ineffektivt för marknadsekonomin. På förmögenhetskontot står olika investeringar på samma linje skattemässigt. Beskattningen styr inte längre dina beslut, utan du väljer dina investeringar utifrån avkastning och risk, så som det ska vara på en marknad.
+
+## Fördel 3/4: Att byta investeringar låser inte längre dina pengar
+
+Många finländares sparpengar sitter fast i gamla investeringar som de gärna skulle bli av med. Överlåtelsevinstskatten vid försäljning hindrar dock bytet.
+
+Det leder till att pengarna blir liggande i ineffektiva objekt i stället för att finansiera nya finländska innovationer eller tillväxtföretag. Förmögenhetskontot löser problemet på en gång. Det frigör egendom som låsts av skatteskäl till mer produktiv användning.
+
+Du kan fritt sälja dina investeringar och köpa nya utan att behöva betala skatt däremellan. Du betalar skatten först när du för pengarna från kontot till ditt eget liv. Det gör våra kapitalmarknader mer dynamiska och smidiga.
+
+## Fördel 4/4: Beskatta konsumtion, inte förmögenhetsbyggande
+
+Förmögenhetskontot fungerar i praktiken som en progressiv utgiftsskatt. Det hindrar inte att kapital byggs upp genom arbete, men beskattar konsumtionen av den förmögenhet som samlats. Systemet gynnar alltså inte jetsetlivet och onödig lyxkonsumtion, utan uppmuntrar till sparsamhet och till att trygga den egna ekonomin.
+
+När reglerna är rättvisa för alla försvinner behovet av dyr skatteplanering. Systemet är också utformat för att vara vattentätt: helhetssystemet måste innehålla en värdestegringsskatt (det vill säga en utflyttningsskatt), så att avkastningen inte kan tas ut skattefritt utomlands. Du kan alltså inte kringgå skatten genom att flytta utomlands.
+
+Ingen kan heller undvika skatten ända in i graven. Kontot kan inte användas för att skjuta upp beskattningen i all oändlighet, eftersom kontot realiseras som dödsboets inkomst vid dödsfall. På så sätt säkerställs att skatterna blir betalda och att systemet förblir rättvist mot alla.
+
+## Låt oss göra förmögenhet till allas rätt
+
+Förmögenhetskontot tar itu med ett av de största hindren för finländarnas förmögenhetsbyggande: att det är plågsamt svårt att samla egendom genom flitigt lönearbete. När sparandet kan föras till investeringar innan skatten betalas ger vi arbete och företagsamhet det värde de förtjänar.
+
+Det här är marknadsekonomi när den är som bäst. Den skyddar inte bara de redan förmögnas intressen, utan ger alla samma regler för att bygga sin ekonomiska trygghet. Den undanröjer marknadens ineffektiviteter, styr pengarna till produktiva objekt och låter ränta på ränta-effekten gynna hela Finland.
+
+Var med och förverkliga folkkapitalismen. Låt oss välja en lösning som belönar flit och gör en rättvis marknadsekonomi tillgänglig för varje löntagare.
+
+## Vanliga frågor
+
+**Vilket problem löser förslaget?**
+Olika inkomster borde i grunden behandlas så likartat som möjligt i beskattningen. Om en inkomstform har betydande skattefördelar borde det finnas betydande och förnuftiga skäl för dem. Vi föreslår därför att lönen får vissa fördelar som i dag bara finns för vissa kapitalinkomster. Att kunna spara och investera före skatt är enligt oss en förmån som det inte är förnuftigt eller rättvist att begränsa till vissa typer av kapitalinkomster.
+
+**Är förändringen svår att genomföra?**
+Inte tekniskt. I Finland finns redan aktiesparkontot, där affärer inom kontot är skattefria och skatten betalas först vid uttag, och Skatteförvaltningen administrerar det redan i dag. Finansministeriets tjänsteinnehavare föreslår i sitt färska [tjänstemannainlägg](https://urn.fi/URN:ISBN:978-952-367-595-7) att aktiesparkontot reformeras till ett investeringssparkonto, där man utöver aktier också kunde investera i fonder och andra noterade produkter. Även Europeiska kommissionen har rekommenderat medlemsländerna att införa motsvarande investeringssparkonton som en del av EU:s spar- och investeringsunion. Förmögenhetskontot för samma tanke längre: även pengar som sparas av lönen skulle komma in på kontot före skatt. Lagstiftningsarbete behövs till exempel för reglerna om uttag, utflyttning och dödsbon, men grunden finns.
+
+**Hur påverkar förändringen skatteintäkterna?**
+Vi har ännu inte beräknat effekten och vill inte presentera en gissning. Riktningen är tydlig: på kort sikt minskar skatteintäkterna, eftersom lön som förs till kontot inte beskattas direkt. Skatten försvinner dock inte, utan betalas när pengarna tas i bruk. Den totala effekten beror på detaljerna i genomförandet, till exempel hur mycket som kan föras till kontot per år och hur uttagen beskattas. Därför föreslår vi att finansministeriet eller Statens ekonomiska forskningscentral VATT bedömer effekterna innan beslut fattas.
+
+**Om statens skatteintäkter minskar, sker systemets kostnader på bekostnad av något annat?**
+På kort sikt ja: den uppskjutna skatten är en intäkt som staten får först senare. Därför måste kostnaden för förmögenhetskontot bedömas och samordnas med anpassningen av den offentliga ekonomin innan kontot införs. På lång sikt återvänder den uppskjutna skatten till staten när sparpengarna tas i bruk.
+
+**Finns det en detaljerad och genomförbar plan för förmögenhetskontot?**
+Inte ännu. Det här är ett initiativ för att lyfta in löntagarnas förmögenhetsbyggande i skattedebatten. Principerna är tydliga: lön som förs till kontot dras av i inkomstbeskattningen, investeringar kan bytas inom kontot utan skatt, skatten betalas vid uttag och den uppskjutna skatten förfaller senast vid utflyttning eller dödsfall. Detaljerna, som beskattningen av uttag och effekterna på skatteintäkterna, avgörs i den fortsatta beredningen.
+
+**Dras sparandet av från förvärvsinkomstskatten eller från den beskattningsbara förvärvsinkomsten?**
+Från den beskattningsbara förvärvsinkomsten. Lön som förs till kontot behandlas som om den ännu inte hade betalats ut till dig: ingen inkomstskatt betalas på den förrän du tar ut den för eget bruk. Därför kan du investera hela bruttobeloppet.
+
+**Hur är detta grön politik (som fokuserar på miljöfrågor, hållbar utveckling och social rättvisa)?**
+Grön politik handlar om långsiktighet. Förmögenhetskontot belönar sparande och beskattar konsumtion, så det uppmuntrar till att tänka långsiktigt i stället för på nästa köp. Det främjar social rättvisa, eftersom det i dag är lättast att bli förmögen för dem som redan har kapital. Förmögenhetskontot ger löntagarna samma möjlighet. När människor har sparpengar klarar de, och hela samhällsekonomin, kriser bättre. Att styra sparande till investeringar är också ett mål för EU:s spar- och investeringsunion, och det finansierar bland annat klimatomställningen.
+
+**Med vilken skattesats beskattas den ursprungliga lönen vid uttag?**
+Det är ännu inte spikat. Utgångspunkten är att uttaget omfattas av inkomstskatt. Den exakta modellen, det vill säga om uttaget beskattas som förvärvsinkomst för uttagsåret och hur avkastningen som samlats på kontot behandlas, avgörs i den fortsatta beredningen. Valet påverkar både sparens fördel och statens skatteintäkter, så det måste bedömas tillsammans med effekterna på skatteintäkterna.

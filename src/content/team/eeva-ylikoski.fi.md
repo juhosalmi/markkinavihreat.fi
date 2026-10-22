@@ -2,7 +2,7 @@
 locale: fi
 name: 'Eeva Ylikoski'
 order: 30
-photo: '/images/team/Eeva-Ylikoski.jpg'
+photo: '../../assets/team/Eeva-Ylikoski.jpg'
 links:
 ---
 

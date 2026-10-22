@@ -2,7 +2,7 @@
 locale: en
 name: 'Ulla Santti'
 order: 31
-photo: '/images/team/Ulla-Santti.jpeg'
+photo: '../../assets/team/Ulla-Santti.jpeg'
 candidateBadge: 'Parliamentary candidate in Savo-Karelia'
 links:
   - type: website

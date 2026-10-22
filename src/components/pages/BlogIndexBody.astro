@@ -25,6 +25,7 @@ const posts = forLocale(allPosts, locale).sort(
   title={`${copy.title} — markkinavihreat.fi`}
   description={copy.metaDescription}
   path="/blogi/"
+  noindex={posts.length === 0}
 >
   <section class="content-max mx-auto px-4 py-16 sm:px-6">
     <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>

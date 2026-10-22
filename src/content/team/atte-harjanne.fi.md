@@ -2,7 +2,8 @@
 locale: fi
 name: 'Atte Harjanne'
 order: 5
-photo: '/images/team/Atte-Harjanne.jpg'
+photo: '../../assets/team/Atte-Harjanne.jpg'
+candidateBadge: 'Eduskuntavaaliehdokas Helsingissä'
 links:
   - type: website
     url: 'https://www.atteharjanne.fi'

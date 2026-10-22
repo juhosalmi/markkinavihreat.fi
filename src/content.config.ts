@@ -26,6 +26,7 @@ const socialLink = z.object({
     'x',
     'youtube',
     'reddit',
+    'wikipedia',
   ]),
   url: z.url(),
   label: z.string().optional(),
@@ -33,18 +34,31 @@ const socialLink = z.object({
 
 const team = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/team', generateId }),
-  schema: z.object({
-    locale,
-    name: z.string(),
-    order: z.number(),
-    photo: z.string(),
-    candidateBadge: z.string().optional(),
-    links: z
-      .array(socialLink)
-      .nullable()
-      .optional()
-      .transform((v) => v ?? []),
-  }),
+  // `photo` is a path relative to the entry file (e.g. '../../assets/team/X.jpg'),
+  // resolved by image() into ImageMetadata so astro:assets can emit resized
+  // webp/avif variants instead of shipping the multi-megabyte originals.
+  schema: ({ image }) =>
+    z.object({
+      locale,
+      name: z.string(),
+      order: z.number(),
+      photo: image(),
+      candidateBadge: z.string().optional(),
+      // Identity anchors for entity reconciliation: the person's own canonical
+      // about page (not just their site's home page) and their Wikidata item.
+      // Both end up in the Person JSON-LD's sameAs, and both are rendered as
+      // visible links on the person page — markup only states what's shown.
+      profileUrl: z.url().optional(),
+      wikidata: z
+        .string()
+        .regex(/^Q\d+$/)
+        .optional(),
+      links: z
+        .array(socialLink)
+        .nullable()
+        .optional()
+        .transform((v) => v ?? []),
+    }),
 })
 
 // A citation is an endorsement quote from a team member (src/content/team),
@@ -52,6 +66,11 @@ const team = defineCollection({
 const citation = z.object({
   person: z.string(),
   quote: z.string(),
+  // The body section (0-based, one per `##` heading) whose quote band this is.
+  // Defaults to the citation's own position in the list, so the n-th quote
+  // follows the n-th section. Setting it also pins the quote: the load-time
+  // shuffle of quote bands only moves quotes that leave it unset.
+  afterSection: z.number().int().min(0).optional(),
 })
 
 const programs = defineCollection({
@@ -60,7 +79,13 @@ const programs = defineCollection({
     locale,
     title: z.string(),
     description: z.string(),
-    order: z.number(),
+    // Publication dates, mirrored across all three locales of an entry (a
+    // translation isn't a separate publication). Drive Article JSON-LD's
+    // datePublished/dateModified, the sitemap's lastmod and the RSS feed —
+    // so they track when the *content* changed, not when the file was touched.
+    // `published` also orders every program listing, newest first.
+    published: z.coerce.date(),
+    updated: z.coerce.date().optional(),
     // Short label above the hero heading, e.g. "Markkinavihreät vaativat".
     heroKicker: z.string(),
     // The hero heading's display lines, e.g. ["Lisää", "markkinoita!"] — the
@@ -70,6 +95,25 @@ const programs = defineCollection({
     // the sitemap — for a page that's ready to link to but not to announce.
     unlisted: z.boolean().default(false),
     citations: z.array(citation).default([]),
+    // Team member slugs who worked on the program without being quoted in it.
+    contributors: z.array(z.string()).default([]),
+    // The program's social-media carousel, offered for download and sharing
+    // at the bottom of the page. Paths are public/ URLs (same-origin, so the
+    // download attribute and the share sheet's file fetch both work).
+    slides: z
+      .object({
+        // Language the slide images are in; a locale whose language differs
+        // gets a note saying so.
+        lang: locale,
+        // The whole carousel as one PDF, for the "download all" link.
+        pdf: z.string().optional(),
+        // Pixel size shared by every slide (a carousel is uniform), so the
+        // images reserve their space before loading.
+        width: z.number().int().positive(),
+        height: z.number().int().positive(),
+        images: z.array(z.object({ src: z.string(), alt: z.string() })).min(1),
+      })
+      .optional(),
   }),
 })
 
@@ -80,7 +124,9 @@ const blog = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    author: z.string().optional(),
+    // Team member slugs (src/content/team), not free-text names — resolved to
+    // linked names and Person JSON-LD. Unknown slugs fail the build (src/lib/team.ts).
+    authors: z.array(z.string()).default([]),
   }),
 })
 

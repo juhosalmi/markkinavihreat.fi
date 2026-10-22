@@ -2,7 +2,7 @@
 locale: fi
 name: 'Onni-Jonatan Matilainen'
 order: 17
-photo: '/images/team/Onni-Jonatan-Matilainen.jpg'
+photo: '../../assets/team/Onni-Jonatan-Matilainen.jpg'
 links:
   - type: linkedin
     url: 'https://linkedin.com/in/ojmatilainen'

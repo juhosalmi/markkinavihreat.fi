@@ -2,7 +2,7 @@
 locale: fi
 name: 'Ulla Santti'
 order: 31
-photo: '/images/team/Ulla-Santti.jpeg'
+photo: '../../assets/team/Ulla-Santti.jpeg'
 candidateBadge: 'Eduskuntavaaliehdokas Savo-Karjalassa'
 links:
   - type: website

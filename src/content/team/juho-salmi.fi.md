@@ -2,7 +2,7 @@
 locale: fi
 name: 'Juho Salmi'
 order: 24
-photo: '/images/team/Juho-Salmi.jpg'
+photo: '../../assets/team/Juho-Salmi.jpg'
 links:
   - type: linkedin
     url: 'https://www.linkedin.com/in/juhosalmi/'
