@@ -1,11 +1,28 @@
 export interface ProgramParagraph {
-  /** `quote`/`attribution` are for an inline pull-quote (`> ...` / `— ...`); everything else is `text`. */
-  type: 'text' | 'quote' | 'attribution'
+  /**
+   * `quote`/`attribution` are for an inline pull-quote (`> ...` / `— ...`).
+   * `chart` is a `[kuvaaja: <id>]` marker paragraph — `text` holds the chart id,
+   * not prose, and the renderer looks it up rather than displaying it as-is.
+   * `video` is a `[video: <youtube-id>]` marker — `text` holds the YouTube
+   * video id, not prose.
+   * `image` is a `[kuva: <id>]` marker — `text` holds a registered image id,
+   * not prose.
+   * `disclosure` is a `[laskelma: <trigger text>]` marker followed by a body
+   * paragraph — renders as a single collapsed accordion item (like an FAQ
+   * entry, but inline within a section rather than its own FAQ block).
+   * `text` holds the body, `question` the trigger text.
+   * Everything else is `text`.
+   */
+  type: 'text' | 'quote' | 'attribution' | 'chart' | 'video' | 'image' | 'disclosure'
   text: string
+  /** Only set for `disclosure` paragraphs — the accordion's trigger text. */
+  question?: string
 }
 
 export interface ProgramHighlightSection {
   type: 'highlight'
+  /** Set only for a "<label> - <heading>" authored heading (see HIGHLIGHT_LABEL_HEADING). */
+  label?: string
   heading: string
   paragraphs: ProgramParagraph[]
 }
@@ -33,6 +50,12 @@ export interface ProgramFaqSection {
 
 export type ProgramSection = ProgramHighlightSection | ProgramRequirementSection | ProgramFaqSection
 
+/**
+ * `dark` — the framing/summary bands (bg-metsa).
+ * `light` / `tint` — the alternating pale bands the argument runs through.
+ */
+export type ProgramSectionTone = 'dark' | 'light' | 'tint'
+
 export interface ParsedProgramBody {
   /** Paragraph(s) before the first heading — the hero's lead-in text. */
   leadParagraphs: ProgramParagraph[]
@@ -45,9 +68,32 @@ const REQUIREMENT_HEADING = /^(\S+)\s+(\d+)\/(\d+):\s*(.+)$/
 // "Yhteenveto: ..." / "Summary: ..." — any other "Word: rest" heading. The
 // original site never shows this label in the rendered heading, so we strip it.
 const LABELED_HEADING = /^[^:]+:\s*(.+)$/
+// "Nykymallin ongelma - Tuki kelpaa vain kaupan kassalla" — a highlight heading
+// authored as "<label> - <heading>" renders as a small eyebrow label above the
+// bigger heading, the same visual pattern the numbered requirement bands
+// already use for their "Vaatimus N / 5" label. Requires spaces around the
+// dash so an ordinary hyphenated word within a heading is never split.
+const HIGHLIGHT_LABEL_HEADING = /^(.+?)\s+-\s+(.+)$/
 // "**Question?**" optionally followed by a hard-break and its answer — the
 // authoring convention for FAQ sections (see content/programs/*.md).
 const FAQ_ITEM = /^\*\*(.+?)\*\*\s*([\s\S]*)$/
+// "[kuvaaja: <id>]" on its own paragraph — a marker for a registered chart
+// component, keyed by id. Anchored to the whole paragraph so an ordinary
+// bracketed aside in body text (e.g. "[jatkuu...]") is never mistaken for one.
+const CHART_MARKER = /^\[kuvaaja:\s*([a-z0-9-]+)\]$/
+// "[video: <youtube-id>]" on its own paragraph — embeds that YouTube video.
+// YouTube video ids are base64url (letters, digits, "-", "_").
+const VIDEO_MARKER = /^\[video:\s*([A-Za-z0-9_-]+)\]$/
+// "[kuva: <id>]" on its own paragraph — a marker for a registered image,
+// keyed by id (same convention as CHART_MARKER).
+const IMAGE_MARKER = /^\[kuva:\s*([a-z0-9-]+)\]$/
+// "[laskelma: <trigger text>]" on the first line of a paragraph, followed by
+// the accordion body on the rest of it. Deliberately a distinct marker from
+// FAQ_ITEM's "**Question**" shape — several existing paragraphs across the
+// programs already start with "**bold**" purely for emphasis (e.g. a closing
+// punchline sentence), so reusing that shape per-paragraph would silently
+// turn those into broken accordions.
+const DISCLOSURE_MARKER = /^\[laskelma:\s*(.+?)\]\n([\s\S]+)$/
 
 function splitRawParagraphs(content: string): string[] {
   return content
@@ -59,6 +105,19 @@ function splitRawParagraphs(content: string): string[] {
 function classifyParagraph(raw: string): ProgramParagraph {
   if (raw.startsWith('> ')) return { type: 'quote', text: raw.slice(2).trim() }
   if (raw.startsWith('—')) return { type: 'attribution', text: raw }
+  const chartMatch = raw.match(CHART_MARKER)
+  if (chartMatch) return { type: 'chart', text: chartMatch[1] }
+  const videoMatch = raw.match(VIDEO_MARKER)
+  if (videoMatch) return { type: 'video', text: videoMatch[1] }
+  const imageMatch = raw.match(IMAGE_MARKER)
+  if (imageMatch) return { type: 'image', text: imageMatch[1] }
+  const disclosureMatch = raw.match(DISCLOSURE_MARKER)
+  if (disclosureMatch)
+    return {
+      type: 'disclosure',
+      question: disclosureMatch[1].trim(),
+      text: disclosureMatch[2].trim(),
+    }
   return { type: 'text', text: raw }
 }
 
@@ -121,6 +180,16 @@ export function parseProgramBody(body: string): ParsedProgramBody {
       }
     }
 
+    const highlightLabelMatch = headingLine.match(HIGHLIGHT_LABEL_HEADING)
+    if (highlightLabelMatch) {
+      return {
+        type: 'highlight',
+        label: highlightLabelMatch[1].trim(),
+        heading: highlightLabelMatch[2].trim(),
+        paragraphs,
+      }
+    }
+
     const labeledMatch = headingLine.match(LABELED_HEADING)
     return {
       type: 'highlight',
@@ -130,4 +199,30 @@ export function parseProgramBody(body: string): ParsedProgramBody {
   })
 
   return { leadParagraphs: splitRawParagraphs(lead).map(classifyParagraph), sections }
+}
+
+/**
+ * Picks a background tone per section so a program reads as alternating bands.
+ *
+ * The opening and closing highlight bands stay dark — they frame the page. A
+ * program that argues its way through several *unnumbered* sections in between
+ * (problem → solution → threshold, rather than "Vaatimus N/5") would otherwise
+ * render as one long dark wall, so those interior highlights join the numbered
+ * requirements in the light/tint alternation. Programs whose only highlights
+ * are the first and last one are unaffected.
+ *
+ * FAQ sections don't render as a band; they get a tone only to keep the result
+ * index-aligned with `sections`.
+ */
+export function assignSectionTones(sections: ProgramSection[]): ProgramSectionTone[] {
+  const highlights = sections.flatMap((section, i) => (section.type === 'highlight' ? [i] : []))
+  const first = highlights[0]
+  const last = highlights[highlights.length - 1]
+
+  let band = 0
+  return sections.map((section, i) => {
+    if (section.type === 'faq') return 'dark'
+    if (section.type === 'highlight' && (i === first || i === last)) return 'dark'
+    return band++ % 2 === 0 ? 'light' : 'tint'
+  })
 }

@@ -1,0 +1,195 @@
+---
+import { ruokaostostukiBreakdowns, type VatBreakdown } from '../../lib/charts/ruokaostostuki'
+import { formatEuro } from '../../lib/format'
+import type { Locale } from '../../lib/content'
+import { t } from '../../i18n/ui'
+
+interface Props {
+  locale: Locale
+}
+
+// The <title>/<desc> ids below are static because the site only ever embeds
+// this chart once per page — a second instance on the same page would
+// collide. Suffix them with a discriminator if that ever changes.
+
+const { locale } = Astro.props
+
+const breakdowns = ruokaostostukiBreakdowns()
+
+// Chart geometry, in SVG user units (≈ px at the viewBox's natural render size).
+// Square (1:1) canvas — the extra height versus the old 600x320 goes almost
+// entirely into PLOT_HEIGHT (taller bars). TOP_PADDING and the baseline's
+// bottom margin stay the same absolute size as before: they're sized for a
+// fixed text stack (the eyebrow+value above, the two-line label below), not
+// proportional to the canvas.
+const VIEW_WIDTH = 600
+const VIEW_HEIGHT = 600
+const BOTTOM_MARGIN = 70 // room for the two-line quintile label below the baseline
+const BASELINE_Y = VIEW_HEIGHT - BOTTOM_MARGIN
+const TOP_PADDING = 70 // room for the "Tuki" eyebrow + the €/kk value above the bar
+const PLOT_HEIGHT = BASELINE_Y - TOP_PADDING
+const BAR_WIDTH = 130 // wider than 600x320's 108 to stay well-proportioned against the taller bars
+const CORNER_RADIUS = 4 // the rounded data-end at the bar's free (top) end
+
+// A single series (the monthly subsidy) — no legend needed; the eyebrow label
+// above each bar and the chart title already say what's plotted.
+function monthlySubsidy(breakdown: VatBreakdown): number {
+  return breakdown.subsidy / 12
+}
+
+const maxMonthly = Math.max(monthlySubsidy(breakdowns.low), monthlySubsidy(breakdowns.high))
+const scale = PLOT_HEIGHT / maxMonthly
+
+interface Column {
+  breakdown: VatBreakdown
+  centerX: number
+  quintileLabel: string
+  barHeight: number
+  barY: number
+}
+
+function columnFor(breakdown: VatBreakdown, centerX: number, quintileLabel: string): Column {
+  const barHeight = monthlySubsidy(breakdown) * scale
+  const barY = BASELINE_Y - barHeight
+  return { breakdown, centerX, quintileLabel, barHeight, barY }
+}
+
+// Columns sit further apart than the bar width alone needs, so the two-line
+// category label below each bar (name + "(per person)") has room to clear
+// its neighbor — SVG text doesn't wrap, so this has to be true by geometry,
+// not by hoping the string stays short.
+const columns: Column[] = [
+  columnFor(breakdowns.low, 160, t(locale, 'chart.ruokaostostuki.lowLabel')),
+  columnFor(breakdowns.high, 440, t(locale, 'chart.ruokaostostuki.highLabel')),
+]
+
+const title = t(locale, 'chart.ruokaostostuki.title')
+const desc = t(locale, 'chart.ruokaostostuki.desc')
+const subsidyLabel = t(locale, 'chart.ruokaostostuki.subsidyLabel')
+const perMonthSuffix = t(locale, 'chart.ruokaostostuki.perMonthSuffix')
+const perPersonSuffix = t(locale, 'chart.ruokaostostuki.perPersonSuffix')
+---
+
+<figure class="my-8">
+  <svg
+    viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`}
+    role="img"
+    aria-labelledby="ruokaostostuki-chart-title ruokaostostuki-chart-desc"
+    preserveAspectRatio="xMidYMid meet"
+    style="width: 100%; height: auto; max-height: 80svh; overflow: visible;"
+  >
+    <title id="ruokaostostuki-chart-title">{title}</title>
+    <desc id="ruokaostostuki-chart-desc">{desc}</desc>
+
+    <line
+      x1={40}
+      y1={BASELINE_Y}
+      x2={VIEW_WIDTH - 40}
+      y2={BASELINE_Y}
+      stroke="var(--color-harmaa)"
+      stroke-width="1"></line>
+
+    {
+      columns.map((col) => (
+        <>
+          {/* Rounded at the bar's free (top) end, square at the baseline. */}
+          <rect
+            x={col.centerX - BAR_WIDTH / 2}
+            y={col.barY}
+            width={BAR_WIDTH}
+            height={col.barHeight}
+            rx={CORNER_RADIUS}
+            ry={CORNER_RADIUS}
+            fill="var(--color-vihrea-tumma)"
+          />
+          <rect
+            x={col.centerX - BAR_WIDTH / 2}
+            y={BASELINE_Y - CORNER_RADIUS}
+            width={BAR_WIDTH}
+            height={CORNER_RADIUS}
+            fill="var(--color-vihrea-tumma)"
+          />
+
+          <text
+            x={col.centerX}
+            y={col.barY - 42}
+            text-anchor="middle"
+            fill="var(--color-harmaa)"
+            font-size="13"
+            font-weight="600"
+            letter-spacing="0.04em"
+          >
+            {subsidyLabel}
+          </text>
+
+          <text
+            x={col.centerX}
+            y={col.barY - 16}
+            text-anchor="middle"
+            fill="var(--color-musta)"
+            font-size="22"
+            font-weight="800"
+          >
+            {formatEuro(monthlySubsidy(col.breakdown), locale) + perMonthSuffix}
+          </text>
+
+          <text
+            x={col.centerX}
+            y={BASELINE_Y + 27}
+            text-anchor="middle"
+            fill="var(--color-musta)"
+            font-size="17"
+            font-weight="600"
+          >
+            {col.quintileLabel}
+          </text>
+          <text
+            x={col.centerX}
+            y={BASELINE_Y + 48}
+            text-anchor="middle"
+            fill="var(--color-harmaa)"
+            font-size="14"
+          >
+            {perPersonSuffix}
+          </text>
+        </>
+      ))
+    }
+  </svg>
+
+  {
+    /*
+      sr-only's `white-space: nowrap` fights table layout: with the sr-only
+      shrink to 1px, an ordinary block honors that instantly, but a <table>
+      under table-layout:auto sizes itself from its content's min-content
+      width first — and nowrap makes that min-content width the full
+      unwrapped row text, so the table renders at its natural content width
+      (here, several hundred px) regardless of the 1px hint, even though
+      clip-path still keeps it invisible. That extra layout width was
+      widening the page's scrollable area on narrow screens. Overriding back
+      to `white-space: normal` (inline, so it beats sr-only's class
+      regardless of stylesheet order) lets the table actually shrink to ~1px
+      like the rest of the sr-only trick assumes — screen readers read the
+      DOM text regardless of this, so nothing here affects accessibility.
+    */
+  }
+  <table class="sr-only" style="white-space: normal;">
+    <caption>{t(locale, 'chart.ruokaostostuki.tableCaption')}</caption>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">{subsidyLabel}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        columns.map((col) => (
+          <tr>
+            <th scope="row">{col.quintileLabel}</th>
+            <td>{formatEuro(monthlySubsidy(col.breakdown), locale) + perMonthSuffix}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</figure>
