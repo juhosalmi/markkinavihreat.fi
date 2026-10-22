@@ -18,11 +18,11 @@ Esitämme ruuan alemman arvonlisäverokannan muuttamista pieneksi perustuloksi, 
 
 ## Mistä on kyse
 
-Ruoasta maksetaan vähemmän arvonlisäveroa kuin muusta kulutuksesta, ja täten valtio luopuu osasta verotuottoa jokaisen ruokaostoksen kohdalla. Tätä eroa nykyisen alennetun kannan ja yleisen verokannan on käytännössä yksi tuen muoto: alennettu verokanta tuottaa täsmälleen saman lopputuloksen kuin jos kaupan kassalla valtio maksaisi osan ihmisten ruokalaskusta. Alennettu verokanta on tukea, samalla tavalla kuin suurin osa yritystuistakin on alennettuja verokantoja.
+Ruoasta maksetaan vähemmän arvonlisäveroa kuin muusta kulutuksesta, ja täten valtio luopuu osasta verotuottoa jokaisen ruokaostoksen kohdalla. Tämä on käytännössä valtion tarjoama tukimuoto: alennettu verokanta tuottaa täsmälleen saman lopputuloksen kuin jos kaupan kassalla valtio maksaisi osan ihmisten ruokalaskusta. Alennettu verokanta on tukea, samalla tavalla kuin suurin osa yritystuistakin on alennettuja verokantoja.
 
 Ongelma ruuan alennetussa verokannassa on että se että hyväosaiset käyttävät lähes kaksinkertaisen määrän rahaa ruokaostoksiin, ja täten valtio käytännössä tukee järjestelyllä voittopuolisesti hyväosaisia. Siitä huolimatta, että alemman verokannan perustelu on nimenomaan pienituloisten tukemisessa.
 
-Me esitämme, että ruoka siirretään yleiseen 25,5 prosentin arvonlisäverokantaan, ja koko tuotto maksetaan takaisin ihmisille kuukausittaisena, samansuuruisena perustulona. Emme kuitenkaan hyväksy ruuan arvonlisäveron korotusta ilman pienen perustulon käyttöönottoa: tämä on meille ehdoton kynnyskysymys!
+Me esitämme, että ruoka siirretään yleiseen 25,5 prosentin arvonlisäverokantaan, ja koko tuotto maksetaan takaisin ihmisille kuukausittaisena, samansuuruisena perustulona. Emme hyväksy ruuan arvonlisäveron korotusta ilman tämän perustulon käyttöönottoa: se on meille ehdoton kynnyskysymys!
 
 ## Nykymallin ongelma - Ruuan alv-tuki kohdistuu eniten hyvätuloisille
 
