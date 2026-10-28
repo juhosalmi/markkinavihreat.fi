@@ -7,6 +7,18 @@ interface Props {
 }
 
 const { locale } = Astro.props
+
+/**
+ * Simple Analytics' free plan requires its badge in the footer. URLs are verbatim from their
+ * badge builder (their detector looks for them); colours are the footer's metsa, kerma/70 and
+ * vihrea. Both modes share one palette because the footer is dark in either scheme.
+ */
+const analyticsBadgeQuery = 'counter=false&radius=0&background=1A3A1A&text=AFB8AB&logo=6EB82A'
+const analyticsBadge = {
+  darkSrc: `https://simpleanalyticsbadges.com/markkinavihreat.fi?mode=dark&${analyticsBadgeQuery}`,
+  href: 'https://www.simpleanalytics.com/markkinavihreat.fi?utm_source=markkinavihreat.fi&utm_content=badge',
+  lightSrc: `https://simpleanalyticsbadges.com/markkinavihreat.fi?mode=light&${analyticsBadgeQuery}`,
+}
 ---
 
 <footer class="bg-metsa text-kerma/70 px-4 py-8 text-center text-sm sm:px-6">
@@ -23,4 +35,24 @@ const { locale } = Astro.props
       CC BY-SA 4.0
     </a>
   </p>
+  <a
+    href={analyticsBadge.href}
+    class="mt-4 inline-block leading-none"
+    referrerpolicy="origin"
+    rel="noopener"
+    target="_blank"
+  >
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset={analyticsBadge.darkSrc} />
+      <img
+        alt="Simple Analytics"
+        crossorigin="anonymous"
+        height="50"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+        src={analyticsBadge.lightSrc}
+        width="210"
+      />
+    </picture>
+  </a>
 </footer>
