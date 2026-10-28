@@ -114,6 +114,7 @@ const ogImage = ogUrlFor(locale, path)
     <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}apple-touch-icon.png`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://scripts.simpleanalyticscdn.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;800&display=swap"
       rel="stylesheet"
@@ -131,5 +132,6 @@ const ogImage = ogUrlFor(locale, path)
       <slot />
     </main>
     <Footer locale={locale} />
+    <script async defer is:inline src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
   </body>
 </html>
