@@ -5,6 +5,9 @@ order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 links:
+  - type: website
+    url: 'https://johannamuurinen.fi/'
+    label: 'johannamuurinen.fi'
   - type: bluesky
     url: 'https://bsky.app/profile/jmuurine.bsky.social'
   - type: facebook
