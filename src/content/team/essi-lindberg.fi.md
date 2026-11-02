@@ -4,6 +4,7 @@ name: 'Essi Lindberg'
 order: 33
 photo: '../../assets/team/Essi-Lindberg.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Varsinais-Suomessa'
+donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=fi&vaali=eduskuntavaalit-2027&alue=vp3&ehdokas=lindberg-essi-10221&valilehti=donate'
 links:
   - type: tiktok
     url: 'https://www.tiktok.com/@essilindberg'
