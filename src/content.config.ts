@@ -44,6 +44,9 @@ const team = defineCollection({
       order: z.number(),
       photo: image(),
       candidateBadge: z.string().optional(),
+      // The candidate's donation form on vihreat.fi, deep-linked to the
+      // donate tab in this entry's language (the gallery's `kieli` is fi/se/en).
+      donationUrl: z.url().optional(),
       // Identity anchors for entity reconciliation: the person's own canonical
       // about page (not just their site's home page) and their Wikidata item.
       // Both end up in the Person JSON-LD's sameAs, and both are rendered as
