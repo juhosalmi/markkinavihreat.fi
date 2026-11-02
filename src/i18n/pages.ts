@@ -36,6 +36,10 @@ interface AboutCopy {
   intro: string
   /** Label for a person's own canonical about page (team `profileUrl`). */
   profileLink: string
+  /** Heading of the section for members with a `candidateBadge`. */
+  candidatesTitle: string
+  /** Heading of the section for everyone else, shown only when candidates exist. */
+  othersTitle: string
 }
 
 interface ContactCopy {
@@ -205,6 +209,8 @@ export const about: Record<Locale, AboutCopy> = {
     intro:
       'Markkinavihreät on joukko Vihreiden jäseniä, luottamushenkilöitä ja aktiiveja, joita yhdistää usko markkinatalouden ja kunnianhimoisen ympäristöpolitiikan yhteensopivuuteen.',
     profileLink: 'Esittely',
+    candidatesTitle: 'Eduskuntavaaliehdokkaat',
+    othersTitle: 'Muut markkinavihreät',
   },
   sv: {
     metaDescription:
@@ -213,6 +219,8 @@ export const about: Record<Locale, AboutCopy> = {
     intro:
       'Markkinavihreät (de marknadsgröna) är en grupp medlemmar, förtroendevalda och aktiva inom De Gröna som förenas av tron att marknadsekonomi och ambitiös miljöpolitik går hand i hand.',
     profileLink: 'Presentation',
+    candidatesTitle: 'Riksdagsvalskandidater',
+    othersTitle: 'Övriga marknadsgröna',
   },
   en: {
     metaDescription:
@@ -221,6 +229,8 @@ export const about: Record<Locale, AboutCopy> = {
     intro:
       'Markkinavihreät is a group of Green League members, elected officials, and activists united by a belief that market economics and ambitious environmental policy belong together.',
     profileLink: 'About',
+    candidatesTitle: 'Parliamentary election candidates',
+    othersTitle: 'Other market greens',
   },
 }
 
