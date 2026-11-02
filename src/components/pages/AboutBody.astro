@@ -50,6 +50,8 @@ const jsonLd = [
             href={personPath(locale, parseLocalizedId(person.id).slug)}
             photo={person.data.photo}
             candidateBadge={person.data.candidateBadge}
+            donationUrl={person.data.donationUrl}
+            donateLabel={t(locale, 'team.donate')}
             summary={firstSentenceOfBio(person.body ?? '')}
             cta={t(locale, 'blog.readMore')}
           />

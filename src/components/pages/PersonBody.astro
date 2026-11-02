@@ -24,7 +24,7 @@ interface Props {
 
 const { locale, person } = Astro.props
 const { slug } = parseLocalizedId(person.id)
-const { name, photo, candidateBadge, links, profileUrl, wikidata } = person.data
+const { name, photo, candidateBadge, donationUrl, links, profileUrl, wikidata } = person.data
 const path = `/ketka/${slug}/`
 const { Content } = await render(person)
 
@@ -118,6 +118,20 @@ const jsonLd: JsonLdNode[] = [
           <Content />
         </div>
         <SocialLinks links={allLinks} />
+        {
+          // Not part of allLinks: a donation form isn't an identity link, so
+          // it stays out of the Person JSON-LD's sameAs.
+          donationUrl && (
+            <a
+              href={donationUrl}
+              target="_blank"
+              rel="noopener"
+              class="bg-kerma text-musta self-start rounded-[20px] px-[18px] py-[8px] text-[16px] font-semibold hover:underline"
+            >
+              {t(locale, 'team.donate')}
+            </a>
+          )
+        }
       </div>
     </div>
 
