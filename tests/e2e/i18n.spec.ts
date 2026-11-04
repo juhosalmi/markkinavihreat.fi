@@ -24,3 +24,23 @@ test('language switcher moves between fi, sv and en on the same page', async ({ 
   await page.getByRole('link', { name: 'EN', exact: true }).click()
   await expect(page).toHaveURL(/\/en\/manifesti\/$/)
 })
+
+test('the ruuan-alv-perustuloksi program renders its chart with an accessible name (fi)', async ({
+  page,
+}) => {
+  await page.goto('/ehdotukset/ruuan-alv-perustuloksi/')
+  await expect(page.locator('h1')).toBeVisible()
+  await expect(page.getByRole('img', { name: 'Ruokaostostuki tuloviidenneksittäin' })).toBeVisible()
+})
+
+for (const path of [
+  '/sv/ehdotukset/ruuan-alv-perustuloksi/',
+  '/en/ehdotukset/ruuan-alv-perustuloksi/',
+]) {
+  test(`the ruuan-alv-perustuloksi program's translation-pending stub renders (${path})`, async ({
+    page,
+  }) => {
+    await page.goto(path)
+    await expect(page.locator('h1')).toBeVisible()
+  })
+}
