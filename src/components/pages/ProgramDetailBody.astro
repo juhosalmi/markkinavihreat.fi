@@ -93,7 +93,11 @@ const signatories = await Promise.all(
   program.data.signatories.map(async (slug) => {
     const person = await getEntry('team', `${slug}.${locale}`)
     if (!person) throw new Error(`Program lists unknown signatory "${slug}"`)
-    return { name: person.data.name, photo: person.data.photo, href: personPath(locale, slug) }
+    return {
+      name: person.data.name,
+      photo: person.data.avatar ?? person.data.photo,
+      href: personPath(locale, slug),
+    }
   }),
 )
 

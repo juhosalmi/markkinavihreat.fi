@@ -43,6 +43,10 @@ const team = defineCollection({
       name: z.string(),
       order: z.number(),
       photo: image(),
+      // A square headshot cropped so the face fills the same share of the
+      // frame as everyone else's, for small round thumbnails (a program's
+      // signatories). The full photo's framing varies too much to crop by CSS.
+      avatar: image().optional(),
       candidateBadge: z.string().optional(),
       // The candidate's donation form on vihreat.fi, deep-linked to the
       // donate tab in this entry's language (the gallery's `kieli` is fi/se/en).

@@ -3,6 +3,7 @@ locale: sv
 name: 'Johanna Muurinen'
 order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
+avatar: '../../assets/team/avatars/Johanna-Muurinen.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=muurinen-johanna-10242&valilehti=donate'
 links:

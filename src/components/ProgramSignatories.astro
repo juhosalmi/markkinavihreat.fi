@@ -4,6 +4,7 @@ import { Picture } from 'astro:assets'
 
 interface Props {
   label: string
+  /** `photo` should be the person's square `avatar` where one exists. */
   people: Array<{ name: string; photo: ImageMetadata; href: string }>
 }
 

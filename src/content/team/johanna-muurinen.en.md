@@ -3,6 +3,7 @@ locale: en
 name: 'Johanna Muurinen'
 order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
+avatar: '../../assets/team/avatars/Johanna-Muurinen.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=en&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=muurinen-johanna-10242&valilehti=donate'
 links:
