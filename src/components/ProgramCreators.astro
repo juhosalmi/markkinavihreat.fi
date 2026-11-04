@@ -13,7 +13,10 @@ const { label, people } = Astro.props
 
 <section class="content-max mx-auto px-4 pb-16 text-center sm:px-6">
   <h2 class="text-eyebrow text-harmaa mb-6">{label}</h2>
-  <ul class="mx-auto flex max-w-[720px] flex-wrap justify-center gap-x-6 gap-y-5">
+  <ul
+    id="program-creators"
+    class="mx-auto flex max-w-[720px] flex-wrap justify-center gap-x-6 gap-y-5"
+  >
     {
       people.map((person) => (
         <li>
