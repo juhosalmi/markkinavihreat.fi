@@ -98,3 +98,6 @@ Kyse on oikeudenmukaisuudesta ja ihmisten vapaudesta päättää omasta rahastaa
 
 **Mistä luvut ovat?**
 Tilastokeskuksen kulutustutkimuksesta vuodelta 2022, kulutusmenoista kulutusyksikköä kohden. Kulutusyksikkö on kotitalouden koon mukaan vakioitu mittayksikkö (ensimmäinen aikuinen 1,0, muut aikuiset 0,5, lapset 0,3), joten vertailu pienituloisimman ja suurituloisimman viidenneksen välillä on reilu riippumatta kotitalouksien koosta. Sivulla esitetyt luvut ovat viittellisiä, emme ole vielä tehneet tarkempaa simulaatiota vaikutuksista.
+
+**Onko ehdotuksen takana koko puolue?**
+Ehdotus ruoan alennetun arvonlisäverokannan korvaamisesta ALV-palautuksella on koko puolueen, se löytyy [talouspoliittisesta ohjelmasta](https://www.vihreat.fi/ohjelmat/talouspoliittinen-ohjelma/). Saara Hyrkkö on myös esitellyt ideaa [Helsingin Sanomissa](https://www.hs.fi/politiikka/art-2000011644455.html).
