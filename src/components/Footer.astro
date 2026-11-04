@@ -1,12 +1,20 @@
 ---
 import type { Locale } from '../lib/content'
 import { t } from '../i18n/ui'
+import AnalyticsCredit from './AnalyticsCredit.astro'
 
 interface Props {
   locale: Locale
 }
 
 const { locale } = Astro.props
+
+/**
+ * Simple Analytics' free plan requires its badge or text link. Keep this URL verbatim, UTM codes
+ * included: their detector looks for it. It points at the public dashboard, as their badges.md asks.
+ */
+const analyticsCreditHref =
+  'https://www.simpleanalytics.com/markkinavihreat.fi?utm_source=markkinavihreat.fi&utm_content=badge'
 ---
 
 <footer class="bg-metsa text-kerma/70 px-4 py-8 text-center text-sm sm:px-6">
@@ -23,4 +31,7 @@ const { locale } = Astro.props
       CC BY-SA 4.0
     </a>
   </p>
+  <div class="mt-4">
+    <AnalyticsCredit href={analyticsCreditHref} />
+  </div>
 </footer>

@@ -4,6 +4,7 @@ name: 'Atte Harjanne'
 order: 5
 photo: '../../assets/team/Atte-Harjanne.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Helsingfors'
+donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp1&ehdokas=harjanne-atte-10137&valilehti=donate'
 links:
   - type: website
     url: 'https://www.atteharjanne.fi'

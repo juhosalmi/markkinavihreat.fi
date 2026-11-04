@@ -4,7 +4,11 @@ name: 'Johanna Muurinen'
 order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Uudellamaalla'
+donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=fi&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=muurinen-johanna-10242&valilehti=donate'
 links:
+  - type: website
+    url: 'https://johannamuurinen.fi/'
+    label: 'johannamuurinen.fi'
   - type: bluesky
     url: 'https://bsky.app/profile/jmuurine.bsky.social'
   - type: facebook
