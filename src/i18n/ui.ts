@@ -32,13 +32,13 @@ export const ui = {
       'Pylväskaavio, joka vertaa ruoan alennetusta arvonlisäverokannasta koituvan kuukausittaisen ruokaostostuen suuruutta pienituloisimman ja suurituloisimman tuloviidenneksen välillä. Tarkat luvut ovat kaavion alla olevassa taulukossa.',
     'chart.ruokaostostuki.lowLabel': 'Pienituloisin 20 %',
     'chart.ruokaostostuki.highLabel': 'Suurituloisin 20 %',
-    'chart.ruokaostostuki.perPersonSuffix': '(per henkilö)',
+    'chart.ruokaostostuki.perPersonSuffix': '(per kulutusyksikkö)',
     'chart.ruokaostostuki.subsidyLabel': 'Tuki',
     'chart.ruokaostostuki.perMonthSuffix': '/kk',
     'chart.ruokaostostuki.tableCaption': 'Ruokaostostuki tuloviidenneksittäin, euroa kuukaudessa',
     'video.embedTitle': 'Upotettu YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
-      'Infografiikka: 100 euron ravintolaillallisen arvonlisäveron alennuksesta saatava tuki on 12 euroa, kun taas 10 euron päivittäisistä ruokaostoksista tuki on vain 1,20 euroa.',
+      'Infografiikka: 100 euron ravintolaillallisen arvonlisäveron alennuksesta saatava tuki on noin 10,60 euroa, kun taas 10 euron päivittäisistä ruokaostoksista tuki on vain noin 1,06 euroa.',
   },
   sv: {
     'nav.home': 'Hem',
@@ -71,13 +71,13 @@ export const ui = {
       'Stapeldiagram som jämför storleken på det månatliga matinköpsstöd som den sänkta momssatsen på mat ger upphov till, mellan den lägsta och högsta inkomstkvintilen. Exakta siffror finns i tabellen under diagrammet.',
     'chart.ruokaostostuki.lowLabel': 'Lägsta 20 %',
     'chart.ruokaostostuki.highLabel': 'Högsta 20 %',
-    'chart.ruokaostostuki.perPersonSuffix': '(per person)',
+    'chart.ruokaostostuki.perPersonSuffix': '(per konsumtionsenhet)',
     'chart.ruokaostostuki.subsidyLabel': 'Stöd',
     'chart.ruokaostostuki.perMonthSuffix': '/mån',
     'chart.ruokaostostuki.tableCaption': 'Matinköpsstöd per inkomstkvintil, euro per månad',
     'video.embedTitle': 'Inbäddad YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
-      'Infografik (på finska): stödet från momssänkningen på en 100 euro restaurangmiddag är 12 euro, medan stödet på 10 euro dagliga matinköp bara är 1,20 euro.',
+      'Infografik (på finska): stödet från momssänkningen på en restaurangmiddag för 100 euro är omkring 10,60 euro, medan stödet på dagliga matinköp för 10 euro bara är omkring 1,06 euro.',
   },
   en: {
     'nav.home': 'Home',
@@ -110,14 +110,14 @@ export const ui = {
       "Bar chart comparing the monthly size of the implicit subsidy from Finland's reduced food VAT rate between the lowest and highest income quintile. Exact figures are in the table below the chart.",
     'chart.ruokaostostuki.lowLabel': 'Lowest 20%',
     'chart.ruokaostostuki.highLabel': 'Highest 20%',
-    'chart.ruokaostostuki.perPersonSuffix': '(per person)',
+    'chart.ruokaostostuki.perPersonSuffix': '(per consumption unit)',
     'chart.ruokaostostuki.subsidyLabel': 'Subsidy',
     'chart.ruokaostostuki.perMonthSuffix': '/mo',
     'chart.ruokaostostuki.tableCaption':
       'Food-purchase subsidy by income quintile, euros per month',
     'video.embedTitle': 'Embedded YouTube video',
     'image.ruuanAlvEsimerkki.alt':
-      'Infographic (in Finnish): the VAT-reduction subsidy on a 100-euro restaurant dinner is 12 euros, while the subsidy on 10 euros of daily groceries is only 1.20 euros.',
+      'Infographic (in Finnish): the VAT-reduction subsidy on a 100-euro restaurant dinner is about 10.60 euros, while the subsidy on 10 euros of daily groceries is only about 1.06 euros.',
   },
 } as const
 
