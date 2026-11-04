@@ -89,17 +89,21 @@ const contributors = await Promise.all(
   }),
 )
 
-const creators = await Promise.all(
-  program.data.creators.map(async (slug) => {
-    const person = await getEntry('team', `${slug}.${locale}`)
-    if (!person) throw new Error(`Program lists unknown creator "${slug}"`)
-    return {
-      name: person.data.name,
-      photo: person.data.avatar ?? person.data.photo,
-      href: personPath(locale, slug),
-    }
-  }),
-)
+// Alphabetical in the HTML, so the order without JavaScript favours no one;
+// ShuffleOnLoad below then randomises it on every load.
+const creators = (
+  await Promise.all(
+    program.data.creators.map(async (slug) => {
+      const person = await getEntry('team', `${slug}.${locale}`)
+      if (!person) throw new Error(`Program lists unknown creator "${slug}"`)
+      return {
+        name: person.data.name,
+        photo: person.data.avatar ?? person.data.photo,
+        href: personPath(locale, slug),
+      }
+    }),
+  )
+).sort((a, b) => a.name.localeCompare(b.name, 'fi'))
 
 const JOIN_URL = 'https://www.vihreat.fi/liity/'
 
@@ -249,4 +253,5 @@ if (faq) jsonLd.push(faq)
   }
 
   <ShuffleOnLoad selector=".js-quote-band" />
+  <ShuffleOnLoad selector="#program-creators > li" />
 </BaseLayout>

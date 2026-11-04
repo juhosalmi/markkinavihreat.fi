@@ -50,3 +50,27 @@ test('programs without slides have no slides section', async ({ page }) => {
   await page.goto('/ehdotukset/lisaa-markkinoita/')
   await expect(page.getByRole('heading', { name: 'Jaa kuvat' })).toHaveCount(0)
 })
+
+const CREATORS_PATH = '/ehdotukset/ruuan-alv-perustuloksi/'
+
+test('program creators are alphabetical without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled: false })
+  const page = await context.newPage()
+  await page.goto(CREATORS_PATH)
+  const names = await page.locator('#program-creators li').allTextContents()
+  expect(names.length).toBeGreaterThan(2)
+  const trimmed = names.map((name) => name.trim())
+  expect(trimmed).toEqual([...trimmed].sort((a, b) => a.localeCompare(b, 'fi')))
+  await context.close()
+})
+
+test('program creators shuffle on load', async ({ page }) => {
+  const orders = new Set<string>()
+  for (let i = 0; i < 5; i++) {
+    await page.goto(CREATORS_PATH)
+    const names = await page.locator('#program-creators li').allTextContents()
+    orders.add(names.join('|'))
+  }
+  // Five loads landing on the same order by chance is vanishingly unlikely.
+  expect(orders.size).toBeGreaterThan(1)
+})
