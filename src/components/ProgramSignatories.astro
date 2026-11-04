@@ -1,0 +1,39 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Picture } from 'astro:assets'
+
+interface Props {
+  label: string
+  people: Array<{ name: string; photo: ImageMetadata; href: string }>
+}
+
+const { label, people } = Astro.props
+---
+
+<section class="content-max mx-auto px-4 pb-16 text-center sm:px-6">
+  <h2 class="text-eyebrow text-harmaa mb-6">{label}</h2>
+  <ul class="mx-auto flex max-w-[720px] flex-wrap justify-center gap-x-6 gap-y-5">
+    {
+      people.map((person) => (
+        <li>
+          <a href={person.href} class="group flex w-24 flex-col items-center gap-2">
+            <Picture
+              src={person.photo}
+              alt=""
+              width={160}
+              widths={[80, 160]}
+              sizes="72px"
+              formats={['webp']}
+              loading="lazy"
+              pictureAttributes={{ class: 'contents' }}
+              class="block h-18 w-18 rounded-full object-cover object-top"
+            />
+            <span class="text-sm leading-tight font-semibold group-hover:underline">
+              {person.name}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>

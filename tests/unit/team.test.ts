@@ -13,6 +13,7 @@ function program(
     unlisted?: boolean
     citations?: Array<{ person: string; quote: string }>
     contributors?: string[]
+    signatories?: string[]
   } = {},
 ) {
   return {
@@ -22,6 +23,7 @@ function program(
       unlisted: opts.unlisted ?? false,
       citations: opts.citations ?? [],
       contributors: opts.contributors ?? [],
+      signatories: opts.signatories ?? [],
     },
   }
 }
@@ -106,6 +108,12 @@ describe('assertTeamRefs', () => {
       /programs\/p\.fi: unknown team member "anan"[\s\S]*blog\/b\.sv: unknown team member "bret"/,
     )
   })
+
+  it('checks signatories too', () => {
+    expect(() => assertTeamRefs(team, [program('p.fi', { signatories: ['bertt'] })], [])).toThrow(
+      /programs\/p\.fi: unknown team member "bertt"/,
+    )
+  })
 })
 
 describe('involvementFor', () => {
@@ -122,6 +130,13 @@ describe('involvementFor', () => {
     expect(result.programs.map((p) => [p.program.id, p.quote])).toEqual([
       ['late.fi', undefined],
       ['early.fi', 'Hyvä!'],
+    ])
+  })
+
+  it('includes programs the person signed', () => {
+    const programs = [program('signed.fi', { signatories: ['bert', 'anna'] })]
+    expect(involvementFor('anna', 'fi', programs, []).programs.map((p) => p.program.id)).toEqual([
+      'signed.fi',
     ])
   })
 

@@ -104,6 +104,10 @@ const programs = defineCollection({
     citations: z.array(citation).default([]),
     // Team member slugs who worked on the program without being quoted in it.
     contributors: z.array(z.string()).default([]),
+    // Team member slugs who put their name to the program. Set when a program
+    // speaks for these people rather than for the whole network; shown under
+    // the hero so readers see up front whose proposal it is.
+    signatories: z.array(z.string()).default([]),
     // The program's social-media carousel, offered for download and sharing
     // at the bottom of the page. Paths are public/ URLs (same-origin, so the
     // download attribute and the share sheet's file fetch both work).
