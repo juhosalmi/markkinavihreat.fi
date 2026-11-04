@@ -36,6 +36,11 @@ export const ui = {
     'chart.ruokaostostuki.subsidyLabel': 'Tuki',
     'chart.ruokaostostuki.perMonthSuffix': '/kk',
     'chart.ruokaostostuki.tableCaption': 'Ruokaostostuki tuloviidenneksittäin, euroa kuukaudessa',
+    'chart.ruokaostostuki.selectHint': 'Valitse pylväs nähdäksesi laskelman.',
+    'chart.ruokaostostuki.detailSpend': 'Ruokaostokset vuodessa',
+    'chart.ruokaostostuki.detailVatPaid': 'Maksettu alv, ruuan kanta',
+    'chart.ruokaostostuki.detailVatGeneral': 'Alv yleisellä kannalla',
+    'chart.ruokaostostuki.detailSubsidy': 'Tuki vuodessa',
     'video.embedTitle': 'Upotettu YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
       'Infografiikka: 100 euron ravintolaillallisen arvonlisäveron alennuksesta saatava tuki on noin 10,60 euroa, kun taas 10 euron päivittäisistä ruokaostoksista tuki on vain noin 1,06 euroa.',
@@ -75,6 +80,11 @@ export const ui = {
     'chart.ruokaostostuki.subsidyLabel': 'Stöd',
     'chart.ruokaostostuki.perMonthSuffix': '/mån',
     'chart.ruokaostostuki.tableCaption': 'Matinköpsstöd per inkomstkvintil, euro per månad',
+    'chart.ruokaostostuki.selectHint': 'Välj en stapel för att se uträkningen.',
+    'chart.ruokaostostuki.detailSpend': 'Matinköp per år',
+    'chart.ruokaostostuki.detailVatPaid': 'Betald moms, matsatsen',
+    'chart.ruokaostostuki.detailVatGeneral': 'Moms enligt allmänna skattesatsen',
+    'chart.ruokaostostuki.detailSubsidy': 'Stöd per år',
     'video.embedTitle': 'Inbäddad YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
       'Infografik (på finska): stödet från momssänkningen på en restaurangmiddag för 100 euro är omkring 10,60 euro, medan stödet på dagliga matinköp för 10 euro bara är omkring 1,06 euro.',
@@ -115,6 +125,11 @@ export const ui = {
     'chart.ruokaostostuki.perMonthSuffix': '/mo',
     'chart.ruokaostostuki.tableCaption':
       'Food-purchase subsidy by income quintile, euros per month',
+    'chart.ruokaostostuki.selectHint': 'Select a bar to see the calculation.',
+    'chart.ruokaostostuki.detailSpend': 'Food spending per year',
+    'chart.ruokaostostuki.detailVatPaid': 'VAT paid at the food rate',
+    'chart.ruokaostostuki.detailVatGeneral': 'VAT at the general rate',
+    'chart.ruokaostostuki.detailSubsidy': 'Subsidy per year',
     'video.embedTitle': 'Embedded YouTube video',
     'image.ruuanAlvEsimerkki.alt':
       'Infographic (in Finnish): the VAT-reduction subsidy on a 100-euro restaurant dinner is about 10.60 euros, while the subsidy on 10 euros of daily groceries is only about 1.06 euros.',

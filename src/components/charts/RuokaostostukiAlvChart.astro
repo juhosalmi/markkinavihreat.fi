@@ -1,6 +1,11 @@
 ---
-import { ruokaostostukiBreakdowns, type VatBreakdown } from '../../lib/charts/ruokaostostuki'
-import { formatEuro } from '../../lib/format'
+import {
+  FOOD_VAT_RATE_2022,
+  GENERAL_VAT_RATE_2022,
+  ruokaostostukiBreakdowns,
+  type VatBreakdown,
+} from '../../lib/charts/ruokaostostuki'
+import { formatEuro, formatPercent } from '../../lib/format'
 import type { Locale } from '../../lib/content'
 import { t } from '../../i18n/ui'
 
@@ -41,6 +46,7 @@ const maxMonthly = Math.max(monthlySubsidy(breakdowns.low), monthlySubsidy(break
 const scale = PLOT_HEIGHT / maxMonthly
 
 interface Column {
+  key: 'low' | 'high'
   breakdown: VatBreakdown
   centerX: number
   quintileLabel: string
@@ -48,20 +54,38 @@ interface Column {
   barY: number
 }
 
-function columnFor(breakdown: VatBreakdown, centerX: number, quintileLabel: string): Column {
+function columnFor(key: Column['key'], centerX: number, quintileLabel: string): Column {
+  const breakdown = breakdowns[key]
   const barHeight = monthlySubsidy(breakdown) * scale
   const barY = BASELINE_Y - barHeight
-  return { breakdown, centerX, quintileLabel, barHeight, barY }
+  return { key, breakdown, centerX, quintileLabel, barHeight, barY }
 }
 
 // Columns sit further apart than the bar width alone needs, so the two-line
-// category label below each bar (name + "(per person)") has room to clear
+// category label below each bar (name + "(per consumption unit)") has room to clear
 // its neighbor — SVG text doesn't wrap, so this has to be true by geometry,
 // not by hoping the string stays short.
 const columns: Column[] = [
-  columnFor(breakdowns.low, 160, t(locale, 'chart.ruokaostostuki.lowLabel')),
-  columnFor(breakdowns.high, 440, t(locale, 'chart.ruokaostostuki.highLabel')),
+  columnFor('low', 160, t(locale, 'chart.ruokaostostuki.lowLabel')),
+  columnFor('high', 440, t(locale, 'chart.ruokaostostuki.highLabel')),
 ]
+
+// Rows of the per-quintile calculation panel revealed by selecting a bar.
+// Every figure comes from the same breakdown the bars use.
+function detailRows(breakdown: VatBreakdown): Array<[string, string]> {
+  return [
+    [t(locale, 'chart.ruokaostostuki.detailSpend'), formatEuro(breakdown.grossExpenditure, locale)],
+    [
+      `${t(locale, 'chart.ruokaostostuki.detailVatPaid')} (${formatPercent(FOOD_VAT_RATE_2022, locale)})`,
+      formatEuro(breakdown.vatPaid, locale),
+    ],
+    [
+      `${t(locale, 'chart.ruokaostostuki.detailVatGeneral')} (${formatPercent(GENERAL_VAT_RATE_2022, locale)})`,
+      formatEuro(breakdown.vatAtGeneralRate, locale),
+    ],
+    [t(locale, 'chart.ruokaostostuki.detailSubsidy'), formatEuro(breakdown.subsidy, locale)],
+  ]
+}
 
 const title = t(locale, 'chart.ruokaostostuki.title')
 const desc = t(locale, 'chart.ruokaostostuki.desc')
@@ -70,7 +94,7 @@ const perMonthSuffix = t(locale, 'chart.ruokaostostuki.perMonthSuffix')
 const perPersonSuffix = t(locale, 'chart.ruokaostostuki.perPersonSuffix')
 ---
 
-<figure class="my-8">
+<figure class="my-8" data-ruoka-chart>
   <svg
     viewBox={`0 0 ${VIEW_WIDTH} ${VIEW_HEIGHT}`}
     role="img"
@@ -91,7 +115,7 @@ const perPersonSuffix = t(locale, 'chart.ruokaostostuki.perPersonSuffix')
 
     {
       columns.map((col) => (
-        <>
+        <g data-ruoka-col={col.key} style="transition: opacity 150ms">
           {/* Rounded at the bar's free (top) end, square at the baseline. */}
           <rect
             x={col.centerX - BAR_WIDTH / 2}
@@ -152,10 +176,58 @@ const perPersonSuffix = t(locale, 'chart.ruokaostostuki.perPersonSuffix')
           >
             {perPersonSuffix}
           </text>
-        </>
+        </g>
       ))
     }
   </svg>
+
+  {
+    /*
+    The SVG is role="img", so its children are hidden from assistive tech;
+    these buttons are the accessible way to pick a bar (the bars themselves
+    are click/tap targets for pointer users only). Hidden until the script
+    runs, so the chart stays a plain static image without JS.
+  */
+  }
+  <div data-ruoka-controls hidden class="mt-4 text-center">
+    <p class="mb-3 text-sm opacity-70">{t(locale, 'chart.ruokaostostuki.selectHint')}</p>
+    <div class="flex flex-wrap justify-center gap-2">
+      {
+        columns.map((col) => (
+          <button
+            type="button"
+            data-ruoka-select={col.key}
+            aria-pressed="false"
+            class="aria-pressed:bg-vihrea-tumma aria-pressed:border-vihrea-tumma cursor-pointer rounded-full border border-current px-4 py-2 text-sm font-semibold aria-pressed:text-white"
+          >
+            {col.quintileLabel}
+          </button>
+        ))
+      }
+    </div>
+    <div aria-live="polite" class="mx-auto mt-4 max-w-md text-left">
+      {
+        columns.map((col) => (
+          <dl
+            data-ruoka-panel={col.key}
+            hidden
+            class="grid grid-cols-[1fr_auto] gap-x-4 gap-y-1 text-sm"
+          >
+            {detailRows(col.breakdown).map(([label, value], i, rows) => (
+              <>
+                <dt class:list={[i === rows.length - 1 && 'font-semibold']}>{label}</dt>
+                <dd
+                  class:list={['text-right tabular-nums', i === rows.length - 1 && 'font-semibold']}
+                >
+                  {value}
+                </dd>
+              </>
+            ))}
+          </dl>
+        ))
+      }
+    </div>
+  </div>
 
   {
     /*
@@ -193,3 +265,32 @@ const perPersonSuffix = t(locale, 'chart.ruokaostostuki.perPersonSuffix')
     </tbody>
   </table>
 </figure>
+
+<script>
+  // Selecting a quintile (button or bar) dims the other bar and reveals that
+  // quintile's calculation; selecting it again clears the selection.
+  for (const root of document.querySelectorAll<HTMLElement>('[data-ruoka-chart]')) {
+    const buttons = root.querySelectorAll<HTMLButtonElement>('[data-ruoka-select]')
+    const bars = root.querySelectorAll<SVGGElement>('[data-ruoka-col]')
+    const panels = root.querySelectorAll<HTMLElement>('[data-ruoka-panel]')
+
+    const select = (key: string) => {
+      const next = root.dataset.selected === key ? '' : key
+      root.dataset.selected = next
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.ruokaSelect === next)))
+      bars.forEach((g) => {
+        g.style.opacity = !next || g.dataset.ruokaCol === next ? '1' : '0.35'
+      })
+      panels.forEach((p) => {
+        p.hidden = p.dataset.ruokaPanel !== next
+      })
+    }
+
+    buttons.forEach((b) => b.addEventListener('click', () => select(b.dataset.ruokaSelect!)))
+    bars.forEach((g) => {
+      g.style.cursor = 'pointer'
+      g.addEventListener('click', () => select(g.dataset.ruokaCol!))
+    })
+    root.querySelector('[data-ruoka-controls]')?.removeAttribute('hidden')
+  }
+</script>
