@@ -19,6 +19,20 @@ const copy = about[locale]
 const allTeam = await getCollection('team')
 const team = forLocale(allTeam, locale).sort((a, b) => a.data.order - b.data.order)
 
+// Candidates get their own section above everyone else. Each section is
+// shuffled separately, so no one is privileged by position within it. With no
+// candidates, the rest render as a single untitled grid, as before.
+const candidates = team.filter((person) => person.data.candidateBadge)
+const others = team.filter((person) => !person.data.candidateBadge)
+const sections = [
+  { id: 'about-candidates', title: copy.candidatesTitle, people: candidates },
+  {
+    id: 'about-grid',
+    title: candidates.length > 0 ? copy.othersTitle : undefined,
+    people: others,
+  },
+].filter((section) => section.people.length > 0)
+
 const people = team.map((person) => {
   const { slug } = parseLocalizedId(person.id)
   return { slug, name: person.data.name, url: `${SITE_URL}${personPath(locale, slug)}` }
@@ -39,25 +53,34 @@ const jsonLd = [
     <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
     <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
 
-    <div
-      id="about-grid"
-      class="mt-10 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[28px]"
-    >
-      {
-        team.map((person) => (
-          <PersonCard
-            name={person.data.name}
-            href={personPath(locale, parseLocalizedId(person.id).slug)}
-            photo={person.data.photo}
-            candidateBadge={person.data.candidateBadge}
-            donationUrl={person.data.donationUrl}
-            donateLabel={t(locale, 'team.donate')}
-            summary={firstSentenceOfBio(person.body ?? '')}
-            cta={t(locale, 'blog.readMore')}
-          />
-        ))
-      }
-    </div>
+    {
+      sections.map((section) => (
+        <section class="mt-12" aria-labelledby={section.title ? `${section.id}-title` : undefined}>
+          {section.title && (
+            <h2 id={`${section.id}-title`} class="text-2xl sm:text-3xl">
+              {section.title}
+            </h2>
+          )}
+          <div
+            id={section.id}
+            class="mt-6 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[28px]"
+          >
+            {section.people.map((person) => (
+              <PersonCard
+                name={person.data.name}
+                href={personPath(locale, parseLocalizedId(person.id).slug)}
+                photo={person.data.photo}
+                candidateBadge={person.data.candidateBadge}
+                donationUrl={person.data.donationUrl}
+                donateLabel={t(locale, 'team.donate')}
+                summary={firstSentenceOfBio(person.body ?? '')}
+                cta={t(locale, 'blog.readMore')}
+              />
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </section>
-  <ShuffleOnLoad selector="#about-grid > *" />
+  {sections.map((section) => <ShuffleOnLoad selector={`#${section.id} > *`} />)}
 </BaseLayout>
