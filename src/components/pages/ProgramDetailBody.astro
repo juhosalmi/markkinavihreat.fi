@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import ProgramFaq from '../ProgramFaq.astro'
 import ProgramHero from '../ProgramHero.astro'
 import ProgramSection from '../ProgramSection.astro'
-import ProgramSignatories from '../ProgramSignatories.astro'
+import ProgramCreators from '../ProgramCreators.astro'
 import ProgramSlides from '../ProgramSlides.astro'
 import QuoteBand from '../QuoteBand.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
@@ -89,10 +89,10 @@ const contributors = await Promise.all(
   }),
 )
 
-const signatories = await Promise.all(
-  program.data.signatories.map(async (slug) => {
+const creators = await Promise.all(
+  program.data.creators.map(async (slug) => {
     const person = await getEntry('team', `${slug}.${locale}`)
-    if (!person) throw new Error(`Program lists unknown signatory "${slug}"`)
+    if (!person) throw new Error(`Program lists unknown creator "${slug}"`)
     return {
       name: person.data.name,
       photo: person.data.avatar ?? person.data.photo,
@@ -157,8 +157,8 @@ if (faq) jsonLd.push(faq)
   />
 
   {
-    signatories.length > 0 && (
-      <ProgramSignatories label={t(locale, 'programs.signatories')} people={signatories} />
+    creators.length > 0 && (
+      <ProgramCreators label={t(locale, 'programs.creators')} people={creators} />
     )
   }
 

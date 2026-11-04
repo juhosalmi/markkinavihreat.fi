@@ -9,7 +9,7 @@ heroLines:
   - belongs to people,
   - not receipts
 citations: []
-signatories:
+creators:
   - lauri-lavanti
   - atte-harjanne
   - taru-hallikainen

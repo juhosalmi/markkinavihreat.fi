@@ -9,7 +9,7 @@ heroLines:
   - ska tillhöra folket,
   - inte kvittona
 citations: []
-signatories:
+creators:
   - lauri-lavanti
   - atte-harjanne
   - taru-hallikainen

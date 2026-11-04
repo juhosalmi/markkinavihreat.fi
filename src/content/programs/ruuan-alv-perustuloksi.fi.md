@@ -9,7 +9,7 @@ heroLines:
   - ruuan alv
   - perustuloksi
 citations: []
-signatories:
+creators:
   - lauri-lavanti
   - atte-harjanne
   - taru-hallikainen
