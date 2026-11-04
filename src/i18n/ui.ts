@@ -39,8 +39,8 @@ export const ui = {
     'chart.ruokaostostuki.tableCaption': 'Ruokaostostuki tuloviidenneksittäin, euroa kuukaudessa',
     'chart.ruokaostostuki.selectHint': 'Valitse pylväs nähdäksesi laskelman.',
     'chart.ruokaostostuki.detailSpend': 'Ruokaostokset vuodessa',
-    'chart.ruokaostostuki.detailVatPaid': 'Maksettu alv, ruuan kanta',
-    'chart.ruokaostostuki.detailVatGeneral': 'Alv yleisellä kannalla',
+    'chart.ruokaostostuki.detailVatPaid': 'Maksettu alv, ruoan kanta 2022',
+    'chart.ruokaostostuki.detailVatGeneral': 'Alv yleisellä kannalla 2022',
     'chart.ruokaostostuki.detailSubsidy': 'Tuki vuodessa',
     'video.embedTitle': 'Upotettu YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
@@ -84,8 +84,8 @@ export const ui = {
     'chart.ruokaostostuki.tableCaption': 'Matinköpsstöd per inkomstkvintil, euro per månad',
     'chart.ruokaostostuki.selectHint': 'Välj en stapel för att se uträkningen.',
     'chart.ruokaostostuki.detailSpend': 'Matinköp per år',
-    'chart.ruokaostostuki.detailVatPaid': 'Betald moms, matsatsen',
-    'chart.ruokaostostuki.detailVatGeneral': 'Moms enligt allmänna skattesatsen',
+    'chart.ruokaostostuki.detailVatPaid': 'Betald moms, matsatsen 2022',
+    'chart.ruokaostostuki.detailVatGeneral': 'Moms enligt allmänna skattesatsen 2022',
     'chart.ruokaostostuki.detailSubsidy': 'Stöd per år',
     'video.embedTitle': 'Inbäddad YouTube-video',
     'image.ruuanAlvEsimerkki.alt':
@@ -130,8 +130,8 @@ export const ui = {
       'Food-purchase subsidy by income quintile, euros per month',
     'chart.ruokaostostuki.selectHint': 'Select a bar to see the calculation.',
     'chart.ruokaostostuki.detailSpend': 'Food spending per year',
-    'chart.ruokaostostuki.detailVatPaid': 'VAT paid at the food rate',
-    'chart.ruokaostostuki.detailVatGeneral': 'VAT at the general rate',
+    'chart.ruokaostostuki.detailVatPaid': 'VAT paid at the 2022 food rate',
+    'chart.ruokaostostuki.detailVatGeneral': 'VAT at the 2022 general rate',
     'chart.ruokaostostuki.detailSubsidy': 'Subsidy per year',
     'video.embedTitle': 'Embedded YouTube video',
     'image.ruuanAlvEsimerkki.alt':
