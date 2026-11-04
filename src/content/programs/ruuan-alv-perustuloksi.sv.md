@@ -9,7 +9,6 @@ heroLines:
   - Matinköpsstödet
   - ska tillhöra folket,
   - inte kvittona
-unlisted: true
 citations: []
 ---
 

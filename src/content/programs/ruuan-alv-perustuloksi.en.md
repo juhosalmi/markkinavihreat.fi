@@ -9,7 +9,6 @@ heroLines:
   - The food-purchase subsidy
   - belongs to people,
   - not receipts
-unlisted: true
 citations: []
 ---
 
