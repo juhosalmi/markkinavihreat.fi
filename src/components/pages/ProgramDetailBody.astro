@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import ProgramFaq from '../ProgramFaq.astro'
 import ProgramHero from '../ProgramHero.astro'
 import ProgramSection from '../ProgramSection.astro'
+import ProgramCreators from '../ProgramCreators.astro'
 import ProgramSlides from '../ProgramSlides.astro'
 import QuoteBand from '../QuoteBand.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
@@ -88,6 +89,18 @@ const contributors = await Promise.all(
   }),
 )
 
+const creators = await Promise.all(
+  program.data.creators.map(async (slug) => {
+    const person = await getEntry('team', `${slug}.${locale}`)
+    if (!person) throw new Error(`Program lists unknown creator "${slug}"`)
+    return {
+      name: person.data.name,
+      photo: person.data.avatar ?? person.data.photo,
+      href: personPath(locale, slug),
+    }
+  }),
+)
+
 const JOIN_URL = 'https://www.vihreat.fi/liity/'
 
 const tones = assignSectionTones(sections)
@@ -142,6 +155,12 @@ if (faq) jsonLd.push(faq)
     lines={program.data.heroLines}
     leadParagraphs={leadParagraphs}
   />
+
+  {
+    creators.length > 0 && (
+      <ProgramCreators label={t(locale, 'programs.creators')} people={creators} />
+    )
+  }
 
   {
     sections.map((section, i) => {

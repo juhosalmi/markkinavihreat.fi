@@ -3,6 +3,7 @@ locale: en
 name: 'Arttu Laitinen'
 order: 15
 photo: '../../assets/team/Arttu-Laitinen.jpg'
+avatar: '../../assets/team/avatars/Arttu-Laitinen.jpg'
 candidateBadge: 'Parliamentary candidate in Southwest Finland'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=en&vaali=eduskuntavaalit-2027&alue=vp3&ehdokas=laitinen-arttu-10228&valilehti=donate'
 links:

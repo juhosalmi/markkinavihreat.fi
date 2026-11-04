@@ -3,7 +3,7 @@
  *
  * Programs and blog posts refer to team members by slug (the team file's
  * `<slug>` in `<slug>.<locale>.md`): programs through `citations[].person` and
- * `contributors`, posts through `authors`. Zod can't check those slugs against
+ * `contributors` and `creators`, posts through `authors`. Zod can't check those slugs against
  * another collection, so assertTeamRefs() does it at build time instead.
  *
  * Kept free of `astro:content` imports so it can be unit-tested with plain
@@ -18,6 +18,7 @@ interface ProgramLike {
     unlisted: boolean
     citations: Array<{ person: string; quote: string }>
     contributors: string[]
+    creators: string[]
   }
 }
 
@@ -76,7 +77,11 @@ export function assertTeamRefs(
   const problems: string[] = []
 
   for (const program of programs) {
-    const refs = [...program.data.citations.map((c) => c.person), ...program.data.contributors]
+    const refs = [
+      ...program.data.citations.map((c) => c.person),
+      ...program.data.contributors,
+      ...program.data.creators,
+    ]
     for (const slug of refs) {
       if (!known.has(slug)) problems.push(`programs/${program.id}: unknown team member "${slug}"`)
     }
@@ -100,7 +105,7 @@ export interface ProgramInvolvement<P extends ProgramLike> {
 
 /**
  * What a person took part in, in one locale: listed programs where they're
- * cited or a contributor (newest first), and posts they wrote (newest first).
+ * cited, a contributor or a creator (newest first), and posts they wrote (newest first).
  * Unlisted programs are left out — they're noindex and not meant to be
  * announced, so a person page shouldn't link to them either.
  */
@@ -117,7 +122,10 @@ export function involvementFor<P extends ProgramLike, B extends PostLike>(
     .filter(inLocale)
     .filter((p) => !p.data.unlisted)
     .filter(
-      (p) => p.data.contributors.includes(slug) || p.data.citations.some((c) => c.person === slug),
+      (p) =>
+        p.data.contributors.includes(slug) ||
+        p.data.creators.includes(slug) ||
+        p.data.citations.some((c) => c.person === slug),
     )
     .sort(newestFirst)
     .map((program) => ({

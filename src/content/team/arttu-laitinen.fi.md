@@ -3,6 +3,7 @@ locale: fi
 name: 'Arttu Laitinen'
 order: 15
 photo: '../../assets/team/Arttu-Laitinen.jpg'
+avatar: '../../assets/team/avatars/Arttu-Laitinen.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Varsinais-Suomessa'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=fi&vaali=eduskuntavaalit-2027&alue=vp3&ehdokas=laitinen-arttu-10228&valilehti=donate'
 links:

@@ -3,6 +3,7 @@ locale: en
 name: 'Ville Aarnio'
 order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
+avatar: '../../assets/team/avatars/Ville-Aarnio.jpg'
 candidateBadge: 'Parliamentary candidate in Southeast Finland'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=en&vaali=eduskuntavaalit-2027&alue=vp8&ehdokas=aarnio-ville-10208&valilehti=donate'
 links:

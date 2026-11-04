@@ -3,6 +3,7 @@ locale: sv
 name: 'Lauri Lavanti'
 order: 16
 photo: '../../assets/team/Lauri-Lavanti.jpg'
+avatar: '../../assets/team/avatars/Lauri-Lavanti.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=lavanti-lauri-10202&valilehti=donate'
 profileUrl: 'https://lavanti.fi/sv/om-lauri/'
