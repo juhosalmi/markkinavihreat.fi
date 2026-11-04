@@ -10,6 +10,13 @@ heroLines:
   - belongs to people,
   - not receipts
 citations: []
+signatories:
+  - lauri-lavanti
+  - atte-harjanne
+  - taru-hallikainen
+  - johanna-muurinen
+  - arttu-laitinen
+  - ville-aarnio
 ---
 
 ## Translation coming soon

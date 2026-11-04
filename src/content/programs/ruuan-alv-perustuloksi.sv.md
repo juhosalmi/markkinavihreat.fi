@@ -10,6 +10,13 @@ heroLines:
   - ska tillhöra folket,
   - inte kvittona
 citations: []
+signatories:
+  - lauri-lavanti
+  - atte-harjanne
+  - taru-hallikainen
+  - johanna-muurinen
+  - arttu-laitinen
+  - ville-aarnio
 ---
 
 ## Översättning på väg

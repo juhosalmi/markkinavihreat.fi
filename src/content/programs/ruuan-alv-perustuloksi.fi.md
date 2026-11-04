@@ -10,6 +10,13 @@ heroLines:
   - ruuan alv
   - perustuloksi
 citations: []
+signatories:
+  - lauri-lavanti
+  - atte-harjanne
+  - taru-hallikainen
+  - johanna-muurinen
+  - arttu-laitinen
+  - ville-aarnio
 ---
 
 Ruoalla on Suomessa alennettu arvonlisäverokanta jota perustellaan pienituloisten tarpeilla. Ruuan alennetulla verokannalla kuitenkin tuetaan enemmän hyvätuloisia kuin pienituloisia. Ei ole oikeudenmukaista tai järkevää tukea hyväosaisten ruokaostoksilla tällä tavalla.
