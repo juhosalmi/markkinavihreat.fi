@@ -5,6 +5,7 @@ order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
 avatar: '../../assets/team/avatars/Johanna-Muurinen.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Uudellamaalla'
+district: uusimaa
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=fi&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=muurinen-johanna-10242&valilehti=donate'
 links:
   - type: website
