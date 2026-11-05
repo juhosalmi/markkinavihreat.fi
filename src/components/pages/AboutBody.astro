@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import PersonCard from '../PersonCard.astro'
 import ShuffleOnLoad from '../ShuffleOnLoad.astro'
 import { forLocale, localePath, parseLocalizedId, type Locale } from '../../lib/content'
-import { firstSentenceOfBio, personPath } from '../../lib/team'
+import { personPath } from '../../lib/team'
 import { t } from '../../i18n/ui'
 import { SITE_URL, teamCollectionNode } from '../../lib/structuredData'
 import { about } from '../../i18n/pages'
@@ -65,7 +65,8 @@ const jsonLd = [
   path="/ketka/"
   jsonLd={jsonLd}
 >
-  <section class="content-max mx-auto px-4 py-16 sm:px-6">
+  <!-- Wider than content-max so the compact gallery fits five tiles a row. -->
+  <section class="mx-auto max-w-[1100px] px-4 py-16 sm:px-6">
     <h1 class="text-4xl sm:text-5xl">{copy.title}</h1>
     <p class="text-harmaa mt-4 max-w-2xl">{copy.intro}</p>
 
@@ -111,7 +112,7 @@ const jsonLd = [
           )}
           <div
             id={section.id}
-            class="mt-6 grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-[28px]"
+            class="mt-6 grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] gap-3 sm:grid-cols-[repeat(auto-fill,minmax(190px,1fr))] sm:gap-4"
           >
             {section.people.map((person) => (
               <PersonCard
@@ -122,8 +123,6 @@ const jsonLd = [
                 district={person.data.district}
                 donationUrl={person.data.donationUrl}
                 donateLabel={t(locale, 'team.donate')}
-                summary={firstSentenceOfBio(person.body ?? '')}
-                cta={t(locale, 'blog.readMore')}
               />
             ))}
           </div>
