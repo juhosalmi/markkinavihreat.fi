@@ -48,6 +48,11 @@ const team = defineCollection({
       // frame as everyone else's, for small round thumbnails (a program's
       // creators). The full photo's framing varies too much to crop by CSS.
       avatar: image().optional(),
+      // The photo pre-cropped to the gallery's 3:4 card so every face sits at
+      // the same size and height (face box ~60% of the frame height, centred
+      // at 43%). The size is the tightest original's, so every crop lies
+      // inside its photo — nothing is extended. Falls back to `photo`.
+      card: image().optional(),
       candidateBadge: z.string().optional(),
       // Language-neutral key of the candidate's electoral district, for the
       // about page's candidate count and district filter. Required alongside

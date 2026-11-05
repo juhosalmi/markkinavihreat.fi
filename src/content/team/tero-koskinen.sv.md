@@ -3,6 +3,7 @@ locale: sv
 name: 'Tero Koskinen'
 order: 12
 photo: '../../assets/team/Tero-Koskinen.jpg'
+card: '../../assets/team/cards/Tero-Koskinen.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 district: uusimaa
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=koskinen-tero-10159&valilehti=donate'

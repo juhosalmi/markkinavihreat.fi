@@ -3,6 +3,7 @@ locale: en
 name: 'Johanna Muurinen'
 order: 19
 photo: '../../assets/team/Johanna-Muurinen.jpg'
+card: '../../assets/team/cards/Johanna-Muurinen.jpg'
 avatar: '../../assets/team/avatars/Johanna-Muurinen.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
 district: uusimaa

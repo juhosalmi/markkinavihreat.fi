@@ -3,6 +3,7 @@ locale: sv
 name: 'Ville Aarnio'
 order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
+card: '../../assets/team/cards/Ville-Aarnio.jpg'
 avatar: '../../assets/team/avatars/Ville-Aarnio.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Sydöstra Finland'
 district: kaakkois-suomi
