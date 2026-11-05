@@ -10,4 +10,4 @@ links:
     url: 'https://instagram.com/ojmatilainen'
 ---
 
-Onni-Jonatan Matilainen on varakaupunginvaltuutettu Oulusta, puoluevaltuuston varajäsen ja taloustieteen maisteriopiskelija. Politiikassa hänen keskeisiin teemoihin kuuluu muiden muassa kestävä kehitys, ilmastopolitiikka, elinkeinopolitiikka ja uudistava sosiaalipolitiikka.
+Onni-Jonatan Matilainen on entinen varakaupunginvaltuutettu Oulusta, puoluevaltuuston varajäsen ja taloustieteen maisteriopiskelija. Matilainen työskentelee tällä hetkellä OECD:lla kansainvälisen veropolitiikan parissa. Politiikassa hänen keskeisiin teemoihin kuuluu muiden muassa kestävä kehitys, ilmastopolitiikka, elinkeinopolitiikka ja uudistava sosiaalipolitiikka.
