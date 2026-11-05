@@ -4,6 +4,7 @@ name: 'Pyry Väre'
 order: 34
 photo: '../../assets/team/Pyry-Väre.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Satakunta'
+district: satakunta
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp4&ehdokas=v%C3%A4re-pyry-10123&valilehti=donate'
 links:
   - type: website
