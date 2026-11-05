@@ -11,6 +11,8 @@ interface Props {
   href: string
   photo: ImageMetadata
   candidateBadge?: string
+  /** District key, exposed on the badge for the about page's district filter. */
+  district?: string
   /** The candidate's donation form, linked beside the cta. */
   donationUrl?: string
   /** Link text for the donation form, e.g. "Lahjoita". */
@@ -21,7 +23,8 @@ interface Props {
   cta: string
 }
 
-const { name, href, photo, candidateBadge, donationUrl, donateLabel, summary, cta } = Astro.props
+const { name, href, photo, candidateBadge, district, donationUrl, donateLabel, summary, cta } =
+  Astro.props
 ---
 
 <div
@@ -49,7 +52,10 @@ const { name, href, photo, candidateBadge, donationUrl, donateLabel, summary, ct
   </h3>
   {
     candidateBadge && (
-      <span class="bg-kerma text-musta self-start rounded-[20px] px-[10px] py-[5px] text-[12px] font-semibold tracking-[0.01em]">
+      <span
+        data-district={district}
+        class="bg-kerma text-musta self-start rounded-[20px] px-[10px] py-[5px] text-[12px] font-semibold tracking-[0.01em]"
+      >
         {candidateBadge}
       </span>
     )
