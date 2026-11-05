@@ -7,6 +7,9 @@ candidateBadge: 'Riksdagsvalskandidat i Nyland'
 district: uusimaa
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=koskinen-tero-10159&valilehti=donate'
 links:
+  - type: website
+    url: 'https://terokoskinen.fi'
+    label: 'terokoskinen.fi'
   - type: bluesky
     url: 'https://bsky.app/profile/terokoskinen.bsky.social'
   - type: threads
@@ -17,4 +20,4 @@ links:
     url: 'https://www.instagram.com/aijavihrea/'
 ---
 
-Tero Koskinen arbetar som beredskapschef vid räddningsverket och välfärdsområdet. Koskinens specialkompetens omfattar beredskap och krisberedskap inom företag, social- och hälsovård samt räddningsväsendet. Centrala teman för Koskinen är säkerhet, natur och miljö samt en aktiv livsstil.
+Tero Koskinen är en erfaren beredskapschef och arbetar i ett beredskapsprojekt inom ett välfärdsområde. Koskinens specialkompetens omfattar beredskap och krisberedskap inom företag, social- och hälsovård samt räddningsväsendet. Centrala teman för Koskinen är säkerhet, natur och miljö samt en aktiv livsstil.

@@ -7,6 +7,9 @@ links:
   - type: website
     url: 'https://villekarttunen.fi'
     label: 'villekarttunen.fi'
+  - type: website
+    url: 'https://armonvihreat.fi/srk-vaalit2026/ehdokasgalleria/ville-veikko-karttunen/'
+    label: 'armonvihreat.fi'
   - type: linkedin
     url: 'https://www.linkedin.com/in/veksi/'
 ---
