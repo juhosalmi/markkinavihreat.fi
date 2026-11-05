@@ -5,6 +5,7 @@ order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
 avatar: '../../assets/team/avatars/Ville-Aarnio.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Sydöstra Finland'
+district: kaakkois-suomi
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=se&vaali=eduskuntavaalit-2027&alue=vp8&ehdokas=aarnio-ville-10208&valilehti=donate'
 links:
   - type: website

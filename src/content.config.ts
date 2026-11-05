@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content'
 import { glob } from 'astro/loaders'
 import { z } from 'zod'
+import { DISTRICTS } from './lib/districts'
 
 const locale = z.enum(['fi', 'sv', 'en'])
 
@@ -48,6 +49,10 @@ const team = defineCollection({
       // creators). The full photo's framing varies too much to crop by CSS.
       avatar: image().optional(),
       candidateBadge: z.string().optional(),
+      // Language-neutral key of the candidate's electoral district, for the
+      // about page's candidate count and district filter. Required alongside
+      // `candidateBadge` (checked in AboutBody.astro).
+      district: z.enum(DISTRICTS).optional(),
       // The candidate's donation form on vihreat.fi, deep-linked to the
       // donate tab in this entry's language (the gallery's `kieli` is fi/se/en).
       donationUrl: z.url().optional(),

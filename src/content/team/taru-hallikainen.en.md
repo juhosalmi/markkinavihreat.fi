@@ -5,6 +5,7 @@ order: 32
 photo: '../../assets/team/Taru-Hallikainen.jpg'
 avatar: '../../assets/team/avatars/Taru-Hallikainen.jpg'
 candidateBadge: 'Parliamentary candidate in Oulu'
+district: oulu
 links:
   - type: website
     url: 'https://taruhallikainen.weebly.com/'

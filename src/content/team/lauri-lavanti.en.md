@@ -5,6 +5,7 @@ order: 16
 photo: '../../assets/team/Lauri-Lavanti.jpg'
 avatar: '../../assets/team/avatars/Lauri-Lavanti.jpg'
 candidateBadge: 'Parliamentary candidate in Uusimaa'
+district: uusimaa
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=en&vaali=eduskuntavaalit-2027&alue=vp2&ehdokas=lavanti-lauri-10202&valilehti=donate'
 profileUrl: 'https://lavanti.fi/en/about/'
 wikidata: 'Q139711658'
