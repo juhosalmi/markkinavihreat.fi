@@ -6,6 +6,9 @@ photo: '../../assets/team/Pyry-Väre.jpg'
 candidateBadge: 'Eduskuntavaaliehdokas Satakunnassa'
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=fi&vaali=eduskuntavaalit-2027&alue=vp4&ehdokas=v%C3%A4re-pyry-10123&valilehti=donate'
 links:
+  - type: website
+    url: 'https://www.pyryvare.fi/'
+    label: 'pyryvare.fi'
   - type: instagram
     url: 'https://www.instagram.com/pyryndo/'
   - type: facebook
