@@ -3,6 +3,7 @@ locale: en
 name: 'Ville Aarnio'
 order: 1
 photo: '../../assets/team/Ville-Aarnio.jpg'
+card: '../../assets/team/cards/Ville-Aarnio.jpg'
 avatar: '../../assets/team/avatars/Ville-Aarnio.jpg'
 candidateBadge: 'Parliamentary candidate in Southeast Finland'
 district: kaakkois-suomi

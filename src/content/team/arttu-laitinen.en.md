@@ -3,6 +3,7 @@ locale: en
 name: 'Arttu Laitinen'
 order: 15
 photo: '../../assets/team/Arttu-Laitinen.jpg'
+card: '../../assets/team/cards/Arttu-Laitinen.jpg'
 avatar: '../../assets/team/avatars/Arttu-Laitinen.jpg'
 candidateBadge: 'Parliamentary candidate in Southwest Finland'
 district: varsinais-suomi

@@ -117,7 +117,7 @@ const jsonLd = [
               <PersonCard
                 name={person.data.name}
                 href={personPath(locale, parseLocalizedId(person.id).slug)}
-                photo={person.data.photo}
+                photo={person.data.card ?? person.data.photo}
                 candidateBadge={person.data.candidateBadge}
                 district={person.data.district}
                 donationUrl={person.data.donationUrl}

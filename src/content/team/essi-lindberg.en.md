@@ -3,6 +3,7 @@ locale: en
 name: 'Essi Lindberg'
 order: 33
 photo: '../../assets/team/Essi-Lindberg.jpg'
+card: '../../assets/team/cards/Essi-Lindberg.jpg'
 candidateBadge: 'Parliamentary candidate in Southwest Finland'
 district: varsinais-suomi
 donationUrl: 'https://www.vihreat.fi/eduskuntavaaliehdokkaat-2027/?kieli=en&vaali=eduskuntavaalit-2027&alue=vp3&ehdokas=lindberg-essi-10221&valilehti=donate'

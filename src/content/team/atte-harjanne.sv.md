@@ -3,6 +3,7 @@ locale: sv
 name: 'Atte Harjanne'
 order: 5
 photo: '../../assets/team/Atte-Harjanne.jpg'
+card: '../../assets/team/cards/Atte-Harjanne.jpg'
 avatar: '../../assets/team/avatars/Atte-Harjanne.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Helsingfors'
 district: helsinki

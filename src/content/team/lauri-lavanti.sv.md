@@ -3,6 +3,7 @@ locale: sv
 name: 'Lauri Lavanti'
 order: 16
 photo: '../../assets/team/Lauri-Lavanti.jpg'
+card: '../../assets/team/cards/Lauri-Lavanti.jpg'
 avatar: '../../assets/team/avatars/Lauri-Lavanti.jpg'
 candidateBadge: 'Riksdagsvalskandidat i Nyland'
 district: uusimaa
