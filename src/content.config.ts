@@ -54,6 +54,10 @@ const team = defineCollection({
       // inside its photo — nothing is extended. Falls back to `photo`.
       card: image().optional(),
       candidateBadge: z.string().optional(),
+      // A one-line teaser for the gallery card, when the person wants something
+      // other than the bio's opening sentence there. The person page and its
+      // JSON-LD still use the bio.
+      summary: z.string().optional(),
       // Language-neutral key of the candidate's electoral district, for the
       // about page's candidate count and district filter. Required alongside
       // `candidateBadge` (checked in AboutBody.astro).
