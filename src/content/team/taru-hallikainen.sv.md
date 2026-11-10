@@ -5,7 +5,7 @@ order: 32
 photo: '../../assets/team/Taru-Hallikainen.jpg'
 card: '../../assets/team/cards/Taru-Hallikainen.jpg'
 avatar: '../../assets/team/avatars/Taru-Hallikainen.jpg'
-candidateBadge: 'Riksdagsvalskandidat i Uleåborg'
+candidateBadge: 'Riksdagsvalskandidat i Uleåborgs valkrets'
 district: oulu
 links:
   - type: website

@@ -24,7 +24,7 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Kaakkois-Suomi',
     'savo-karjala': 'Savo-Karjala',
-    oulu: 'Oulu',
+    oulu: 'Oulun vaalipiiri',
   },
   sv: {
     helsinki: 'Helsingfors',
@@ -33,7 +33,7 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Sydöstra Finland',
     'savo-karjala': 'Savolax–Karelen',
-    oulu: 'Uleåborg',
+    oulu: 'Uleåborgs valkrets',
   },
   en: {
     helsinki: 'Helsinki',
@@ -42,6 +42,6 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Southeast Finland',
     'savo-karjala': 'Savo-Karelia',
-    oulu: 'Oulu',
+    oulu: 'Oulu constituency',
   },
 }
