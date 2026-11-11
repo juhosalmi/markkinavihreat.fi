@@ -11,6 +11,7 @@ export const DISTRICTS = [
   'satakunta',
   'kaakkois-suomi',
   'savo-karjala',
+  'vaasa',
   'oulu',
 ] as const
 
@@ -24,6 +25,7 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Kaakkois-Suomi',
     'savo-karjala': 'Savo-Karjala',
+    vaasa: 'Vaasan vaalipiiri',
     oulu: 'Oulun vaalipiiri',
   },
   sv: {
@@ -33,6 +35,7 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Sydöstra Finland',
     'savo-karjala': 'Savolax–Karelen',
+    vaasa: 'Vasa valkrets',
     oulu: 'Uleåborgs valkrets',
   },
   en: {
@@ -42,6 +45,7 @@ export const districtNames: Record<Locale, Record<District, string>> = {
     satakunta: 'Satakunta',
     'kaakkois-suomi': 'Southeast Finland',
     'savo-karjala': 'Savo-Karelia',
+    vaasa: 'Vaasa constituency',
     oulu: 'Oulu constituency',
   },
 }
