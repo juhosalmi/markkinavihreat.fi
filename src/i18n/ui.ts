@@ -11,7 +11,7 @@ export const ui = {
     'nav.whatsapp': 'Liity WhatsApp-ryhmään',
     'nav.lang': 'Kieli',
     'footer.license': 'Sisältö julkaistu lisenssillä',
-    'footer.disclaimer': 'Markkinavihreät ei ole Vihreä liiton virallinen sivusto.',
+    'footer.disclaimer': 'Markkinavihreät ei ole Vihreän liiton virallinen sivusto.',
     'blog.readMore': 'Lue lisää',
     'team.donate': 'Lahjoita',
     'blog.empty': 'Blogikirjoituksia ei vielä ole julkaistu.',
