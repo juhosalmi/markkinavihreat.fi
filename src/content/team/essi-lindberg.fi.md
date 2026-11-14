@@ -16,6 +16,8 @@ links:
     url: 'https://bsky.app/profile/essilindberg.bsky.social'
   - type: facebook
     url: 'https://www.facebook.com/share/1DEGY581Gf/'
+  - type: instagram
+    url: 'https://www.instagram.com/essilindberg/'
 ---
 
 Essi Lindberg on turkulainen Varsinais-Suomen Vihreiden eduskuntavaaliehdokas, Turun kaupunginvaltuutettu, hyvinvointialue Varhan aluevaltuutettu ja Vihreiden puoluevaltuuston jäsen. Työkseen hän johtaa taloustieteellisen tutkimuslaitoksen viestintää.

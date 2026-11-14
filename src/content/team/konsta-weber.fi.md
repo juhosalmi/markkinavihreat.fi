@@ -17,6 +17,8 @@ links:
     url: 'https://www.linkedin.com/in/konstaweber/'
   - type: facebook
     url: 'https://www.facebook.com/konsta.weber/'
+  - type: instagram
+    url: 'https://www.instagram.com/konstaweber/'
 ---
 
 Konsta Weber on Vihreiden eduskuntavaaliehdokas Varsinais-Suomen vaalipiirissä. Hän on Turun kaupunginvaltuutettu vuodesta 2017 ja Turun Sataman hallituksen puheenjohtaja. Weber on sarjayrittäjä: hän on perustanut ja myynyt ohjelmistoyrityksiä ja toimii nyt Fit+:n osakkaana ja liiketoimintajohtajana. Koulutukseltaan hän on KTM ja FM. Hänen tavoitteensa on Suomi, jossa uudet yritykset saavat kasvaa, työ ja yrittäjyys kannattavat aina ja ympäristöhaitalla on hinta. Pehmeitä arvoja, kovaa osaamista.

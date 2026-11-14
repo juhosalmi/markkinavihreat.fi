@@ -16,6 +16,8 @@ links:
     url: 'https://bsky.app/profile/essilindberg.bsky.social'
   - type: facebook
     url: 'https://www.facebook.com/share/1DEGY581Gf/'
+  - type: instagram
+    url: 'https://www.instagram.com/essilindberg/'
 ---
 
 Essi Lindberg är Egentliga Finlands Grönas riksdagsvalskandidat från Åbo, stadsfullmäktigeledamot i Åbo, fullmäktigeledamot i välfärdsområdet Varha och medlem av De Grönas partifullmäktige. Till yrket leder hon kommunikationen vid ett nationalekonomiskt forskningsinstitut.
