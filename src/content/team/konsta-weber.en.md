@@ -17,6 +17,8 @@ links:
     url: 'https://www.linkedin.com/in/konstaweber/'
   - type: facebook
     url: 'https://www.facebook.com/konsta.weber/'
+  - type: instagram
+    url: 'https://www.instagram.com/konstaweber/'
 ---
 
 Konsta Weber is the Greens' parliamentary candidate in the Southwest Finland electoral district. He has been a member of the Turku City Council since 2017 and chairs the board of the Port of Turku. Weber is a serial entrepreneur: he has founded and sold software companies and is now a partner and business director at Fit+. He holds two master's degrees (KTM and FM). His goal is a Finland where new companies get to grow, where work and entrepreneurship always pay, and where environmental harm has a price. Soft values, hard skills.
