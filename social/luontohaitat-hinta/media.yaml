@@ -1,0 +1,19 @@
+# Paste under each platform's media: in <date>-<slug>-posts.yaml (lavanti-2027).
+default:
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-1.jpg"
+        alt: "Teksti: Yli puolet suomalaisista haluaa saastuttamiselle hinnan. Vaikka se vaikuttaisi arjen kustannuksiin."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-2.jpg"
+        alt: "Teksti: Nyt hinta ei kerro totuutta. Saastuttava tuote voi olla halpa. Vika ei ole kuluttajassa vaan hinnassa."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-3.jpg"
+        alt: "Teksti: Entä jos saastuttaminen ei enää kannattaisi? Kun luontohaitoille asetetaan hinta, saastuttaja maksaa."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-4.jpg"
+        alt: "Teksti: Tuodaan valintojen todelliset kustannukset näkyviin ja tehdään puhtaasta tuotannosta kannattavampaa."
+tiktok:
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-tiktok-1.jpg"
+        alt: "Teksti: Yli puolet suomalaisista haluaa saastuttamiselle hinnan. Vaikka se vaikuttaisi arjen kustannuksiin."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-tiktok-2.jpg"
+        alt: "Teksti: Nyt hinta ei kerro totuutta. Saastuttava tuote voi olla halpa. Vika ei ole kuluttajassa vaan hinnassa."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-tiktok-3.jpg"
+        alt: "Teksti: Entä jos saastuttaminen ei enää kannattaisi? Kun luontohaitoille asetetaan hinta, saastuttaja maksaa."
+      - url: "https://markkinavihreat.fi/social/2026-11-23-luontohaitat-hinta-tiktok-4.jpg"
+        alt: "Teksti: Tuodaan valintojen todelliset kustannukset näkyviin ja tehdään puhtaasta tuotannosta kannattavampaa."
