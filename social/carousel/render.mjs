@@ -4,10 +4,10 @@
 //   ONLY=2,3 node social/carousel/render.mjs <slug> # re-render some slides
 //
 // Writes, for N slides:
-//   social/<slug>/dia-N.png                          2160×2700 review copies
+//   social/<slug>/dia-N.png                          2160×2880 review copies
 //   social/<slug>/karuselli.png                      all slides in one row (preview)
-//   public/social/<date>-<slug>-N.jpg                2160×2700 for Buffer (IG, LI, Threads…)
-//   public/social/<date>-<slug>-tiktok-N.jpg         1080×1350 (TikTok caps 2,073,600 px)
+//   public/social/<date>-<slug>-N.jpg                2160×2880 for Buffer (IG, LI, Threads…)
+//   public/social/<date>-<slug>-tiktok-N.jpg         1080×1440 (TikTok caps 2,073,600 px)
 // public/ is served at https://markkinavihreat.fi/social/… once the branch is pushed.
 //
 // Deck format and slide types: social/carousel/README.md. Text marked *like this*
@@ -40,6 +40,15 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(deck.date ?? '')) {
   process.exit(2)
 }
 const BASE = `${deck.date}-${slug}`
+
+// Aspect: 3:4 (1080×1440) by default, the tallest feed format every platform takes.
+// "aspect": "4:5" (1080×1350) only reproduces decks published before 2026-11-24.
+const ASPECTS = { '3:4': 1440, '4:5': 1350 }
+const H = ASPECTS[deck.aspect ?? '3:4']
+if (!H) {
+  console.error(`deck.json: "aspect" must be one of ${Object.keys(ASPECTS).join(', ')}`)
+  process.exit(2)
+}
 
 // ---- brand tokens (from src/styles/global.css) ----
 const C = {
@@ -133,7 +142,7 @@ const css = `
     src:url(data:font/ttf;base64,${fontExtra}) format('truetype'); }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Hanken Grotesk', sans-serif; font-weight:600; -webkit-font-smoothing:antialiased; }
-  .slide { width:1080px; height:1350px; overflow:hidden; position:relative; }
+  .slide { width:1080px; height:${H}px; overflow:hidden; position:relative; }
   .pad { position:absolute; inset:0; padding:92px 88px; display:flex; flex-direction:column; }
   .theme-light { background:${C.kerma}; color:${C.musta}; }
   .theme-tint  { background:${C.surfaceGreen}; color:${C.metsa}; }
@@ -191,7 +200,7 @@ const html = `<!doctype html><html lang="fi"><head><meta charset="utf-8"><style>
 
 const browser = await chromium.launch()
 const page = await (
-  await browser.newContext({ viewport: { width: 1080, height: 1350 }, deviceScaleFactor: 2 })
+  await browser.newContext({ viewport: { width: 1080, height: H }, deviceScaleFactor: 2 })
 ).newPage()
 await page.setContent(html, { waitUntil: 'load' })
 await page.evaluate(async () => {
@@ -234,11 +243,11 @@ for (let i = 1; i <= slides.length; i++) {
 const imgs = deck.slides
   .map((_, i) => `<img src="data:image/png;base64,${b64(join(DIR, `dia-${i + 1}.png`))}">`)
   .join('')
-await page.setViewportSize({ width: 600 * total, height: 800 })
+await page.setViewportSize({ width: 600 * total, height: Math.round(H / 2) + 100 })
 await page.setContent(
   `<!doctype html><html><head><style>body{margin:0;background:#dcdcd6}
   #m{display:flex;gap:24px;padding:24px;width:max-content}
-  img{width:540px;height:675px;display:block;border-radius:12px}</style></head>
+  img{width:540px;height:${H / 2}px;display:block;border-radius:12px}</style></head>
   <body><div id="m">${imgs}</div></body></html>`,
   { waitUntil: 'load' },
 )

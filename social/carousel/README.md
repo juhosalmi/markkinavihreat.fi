@@ -12,11 +12,11 @@ Tulosteet, kun dioja on N:
 
 | Tiedosto                                   | Koko      | Käyttö                                           |
 | ------------------------------------------ | --------- | ------------------------------------------------ |
-| `social/<slug>/dia-N.png`                  | 2160×2700 | tarkistus                                        |
+| `social/<slug>/dia-N.png`                  | 2160×2880 | tarkistus                                        |
 | `social/<slug>/karuselli.png`              | rivi      | koko karuselli yhdellä silmäyksellä              |
 | `social/<slug>/media.yaml`                 | –         | Bufferin `media:`-listat alt-teksteineen         |
-| `public/social/<date>-<slug>-N.jpg`        | 2160×2700 | Buffer: IG, LinkedIn, Threads, Bluesky, Mastodon |
-| `public/social/<date>-<slug>-tiktok-N.jpg` | 1080×1350 | TikTok (enintään 2 073 600 px)                   |
+| `public/social/<date>-<slug>-N.jpg`        | 2160×2880 | Buffer: IG, LinkedIn, Threads, Bluesky, Mastodon |
+| `public/social/<date>-<slug>-tiktok-N.jpg` | 1080×1440 | TikTok (enintään 2 073 600 px)                   |
 
 `public/social/` näkyy osoitteessa `https://markkinavihreat.fi/social/…`, kun haara on
 pushattu (jokainen push deployaa tuotantoon).
@@ -73,4 +73,5 @@ Sama deck tuottaa aina samat kuvat, joten muutokset tehdään `deck.json`iin, ei
   kicker pienenee automaattisesti.
 - `cta`: tumma loppudia, linkki ja Vihreät-logo.
 - `alt`: pakollinen, enintään 125 merkkiä (Buffer).
+- `aspect` (valinnainen, deckin juuressa): oletus `3:4` (1080×1440), korkein muoto, jonka kaikki alustat ottavat ja joka peittää puhelimessa eniten ruutua. `4:5` vain ennen 24.11.2026 julkaistujen deckien uusintaan.
 - `eyebrow` (valinnainen, deckin juuressa): yläreunan teksti, oletus `Markkinavihreät`.

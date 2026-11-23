@@ -93,7 +93,7 @@ Julkaisuajan jälkeen: `node scripts/buffer-post.mjs get <id…> --json` → jok
 
 ## Opitut sudenkuopat
 
-- TikTok hylkää yli 2 073 600 px kuvat → siksi `-tiktok-N.jpg` 1080×1350.
+- Kuvat ovat aina 3:4 (1080×1440, renderöijän oletus); älä vaihda 4:5:een. TikTok hylkää yli 2 073 600 px kuvat → siksi `-tiktok-N.jpg` 1080×1440.
 - Buffer: alt-teksti ≤ 125 merkkiä; `session.md` pakollinen; `themes` pakollinen.
 - Remote Control -istunnosta ei voi käynnistää uutta sessiota toiseen repoon: aja lavanti-2027:n
   skriptit suoraan tästä istunnosta absoluuttisilla poluilla.
