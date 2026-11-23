@@ -249,7 +249,8 @@ const media = (suffix) =>
   deck.slides
     .map(
       (s, i) =>
-        `      - url: "https://markkinavihreat.fi/social/${BASE}-${suffix}${i + 1}.jpg"\n        alt: ${JSON.stringify(s.alt)}`,
+        // Prettier-clean YAML (CI runs format:check); indent it under media: when pasting.
+        `  - url: 'https://markkinavihreat.fi/social/${BASE}-${suffix}${i + 1}.jpg'\n    alt: '${s.alt.replace(/'/g, "''")}'`,
     )
     .join('\n')
 writeFileSync(
