@@ -218,6 +218,11 @@ for (let i = 1; i <= slides.length; i++) {
   // Publish copy for Buffer: served at markkinavihreat.fi/social/…
   const jpg = join(REPO, `public/social/2026-11-23-luontohaitat-hinta-${i}.jpg`)
   await page.locator(`#slide-${i}`).screenshot({ path: jpg, type: 'jpeg', quality: 90 })
+  // TikTok caps images at 2,073,600 px, so it gets a 1x (1080×1350) copy.
+  const tt = join(REPO, `public/social/2026-11-23-luontohaitat-hinta-tiktok-${i}.jpg`)
+  await page
+    .locator(`#slide-${i}`)
+    .screenshot({ path: tt, type: 'jpeg', quality: 90, scale: 'css' })
 }
 
 await browser.close()
