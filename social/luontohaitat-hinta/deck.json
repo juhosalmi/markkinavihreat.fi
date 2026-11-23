@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-23",
+  "aspect": "4:5",
+  "slides": [
+    {
+      "type": "cover",
+      "title": "Yli puolet suomalaisista haluaa saastuttamiselle *hinnan.*",
+      "lines": ["Vaikka se vaikuttaisi arjen kustannuksiin", "(Verian 23.11.2026)"],
+      "alt": "Teksti: Yli puolet suomalaisista haluaa saastuttamiselle hinnan. Vaikka se vaikuttaisi arjen kustannuksiin."
+    },
+    {
+      "type": "list",
+      "theme": "light",
+      "title": "Nyt hinta ei kerro totuutta",
+      "intro": "Kun luontohaitoilla ei ole hintaa:",
+      "mark": "x",
+      "items": [
+        "Tuotteen voi myydä halvalla, vaikka tuotanto saastuttaa",
+        "Kestävämmin tuottava häviää hintakilpailussa",
+        "Päästöjä ei lue kauppakuitissa"
+      ],
+      "kicker": "Vika ei ole kuluttajassa *vaan hinnassa.*",
+      "alt": "Teksti: Nyt hinta ei kerro totuutta. Saastuttava tuote voi olla halpa. Vika ei ole kuluttajassa vaan hinnassa."
+    },
+    {
+      "type": "list",
+      "theme": "tint",
+      "title": "Entä jos saastuttaminen ei enää kannattaisi?",
+      "intro": "Kun luontohaitoille asetetaan hinta:",
+      "mark": "ok",
+      "items": [
+        "Saastuttaja maksaa aiheuttamistaan haitoista.",
+        "Vastuulliset yritykset pärjäävät paremmin ja ympäristöinnovaatiot kannattavat.",
+        "Kuluttajat voivat vertailla hintoja, jotka huomioivat myös ympäristöhaitat."
+      ],
+      "kicker": "Näin *markkinat* alkavat ohjata kestävämpiin valintoihin ja kestävään tuotantoon.",
+      "alt": "Teksti: Entä jos saastuttaminen ei enää kannattaisi? Kun luontohaitoille asetetaan hinta, saastuttaja maksaa."
+    },
+    {
+      "type": "cta",
+      "text": "Tuodaan valintojen todelliset kustannukset näkyviin ja tehdään puhtaasta tuotannosta *kannattavampaa.*",
+      "url": "markkinavihreat.fi",
+      "alt": "Teksti: Tuodaan valintojen todelliset kustannukset näkyviin ja tehdään puhtaasta tuotannosta kannattavampaa."
+    }
+  ]
+}
