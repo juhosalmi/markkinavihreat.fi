@@ -11,12 +11,12 @@ links:
   - type: website
     url: 'https://minervakastehelmi.com/'
     label: 'minervakastehelmi.com'
+  - type: threads
+    url: 'https://www.threads.com/@minervakastehelmi'
   - type: instagram
     url: 'https://www.instagram.com/minervakastehelmi/'
   - type: facebook
-    url: 'https://www.facebook.com/kastehelmiminerva/'
-  - type: tiktok
-    url: 'https://www.tiktok.com/@minervakastehelmi'
+    url: 'https://facebook.com/kastehelmiminerva/'
   - type: x
     url: 'https://x.com/mkastehelmi'
 ---
