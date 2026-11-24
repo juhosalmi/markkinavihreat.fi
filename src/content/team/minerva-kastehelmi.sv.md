@@ -17,6 +17,8 @@ links:
     url: 'https://www.instagram.com/minervakastehelmi/'
   - type: facebook
     url: 'https://facebook.com/kastehelmiminerva/'
+  - type: tiktok
+    url: 'https://www.tiktok.com/@minervakastehelmi'
   - type: x
     url: 'https://x.com/mkastehelmi'
 ---
