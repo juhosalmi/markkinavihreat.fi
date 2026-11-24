@@ -23,8 +23,8 @@ links:
     url: 'https://x.com/mkastehelmi'
 ---
 
-Minerva Kastehelmi är ingenjör i produktionsekonomi, socionom och studerande för teknologie magister från Lahtis. Hon arbetar som sakkunnig inom offentlig upphandling.
+Minerva Kastehelmi från Lahtis är ingenjör i produktionsekonomi och socionom och studerar till teknologie magister. Hon arbetar som sakkunnig inom offentlig upphandling.
 
-För Minerva är det viktigt att främja ett långsiktigt beslutsfattande som bygger på forskad kunskap. Särskilt nära hennes hjärta ligger en hållbar marknadsekonomi, sysselsättning, fungerande basservice och säkerhet.
+För Minerva är det viktigt att främja ett långsiktigt beslutsfattande som bygger på forskningsbaserad kunskap. Särskilt nära hennes hjärta ligger en hållbar marknadsekonomi, sysselsättning, fungerande basservice och säkerhet.
 
 Minerva är ledamot i stadsstyrelsen och stadsfullmäktige i Lahtis samt ledamot i välfärdsområdesfullmäktige och revisionsnämnden i Päijänne-Tavastlands välfärdsområde.
